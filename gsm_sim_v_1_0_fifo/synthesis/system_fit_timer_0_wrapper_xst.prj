@@ -1,3 +1,3 @@
-vhdl fit_timer_v1_01_c /home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/fit_timer_v1_01_c/hdl/vhdl/divide_part.vhd
-vhdl fit_timer_v1_01_c /home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/fit_timer_v1_01_c/hdl/vhdl/fit_timer.vhd
+vhdl fit_timer_v1_01_c /nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/fit_timer_v1_01_c/hdl/vhdl/divide_part.vhd
+vhdl fit_timer_v1_01_c /nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/fit_timer_v1_01_c/hdl/vhdl/fit_timer.vhd
 vhdl work ../hdl/system_fit_timer_0_wrapper.vhd

@@ -2,8 +2,8 @@
 Release 14.7 Trace  (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -e 3
--xml system.twx system.ncd system.pcf
+/nfs/tools/xilinx/ise/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -e 3 -xml
+system.twx system.ncd system.pcf
 
 Design file:              system.ncd
 Physical constraint file: system.pcf
@@ -144,14 +144,14 @@ Design statistics:
    Minimum period:   3.334ns   (Maximum frequency: 299.940MHz)
 
 
-Analysis completed Tue May 20 21:36:30 2014 
+Analysis completed Wed May 21 20:15:41 2014 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 445 MB
+Peak Memory Usage: 444 MB
 
 
 

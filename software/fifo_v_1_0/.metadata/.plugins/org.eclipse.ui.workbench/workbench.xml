@@ -1,27 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="16" version="2.0">
+<workbench progressCount="15" version="2.0">
 <workbenchAdvisor/>
-<window height="744" maximized="true" width="1024" x="65" y="24">
+<window height="747" maximized="true" width="1020" x="64" y="24">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
 </perspectiveBar>
 <coolbarLayout>
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="280" y="30"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="248" y="34"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.cdt.ui.CElementCreationActionSet" itemType="typeToolBarContribution" x="204" y="30"/>
+<coolItem id="org.eclipse.cdt.ui.CElementCreationActionSet" itemType="typeToolBarContribution" x="180" y="34"/>
 <coolItem id="org.eclipse.debug.ui.launch.toolbar" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="156" y="30"/>
-<coolItem id="org.eclipse.debug.ui.main.toolbar" itemType="typeToolBarContribution" x="40" y="30"/>
-<coolItem id="com.xilinx.sdk.xbash.toolbar1" itemType="typeToolBarContribution" x="40" y="30"/>
-<coolItem id="com.xilinx.sdk.targetmanager.ui.toolbar1" itemType="typeToolBarContribution" x="68" y="30"/>
-<coolItem id="com.xilinx.sdk.sw.toolbar1" itemType="typeToolBarContribution" x="40" y="30"/>
-<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="88" y="30"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="183" y="30"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="140" y="34"/>
+<coolItem id="org.eclipse.debug.ui.main.toolbar" itemType="typeToolBarContribution" x="44" y="34"/>
+<coolItem id="com.xilinx.sdk.xbash.toolbar1" itemType="typeToolBarContribution" x="44" y="34"/>
+<coolItem id="com.xilinx.sdk.targetmanager.ui.toolbar1" itemType="typeToolBarContribution" x="68" y="34"/>
+<coolItem id="com.xilinx.sdk.sw.toolbar1" itemType="typeToolBarContribution" x="44" y="34"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="84" y="34"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="68" y="34"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="232" y="30"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="204" y="34"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -38,13 +39,17 @@
 <part id="3"/>
 <part id="4"/>
 <part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
+<part id="10"/>
+<part id="11"/>
+<part id="12"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="com.xilinx.sdk.hw.ui.HwSpecXMLEditor" name="system.xml" partName="system.xml" path="/home/vivric/workspace/gsm_sim_lab/software/fifo_v_1_0/gsm_sim_v_1_0_fifo_hw_platform/system.xml" title="system.xml" tooltip="gsm_sim_v_1_0_fifo_hw_platform/system.xml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/gsm_sim_v_1_0_fifo_hw_platform/system.xml"/>
-</editor>
 <editor id="com.xilinx.sdk.sw.MSSEditor" name="system.mss" partName="system.mss" path="/home/vivric/workspace/gsm_sim_lab/software/fifo_v_1_0/standalone_bsp_0/system.mss" title="system.mss" tooltip="standalone_bsp_0/system.mss" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/standalone_bsp_0/system.mss"/>
 </editor>
@@ -52,17 +57,48 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/fifo_v_1_0_a/src/platform_config.h"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="helloworld.c" partName="helloworld.c" path="/home/vivric/workspace/gsm_sim_lab/software/fifo_v_1_0/fifo_v_1_0_a/src/helloworld.c" title="helloworld.c" tooltip="fifo_v_1_0_a/src/helloworld.c" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="helloworld.c" partName="helloworld.c" path="/home/ga97guz/workspace/gsm_sim/software/fifo_v_1_0/fifo_v_1_0_a/src/helloworld.c" title="helloworld.c" tooltip="fifo_v_1_0_a/src/helloworld.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/fifo_v_1_0_a/src/helloworld.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1400" selectionTopPixel="88"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1725" selectionTopPixel="302"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="xintc.h" partName="xintc.h" path="/home/vivric/workspace/gsm_sim_lab/software/fifo_v_1_0/standalone_bsp_0/microblaze_0/include/xintc.h" title="xintc.h" tooltip="standalone_bsp_0/microblaze_0/include/xintc.h" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="xintc.h" partName="xintc.h" path="/home/ga97guz/workspace/gsm_sim/software/fifo_v_1_0/standalone_bsp_0/microblaze_0/include/xintc.h" title="xintc.h" tooltip="standalone_bsp_0/microblaze_0/include/xintc.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/standalone_bsp_0/microblaze_0/include/xintc.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2527" selectionTopPixel="3754"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="xparameters.h" partName="xparameters.h" path="/home/vivric/workspace/gsm_sim_lab/software/fifo_v_1_0/standalone_bsp_0/microblaze_0/include/xparameters.h" title="xparameters.h" tooltip="standalone_bsp_0/microblaze_0/include/xparameters.h" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="xparameters.h" partName="xparameters.h" path="/home/ga97guz/workspace/gsm_sim/software/fifo_v_1_0/standalone_bsp_0/microblaze_0/include/xparameters.h" title="xparameters.h" tooltip="standalone_bsp_0/microblaze_0/include/xparameters.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/standalone_bsp_0/microblaze_0/include/xparameters.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="10495" selectionTopPixel="136"/>
+<editorState selectionHorizontalPixel="0" selectionLength="23" selectionOffset="8841" selectionTopPixel="3579"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="sc_uart.c" partName="sc_uart.c" path="/home/ga97guz/workspace/gsm_sim/software/fifo_v_1_0/standalone_bsp_0/microblaze_0/libsrc/sc_uart_v1_00_a/src/sc_uart.c" title="sc_uart.c" tooltip="standalone_bsp_0/microblaze_0/libsrc/sc_uart_v1_00_a/src/sc_uart.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/standalone_bsp_0/microblaze_0/libsrc/sc_uart_v1_00_a/src/sc_uart.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="79" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="sc_uart.h" partName="sc_uart.h" path="/home/ga97guz/workspace/gsm_sim/software/fifo_v_1_0/standalone_bsp_0/microblaze_0/libsrc/sc_uart_v1_00_a/src/sc_uart.h" title="sc_uart.h" tooltip="standalone_bsp_0/microblaze_0/libsrc/sc_uart_v1_00_a/src/sc_uart.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/standalone_bsp_0/microblaze_0/libsrc/sc_uart_v1_00_a/src/sc_uart.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="17" selectionOffset="1736" selectionTopPixel="456"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="xintc_l.h" partName="xintc_l.h" path="/home/ga97guz/workspace/gsm_sim/software/fifo_v_1_0/standalone_bsp_0/microblaze_0/include/xintc_l.h" title="xintc_l.h" tooltip="standalone_bsp_0/microblaze_0/include/xintc_l.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/standalone_bsp_0/microblaze_0/include/xintc_l.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="19" selectionOffset="9210" selectionTopPixel="2859"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="xintc.h" partName="xintc.h" path="/home/ga97guz/workspace/gsm_sim/software/fifo_v_1_0/standalone_bsp_0/microblaze_0/libsrc/intc_v2_06_a/src/xintc.h" title="xintc.h" tooltip="standalone_bsp_0/microblaze_0/libsrc/intc_v2_06_a/src/xintc.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/standalone_bsp_0/microblaze_0/libsrc/intc_v2_06_a/src/xintc.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="13409" selectionTopPixel="4088"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="xintc.c" partName="xintc.c" path="/home/ga97guz/workspace/gsm_sim/software/fifo_v_1_0/standalone_bsp_0/microblaze_0/libsrc/intc_v2_06_a/src/xintc.c" title="xintc.c" tooltip="standalone_bsp_0/microblaze_0/libsrc/intc_v2_06_a/src/xintc.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/standalone_bsp_0/microblaze_0/libsrc/intc_v2_06_a/src/xintc.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="19552" selectionTopPixel="8684"/>
+</editor>
+<editor id="com.xilinx.sdk.hw.ui.HwSpecXMLEditor" name="system.xml" partName="system.xml" path="/home/ga97guz/workspace/gsm_sim/software/fifo_v_1_0/gsm_sim_v_1_0_fifo_hw_platform/system.xml" title="system.xml" tooltip="gsm_sim_v_1_0_fifo_hw_platform/system.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/gsm_sim_v_1_0_fifo_hw_platform/system.xml"/>
+</editor>
+<editor id="org.eclipse.ui.DefaultTextEditor" name="system.bit" partName="system.bit" path="/home/ga97guz/workspace/gsm_sim/software/fifo_v_1_0/gsm_sim_v_1_0_fifo_hw_platform/system.bit" title="system.bit" tooltip="gsm_sim_v_1_0_fifo_hw_platform/system.bit" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/gsm_sim_v_1_0_fifo_hw_platform/system.bit"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="42261" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.ui.DefaultTextEditor" name="system_bd.bmm" partName="system_bd.bmm" path="/home/ga97guz/workspace/gsm_sim/software/fifo_v_1_0/gsm_sim_v_1_0_fifo_hw_platform/system_bd.bmm" title="system_bd.bmm" tooltip="gsm_sim_v_1_0_fifo_hw_platform/system_bd.bmm" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/gsm_sim_v_1_0_fifo_hw_platform/system_bd.bmm"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="857" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -74,7 +110,10 @@
 <view id="org.eclipse.tm.terminal.view.TerminalView" partName="Terminal"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="105" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
+<expanded>
+<category IMemento.internal.id="Infos (1 item)"/>
+</expanded>
+<columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="105" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="1199"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
@@ -85,12 +124,23 @@
 <view id="org.eclipse.ui.console.ConsoleView" partName="Console">
 <viewState/>
 </view>
-<view id="org.eclipse.ui.views.TaskList" partName="Tasks"/>
+<view id="org.eclipse.ui.views.TaskList" partName="Tasks">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.completionField" categoryGroup="none" markerContentGenerator="org.eclipse.ui.ide.tasksGenerator" partName="Tasks">
+<columnWidths org.eclipse.ui.ide.completionField="40" org.eclipse.ui.ide.descriptionField="350" org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="636" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.priorityField="35" org.eclipse.ui.ide.resourceField="105"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.completionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.priorityField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.descriptionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
 <view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="org.eclipse.cdt.ui.CPerspective">
+<perspectives activePart="org.eclipse.ui.DefaultTextEditor" activePerspective="org.eclipse.cdt.ui.CPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.cdt.internal.ui.CPerspectiveFactory" id="org.eclipse.cdt.ui.CPerspective" label="C/C++"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -168,7 +218,7 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.24950495" ratioLeft="252" ratioRight="758" relationship="2" relative="topLeft"/>
+<info part="org.eclipse.ui.editorss" ratio="0.45416418" ratioLeft="758" ratioRight="911" relationship="2" relative="topLeft"/>
 <info folder="true" part="bottom" ratio="0.75" ratioLeft="480" ratioRight="160" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
@@ -202,29 +252,162 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.hw.ui.HwSpecXMLEditor" path="/gsm_sim_v_1_0_fifo_hw_platform/system.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.sw.MSSEditor" path="/standalone_bsp_0/system.mss"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/fifo_v_1_0_a/src/platform_config.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/fifo_v_1_0_a/src/helloworld.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/standalone_bsp_0/microblaze_0/include/xintc.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/fifo_v_1_0_a/src/helloworld.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/standalone_bsp_0/microblaze_0/libsrc/sc_uart_v1_00_a/src/sc_uart.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/standalone_bsp_0/microblaze_0/libsrc/sc_uart_v1_00_a/src/sc_uart.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/standalone_bsp_0/microblaze_0/libsrc/sc_uart_v1_00_a/src/sc_uart.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/standalone_bsp_0/microblaze_0/include/xparameters.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/standalone_bsp_0/microblaze_0/include/xintc_l.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/standalone_bsp_0/microblaze_0/libsrc/intc_v2_06_a/src/xintc.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/standalone_bsp_0/microblaze_0/libsrc/intc_v2_06_a/src/xintc.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.hw.ui.HwSpecXMLEditor" path="/gsm_sim_v_1_0_fifo_hw_platform/system.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/gsm_sim_v_1_0_fifo_hw_platform/system.bit"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/gsm_sim_v_1_0_fifo_hw_platform/system_bd.bmm"/>
 </editors>
-<item historyLabel="system.xml" index="0"/>
-<item historyLabel="system.mss" index="1"/>
-<item historyLabel="platform_config.h" index="2">
+<item historyLabel="xintc.h" index="0">
+<position info="not_deleted" x="82" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="1">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="3">
-<position info="not_deleted" x="1400" y="0"/>
+<item historyLabel="helloworld.c" index="1">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="xintc.h" index="4">
-<position info="not_deleted" x="82" y="0"/>
+<item historyLabel="sc_uart.c" index="2">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="sc_uart.c" index="2">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="sc_uart.h" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="sc_uart.c" index="2">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="1">
+<position info="not_deleted" x="2454" y="0"/>
+</item>
+<item historyLabel="sc_uart.c" index="2">
+<position info="not_deleted" x="79" y="0"/>
+</item>
+<item historyLabel="sc_uart.h" index="4">
+<position info="not_deleted" x="844" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="1">
+<position info="not_deleted" x="2454" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="1">
+<position info="not_deleted" x="2402" y="0"/>
+</item>
+<item historyLabel="sc_uart.h" index="4">
+<position info="not_deleted" x="2398" y="16"/>
+</item>
+<item historyLabel="sc_uart.c" index="2">
+<position info="not_deleted" x="79" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="1">
+<position info="not_deleted" x="1903" y="0"/>
+</item>
+<item historyLabel="sc_uart.h" index="4">
+<position info="not_deleted" x="2398" y="16"/>
 </item>
 <item historyLabel="xparameters.h" index="5">
-<position info="not_deleted" x="10495" y="0"/>
+<position info="not_deleted" x="8841" y="23"/>
 </item>
-<item active="true" historyLabel="xintc.h" index="4">
+<item historyLabel="helloworld.c" index="1">
+<position info="not_deleted" x="1903" y="0"/>
+</item>
+<item historyLabel="sc_uart.h" index="4">
+<position info="not_deleted" x="981" y="23"/>
+</item>
+<item historyLabel="sc_uart.c" index="2">
+<position info="not_deleted" x="79" y="0"/>
+</item>
+<item historyLabel="xparameters.h" index="5">
+<position info="not_deleted" x="8841" y="23"/>
+</item>
+<item historyLabel="helloworld.c" index="1">
+<position info="not_deleted" x="1617" y="0"/>
+</item>
+<item historyLabel="sc_uart.h" index="4">
+<position info="not_deleted" x="981" y="23"/>
+</item>
+<item historyLabel="sc_uart.c" index="2">
+<position info="not_deleted" x="79" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="1">
+<position info="not_deleted" x="1407" y="0"/>
+</item>
+<item historyLabel="xintc_l.h" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="xintc_l.h" index="6">
 <position info="not_deleted" x="82" y="0"/>
+</item>
+<item historyLabel="xintc_l.h" index="6">
+<position info="not_deleted" x="9505" y="10"/>
+</item>
+<item historyLabel="xintc.h" index="7">
+<position info="not_deleted" x="13409" y="0"/>
+</item>
+<item historyLabel="xintc.c" index="8">
+<position info="not_deleted" x="19552" y="0"/>
+</item>
+<item historyLabel="xintc_l.h" index="6">
+<position info="not_deleted" x="9210" y="19"/>
+</item>
+<item historyLabel="helloworld.c" index="1">
+<position info="not_deleted" x="1772" y="0"/>
+</item>
+<item historyLabel="xintc_l.h" index="6">
+<position info="not_deleted" x="9210" y="19"/>
+</item>
+<item historyLabel="helloworld.c" index="1">
+<position info="not_deleted" x="1772" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="1">
+<position info="not_deleted" x="2399" y="0"/>
+</item>
+<item historyLabel="xparameters.h" index="5">
+<position info="not_deleted" x="8841" y="23"/>
+</item>
+<item historyLabel="sc_uart.c" index="2">
+<position info="not_deleted" x="79" y="0"/>
+</item>
+<item historyLabel="sc_uart.h" index="4">
+<position info="not_deleted" x="1736" y="17"/>
+</item>
+<item historyLabel="helloworld.c" index="1">
+<position info="not_deleted" x="1856" y="23"/>
+</item>
+<item historyLabel="sc_uart.h" index="4">
+<position info="not_deleted" x="1736" y="17"/>
+</item>
+<item historyLabel="helloworld.c" index="1">
+<position info="not_deleted" x="1856" y="23"/>
+</item>
+<item historyLabel="helloworld.c" index="1">
+<position info="not_deleted" x="1974" y="0"/>
+</item>
+<item historyLabel="system.xml" index="9"/>
+<item historyLabel="helloworld.c" index="1">
+<position info="not_deleted" x="1725" y="0"/>
+</item>
+<item historyLabel="system.xml" index="9"/>
+<item historyLabel="system.bit" index="10">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="system.bit" index="10">
+<position info="not_deleted" x="42261" y="0"/>
+</item>
+<item historyLabel="system.xml" index="9"/>
+<item historyLabel="system_bd.bmm" index="11">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item active="true" historyLabel="system_bd.bmm" index="11">
+<position info="not_deleted" x="0" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -243,6 +426,30 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="system_bd.bmm" tooltip="gsm_sim_v_1_0_fifo_hw_platform/system_bd.bmm">
+<persistable path="/gsm_sim_v_1_0_fifo_hw_platform/system_bd.bmm"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="system.bit" tooltip="gsm_sim_v_1_0_fifo_hw_platform/system.bit">
+<persistable path="/gsm_sim_v_1_0_fifo_hw_platform/system.bit"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.hw.ui.HwSpecXMLEditor" name="system.xml" tooltip="gsm_sim_v_1_0_fifo_hw_platform/system.xml">
+<persistable path="/gsm_sim_v_1_0_fifo_hw_platform/system.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="xintc.c" tooltip="standalone_bsp_0/microblaze_0/libsrc/intc_v2_06_a/src/xintc.c">
+<persistable path="/standalone_bsp_0/microblaze_0/libsrc/intc_v2_06_a/src/xintc.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="xintc.h" tooltip="standalone_bsp_0/microblaze_0/libsrc/intc_v2_06_a/src/xintc.h">
+<persistable path="/standalone_bsp_0/microblaze_0/libsrc/intc_v2_06_a/src/xintc.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="xintc_l.h" tooltip="standalone_bsp_0/microblaze_0/include/xintc_l.h">
+<persistable path="/standalone_bsp_0/microblaze_0/include/xintc_l.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="sc_uart.h" tooltip="standalone_bsp_0/microblaze_0/libsrc/sc_uart_v1_00_a/src/sc_uart.h">
+<persistable path="/standalone_bsp_0/microblaze_0/libsrc/sc_uart_v1_00_a/src/sc_uart.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="sc_uart.c" tooltip="standalone_bsp_0/microblaze_0/libsrc/sc_uart_v1_00_a/src/sc_uart.c">
+<persistable path="/standalone_bsp_0/microblaze_0/libsrc/sc_uart_v1_00_a/src/sc_uart.c"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="xparameters.h" tooltip="standalone_bsp_0/microblaze_0/include/xparameters.h">
 <persistable path="/standalone_bsp_0/microblaze_0/include/xparameters.h"/>
 </file>
@@ -257,9 +464,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.sw.MSSEditor" name="system.mss" tooltip="standalone_bsp_0/system.mss">
 <persistable path="/standalone_bsp_0/system.mss"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.hw.ui.HwSpecXMLEditor" name="system.xml" tooltip="gsm_sim_v_1_0_fifo_hw_platform/system.xml">
-<persistable path="/gsm_sim_v_1_0_fifo_hw_platform/system.xml"/>
 </file>
 </mruList>
 </workbench>

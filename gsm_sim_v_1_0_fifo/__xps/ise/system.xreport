@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2014-05-20T21:16:17</DateModified>
+  <DateModified>2014-05-21T19:54:53</DateModified>
   <ModuleName>system</ModuleName>
-  <SummaryTimeStamp>2014-05-20T21:16:17</SummaryTimeStamp>
-  <SavedFilePath>/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/__xps/ise/system.xreport</SavedFilePath>
+  <SummaryTimeStamp>2014-05-21T19:54:53</SummaryTimeStamp>
+  <SavedFilePath>/home/ga97guz/workspace/gsm_sim/gsm_sim_v_1_0_fifo/__xps/ise/system.xreport</SavedFilePath>
   <FilterFile>filter.filter</FilterFile>
-  <SavedFilterFilePath>/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/__xps/ise</SavedFilterFilePath>
+  <SavedFilterFilePath>/home/ga97guz/workspace/gsm_sim/gsm_sim_v_1_0_fifo/__xps/ise</SavedFilterFilePath>
   <DateInitialized>2014-05-20T20:46:22</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

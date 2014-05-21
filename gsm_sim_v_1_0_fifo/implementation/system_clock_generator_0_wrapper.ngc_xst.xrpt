@@ -5,51 +5,55 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Tue May 20 21:31:07 2014">
+  <application stringID="Xst" timeStamp="Wed May 21 20:13:15 2014">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
           <item stringID="variable" value="XILINX_DSP"/>
-          <item stringID="value" value="/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/ISE"/>
+          <item stringID="value" value="/nfs/tools/xilinx/ise/14.7/ISE_DS/ISE"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="LD_LIBRARY_PATH"/>
-          <item stringID="value" value="/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/ISE//lib/lin64:/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/lib/lin64:/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK//lib/lin64:/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/ISE/lib/lin64:/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/ISE/smartmodel/lin64/installed_lin64/lib:/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/ISE/sysgen/lib:/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/common/lib/lin64"/>
+          <item stringID="value" value="/nfs/tools/xilinx/ise/14.7/ISE_DS/ISE//lib/lin64:/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/lib/lin64:/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK//lib/lin64:(null)"/>
         </row>
         <row stringID="row" value="2">
           <item stringID="variable" value="XILINX_EDK"/>
-          <item stringID="value" value="/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK"/>
+          <item stringID="value" value="/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK"/>
         </row>
         <row stringID="row" value="3">
           <item stringID="variable" value="PATH"/>
-          <item stringID="value" value="/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/ISE//bin/lin64:/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/bin/lin64:/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/gnu/microblaze/lin64/bin:/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/gnu/powerpc-eabi/lin64/bin:/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK//bin/lin64:/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/ISE/bin/lin64:/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/ISE/sysgen/util:/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/ISE/sysgen/bin:/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/ISE/../../../DocNav:/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/PlanAhead/bin:/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin:/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/gnu/powerpc-eabi/lin/bin:/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/gnu/arm/lin/bin:/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/gnu/microblaze/linux_toolchain/lin64_be/bin:/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/gnu/microblaze/linux_toolchain/lin64_le/bin:/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/common/bin/lin64:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"/>
+          <item stringID="value" value="/nfs/tools/xilinx/ise/14.7/ISE_DS/ISE//bin/lin64:/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/bin/lin64:/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/gnu/microblaze/lin64/bin:/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/gnu/powerpc-eabi/lin64/bin:/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK//bin/lin64:/nfs/tools/xilinx/ise/14.7/ISE_DS/PlanAhead/bin:/nfs/tools/xilinx/ise/14.7/ISE_DS/ISE/bin/lin64:/nfs/tools/xilinx/ise/14.7/ISE_DS/ISE/sysgen/util:/nfs/tools/xilinx/ise/14.7/ISE_DS/ISE/sysgen/bin:/nfs/tools/xilinx/ise/14.7/ISE_DS/ISE/../../../DocNav:/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin:/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/gnu/powerpc-eabi/lin/bin:/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/gnu/arm/lin/bin:/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/gnu/microblaze/linux_toolchain/lin64_be/bin:/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/gnu/microblaze/linux_toolchain/lin64_le/bin:/nfs/tools/xilinx/ise/14.7/ISE_DS/common/bin/lin64:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/mnt/share/tools/kontrollerlab/bin:/nfs/tools/matlab/R2012a/bin"/>
         </row>
         <row stringID="row" value="4">
-          <item stringID="variable" value="LMC_HOME"/>
-          <item stringID="value" value="/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/ISE/smartmodel/lin64/installed_lin64"/>
+          <item stringID="variable" value="XILINX_ISE"/>
+          <item stringID="value" value="/nfs/tools/xilinx/ise/14.7/ISE_DS/ISE"/>
         </row>
         <row stringID="row" value="5">
-          <item stringID="variable" value="XILINX_PLANAHEAD"/>
-          <item stringID="value" value="/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/PlanAhead"/>
+          <item stringID="variable" value="LMC_HOME"/>
+          <item stringID="value" value="/nfs/tools/xilinx/ise/14.7/ISE_DS/ISE/smartmodel/lin64/installed_lin64"/>
         </row>
         <row stringID="row" value="6">
+          <item stringID="variable" value="XILINX_PLANAHEAD"/>
+          <item stringID="value" value="/nfs/tools/xilinx/ise/14.7/ISE_DS/PlanAhead"/>
+        </row>
+        <row stringID="row" value="7">
           <item stringID="variable" value="XILINX"/>
-          <item stringID="value" value="/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/ISE/:/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK"/>
+          <item stringID="value" value="/nfs/tools/xilinx/ise/14.7/ISE_DS/ISE/:/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK"/>
         </row>
       </table>
       <item stringID="User_EnvOs" value="OS Information">
         <item stringID="User_EnvOsname" value="Ubuntu"/>
-        <item stringID="User_EnvOsrelease" value="Ubuntu 14.04 LTS"/>
+        <item stringID="User_EnvOsrelease" value="Ubuntu 10.04.4 LTS"/>
       </item>
-      <item stringID="User_EnvHost" value="vivric-HP-ENVY-6-Notebook-PC"/>
+      <item stringID="User_EnvHost" value="TUEISEC-Pra04"/>
       <table stringID="User_EnvCpu">
         <column stringID="arch"/>
         <column stringID="speed"/>
         <row stringID="row" value="0">
-          <item stringID="arch" value="Intel(R) Core(TM) i5-3317U CPU @ 1.70GHz"/>
-          <item stringID="speed" value="1701.000 MHz"/>
+          <item stringID="arch" value="Intel(R) Core(TM) i7 CPU         870  @ 2.93GHz"/>
+          <item stringID="speed" value="1197.000 MHz"/>
         </row>
       </table>
     </section>
@@ -65,7 +69,7 @@
       <item DEFAULT="/" stringID="XST_HIERARCHYSEPARATOR" value="/"/>
       <item DEFAULT="Yes" label="-iobuf" stringID="XST_IOBUF" value="NO"/>
       <item DEFAULT="" label="-sd" stringID="XST_SD" value="{../implementation}"/>
-      <item DEFAULT="" label="-vlgincdir" stringID="XST_VLGINCDIR" value="{&quot;/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/pcores/&quot; &quot;/home/vivric/Documents/Nexys3_BSB_Support_v_2_7/Nexys3_AXI_BSB_Support/lib/Digilent/pcores/&quot; &quot;/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/&quot; &quot;/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/&quot; }"/>
+      <item DEFAULT="" label="-vlgincdir" stringID="XST_VLGINCDIR" value="{&quot;/home/ga97guz/workspace/gsm_sim/gsm_sim_v_1_0_fifo/pcores/&quot; &quot;/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/&quot; &quot;/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/&quot; }"/>
     </section>
     <section stringID="XST_UNISIM_SUMMARY">
       <item dataType="int" stringID="XST_NUM_BUFG" value="1"/>

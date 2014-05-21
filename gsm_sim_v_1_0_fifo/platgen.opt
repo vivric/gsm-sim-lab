@@ -4,8 +4,6 @@ xc6slx16csg324-3
 vhdl
 -intstyle
 default
--lp
-/home/vivric/Documents/Nexys3_BSB_Support_v_2_7/Nexys3_AXI_BSB_Support/lib/
 -msg
 __xps/ise/xmsgprops.lst
 system.mhs
