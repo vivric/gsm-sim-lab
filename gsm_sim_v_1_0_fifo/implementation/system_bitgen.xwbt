@@ -1,0 +1,7 @@
+INFILE=/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/implementation/system.ncd
+OUTFILE=/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/implementation/system.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/implementation
+LICENSE=WebPack
+USER_INFO=210814268_1777500210_210581189_065

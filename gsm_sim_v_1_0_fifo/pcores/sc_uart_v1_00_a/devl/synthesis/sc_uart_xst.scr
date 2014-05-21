@@ -1,0 +1,12 @@
+run
+-opt_level 2
+-opt_mode speed
+-ifmt mixed
+-ifn "/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/pcores/sc_uart_v1_00_a/devl/synthesis/sc_uart_xst.prj"
+-top sc_uart
+-p virtex6
+-ofn "/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/pcores/sc_uart_v1_00_a/devl/synthesis/sc_uart_xst.ngc"
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /
+-work_lib sc_uart_v1_00_a
