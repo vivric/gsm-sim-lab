@@ -1,0 +1,9 @@
+20:22:35 **** Incremental Build of configuration Debug for project fifo_v_1_1_a ****
+make all 
+make: Nothing to be done for `all'.
+20:24:25 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+20:24:44 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries

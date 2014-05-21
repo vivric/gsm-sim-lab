@@ -1,0 +1,21 @@
+20:16:59.239 INFO  - Processing command line option -hwspec /home/ga97guz/workspace/gsm_sim/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/system.xml. 
+20:20:04.251 INFO  - FPGA configured successfully with bitstream "/home/ga97guz/workspace/gsm_sim/software/fifo_v_1_1/gsm_sim_v_1_0_fifo_hw_platform/download.bit" 
+20:20:45.585 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+20:21:45.529 INFO  - Time out for XMD transaction is 60000
+If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx SDK -> XMD Startup 
+20:21:45.531 ERROR - Timeout occured while waiting to get reply for command "xfpga_isconfigured -cable type digilent_plugin" 
+20:21:45.535 ERROR - Checking FPGA configuration failed.. 
+20:22:13.351 INFO  - Time out for XMD transaction is 60000
+If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx SDK -> XMD Startup 
+20:22:13.351 ERROR - Timeout occured while waiting to get reply for command "xdisconnect -cable" 
+20:22:29.726 ERROR - Unexpected error while issuing command {"command": "xdisconnect -cable"} to XMD: java.net.SocketException: Broken pipe 
+20:22:41.163 ERROR - Unexpected error while issuing command {"command": "xdisconnect -cable"} to XMD: java.net.SocketException: Broken pipe 
+20:23:11.558 ERROR - Unexpected error while issuing command {"command": "xdisconnect -cable"} to XMD: java.net.SocketException: Broken pipe 
+20:23:35.177 ERROR - Unexpected error while issuing command {"command": "xdisconnect -cable"} to XMD: java.net.SocketException: Broken pipe 
+20:24:24.225 INFO  - FPGA configured successfully with bitstream "/home/ga97guz/workspace/gsm_sim/software/fifo_v_1_1/gsm_sim_v_1_0_fifo_hw_platform/download.bit" 
+20:24:43.888 INFO  - FPGA configured successfully with bitstream "/home/ga97guz/workspace/gsm_sim/software/fifo_v_1_1/gsm_sim_v_1_0_fifo_hw_platform/download.bit" 
+20:24:52.957 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+20:25:52.909 INFO  - Time out for XMD transaction is 60000
+If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx SDK -> XMD Startup 
+20:25:52.909 ERROR - Timeout occured while waiting to get reply for command "xfpga  -cable type digilent_plugin -f /home/ga97guz/workspace/gsm_sim/software/fifo_v_1_1/gsm_sim_v_1_0_fifo_hw_platform/download.bit -report_progress" 
+20:25:52.910 ERROR - FPGA Configuration failed. 
