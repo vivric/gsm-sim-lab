@@ -1,10 +1,8 @@
 gsm-sim-lab
 ===========
 
-GSM SIM lab projects
-
-Status :
-
+Status
+------
 -- May 20: --
 
 -- Current version : Fifo_v_1_1
