@@ -10,7 +10,7 @@ _ISE/14.7/ISE_DS/EDK.
    "system" is an NCD, version 3.2, device xc6slx16, package csg324, speed -3
 Opened constraints file system.pcf.
 
-Tue May 20 21:36:38 2014
+Thu May 22 02:03:08 2014
 
 /home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/ISE/bin/lin64/unwrapped/bitgen -w -g TdoPin:PULLNONE -g StartUpClk:JTAGCLK system.ncd 
 

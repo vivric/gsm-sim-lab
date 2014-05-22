@@ -195,6 +195,7 @@ BEGIN fit_timer
  PARAMETER INSTANCE = fit_timer_0
  PARAMETER HW_VER = 1.01.c
  PARAMETER C_NO_CLOCKS = 10000
+ PARAMETER C_INACCURACY = 5
  PORT Clk = clk_100_0000MHz
  PORT Rst = proc_sys_reset_0_Peripheral_Reset
  PORT Interrupt = fit_timer_0_Interrupt

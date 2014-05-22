@@ -177,6 +177,51 @@ Creating hardware output directories ...
 Managing hardware (BBD-specified) netlist files ...
 
 Managing cache ...
+IPNAME:proc_sys_reset INSTANCE:proc_sys_reset_0 -
+/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 27 -
+Copying cache implementation netlist
+IPNAME:lmb_v10 INSTANCE:microblaze_0_ilmb -
+/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 42 -
+Copying cache implementation netlist
+IPNAME:lmb_bram_if_cntlr INSTANCE:microblaze_0_i_bram_ctrl -
+/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 49 -
+Copying cache implementation netlist
+IPNAME:lmb_v10 INSTANCE:microblaze_0_dlmb -
+/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 58 -
+Copying cache implementation netlist
+IPNAME:lmb_bram_if_cntlr INSTANCE:microblaze_0_d_bram_ctrl -
+/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 65 -
+Copying cache implementation netlist
+IPNAME:bram_block INSTANCE:microblaze_0_bram_block -
+/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 74 -
+Copying cache implementation netlist
+IPNAME:microblaze INSTANCE:microblaze_0 -
+/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 81 -
+Copying cache implementation netlist
+IPNAME:mdm INSTANCE:debug_module -
+/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 104 -
+Copying cache implementation netlist
+IPNAME:axi_interconnect INSTANCE:axi4lite_0 -
+/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 129 -
+Copying cache implementation netlist
+IPNAME:axi_uartlite INSTANCE:rs232_uart_1 -
+/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 137 -
+Copying cache implementation netlist
+IPNAME:axi_gpio INSTANCE:push_buttons_4bits -
+/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 152 -
+Copying cache implementation netlist
+IPNAME:axi_gpio INSTANCE:leds_8bits -
+/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 166 -
+Copying cache implementation netlist
+IPNAME:axi_gpio INSTANCE:dip_switches_8bits -
+/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 180 -
+Copying cache implementation netlist
+IPNAME:axi_intc INSTANCE:axi_intc_0 -
+/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 204 -
+Copying cache implementation netlist
+IPNAME:sc_uart INSTANCE:sc_uart_0 -
+/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 216 -
+Copying cache implementation netlist
 
 Elaborating instances ...
 IPNAME:bram_block INSTANCE:microblaze_0_bram_block -
@@ -192,10 +237,10 @@ ClkGen elaborate status: PASSED
 Writing HDL for elaborated instances ...
 
 Inserting wrapper level ...
-Completion time: 0.00 seconds
+Completion time: 1.00 seconds
 
 Constructing platform-level connectivity ...
-Completion time: 1.00 seconds
+Completion time: 0.00 seconds
 
 Writing (top-level) BMM ...
 
@@ -208,73 +253,16 @@ Running XST synthesis ...
 INFO:EDK:4211 - The following instances are synthesized with XST. The MPD option
    IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
    synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
-INSTANCE:proc_sys_reset_0 -
-/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 27 -
-Running XST synthesis
-INSTANCE:microblaze_0_ilmb -
-/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 42 -
-Running XST synthesis
-INSTANCE:microblaze_0_i_bram_ctrl -
-/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 49 -
-Running XST synthesis
-INSTANCE:microblaze_0_dlmb -
-/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 58 -
-Running XST synthesis
-INSTANCE:microblaze_0_d_bram_ctrl -
-/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 65 -
-Running XST synthesis
-INSTANCE:microblaze_0_bram_block -
-/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 74 -
-Running XST synthesis
-INSTANCE:microblaze_0 -
-/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 81 -
-Running XST synthesis
-INSTANCE:debug_module -
-/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 104 -
-Running XST synthesis
 INSTANCE:clock_generator_0 -
 /home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 117 -
-Running XST synthesis
-INSTANCE:axi4lite_0 -
-/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 129 -
-Running XST synthesis
-INSTANCE:rs232_uart_1 -
-/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 137 -
-Running XST synthesis
-INSTANCE:push_buttons_4bits -
-/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 152 -
-Running XST synthesis
-INSTANCE:leds_8bits -
-/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 166 -
-Running XST synthesis
-INSTANCE:dip_switches_8bits -
-/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 180 -
 Running XST synthesis
 INSTANCE:fit_timer_0 -
 /home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 194 -
 Running XST synthesis
-INSTANCE:axi_intc_0 -
-/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 203 -
-Running XST synthesis
-INSTANCE:sc_uart_0 -
-/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 215 -
-Running XST synthesis
 
 Running NGCBUILD ...
-IPNAME:system_microblaze_0_ilmb_wrapper INSTANCE:microblaze_0_ilmb -
-/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 42 -
-Running NGCBUILD
-IPNAME:system_microblaze_0_dlmb_wrapper INSTANCE:microblaze_0_dlmb -
-/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 58 -
-Running NGCBUILD
-IPNAME:system_microblaze_0_wrapper INSTANCE:microblaze_0 -
-/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 81 -
-Running NGCBUILD
 IPNAME:system_clock_generator_0_wrapper INSTANCE:clock_generator_0 -
 /home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 117 -
-Running NGCBUILD
-IPNAME:system_axi4lite_0_wrapper INSTANCE:axi4lite_0 -
-/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 129 -
 Running NGCBUILD
 INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
    If any constraint needs to be overridden, this should be done by modifying
@@ -282,4 +270,4 @@ INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
 
 Rebuilding cache ...
 
-Total run time: 276.00 seconds
+Total run time: 53.00 seconds

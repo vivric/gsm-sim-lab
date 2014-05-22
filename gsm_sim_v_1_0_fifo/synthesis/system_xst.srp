@@ -5,7 +5,7 @@ Parameter TMPDIR set to /home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/sy
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> 
 
@@ -1508,13 +1508,13 @@ GCLK           |    2.718|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 19.00 secs
-Total CPU time to Xst completion: 18.75 secs
+Total REAL time to Xst completion: 20.00 secs
+Total CPU time to Xst completion: 19.08 secs
  
 --> 
 
 
-Total memory usage is 445676 kilobytes
+Total memory usage is 445704 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    4 (   0 filtered)

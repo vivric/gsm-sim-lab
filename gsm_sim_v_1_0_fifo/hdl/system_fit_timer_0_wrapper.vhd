@@ -44,7 +44,7 @@ begin
     generic map (
       C_FAMILY => "spartan6",
       C_NO_CLOCKS => 10000,
-      C_INACCURACY => 0,
+      C_INACCURACY => 5,
       C_EXT_RESET_HIGH => 1
     )
     port map (

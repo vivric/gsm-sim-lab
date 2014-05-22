@@ -1,0 +1,8 @@
+TIMEGRP "GRP_INTC_intr_sync_axi_intc_0" = FFS ("axi_intc_0/INTC_CORE_I/intr_sync*");
+TIMEGRP "GRP_INTC_intr_p1_axi_intc_0" = FFS ("axi_intc_0/INTC_CORE_I/intr_p1*");
+TIMESPEC "TS_sync_axi_intc_0" = TO "GRP_INTC_intr_sync_axi_intc_0" TIG;
+TIMESPEC "TS_intr_sync_p1_axi_intc_0" = FROM "GRP_INTC_intr_sync_axi_intc_0" TO "GRP_INTC_intr_p1_axi_intc_0" TIG;
+NET "S_AXI_ACLK" TNM_NET = "S_AXI_ACLK_axi_intc_0";
+NET "Processor_clk" TNM_NET = "Processor_clk_axi_intc_0";
+TIMESPEC "TS_MB_AXI_FP_axi_intc_0" = FROM "Processor_clk_axi_intc_0" TO "S_AXI_ACLK_axi_intc_0" TIG;
+TIMESPEC "TS_AXI_MB_FP_axi_intc_0" = FROM "S_AXI_ACLK_axi_intc_0" TO "Processor_clk_axi_intc_0" TIG;

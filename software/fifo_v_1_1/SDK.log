@@ -1,0 +1,194 @@
+20:16:59.239 INFO  - Processing command line option -hwspec /home/ga97guz/workspace/gsm_sim/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/system.xml. 
+20:20:04.251 INFO  - FPGA configured successfully with bitstream "/home/ga97guz/workspace/gsm_sim/software/fifo_v_1_1/gsm_sim_v_1_0_fifo_hw_platform/download.bit" 
+20:20:45.585 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+20:21:45.529 INFO  - Time out for XMD transaction is 60000
+If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx SDK -> XMD Startup 
+20:21:45.531 ERROR - Timeout occured while waiting to get reply for command "xfpga_isconfigured -cable type digilent_plugin" 
+20:21:45.535 ERROR - Checking FPGA configuration failed.. 
+20:22:13.351 INFO  - Time out for XMD transaction is 60000
+If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx SDK -> XMD Startup 
+20:22:13.351 ERROR - Timeout occured while waiting to get reply for command "xdisconnect -cable" 
+20:22:29.726 ERROR - Unexpected error while issuing command {"command": "xdisconnect -cable"} to XMD: java.net.SocketException: Broken pipe 
+20:22:41.163 ERROR - Unexpected error while issuing command {"command": "xdisconnect -cable"} to XMD: java.net.SocketException: Broken pipe 
+20:23:11.558 ERROR - Unexpected error while issuing command {"command": "xdisconnect -cable"} to XMD: java.net.SocketException: Broken pipe 
+20:23:35.177 ERROR - Unexpected error while issuing command {"command": "xdisconnect -cable"} to XMD: java.net.SocketException: Broken pipe 
+20:24:24.225 INFO  - FPGA configured successfully with bitstream "/home/ga97guz/workspace/gsm_sim/software/fifo_v_1_1/gsm_sim_v_1_0_fifo_hw_platform/download.bit" 
+20:24:43.888 INFO  - FPGA configured successfully with bitstream "/home/ga97guz/workspace/gsm_sim/software/fifo_v_1_1/gsm_sim_v_1_0_fifo_hw_platform/download.bit" 
+20:24:52.957 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+20:25:52.909 INFO  - Time out for XMD transaction is 60000
+If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx SDK -> XMD Startup 
+20:25:52.909 ERROR - Timeout occured while waiting to get reply for command "xfpga  -cable type digilent_plugin -f /home/ga97guz/workspace/gsm_sim/software/fifo_v_1_1/gsm_sim_v_1_0_fifo_hw_platform/download.bit -report_progress" 
+20:25:52.910 ERROR - FPGA Configuration failed. 
+00:21:28.629 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Could not open plug-in of the type: digilent_plugin. Please check to make sure the correct plug-in for this type is properly installed.
+The following targetNames are available:
+  xilinx_svffile (libCseSvfFilePlugin)
+  xilinx_tcf (libCseTcfPlugin)
+  auto (libCseXilCommPlugin)
+  xilinx_parallel (libCseXilCommPlugin)
+  xilinx_platformusb (libCseXilCommPlugin)
+  xilinx_file (libCseXilCommPlugin)
+  xilinx_xvc (libCseXvcPlugin)
+
+    Failed to Open JTAG Cable
+    Unknown Error
+ 
+00:22:41.432 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+00:23:10.769 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Could not open plug-in of the type: digilent_plugin. Please check to make sure the correct plug-in for this type is properly installed.
+The following targetNames are available:
+  xilinx_svffile (libCseSvfFilePlugin)
+  xilinx_tcf (libCseTcfPlugin)
+  auto (libCseXilCommPlugin)
+  xilinx_parallel (libCseXilCommPlugin)
+  xilinx_platformusb (libCseXilCommPlugin)
+  xilinx_file (libCseXilCommPlugin)
+  xilinx_xvc (libCseXvcPlugin)
+
+    Failed to Open JTAG Cable
+    Unknown Error
+ 
+00:33:43.265 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Could not open plug-in of the type: digilent_plugin. Please check to make sure the correct plug-in for this type is properly installed.
+The following targetNames are available:
+  xilinx_svffile (libCseSvfFilePlugin)
+  xilinx_tcf (libCseTcfPlugin)
+  auto (libCseXilCommPlugin)
+  xilinx_parallel (libCseXilCommPlugin)
+  xilinx_platformusb (libCseXilCommPlugin)
+  xilinx_file (libCseXilCommPlugin)
+  xilinx_xvc (libCseXvcPlugin)
+
+    Failed to Open JTAG Cable
+    Unknown Error
+ 
+00:47:56.077 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Could not open plug-in of the type: digilent_plugin. Please check to make sure the correct plug-in for this type is properly installed.
+The following targetNames are available:
+  xilinx_svffile (libCseSvfFilePlugin)
+  xilinx_tcf (libCseTcfPlugin)
+  auto (libCseXilCommPlugin)
+  xilinx_parallel (libCseXilCommPlugin)
+  xilinx_platformusb (libCseXilCommPlugin)
+  xilinx_file (libCseXilCommPlugin)
+  xilinx_xvc (libCseXvcPlugin)
+
+    Failed to Open JTAG Cable
+    Unknown Error
+ 
+00:57:31.426 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Could not open plug-in of the type: digilent_plugin. Please check to make sure the correct plug-in for this type is properly installed.
+The following targetNames are available:
+  xilinx_svffile (libCseSvfFilePlugin)
+  xilinx_tcf (libCseTcfPlugin)
+  auto (libCseXilCommPlugin)
+  xilinx_parallel (libCseXilCommPlugin)
+  xilinx_platformusb (libCseXilCommPlugin)
+  xilinx_file (libCseXilCommPlugin)
+  xilinx_xvc (libCseXvcPlugin)
+
+    Failed to Open JTAG Cable
+    Unknown Error
+ 
+00:57:45.658 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+01:00:31.200 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Could not open plug-in of the type: digilent_plugin. Please check to make sure the correct plug-in for this type is properly installed.
+The following targetNames are available:
+  xilinx_svffile (libCseSvfFilePlugin)
+  xilinx_tcf (libCseTcfPlugin)
+  auto (libCseXilCommPlugin)
+  xilinx_parallel (libCseXilCommPlugin)
+  xilinx_platformusb (libCseXilCommPlugin)
+  xilinx_file (libCseXilCommPlugin)
+  xilinx_xvc (libCseXvcPlugin)
+
+    Failed to Open JTAG Cable
+    Unknown Error
+ 
+01:01:55.349 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+01:40:22.042 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Unknown Error
+ 
+01:40:58.384 INFO  - FPGA configured successfully with bitstream "/home/vivric/workspace/gsm_sim_lab/software/fifo_v_1_1/gsm_sim_v_1_0_fifo_hw_platform/download.bit" 
+01:41:20.224 INFO  - FPGA configured successfully with bitstream "/home/vivric/workspace/gsm_sim_lab/software/fifo_v_1_1/gsm_sim_v_1_0_fifo_hw_platform/download.bit" 
+01:42:01.329 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Unknown Error
+ 
+01:42:16.138 INFO  - FPGA configured successfully with bitstream "/home/vivric/workspace/gsm_sim_lab/software/fifo_v_1_1/gsm_sim_v_1_0_fifo_hw_platform/download.bit" 
+01:46:53.649 WARN  - Terminating existing sessions on processor microblaze_0 
+01:47:00.393 INFO  - FPGA configured successfully with bitstream "/home/vivric/workspace/gsm_sim_lab/software/fifo_v_1_1/gsm_sim_v_1_0_fifo_hw_platform/download.bit" 
+01:47:00.673 ERROR - Error while closing JTAG UART server: System is NOT a Hardware
+ 
+01:51:24.171 WARN  - Terminating existing sessions on processor microblaze_0 
+01:51:31.827 INFO  - FPGA configured successfully with bitstream "/home/vivric/workspace/gsm_sim_lab/software/fifo_v_1_1/gsm_sim_v_1_0_fifo_hw_platform/download.bit" 
+02:07:05.473 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+02:07:06.004 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+02:07:31.942 INFO  - Processing command line option -hwspec /home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/system.xml. 
+02:07:35.505 INFO  - The hardware specification for project 'gsm_sim_v_1_0_fifo_hw_platform' is different from /home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/system.xml. 
+02:07:35.821 INFO  - Copied contents of /home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/system.xml into /gsm_sim_v_1_0_fifo_hw_platform/system.xml. 
+02:07:35.824 INFO  - Copied contents of /home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/system.bit into /gsm_sim_v_1_0_fifo_hw_platform/system.bit. 
+02:07:35.825 INFO  - Copied contents of /home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/system_bd.bmm into /gsm_sim_v_1_0_fifo_hw_platform/system_bd.bmm. 
+02:07:36.138 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+02:07:38.284 INFO  - Updating hardware inferred compiler options for fifo_v_1_1_a. 
+02:07:38.311 INFO  - Clearing existing target manager status. 
+02:08:43.598 INFO  - FPGA configured successfully with bitstream "/home/vivric/workspace/gsm_sim_lab/software/fifo_v_1_1/gsm_sim_v_1_0_fifo_hw_platform/download.bit" 
+02:09:14.871 INFO  - FPGA configured successfully with bitstream "/home/vivric/workspace/gsm_sim_lab/software/fifo_v_1_1/gsm_sim_v_1_0_fifo_hw_platform/download.bit" 
+02:11:40.059 WARN  - Terminating existing sessions on processor microblaze_0 
+02:11:43.959 INFO  - FPGA configured successfully with bitstream "/home/vivric/workspace/gsm_sim_lab/software/fifo_v_1_1/gsm_sim_v_1_0_fifo_hw_platform/download.bit" 
+02:11:46.400 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+02:13:16.016 INFO  - Time out for XMD transaction is 60000
+If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx SDK -> XMD Startup 
+02:13:16.016 ERROR - Timeout occured while waiting to get reply for command "xdisconnect -cable" 
+02:13:39.473 ERROR - Unexpected error while issuing command {"command": "xdisconnect -cable"} to XMD: java.net.SocketException: Broken pipe 
+02:15:27.670 INFO  - FPGA configured successfully with bitstream "/home/vivric/workspace/gsm_sim_lab/software/fifo_v_1_1/gsm_sim_v_1_0_fifo_hw_platform/download.bit" 
+02:16:12.404 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+02:17:25.286 WARN  - Terminating existing sessions on processor microblaze_0 
+02:17:26.495 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+02:18:25.659 INFO  - Time out for XMD transaction is 60000
+If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx SDK -> XMD Startup 
+02:18:25.659 ERROR - Timeout occured while waiting to get reply for command "xdisconnect -cable" 
+02:18:42.461 ERROR - Unexpected error while issuing command {"command": "xfpga_isconfigured -cable type digilent_plugin"} to XMD: java.net.SocketException: Broken pipe 
+02:18:42.461 ERROR - Checking FPGA configuration failed.. 
+02:19:06.112 ERROR - Unexpected error while issuing command {"command": "xdisconnect -cable"} to XMD: java.net.SocketException: Broken pipe 
+02:19:21.440 ERROR - Unexpected error while issuing command {"command": "xdisconnect -cable"} to XMD: java.net.SocketException: Broken pipe 
+02:19:31.919 INFO  - Time out for XMD transaction is 60000
+If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx SDK -> XMD Startup 
+02:19:31.919 ERROR - Timeout occured while waiting to get reply for command "xfpga_isconfigured -cable type digilent_plugin" 
+02:19:31.919 ERROR - Checking FPGA configuration failed.. 
+02:19:44.249 ERROR - Unexpected error while issuing command {"command": "xdisconnect -cable"} to XMD: java.net.SocketException: Broken pipe 
+02:19:58.479 ERROR - Unexpected error while issuing command {"command": "xdisconnect -cable"} to XMD: java.net.SocketException: Broken pipe 
+02:20:07.325 ERROR - Unexpected error while issuing command {"command": "xdisconnect -cable"} to XMD: java.net.SocketException: Broken pipe 
+02:21:07.310 ERROR - Unexpected error while issuing command {"command": "xdisconnect -cable"} to XMD: java.net.SocketException: Broken pipe 
+02:21:13.281 ERROR - Unexpected error while issuing command {"command": "xfpga_isconfigured -cable type digilent_plugin"} to XMD: java.net.SocketException: Broken pipe 
+02:21:13.284 ERROR - Checking FPGA configuration failed.. 
+02:21:19.786 ERROR - Unexpected error while issuing command {"command": "xfpga_isconfigured -cable type digilent_plugin"} to XMD: java.net.SocketException: Broken pipe 
+02:21:19.787 ERROR - Checking FPGA configuration failed.. 
+02:22:56.812 INFO  - FPGA configured successfully with bitstream "/home/vivric/workspace/gsm_sim_lab/software/fifo_v_1_1/gsm_sim_v_1_0_fifo_hw_platform/download.bit" 
+02:23:24.403 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+07:10:39.089 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

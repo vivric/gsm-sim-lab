@@ -1,1 +1,19 @@
 21:46:49.016 INFO  - Processing command line option -hwspec /home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/system.xml. 
+19:56:55.649 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+19:57:54.550 INFO  - Time out for XMD transaction is 60000
+If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx SDK -> XMD Startup 
+19:57:54.551 ERROR - Timeout occured while waiting to get reply for command "xfpga  -cable type digilent_plugin -f /home/ga97guz/workspace/gsm_sim/software/fifo_v_1_0/gsm_sim_v_1_0_fifo_hw_platform/download.bit -report_progress" 
+19:57:54.552 ERROR - FPGA Configuration failed. 
+19:59:21.350 INFO  - Time out for XMD transaction is 60000
+If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx SDK -> XMD Startup 
+19:59:21.351 ERROR - Timeout occured while waiting to get reply for command "xdisconnect -cable" 
+20:09:18.144 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+20:10:18.092 INFO  - Time out for XMD transaction is 60000
+If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx SDK -> XMD Startup 
+20:10:18.093 ERROR - Timeout occured while waiting to get reply for command "xfpga  -cable type digilent_plugin -f /home/ga97guz/workspace/gsm_sim/software/fifo_v_1_0/gsm_sim_v_1_0_fifo_hw_platform/download.bit -report_progress" 
+20:10:18.095 ERROR - FPGA Configuration failed. 
+20:11:27.526 INFO  - Time out for XMD transaction is 60000
+If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx SDK -> XMD Startup 
+20:11:27.544 ERROR - Timeout occured while waiting to get reply for command "xdisconnect -cable" 
+20:11:56.930 ERROR - Unexpected error while issuing command {"command": "xdisconnect -cable"} to XMD: java.net.SocketException: Broken pipe 
+20:12:16.274 ERROR - Unexpected error while issuing command {"command": "xdisconnect -cable"} to XMD: java.net.SocketException: Broken pipe 

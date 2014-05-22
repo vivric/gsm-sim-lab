@@ -5,7 +5,7 @@ Parameter TMPDIR set to /home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/sy
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> 
 
@@ -100,7 +100,7 @@ Synthesizing Unit <FIT_timer>.
     Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/fit_timer_v1_01_c/hdl/vhdl/fit_timer.vhd".
         C_FAMILY = "spartan6"
         C_NO_CLOCKS = 10000
-        C_INACCURACY = 0
+        C_INACCURACY = 5
         C_EXT_RESET_HIGH = 1
     Summary:
 	no macro.
@@ -346,13 +346,13 @@ Clk            |    2.939|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 7.11 secs
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.38 secs
  
 --> 
 
 
-Total memory usage is 398044 kilobytes
+Total memory usage is 398060 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
