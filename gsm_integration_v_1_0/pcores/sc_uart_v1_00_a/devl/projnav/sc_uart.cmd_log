@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/pcores/sc_uart_v1_00_a/devl/projnav/sc_uart.xst" -ofn "/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/pcores/sc_uart_v1_00_a/devl/projnav/sc_uart.syr" 
+xst -intstyle ise -ifn "/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/pcores/sc_uart_v1_00_a/devl/projnav/sc_uart.xst" -ofn "/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/pcores/sc_uart_v1_00_a/devl/projnav/sc_uart.syr" 

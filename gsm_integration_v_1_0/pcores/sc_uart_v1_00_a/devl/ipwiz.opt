@@ -1,0 +1,11 @@
+-batch 
+-create sc_uart 
+-ver 1.00.a 
+-dir "/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo" 
+-lang vhdl 
+-bus axi4lite s 
+-reg 2 
+-xps 
+-ise 
+-bfmsim all
+-driver 

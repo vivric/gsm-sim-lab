@@ -1,0 +1,148 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to /home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/synthesis/xst_temp_dir/
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "system_sc_uart_interface_0_wrapper_xst.prj"
+Verilog Include Directory          : {"/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/" "/home/ga38kud/vivin_gsm/gsm_sim/Nexys3_BSB_Support_v_2_7/Nexys3_AXI_BSB_Support/lib/Digilent/pcores/" "/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/" "/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
+
+---- Target Parameters
+Target Device                      : xc6slx16csg324-3
+Output File Name                   : "../implementation/system_sc_uart_interface_0_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : system_sc_uart_interface_0_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Netlist Hierarchy                  : as_optimized
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/proc_common_pkg.vhd" into library proc_common_v3_00_a
+Parsing package <proc_common_pkg>.
+Parsing package body <proc_common_pkg>.
+Parsing VHDL file "/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/family_support.vhd" into library proc_common_v3_00_a
+Parsing package <family_support>.
+Parsing package body <family_support>.
+Parsing VHDL file "/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd" into library proc_common_v3_00_a
+Parsing entity <pselect_f>.
+Parsing architecture <imp> of entity <pselect_f>.
+Parsing VHDL file "/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_pkg.vhd" into library proc_common_v3_00_a
+Parsing package <ipif_pkg>.
+Parsing package body <ipif_pkg>.
+Parsing VHDL file "/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/sc_uart_interface_v2_00_a/hdl/vhdl/uart_tx.vhd" into library sc_uart_interface_v2_00_a
+Parsing entity <UART_TX_CTRL>.
+Parsing architecture <Behavioral> of entity <uart_tx_ctrl>.
+Parsing VHDL file "/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/sc_uart_interface_v2_00_a/hdl/vhdl/uart_rx.vhd" into library sc_uart_interface_v2_00_a
+Parsing entity <UART_RX_CTRL>.
+Parsing architecture <Behavioral> of entity <uart_rx_ctrl>.
+Parsing VHDL file "/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/sc_uart_interface_v2_00_a/hdl/vhdl/Control.vhd" into library sc_uart_interface_v2_00_a
+Parsing entity <Control>.
+Parsing architecture <Behavioral> of entity <control>.
+Parsing VHDL file "/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_f.vhd" into library proc_common_v3_00_a
+Parsing entity <counter_f>.
+Parsing architecture <imp> of entity <counter_f>.
+Parsing VHDL file "/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/address_decoder.vhd" into library axi_lite_ipif_v1_01_a
+Parsing entity <address_decoder>.
+Parsing architecture <IMP> of entity <address_decoder>.
+Parsing VHDL file "/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/sc_uart_interface_v2_00_a/hdl/vhdl/uart_top.vhd" into library sc_uart_interface_v2_00_a
+Parsing entity <uart_top>.
+Parsing architecture <Behavioral> of entity <uart_top>.
+Parsing VHDL file "/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/sc_uart_interface_v2_00_a/hdl/vhdl/tx_cdc.vhd" into library sc_uart_interface_v2_00_a
+Parsing entity <tx_cdc>.
+Parsing architecture <Behavioral> of entity <tx_cdc>.
+Parsing VHDL file "/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/sc_uart_interface_v2_00_a/hdl/vhdl/rx_cdc.vhd" into library sc_uart_interface_v2_00_a
+Parsing entity <rx_cdc>.
+Parsing architecture <Behavioral> of entity <rx_cdc>.
+Parsing VHDL file "/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/sc_uart_interface_v2_00_a/hdl/vhdl/reset_cdc.vhd" into library sc_uart_interface_v2_00_a
+Parsing entity <reset_cdc>.
+Parsing architecture <Behavioral> of entity <reset_cdc>.
+Parsing VHDL file "/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/slave_attachment.vhd" into library axi_lite_ipif_v1_01_a
+Parsing entity <slave_attachment>.
+Parsing architecture <imp> of entity <slave_attachment>.
+Parsing VHDL file "/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/sc_uart_interface_v2_00_a/hdl/vhdl/uart_ip.vhd" into library sc_uart_interface_v2_00_a
+Parsing entity <uart_ip>.
+Parsing architecture <Behavioral> of entity <uart_ip>.
+Parsing VHDL file "/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/axi_lite_ipif.vhd" into library axi_lite_ipif_v1_01_a
+Parsing entity <axi_lite_ipif>.
+Parsing architecture <imp> of entity <axi_lite_ipif>.
+Parsing VHDL file "/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/sc_uart_interface_v1_00_a/hdl/vhdl/user_logic.vhd" into library sc_uart_interface_v1_00_a
+Parsing entity <user_logic>.
+Parsing architecture <IMP> of entity <user_logic>.
+Parsing VHDL file "/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/sc_uart_interface_v1_00_a/hdl/vhdl/sc_uart_interface.vhd" into library sc_uart_interface_v1_00_a
+Parsing entity <sc_uart_interface>.
+Parsing architecture <IMP> of entity <sc_uart_interface>.
+Parsing VHDL file "/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/hdl/system_sc_uart_interface_0_wrapper.vhd" into library work
+Parsing entity <system_sc_uart_interface_0_wrapper>.
+Parsing architecture <STRUCTURE> of entity <system_sc_uart_interface_0_wrapper>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <system_sc_uart_interface_0_wrapper> (architecture <STRUCTURE>) from library <work>.
+ERROR:HDLCompiler:1156 - "/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/hdl/system_sc_uart_interface_0_wrapper.vhd" Line 81: Formal port <UART_IO_I> does not exist in entity <sc_uart_interface>.  Please compare the definition of block <sc_uart_interface> to its component declaration and its instantion to detect the mismatch.
+INFO:HDLCompiler:1408 - "/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/sc_uart_interface_v1_00_a/hdl/vhdl/sc_uart_interface.vhd" Line 114. sc_uart_interface is declared here
+ERROR:HDLCompiler:1156 - "/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/hdl/system_sc_uart_interface_0_wrapper.vhd" Line 82: Formal port <UART_IO_O> does not exist in entity <sc_uart_interface>.  Please compare the definition of block <sc_uart_interface> to its component declaration and its instantion to detect the mismatch.
+INFO:HDLCompiler:1408 - "/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/sc_uart_interface_v1_00_a/hdl/vhdl/sc_uart_interface.vhd" Line 114. sc_uart_interface is declared here
+ERROR:HDLCompiler:1156 - "/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/hdl/system_sc_uart_interface_0_wrapper.vhd" Line 83: Formal port <UART_IO_T> does not exist in entity <sc_uart_interface>.  Please compare the definition of block <sc_uart_interface> to its component declaration and its instantion to detect the mismatch.
+INFO:HDLCompiler:1408 - "/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/sc_uart_interface_v1_00_a/hdl/vhdl/sc_uart_interface.vhd" Line 114. sc_uart_interface is declared here
+
+Elaborating entity <sc_uart_interface> (architecture <IMP>) with generics from library <sc_uart_interface_v1_00_a>.
+Execution of entity sc_uart_interface failed
+Netlist system_sc_uart_interface_0_wrapper(STRUCTURE) remains a blackbox, due to errors in its contents
+--> 
+
+
+Total memory usage is 325916 kilobytes
+
+Number of errors   :    3 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

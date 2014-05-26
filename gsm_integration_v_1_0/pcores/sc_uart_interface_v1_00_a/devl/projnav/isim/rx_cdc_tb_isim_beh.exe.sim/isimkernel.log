@@ -1,0 +1,28 @@
+Command line:
+   rx_cdc_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  52179
+
+Mon May 26 10:53:49 2014
+
+
+ Elaboration Time: 0.06 sec
+
+ Current Memory Usage: 209.326 Meg
+
+ Total Signals          : 24
+ Total Nets             : 37
+ Total Signal Drivers   : 15
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 8
+ Total Traceable Variables  : 10
+ Total Scalar Nets and Variables : 399
+
+ Total Simulation Time: 0.21 sec
+
+ Current Memory Usage: 217.657 Meg
+
+Mon May 26 11:04:42 2014
+

@@ -1,0 +1,14 @@
+set -tmpdir /home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/synthesis/xst_temp_dir/
+run
+-opt_mode speed
+-netlist_hierarchy as_optimized
+-opt_level 1
+-p xc6slx16csg324-3
+-top system_push_buttons_4bits_wrapper
+-ifmt MIXED
+-ifn system_push_buttons_4bits_wrapper_xst.prj
+-ofn ../implementation/system_push_buttons_4bits_wrapper.ngc
+-hierarchy_separator /
+-iobuf NO
+-sd {../implementation}
+-vlgincdir {"/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/" "/home/ga38kud/vivin_gsm/gsm_sim/Nexys3_BSB_Support_v_2_7/Nexys3_AXI_BSB_Support/lib/Digilent/pcores/" "/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/" "/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }

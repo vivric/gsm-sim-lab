@@ -1,0 +1,10 @@
+##############################################################################
+## Filename:          /home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/pcores/sc_uart_v1_00_a/data/sc_uart_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Tue May 20 20:47:36 2014 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib proc_common_v3_00_a  all 
+lib axi_lite_ipif_v1_01_a  all 
+lib sc_uart_v1_00_a user_logic vhdl
+lib sc_uart_v1_00_a sc_uart vhdl

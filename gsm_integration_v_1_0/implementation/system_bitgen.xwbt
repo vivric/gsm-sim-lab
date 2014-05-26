@@ -1,0 +1,7 @@
+INFILE=/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/implementation/system.ncd
+OUTFILE=/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/implementation/system.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/implementation
+LICENSE=ISE
+USER_INFO=176488445_177900754_210552656_564

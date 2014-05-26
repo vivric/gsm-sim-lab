@@ -1,0 +1,2 @@
+vhdl work "rx_cdc.vhd"
+vhdl work "rx_cdc_tb.vhd"

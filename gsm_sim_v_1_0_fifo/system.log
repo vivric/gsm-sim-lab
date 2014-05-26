@@ -6047,3 +6047,13 @@ Done writing filter settings to:
 	/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/etc/system.filters
 Done writing Tab View settings to:
 	/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/etc/system.gui
+Xilinx Platform Studio (XPS)
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+WARNING:EDK:2137 - Peripheral sc_uart_interface_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+ERROR:EDK:1405 - File not found in any repository 'sc_uart_interface_v1_00_a/hdl/vhdl/user_logic.vhd'
+ERROR:EDK:1405 - File not found in any repository 'sc_uart_interface_v1_00_a/hdl/vhdl/sc_uart_interface.vhd'
+WARNING:EDK:2137 - Peripheral sc_uart_interface_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+WARNING:EDK:2137 - Peripheral sc_uart_interface_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+WARNING:EDK:2137 - Peripheral sc_uart_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 

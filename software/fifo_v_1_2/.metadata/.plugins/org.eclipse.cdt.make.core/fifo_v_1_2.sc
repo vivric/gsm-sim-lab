@@ -4,6 +4,9 @@
 <scannerInfo id="org.eclipse.cdt.make.core.discoveredScannerInfo">
 <instance id="xilinx.gnu.mb.exe.debug.1934457082;xilinx.gnu.mb.exe.debug.1934457082.">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+<includePath path="/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/include"/>
+<includePath path="/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/include-fixed"/>
+<includePath path="/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include"/>
 <includePath path="/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/include"/>
 <includePath path="/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/include-fixed"/>
 <includePath path="/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include"/>
@@ -398,6 +401,9 @@
 </instance>
 <instance id="xilinx.gnu.mb.exe.debug.1934457082;xilinx.gnu.mb.exe.debug.1934457082.;xilinx.gnu.mb.c.toolchain.compiler.debug.427408495;xilinx.gnu.compiler.input.639735371">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+<includePath path="/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/include"/>
+<includePath path="/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/include-fixed"/>
+<includePath path="/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include"/>
 <includePath path="/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/include"/>
 <includePath path="/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/include-fixed"/>
 <includePath path="/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include"/>

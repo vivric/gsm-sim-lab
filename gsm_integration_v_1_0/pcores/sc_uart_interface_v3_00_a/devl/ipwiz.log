@@ -1,0 +1,197 @@
+Mapping logical library work (line 5) to current logical library
+sc_uart_interface_v3_00_a ...
+Mapping logical library work (line 6) to current logical library
+sc_uart_interface_v3_00_a ...
+Mapping logical library work (line 7) to current logical library
+sc_uart_interface_v3_00_a ...
+Mapping logical library work (line 10) to current logical library
+sc_uart_interface_v3_00_a ...
+Mapping logical library work (line 11) to current logical library
+sc_uart_interface_v3_00_a ...
+Mapping logical library work (line 12) to current logical library
+sc_uart_interface_v3_00_a ...
+Mapping logical library work (line 13) to current logical library
+sc_uart_interface_v3_00_a ...
+Mapping logical library work (line 15) to current logical library
+sc_uart_interface_v3_00_a ...
+Parsing XST project file successfully ...
+Analyzing HDL source files ...
+Analyzing HDL source files successfully ...
+HDL language for the peripheral (top level) design unit sc_uart_interface is
+vhdl ...
+INFO:EDK:3391 - Create temporary xst project file:
+   /home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/sc_uart_interfac
+   e.prj
+Compiling vhdl file
+"/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_commo
+n_v3_00_a/hdl/vhdl/proc_common_pkg.vhd" in Library proc_common_v3_00_a.
+Package <proc_common_pkg> compiled.
+Package body <proc_common_pkg> compiled.
+Compiling vhdl file
+"/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_commo
+n_v3_00_a/hdl/vhdl/family_support.vhd" in Library proc_common_v3_00_a.
+Package <family_support> compiled.
+Package body <family_support> compiled.
+Compiling vhdl file
+"/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/sc_uart_interface_
+v3_00_a/devl/projnav/uart_tx.vhd" in Library sc_uart_interface_v3_00_a.
+Entity <UART_TX_CTRL> compiled.
+Entity <UART_TX_CTRL> (Architecture <Behavioral>) compiled.
+Compiling vhdl file
+"/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/sc_uart_interface_
+v3_00_a/devl/projnav/uart_rx.vhd" in Library sc_uart_interface_v3_00_a.
+Entity <UART_RX_CTRL> compiled.
+Entity <UART_RX_CTRL> (Architecture <Behavioral>) compiled.
+Compiling vhdl file
+"/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/sc_uart_interface_
+v3_00_a/devl/projnav/Control.vhd" in Library sc_uart_interface_v3_00_a.
+Entity <Control> compiled.
+Entity <Control> (Architecture <Behavioral>) compiled.
+Compiling vhdl file
+"/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_commo
+n_v3_00_a/hdl/vhdl/counter_f.vhd" in Library proc_common_v3_00_a.
+Entity <counter_f> compiled.
+Entity <counter_f> (Architecture <imp>) compiled.
+Compiling vhdl file
+"/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_commo
+n_v3_00_a/hdl/vhdl/pselect_f.vhd" in Library proc_common_v3_00_a.
+Entity <pselect_f> compiled.
+Entity <pselect_f> (Architecture <imp>) compiled.
+Compiling vhdl file
+"/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_commo
+n_v3_00_a/hdl/vhdl/ipif_pkg.vhd" in Library proc_common_v3_00_a.
+Package <ipif_pkg> compiled.
+Package body <ipif_pkg> compiled.
+Compiling vhdl file
+"/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/sc_uart_interface_
+v3_00_a/devl/projnav/reset_cdc.vhd" in Library sc_uart_interface_v3_00_a.
+Entity <reset_cdc> compiled.
+Entity <reset_cdc> (Architecture <Behavioral>) compiled.
+Compiling vhdl file
+"/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/sc_uart_interface_
+v3_00_a/devl/projnav/rx_cdc.vhd" in Library sc_uart_interface_v3_00_a.
+Entity <rx_cdc> compiled.
+Entity <rx_cdc> (Architecture <Behavioral>) compiled.
+Compiling vhdl file
+"/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/sc_uart_interface_
+v3_00_a/devl/projnav/tx_cdc.vhd" in Library sc_uart_interface_v3_00_a.
+Entity <tx_cdc> compiled.
+Entity <tx_cdc> (Architecture <Behavioral>) compiled.
+Compiling vhdl file
+"/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/sc_uart_interface_
+v3_00_a/devl/projnav/uart_top.vhd" in Library sc_uart_interface_v3_00_a.
+Entity <uart_top> compiled.
+Entity <uart_top> (Architecture <Behavioral>) compiled.
+Compiling vhdl file
+"/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_i
+pif_v1_01_a/hdl/vhdl/address_decoder.vhd" in Library axi_lite_ipif_v1_01_a.
+Entity <address_decoder> compiled.
+Entity <address_decoder> (Architecture <IMP>) compiled.
+Compiling vhdl file
+"/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/sc_uart_interface_
+v3_00_a/devl/projnav/uart_ip.vhd" in Library sc_uart_interface_v3_00_a.
+Entity <uart_ip> compiled.
+Entity <uart_ip> (Architecture <Behavioral>) compiled.
+Compiling vhdl file
+"/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_i
+pif_v1_01_a/hdl/vhdl/slave_attachment.vhd" in Library axi_lite_ipif_v1_01_a.
+Entity <slave_attachment> compiled.
+Entity <slave_attachment> (Architecture <imp>) compiled.
+Compiling vhdl file
+"/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_i
+pif_v1_01_a/hdl/vhdl/axi_lite_ipif.vhd" in Library axi_lite_ipif_v1_01_a.
+Entity <axi_lite_ipif> compiled.
+Entity <axi_lite_ipif> (Architecture <imp>) compiled.
+Compiling vhdl file
+"/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/sc_uart_interface_
+v3_00_a/hdl/vhdl/user_logic.vhd" in Library sc_uart_interface_v3_00_a.
+Entity <user_logic> compiled.
+Entity <user_logic> (Architecture <IMP>) compiled.
+Compiling vhdl file
+"/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/sc_uart_interface_
+v3_00_a/hdl/vhdl/sc_uart_interface.vhd" in Library sc_uart_interface_v3_00_a.
+Entity <sc_uart_interface> compiled.
+Entity <sc_uart_interface> (Architecture <IMP>) compiled.
+
+
+Analyzing HDL attributes ...
+Entity name = sc_uart_interface
+INFO:EDK:1607 - IPTYPE set to value : PERIPHERAL
+INFO:EDK:1511 - IMP_NETLIST set to value : TRUE
+INFO:EDK:1486 - HDL set to value : VHDL
+INFO:EDK:1951 - No SIGIS=CLK specified for probable Clock signal UART_CLK
+INFO:EDK:1953 - No SIGIS=RST specified for probable Reset signal UART_RST
+INFO:EDK:1951 - No SIGIS=CLK specified for probable Clock signal UART_CLK
+INFO:EDK:1953 - No SIGIS=RST specified for probable Reset signal UART_RST
+INFO:EDK:1631 - Infer bus clock [S_AXI_ACLK] for bus interface S_AXI ...
+Copying file uart_tx.vhd to
+/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/sc_uart_interface_v
+3_00_a/hdl/vhdl/ ...
+Copying file uart_rx.vhd to
+/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/sc_uart_interface_v
+3_00_a/hdl/vhdl/ ...
+Copying file Control.vhd to
+/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/sc_uart_interface_v
+3_00_a/hdl/vhdl/ ...
+Copying file uart_top.vhd to
+/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/sc_uart_interface_v
+3_00_a/hdl/vhdl/ ...
+Copying file tx_cdc.vhd to
+/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/sc_uart_interface_v
+3_00_a/hdl/vhdl/ ...
+Copying file rx_cdc.vhd to
+/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/sc_uart_interface_v
+3_00_a/hdl/vhdl/ ...
+Copying file reset_cdc.vhd to
+/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/sc_uart_interface_v
+3_00_a/hdl/vhdl/ ...
+Copying file uart_ip.vhd to
+/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/sc_uart_interface_v
+3_00_a/hdl/vhdl/ ...
+Copying file user_logic.vhd to
+/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/sc_uart_interface_v
+3_00_a/hdl/vhdl/ ...
+Copying file sc_uart_interface.vhd to
+/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/sc_uart_interface_v
+3_00_a/hdl/vhdl/ ...
+
+Thank you for using Create and Import Peripheral Wizard! Please find your
+imported peripheral under
+/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/sc_uart_interface_v
+3_00_a.
+
+Summary:
+
+  Logical library     : sc_uart_interface_v3_00_a
+  Version             : 3.00.a
+  Bus interface(s)    : S_AXI4LITE 
+
+The following sub-directories will be created:
+
+  - sc_uart_interface_v3_00_a/data
+  - sc_uart_interface_v3_00_a/hdl
+  - sc_uart_interface_v3_00_a/hdl/verilog
+  - sc_uart_interface_v3_00_a/hdl/vhdl
+
+
+The following HDL source files will be copied into the
+sc_uart_interface_v3_00_a/hdl/vhdl directory:
+
+  - uart_tx.vhd
+  - uart_rx.vhd
+  - Control.vhd
+  - uart_top.vhd
+  - tx_cdc.vhd
+  - rx_cdc.vhd
+  - reset_cdc.vhd
+  - uart_ip.vhd
+  - user_logic.vhd
+  - sc_uart_interface.vhd
+
+The following files will be created under the sc_uart_interface_v3_00_a/data
+directory:
+
+  - sc_uart_interface_v2_1_0.mpd
+  - sc_uart_interface_v2_1_0.pao
+
+

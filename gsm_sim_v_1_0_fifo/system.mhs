@@ -19,9 +19,9 @@
  PORT GCLK = GCLK, DIR = I, SIGIS = CLK, CLK_FREQ = 100000000
  PORT DIP_Switches_8Bits_TRI_I = DIP_Switches_8Bits_TRI_I, DIR = I, VEC = [7:0]
  PORT sc_uart_0_tx_data_pin = sc_uart_0_tx_data, DIR = O, VEC = [7:0]
+ PORT sc_uart_0_rx_data_pin = sc_uart_0_rx_data, DIR = I, VEC = [7:0]
  PORT sc_uart_0_master_status_pin = sc_uart_0_master_status, DIR = O, VEC = [2:0]
  PORT sc_uart_0_slave_status_pin = sc_uart_0_slave_status, DIR = I, VEC = [2:0]
- PORT sc_uart_0_rx_data_pin = sc_uart_0_rx_data, DIR = I, VEC = [7:0]
 
 
 BEGIN proc_sys_reset
@@ -223,8 +223,8 @@ BEGIN sc_uart
  BUS_INTERFACE S_AXI = axi4lite_0
  PORT S_AXI_ACLK = clk_100_0000MHz
  PORT tx_data = sc_uart_0_tx_data
+ PORT rx_data = sc_uart_0_rx_data
  PORT master_status = sc_uart_0_master_status
  PORT slave_status = sc_uart_0_slave_status
- PORT rx_data = sc_uart_0_rx_data
 END
 

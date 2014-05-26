@@ -21,3 +21,9 @@
 	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
 
 03:06:00.105 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+10:00:36.384 INFO  - FPGA configured successfully with bitstream "/home/ga38kud/vivin_gsm/gsm_sim/software/fifo_v_1_2/gsm_sim_v_1_0_fifo_hw_platform/download.bit" 
+10:24:15.323 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:25:16.989 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:26:01.351 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:27:18.155 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:42:15.446 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 

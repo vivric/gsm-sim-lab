@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/home/ga37jom/GSM/prog/pcores/sc_uart_interface_v1_00_a/devl/projnav/rx_cdc_tb_isim_beh.exe" -prj "/home/ga37jom/GSM/prog/pcores/sc_uart_interface_v1_00_a/devl/projnav/rx_cdc_tb_beh.prj" "work.rx_cdc_tb" 

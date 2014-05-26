@@ -1,0 +1,12 @@
+run
+-opt_level 2
+-opt_mode speed
+-ifmt mixed
+-ifn "/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/exa_v1_00_a/devl/synthesis/exa_xst.prj"
+-top exa
+-p virtex6
+-ofn "/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/exa_v1_00_a/devl/synthesis/exa_xst.ngc"
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /
+-work_lib exa_v1_00_a

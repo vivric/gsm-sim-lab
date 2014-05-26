@@ -1,6 +1,6 @@
-02:42:46 **** Auto Build of project fifo_v_1_2_bsp ****
+10:25:12 **** Auto Build of project fifo_v_1_2_bsp ****
 make -k all 
 Finished building libraries
 
-02:42:46 Build Finished (took 549ms)
+10:25:12 Build Finished (took 75ms)
 

@@ -1,0 +1,111 @@
+Parsing XST project file successfully ...
+Analyzing HDL source files ...
+Analyzing HDL source files successfully ...
+HDL language for the peripheral (top level) design unit exa is vhdl ...
+INFO:EDK:3391 - Create temporary xst project file:
+   /home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/exa.prj
+Compiling vhdl file
+"/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_commo
+n_v3_00_a/hdl/vhdl/proc_common_pkg.vhd" in Library proc_common_v3_00_a.
+Package <proc_common_pkg> compiled.
+Package body <proc_common_pkg> compiled.
+Compiling vhdl file
+"/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_commo
+n_v3_00_a/hdl/vhdl/family_support.vhd" in Library proc_common_v3_00_a.
+Package <family_support> compiled.
+Package body <family_support> compiled.
+Compiling vhdl file
+"/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_commo
+n_v3_00_a/hdl/vhdl/or_muxcy.vhd" in Library proc_common_v3_00_a.
+Entity <or_muxcy> compiled.
+Entity <or_muxcy> (Architecture <implementation>) compiled.
+Compiling vhdl file
+"/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_commo
+n_v3_00_a/hdl/vhdl/or_gate128.vhd" in Library proc_common_v3_00_a.
+Entity <or_gate128> compiled.
+Entity <or_gate128> (Architecture <imp>) compiled.
+Compiling vhdl file
+"/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_commo
+n_v3_00_a/hdl/vhdl/counter_f.vhd" in Library proc_common_v3_00_a.
+Entity <counter_f> compiled.
+Entity <counter_f> (Architecture <imp>) compiled.
+Compiling vhdl file
+"/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_commo
+n_v3_00_a/hdl/vhdl/pselect_f.vhd" in Library proc_common_v3_00_a.
+Entity <pselect_f> compiled.
+Entity <pselect_f> (Architecture <imp>) compiled.
+Compiling vhdl file
+"/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_commo
+n_v3_00_a/hdl/vhdl/ipif_pkg.vhd" in Library proc_common_v3_00_a.
+Package <ipif_pkg> compiled.
+Package body <ipif_pkg> compiled.
+Compiling vhdl file
+"/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_i
+pif_v1_01_a/hdl/vhdl/address_decoder.vhd" in Library axi_lite_ipif_v1_01_a.
+Entity <address_decoder> compiled.
+Entity <address_decoder> (Architecture <IMP>) compiled.
+Compiling vhdl file
+"/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_i
+pif_v1_01_a/hdl/vhdl/slave_attachment.vhd" in Library axi_lite_ipif_v1_01_a.
+Entity <slave_attachment> compiled.
+Entity <slave_attachment> (Architecture <imp>) compiled.
+Compiling vhdl file
+"/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_i
+pif_v1_01_a/hdl/vhdl/axi_lite_ipif.vhd" in Library axi_lite_ipif_v1_01_a.
+Entity <axi_lite_ipif> compiled.
+Entity <axi_lite_ipif> (Architecture <imp>) compiled.
+Compiling vhdl file
+"/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/exa_v1_00_a/hdl/vh
+dl/user_logic.vhd" in Library exa_v1_00_a.
+Entity <user_logic> compiled.
+Entity <user_logic> (Architecture <IMP>) compiled.
+Compiling vhdl file
+"/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/exa_v1_00_a/hdl/vh
+dl/exa.vhd" in Library exa_v1_00_a.
+Entity <exa> compiled.
+Entity <exa> (Architecture <IMP>) compiled.
+
+
+Analyzing HDL attributes ...
+Entity name = exa
+INFO:EDK:1607 - IPTYPE set to value : PERIPHERAL
+INFO:EDK:1511 - IMP_NETLIST set to value : TRUE
+INFO:EDK:1486 - HDL set to value : VHDL
+INFO:EDK:1631 - Infer bus clock [S_AXI_ACLK] for bus interface S_AXI ...
+Copying file user_logic.vhd to
+/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/exa_v1_00_a/hdl/vhd
+l/ ...
+Copying file exa.vhd to
+/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/exa_v1_00_a/hdl/vhd
+l/ ...
+
+Thank you for using Create and Import Peripheral Wizard! Please find your
+imported peripheral under
+/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/exa_v1_00_a.
+
+Summary:
+
+  Logical library     : exa_v1_00_a
+  Version             : 1.00.a
+  Bus interface(s)    : S_AXI4LITE 
+
+The following sub-directories will be created:
+
+  - exa_v1_00_a/data
+  - exa_v1_00_a/hdl
+  - exa_v1_00_a/hdl/verilog
+  - exa_v1_00_a/hdl/vhdl
+
+
+The following HDL source files will be copied into the exa_v1_00_a/hdl/vhdl
+directory:
+
+  - user_logic.vhd
+  - exa.vhd
+
+The following files will be created under the exa_v1_00_a/data directory:
+
+  - exa_v2_1_0.mpd
+  - exa_v2_1_0.pao
+
+
