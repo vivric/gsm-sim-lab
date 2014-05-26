@@ -25,5 +25,15 @@ Problems :
 * Still facing problemes with interrupts. The module is tested by polling method. Currently interrupts are disabled.
 
 
+Modification :
+
+* UART module is interfaced with microblaze module.
+*Under testing phase
+*current version : gsm_integration_v_1_0 (hw platform)
+		   fifo_v_2_0 (sw platform)
+
+
+
+
 
 
