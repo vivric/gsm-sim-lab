@@ -1,4 +1,4 @@
-set -tmpdir /home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/synthesis/xst_temp_dir/
+set -tmpdir /home/ga38kud/vivin_gsm/gsm_sim/gsm_sim_v_1_0_fifo/synthesis/xst_temp_dir/
 run
 -opt_mode speed
 -netlist_hierarchy as_optimized
@@ -11,4 +11,4 @@ run
 -hierarchy_separator /
 -iobuf NO
 -sd {../implementation}
--vlgincdir {"/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/pcores/" "/home/vivric/Documents/Nexys3_BSB_Support_v_2_7/Nexys3_AXI_BSB_Support/lib/Digilent/pcores/" "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/" "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
+-vlgincdir {"/home/ga38kud/vivin_gsm/gsm_sim/gsm_sim_v_1_0_fifo/pcores/" "/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/" "/nfs/tools/xilinx/ise/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }

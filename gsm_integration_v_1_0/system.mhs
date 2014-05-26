@@ -18,7 +18,10 @@
  PORT LEDs_8Bits_TRI_O = LEDs_8Bits_TRI_O, DIR = O, VEC = [7:0]
  PORT GCLK = GCLK, DIR = I, SIGIS = CLK, CLK_FREQ = 100000000
  PORT DIP_Switches_8Bits_TRI_I = DIP_Switches_8Bits_TRI_I, DIR = I, VEC = [7:0]
- PORT exa_0_io = exa_0_io, DIR = IO
+ PORT sc_uart_interface_modified_0_led_pin = sc_uart_interface_modified_0_led, DIR = O, VEC = [6:0]
+ PORT sc_uart_interface_modified_0_UART_IO = sc_uart_interface_modified_0_UART_IO, DIR = IO
+ PORT sc_uart_interface_modified_0_UART_CLK_pin = sc_uart_interface_modified_0_UART_CLK, DIR = I
+ PORT sc_uart_interface_modified_0_UART_RST_pin = sc_uart_interface_modified_0_UART_RST, DIR = I
 
 
 BEGIN proc_sys_reset
@@ -186,13 +189,16 @@ BEGIN axi_gpio
  PORT GPIO_IO_I = DIP_Switches_8Bits_TRI_I
 END
 
-BEGIN exa
- PARAMETER INSTANCE = exa_0
+BEGIN sc_uart_interface_modified
+ PARAMETER INSTANCE = sc_uart_interface_modified_0
  PARAMETER HW_VER = 1.00.a
- PARAMETER C_BASEADDR = 0x72a00000
- PARAMETER C_HIGHADDR = 0x72a0ffff
+ PARAMETER C_BASEADDR = 0x7f400000
+ PARAMETER C_HIGHADDR = 0x7f40ffff
  BUS_INTERFACE S_AXI = axi4lite_0
  PORT S_AXI_ACLK = clk_100_0000MHz
- PORT io = exa_0_io
+ PORT led = sc_uart_interface_modified_0_led
+ PORT UART_IO = sc_uart_interface_modified_0_UART_IO
+ PORT UART_CLK = sc_uart_interface_modified_0_UART_CLK
+ PORT UART_RST = sc_uart_interface_modified_0_UART_RST
 END
 

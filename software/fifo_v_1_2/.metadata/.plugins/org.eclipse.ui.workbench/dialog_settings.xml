@@ -4,6 +4,8 @@
 		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID"/>
 		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID"/>
 		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/drivers/sc_uart_interface_modified_v2_00_a/src"/>
+			<item value="/home/ga38kud/vivin_gsm/gsm_sim/gsm_sim_v_1_0_fifo/drivers/sc_uart_v1_00_a/src"/>
 			<item value="/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/drivers/sc_uart_v1_00_a/src"/>
 		</list>
 	</section>

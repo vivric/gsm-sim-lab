@@ -1,0 +1,24 @@
+##############################################################################
+## Filename:          /home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/pcores/sc_uart_interface_modified_v1_00_a/data/sc_uart_interface_modified_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Mon May 26 20:34:18 2014 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib proc_common_v3_00_a proc_common_pkg vhdl
+lib proc_common_v3_00_a family_support vhdl
+lib proc_common_v3_00_a pselect_f vhdl
+lib proc_common_v3_00_a ipif_pkg vhdl
+lib sc_uart_interface_modified_v1_00_a uart_tx vhdl
+lib sc_uart_interface_modified_v1_00_a uart_rx vhdl
+lib sc_uart_interface_modified_v1_00_a Control vhdl
+lib proc_common_v3_00_a counter_f vhdl
+lib axi_lite_ipif_v1_01_a address_decoder vhdl
+lib sc_uart_interface_modified_v1_00_a uart_top vhdl
+lib sc_uart_interface_modified_v1_00_a tx_cdc vhdl
+lib sc_uart_interface_modified_v1_00_a rx_cdc vhdl
+lib sc_uart_interface_modified_v1_00_a reset_cdc vhdl
+lib axi_lite_ipif_v1_01_a slave_attachment vhdl
+lib sc_uart_interface_modified_v1_00_a uart_ip vhdl
+lib axi_lite_ipif_v1_01_a axi_lite_ipif vhdl
+lib sc_uart_interface_modified_v2_00_a user_logic vhdl
+lib sc_uart_interface_modified_v2_00_a sc_uart_interface_modified vhdl

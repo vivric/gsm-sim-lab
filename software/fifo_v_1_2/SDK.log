@@ -27,3 +27,31 @@
 10:26:01.351 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
 10:27:18.155 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
 10:42:15.446 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+19:17:45.838 INFO  - FPGA configured successfully with bitstream "/home/ga38kud/vivin_gsm/gsm_sim/software/fifo_v_1_2/gsm_sim_v_1_0_fifo_hw_platform/download.bit" 
+19:18:33.025 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+19:34:34.786 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+19:34:34.821 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+19:34:49.420 INFO  - Processing command line option -hwspec /home/ga38kud/vivin_gsm/gsm_sim/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/system.xml. 
+19:34:50.879 INFO  - The hardware specification for project 'gsm_sim_v_1_0_fifo_hw_platform' is different from /home/ga38kud/vivin_gsm/gsm_sim/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/system.xml. 
+19:34:51.028 INFO  - Copied contents of /home/ga38kud/vivin_gsm/gsm_sim/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/system.xml into /gsm_sim_v_1_0_fifo_hw_platform/system.xml. 
+19:34:51.054 INFO  - Copied contents of /home/ga38kud/vivin_gsm/gsm_sim/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/system.bit into /gsm_sim_v_1_0_fifo_hw_platform/system.bit. 
+19:34:51.062 INFO  - Copied contents of /home/ga38kud/vivin_gsm/gsm_sim/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/system_bd.bmm into /gsm_sim_v_1_0_fifo_hw_platform/system_bd.bmm. 
+19:34:51.246 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+19:34:53.111 INFO  - Updating hardware inferred compiler options for fifo_v_1_2. 
+19:34:53.117 INFO  - Clearing existing target manager status. 
+19:35:09.261 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+19:35:20.097 INFO  - Processing command line option -hwspec /home/ga38kud/vivin_gsm/gsm_sim/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/system.xml. 
+19:35:54.987 INFO  - FPGA configured successfully with bitstream "/home/ga38kud/vivin_gsm/gsm_sim/software/fifo_v_1_2/gsm_sim_v_1_0_fifo_hw_platform/download.bit" 
+19:55:16.124 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+20:01:30.809 INFO  - Processing command line option -hwspec /home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/SDK/SDK_Export/hw/system.xml. 
+20:01:32.085 INFO  - The hardware specification for project 'gsm_sim_v_1_0_fifo_hw_platform' is different from /home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/SDK/SDK_Export/hw/system.xml. 
+20:01:32.480 INFO  - Copied contents of /home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/SDK/SDK_Export/hw/system.xml into /gsm_sim_v_1_0_fifo_hw_platform/system.xml. 
+20:01:32.528 INFO  - Copied contents of /home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/SDK/SDK_Export/hw/system.bit into /gsm_sim_v_1_0_fifo_hw_platform/system.bit. 
+20:01:32.543 INFO  - Copied contents of /home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/SDK/SDK_Export/hw/system_bd.bmm into /gsm_sim_v_1_0_fifo_hw_platform/system_bd.bmm. 
+20:01:32.693 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+20:01:35.054 INFO  - Updating hardware inferred compiler options for fifo_v_1_2. 
+20:01:35.148 INFO  - Clearing existing target manager status. 
+20:06:08.803 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

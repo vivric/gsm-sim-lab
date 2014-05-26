@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2014-05-26T11:16:42</DateModified>
+  <DateModified>2014-05-26T19:19:24</DateModified>
   <ModuleName>system</ModuleName>
-  <SummaryTimeStamp>2014-05-26T11:16:42</SummaryTimeStamp>
+  <SummaryTimeStamp>2014-05-26T19:19:23</SummaryTimeStamp>
   <SavedFilePath>/home/ga38kud/vivin_gsm/gsm_sim/gsm_sim_v_1_0_fifo/__xps/ise/system.xreport</SavedFilePath>
   <FilterFile>filter.filter</FilterFile>
   <SavedFilterFilePath>/home/ga38kud/vivin_gsm/gsm_sim/gsm_sim_v_1_0_fifo/__xps/ise</SavedFilterFilePath>

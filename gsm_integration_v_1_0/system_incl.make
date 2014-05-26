@@ -74,7 +74,7 @@ implementation/system_rs232_uart_1_wrapper.ngc \
 implementation/system_push_buttons_4bits_wrapper.ngc \
 implementation/system_leds_8bits_wrapper.ngc \
 implementation/system_dip_switches_8bits_wrapper.ngc \
-implementation/system_exa_0_wrapper.ngc
+implementation/system_sc_uart_interface_modified_0_wrapper.ngc
 
 POSTSYN_NETLIST = implementation/$(SYSTEM).ngc
 

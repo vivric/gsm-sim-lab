@@ -10,14 +10,14 @@ NET DIP_Switches_8Bits_TRI_I[5] LOC = "U8"  |  IOSTANDARD = "LVCMOS33";
 NET DIP_Switches_8Bits_TRI_I[6] LOC = "V8"  |  IOSTANDARD = "LVCMOS33";
 NET DIP_Switches_8Bits_TRI_I[7] LOC = "T5"  |  IOSTANDARD = "LVCMOS33";
 NET GCLK LOC = "V10"  |  IOSTANDARD = "LVCMOS33";
-NET LEDs_8Bits_TRI_O[0] LOC = "U16"  |  IOSTANDARD = "LVCMOS33";
-NET LEDs_8Bits_TRI_O[1] LOC = "V16"  |  IOSTANDARD = "LVCMOS33";
-NET LEDs_8Bits_TRI_O[2] LOC = "U15"  |  IOSTANDARD = "LVCMOS33";
-NET LEDs_8Bits_TRI_O[3] LOC = "V15"  |  IOSTANDARD = "LVCMOS33";
-NET LEDs_8Bits_TRI_O[4] LOC = "M11"  |  IOSTANDARD = "LVCMOS33";
-NET LEDs_8Bits_TRI_O[5] LOC = "N11"  |  IOSTANDARD = "LVCMOS33";
-NET LEDs_8Bits_TRI_O[6] LOC = "R11"  |  IOSTANDARD = "LVCMOS33";
-NET LEDs_8Bits_TRI_O[7] LOC = "T11"  |  IOSTANDARD = "LVCMOS33";
+#NET led[0] LOC = "U16"  |  IOSTANDARD = "LVCMOS33";
+NET sc_uart_interface_modified_0_led_pin[0] LOC = "V16"  |  IOSTANDARD = "LVCMOS33";
+NET sc_uart_interface_modified_0_led_pin[1] LOC = "U15"  |  IOSTANDARD = "LVCMOS33";
+NET sc_uart_interface_modified_0_led_pin[2] LOC = "V15"  |  IOSTANDARD = "LVCMOS33";
+NET sc_uart_interface_modified_0_led_pin[3] LOC = "M11"  |  IOSTANDARD = "LVCMOS33";
+NET sc_uart_interface_modified_0_led_pin[4] LOC = "N11"  |  IOSTANDARD = "LVCMOS33";
+NET sc_uart_interface_modified_0_led_pin[5] LOC = "R11"  |  IOSTANDARD = "LVCMOS33";
+NET sc_uart_interface_modified_0_led_pin[6] LOC = "T11"  |  IOSTANDARD = "LVCMOS33";
 NET Push_Buttons_4Bits_TRI_I[0] LOC = "A8"  |  IOSTANDARD = "LVCMOS33";
 NET Push_Buttons_4Bits_TRI_I[1] LOC = "C4"  |  IOSTANDARD = "LVCMOS33";
 NET Push_Buttons_4Bits_TRI_I[2] LOC = "C9"  |  IOSTANDARD = "LVCMOS33";
@@ -26,15 +26,18 @@ NET RESET LOC = "B8"  |  IOSTANDARD = "LVCMOS33"  |  TIG;
 NET RS232_Uart_1_sin LOC = "N17"  |  IOSTANDARD = "LVCMOS33";
 NET RS232_Uart_1_sout LOC = "N18"  |  IOSTANDARD = "LVCMOS33";
 
-NET exa_0_io LOC = "V12"  | IOSTANDARD = "LVCMOS33";
-#NET sc_uart_interface_0_UART_IO LOC = "V12"  | IOSTANDARD = "LVCMOS33";
-#NET sc_uart_interface_0_UART_CLK_pin LOC = "P11"  | IOSTANDARD = "LVCMOS33";
-#NET sc_uart_interface_0_UART_RST_pin LOC = "N10"  | IOSTANDARD = "LVCMOS33";
+#NET exa_0_io LOC = "V12"  | IOSTANDARD = "LVCMOS33";
+
+NET sc_uart_interface_modified_0_UART_IO LOC = "V12"  | IOSTANDARD = "LVCMOS33";
+NET sc_uart_interface_modified_0_UART_CLK_pin LOC = "P11"  | IOSTANDARD = "LVCMOS33";
+NET sc_uart_interface_modified_0_UART_RST_pin LOC = "N10"  | IOSTANDARD = "LVCMOS33";
 
 #
 # additional constraints
 #
 
 NET "GCLK" TNM_NET = sys_clk_pin;
+NET "sc_uart_interface_modified_0_UART_CLK_pin" CLOCK_DEDICATED_ROUTE =
+   FALSE;
 TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 100000 kHz;
 

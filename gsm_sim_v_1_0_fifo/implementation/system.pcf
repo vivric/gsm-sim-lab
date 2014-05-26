@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sat May 24 21:50:24 2014
+// Written by: Map P.20131013 on Mon May 26 19:32:20 2014
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -571,7 +571,6 @@ TIMEGRP Processor_clk_axi_intc_0 = PIN
         "proc_sys_reset_0/proc_sys_reset_0/EXT_LPF/asr_lpf_2" BEL
         "proc_sys_reset_0/proc_sys_reset_0/EXT_LPF/exr_lpf_3" BEL
         "proc_sys_reset_0/proc_sys_reset_0/EXT_LPF/asr_lpf_3" BEL
-        "proc_sys_reset_0/proc_sys_reset_0/Peripheral_aresetn_0" BEL
         "proc_sys_reset_0/proc_sys_reset_0/Interconnect_aresetn_0" BEL
         "proc_sys_reset_0/proc_sys_reset_0/MB_Reset" BEL
         "proc_sys_reset_0/proc_sys_reset_0/Bus_Struct_Reset_0" BEL
@@ -605,7 +604,81 @@ TIMEGRP Processor_clk_axi_intc_0 = PIN
         BEL
         "fit_timer_0/fit_timer_0/Using_SRL16s.SRL16s[1].Divide_I/One_SRL16.SRL16E_I"
         BEL "fit_timer_0/fit_timer_0/Using_SRL16s.SRL16s[1].Divide_I/Rst_d1"
+        BEL "axi_intc_0/axi_intc_0/INTC_CORE_I/sie_0" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/iar_0" BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg"
+        BEL "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rst" BEL
+        "axi_intc_0/axi_intc_0/ip2bus_rdack" BEL
+        "axi_intc_0/axi_intc_0/ip2bus_wrack" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/mer_int_1" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/mer_int_0" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/cie_0" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/isr_0" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/hw_intr_0" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/Irq" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/ier_0" BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bvalid_i"
         BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rvalid_i"
+        BEL "axi_intc_0/axi_intc_0/INTC_CORE_I/ivr_0" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/intr_p1_0" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/INTR_DETECT_GEN<0>.EDGE_DETECT_GEN.intr_p2_0"
+        BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/INTR_DETECT_GEN<0>.EDGE_DETECT_GEN.intr_d1_0"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_16"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_1"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_4"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_2"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_3"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_5"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_6"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_9"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_7"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_8"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_10"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_11"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_12"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_13"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_14"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_15"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_0"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_1"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_31"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_0"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_1"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_2"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd2"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1"
+        BEL "axi_intc_0/axi_intc_0/ip2bus_wrack_int_d1" BEL
+        "axi_intc_0/axi_intc_0/ip2bus_rdack_int_d1" BEL
         "axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/grant_rnw_3"
         BEL
         "axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_enc_0_1"
@@ -819,81 +892,7 @@ TIMEGRP Processor_clk_axi_intc_0 = PIN
         "axi4lite_0/axi4lite_0/mi_register_slice_bank/gen_reg_slot[5].register_slice_inst/reset"
         BEL
         "axi4lite_0/axi4lite_0/mi_register_slice_bank/gen_reg_slot[6].register_slice_inst/reset"
-        BEL "axi_intc_0/axi_intc_0/INTC_CORE_I/sie_0" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/iar_0" BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg"
-        BEL "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rst" BEL
-        "axi_intc_0/axi_intc_0/ip2bus_rdack" BEL
-        "axi_intc_0/axi_intc_0/ip2bus_wrack" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/mer_int_1" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/mer_int_0" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/cie_0" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/isr_0" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/hw_intr_0" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/Irq" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/ier_0" BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bvalid_i"
         BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rvalid_i"
-        BEL "axi_intc_0/axi_intc_0/INTC_CORE_I/ivr_0" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/intr_p1_0" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/INTR_DETECT_GEN<0>.EDGE_DETECT_GEN.intr_p2_0"
-        BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/INTR_DETECT_GEN<0>.EDGE_DETECT_GEN.intr_d1_0"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_16"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_1"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_4"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_2"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_3"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_5"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_6"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_9"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_7"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_8"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_10"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_11"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_12"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_13"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_14"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_15"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_0"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_1"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_31"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_0"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_1"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_2"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd2"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1"
-        BEL "axi_intc_0/axi_intc_0/ip2bus_wrack_int_d1" BEL
-        "axi_intc_0/axi_intc_0/ip2bus_rdack_int_d1" BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_Take_Intr_or_Exc_1"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_28_2"
@@ -3683,7 +3682,6 @@ TIMEGRP S_AXI_ACLK_axi_intc_0 = PIN
         "proc_sys_reset_0/proc_sys_reset_0/EXT_LPF/asr_lpf_2" BEL
         "proc_sys_reset_0/proc_sys_reset_0/EXT_LPF/exr_lpf_3" BEL
         "proc_sys_reset_0/proc_sys_reset_0/EXT_LPF/asr_lpf_3" BEL
-        "proc_sys_reset_0/proc_sys_reset_0/Peripheral_aresetn_0" BEL
         "proc_sys_reset_0/proc_sys_reset_0/Interconnect_aresetn_0" BEL
         "proc_sys_reset_0/proc_sys_reset_0/MB_Reset" BEL
         "proc_sys_reset_0/proc_sys_reset_0/Bus_Struct_Reset_0" BEL
@@ -3717,7 +3715,81 @@ TIMEGRP S_AXI_ACLK_axi_intc_0 = PIN
         BEL
         "fit_timer_0/fit_timer_0/Using_SRL16s.SRL16s[1].Divide_I/One_SRL16.SRL16E_I"
         BEL "fit_timer_0/fit_timer_0/Using_SRL16s.SRL16s[1].Divide_I/Rst_d1"
+        BEL "axi_intc_0/axi_intc_0/INTC_CORE_I/sie_0" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/iar_0" BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg"
+        BEL "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rst" BEL
+        "axi_intc_0/axi_intc_0/ip2bus_rdack" BEL
+        "axi_intc_0/axi_intc_0/ip2bus_wrack" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/mer_int_1" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/mer_int_0" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/cie_0" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/isr_0" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/hw_intr_0" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/Irq" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/ier_0" BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bvalid_i"
         BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rvalid_i"
+        BEL "axi_intc_0/axi_intc_0/INTC_CORE_I/ivr_0" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/intr_p1_0" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/INTR_DETECT_GEN<0>.EDGE_DETECT_GEN.intr_p2_0"
+        BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/INTR_DETECT_GEN<0>.EDGE_DETECT_GEN.intr_d1_0"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_16"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_1"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_4"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_2"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_3"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_5"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_6"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_9"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_7"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_8"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_10"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_11"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_12"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_13"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_14"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_15"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_0"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_1"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_31"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_0"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_1"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_2"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd2"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1"
+        BEL "axi_intc_0/axi_intc_0/ip2bus_wrack_int_d1" BEL
+        "axi_intc_0/axi_intc_0/ip2bus_rdack_int_d1" BEL
         "axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/grant_rnw_3"
         BEL
         "axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_enc_0_1"
@@ -3931,81 +4003,7 @@ TIMEGRP S_AXI_ACLK_axi_intc_0 = PIN
         "axi4lite_0/axi4lite_0/mi_register_slice_bank/gen_reg_slot[5].register_slice_inst/reset"
         BEL
         "axi4lite_0/axi4lite_0/mi_register_slice_bank/gen_reg_slot[6].register_slice_inst/reset"
-        BEL "axi_intc_0/axi_intc_0/INTC_CORE_I/sie_0" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/iar_0" BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg"
-        BEL "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rst" BEL
-        "axi_intc_0/axi_intc_0/ip2bus_rdack" BEL
-        "axi_intc_0/axi_intc_0/ip2bus_wrack" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/mer_int_1" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/mer_int_0" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/cie_0" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/isr_0" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/hw_intr_0" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/Irq" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/ier_0" BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bvalid_i"
         BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rvalid_i"
-        BEL "axi_intc_0/axi_intc_0/INTC_CORE_I/ivr_0" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/intr_p1_0" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/INTR_DETECT_GEN<0>.EDGE_DETECT_GEN.intr_p2_0"
-        BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/INTR_DETECT_GEN<0>.EDGE_DETECT_GEN.intr_d1_0"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_16"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_1"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_4"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_2"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_3"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_5"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_6"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_9"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_7"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_8"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_10"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_11"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_12"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_13"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_14"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_15"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_0"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_1"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_31"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_0"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_1"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_2"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd2"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1"
-        BEL "axi_intc_0/axi_intc_0/ip2bus_wrack_int_d1" BEL
-        "axi_intc_0/axi_intc_0/ip2bus_rdack_int_d1" BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_Take_Intr_or_Exc_1"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_28_2"
@@ -6795,7 +6793,6 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0 = PIN
         "proc_sys_reset_0/proc_sys_reset_0/EXT_LPF/asr_lpf_2" BEL
         "proc_sys_reset_0/proc_sys_reset_0/EXT_LPF/exr_lpf_3" BEL
         "proc_sys_reset_0/proc_sys_reset_0/EXT_LPF/asr_lpf_3" BEL
-        "proc_sys_reset_0/proc_sys_reset_0/Peripheral_aresetn_0" BEL
         "proc_sys_reset_0/proc_sys_reset_0/Interconnect_aresetn_0" BEL
         "proc_sys_reset_0/proc_sys_reset_0/MB_Reset" BEL
         "proc_sys_reset_0/proc_sys_reset_0/Bus_Struct_Reset_0" BEL
@@ -6830,7 +6827,81 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0 = PIN
         BEL
         "fit_timer_0/fit_timer_0/Using_SRL16s.SRL16s[1].Divide_I/One_SRL16.SRL16E_I"
         BEL "fit_timer_0/fit_timer_0/Using_SRL16s.SRL16s[1].Divide_I/Rst_d1"
+        BEL "axi_intc_0/axi_intc_0/INTC_CORE_I/sie_0" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/iar_0" BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg"
+        BEL "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rst" BEL
+        "axi_intc_0/axi_intc_0/ip2bus_rdack" BEL
+        "axi_intc_0/axi_intc_0/ip2bus_wrack" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/mer_int_1" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/mer_int_0" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/cie_0" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/isr_0" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/hw_intr_0" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/Irq" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/ier_0" BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bvalid_i"
         BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rvalid_i"
+        BEL "axi_intc_0/axi_intc_0/INTC_CORE_I/ivr_0" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/intr_p1_0" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/INTR_DETECT_GEN<0>.EDGE_DETECT_GEN.intr_p2_0"
+        BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/INTR_DETECT_GEN<0>.EDGE_DETECT_GEN.intr_d1_0"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_16"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_1"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_4"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_2"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_3"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_5"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_6"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_9"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_7"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_8"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_10"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_11"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_12"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_13"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_14"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_15"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_0"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_1"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_31"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_0"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_1"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_2"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd2"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1"
+        BEL "axi_intc_0/axi_intc_0/ip2bus_wrack_int_d1" BEL
+        "axi_intc_0/axi_intc_0/ip2bus_rdack_int_d1" BEL
         "axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/grant_rnw_3"
         BEL
         "axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_enc_0_1"
@@ -7044,81 +7115,7 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0 = PIN
         "axi4lite_0/axi4lite_0/mi_register_slice_bank/gen_reg_slot[5].register_slice_inst/reset"
         BEL
         "axi4lite_0/axi4lite_0/mi_register_slice_bank/gen_reg_slot[6].register_slice_inst/reset"
-        BEL "axi_intc_0/axi_intc_0/INTC_CORE_I/sie_0" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/iar_0" BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg"
-        BEL "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rst" BEL
-        "axi_intc_0/axi_intc_0/ip2bus_rdack" BEL
-        "axi_intc_0/axi_intc_0/ip2bus_wrack" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/mer_int_1" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/mer_int_0" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/cie_0" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/isr_0" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/hw_intr_0" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/Irq" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/ier_0" BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bvalid_i"
         BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rvalid_i"
-        BEL "axi_intc_0/axi_intc_0/INTC_CORE_I/ivr_0" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/intr_p1_0" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/INTR_DETECT_GEN<0>.EDGE_DETECT_GEN.intr_p2_0"
-        BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/INTR_DETECT_GEN<0>.EDGE_DETECT_GEN.intr_d1_0"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_16"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_1"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_4"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_2"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_3"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_5"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_6"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_9"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_7"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_8"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_10"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_11"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_12"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_13"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_14"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_15"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_0"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_1"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_31"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_0"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_1"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_2"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd2"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1"
-        BEL "axi_intc_0/axi_intc_0/ip2bus_wrack_int_d1" BEL
-        "axi_intc_0/axi_intc_0/ip2bus_rdack_int_d1" BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_Take_Intr_or_Exc_1"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_28_2"
@@ -9426,11 +9423,11 @@ PIN
         PINNAME CLKIN1;
 TIMEGRP sys_clk_pin = PIN "SP6_BUFIO2_INSERT_PLL1_ML_BUFIO2_1_pins<0>" PIN
         "clock_generator_0/clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst_pins<2>";
-TIMEGRP axi4lite_0_reset_source = FFS(*) PADS(*);
 TIMEGRP GRP_INTC_intr_sync_axi_intc_0 = BEL
         "axi_intc_0/axi_intc_0/INTC_CORE_I/intr_sync_0";
 TIMEGRP GRP_INTC_intr_p1_axi_intc_0 = BEL
         "axi_intc_0/axi_intc_0/INTC_CORE_I/intr_p1_0";
+TIMEGRP axi4lite_0_reset_source = FFS(*) PADS(*);
 TIMEGRP "FFS" = FFS(*);
 PATH TS_TIG_microblaze_0_Reset_path = FROM TIMEGRP "FFS" TO TIMEGRP
         "microblaze_0_Reset_dst";
@@ -9438,6 +9435,9 @@ PATH "TS_TIG_microblaze_0_Reset_path" TIG;
 PATH TS_TIG_microblaze_0_Interrupt_path = FROM TIMEGRP "FFS" TO TIMEGRP
         "microblaze_0_Interrupt_dst";
 PATH "TS_TIG_microblaze_0_Interrupt_path" TIG;
+PATH TS_axi4lite_0_reset_resync_path = FROM TIMEGRP "axi4lite_0_reset_source"
+        TO TIMEGRP "axi4lite_0_reset_resync";
+PATH "TS_axi4lite_0_reset_resync_path" TIG;
 PATH TS_sync_axi_intc_0_path = TO TIMEGRP "GRP_INTC_intr_sync_axi_intc_0";
 PATH "TS_sync_axi_intc_0_path" TIG;
 PATH TS_intr_sync_p1_axi_intc_0_path = FROM TIMEGRP
@@ -9450,9 +9450,6 @@ PATH "TS_MB_AXI_FP_axi_intc_0_path" TIG;
 PATH TS_AXI_MB_FP_axi_intc_0_path = FROM TIMEGRP "S_AXI_ACLK_axi_intc_0" TO
         TIMEGRP "Processor_clk_axi_intc_0";
 PATH "TS_AXI_MB_FP_axi_intc_0_path" TIG;
-PATH TS_axi4lite_0_reset_resync_path = FROM TIMEGRP "axi4lite_0_reset_source"
-        TO TIMEGRP "axi4lite_0_reset_resync";
-PATH "TS_axi4lite_0_reset_resync_path" TIG;
 PATH TS_TIG_microblaze_0_dlmb_POR_FF_I_path = FROM TIMEGRP "FFS" TO TIMEGRP
         "microblaze_0_dlmb_POR_FF_I_dst";
 PATH "TS_TIG_microblaze_0_dlmb_POR_FF_I_path" TIG;

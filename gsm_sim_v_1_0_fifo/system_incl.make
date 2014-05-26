@@ -76,7 +76,7 @@ implementation/system_leds_8bits_wrapper.ngc \
 implementation/system_dip_switches_8bits_wrapper.ngc \
 implementation/system_fit_timer_0_wrapper.ngc \
 implementation/system_axi_intc_0_wrapper.ngc \
-implementation/system_sc_uart_interface_0_wrapper.ngc
+implementation/system_sc_uart_0_wrapper.ngc
 
 POSTSYN_NETLIST = implementation/$(SYSTEM).ngc
 

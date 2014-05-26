@@ -16,7 +16,10 @@ entity system_stub is
     LEDs_8Bits_TRI_O : out std_logic_vector(7 downto 0);
     GCLK : in std_logic;
     DIP_Switches_8Bits_TRI_I : in std_logic_vector(7 downto 0);
-    exa_0_io : inout std_logic
+    sc_uart_interface_modified_0_led_pin : out std_logic_vector(6 downto 0);
+    sc_uart_interface_modified_0_UART_IO : inout std_logic;
+    sc_uart_interface_modified_0_UART_CLK_pin : in std_logic;
+    sc_uart_interface_modified_0_UART_RST_pin : in std_logic
   );
 end system_stub;
 
@@ -31,7 +34,10 @@ architecture STRUCTURE of system_stub is
       LEDs_8Bits_TRI_O : out std_logic_vector(7 downto 0);
       GCLK : in std_logic;
       DIP_Switches_8Bits_TRI_I : in std_logic_vector(7 downto 0);
-      exa_0_io : inout std_logic
+      sc_uart_interface_modified_0_led_pin : out std_logic_vector(6 downto 0);
+      sc_uart_interface_modified_0_UART_IO : inout std_logic;
+      sc_uart_interface_modified_0_UART_CLK_pin : in std_logic;
+      sc_uart_interface_modified_0_UART_RST_pin : in std_logic
     );
   end component;
 
@@ -49,7 +55,10 @@ begin
       LEDs_8Bits_TRI_O => LEDs_8Bits_TRI_O,
       GCLK => GCLK,
       DIP_Switches_8Bits_TRI_I => DIP_Switches_8Bits_TRI_I,
-      exa_0_io => exa_0_io
+      sc_uart_interface_modified_0_led_pin => sc_uart_interface_modified_0_led_pin,
+      sc_uart_interface_modified_0_UART_IO => sc_uart_interface_modified_0_UART_IO,
+      sc_uart_interface_modified_0_UART_CLK_pin => sc_uart_interface_modified_0_UART_CLK_pin,
+      sc_uart_interface_modified_0_UART_RST_pin => sc_uart_interface_modified_0_UART_RST_pin
     );
 
 end architecture STRUCTURE;

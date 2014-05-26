@@ -1,0 +1,10 @@
+-batch 
+-create sc_uart_interface_modified 
+-ver 1.00.a 
+-dir "/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0" 
+-lang vhdl 
+-bus axi4lite s 
+-reg 2 
+-xps 
+-ise 
+-driver 

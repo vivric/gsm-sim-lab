@@ -25,6 +25,9 @@ Loading design module
 "/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/implementation/system_clo
 ck_generator_0_wrapper.ngc"...
 Loading design module
+"/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/implementation/system_sc_
+uart_interface_modified_0_wrapper.ngc"...
+Loading design module
 "/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/implementation/system_mic
 roblaze_0_ilmb_wrapper.ngc"...
 Loading design module
@@ -48,9 +51,6 @@ ug_module_wrapper.ngc"...
 Loading design module
 "/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/implementation/system_led
 s_8bits_wrapper.ngc"...
-Loading design module
-"/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/implementation/system_exa
-_0_wrapper.ngc"...
 Loading design module
 "/home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/implementation/system_mic
 roblaze_0_bram_block_wrapper.ngc"...
@@ -118,10 +118,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   4
 
-Total memory usage is 438076 kilobytes
+Total memory usage is 440512 kilobytes
 
 Writing NGD file "system.ngd" ...
-Total REAL time to NGDBUILD completion:  33 sec
-Total CPU time to NGDBUILD completion:   33 sec
+Total REAL time to NGDBUILD completion:  35 sec
+Total CPU time to NGDBUILD completion:   34 sec
 
 Writing NGDBUILD log file "system.bld"...

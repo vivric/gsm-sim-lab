@@ -1,0 +1,6 @@
+21:13:09 **** Auto Build of project sc_uart_v_2_0_bsp ****
+make -k all 
+Finished building libraries
+
+21:13:09 Build Finished (took 62ms)
+

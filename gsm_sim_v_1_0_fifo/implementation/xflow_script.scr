@@ -6,7 +6,7 @@
 #
 # Command line for ngdbuild
 #
-ngdbuild -p xc6slx16csg324-3 -nt timestamp -bm system.bmm "/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/implementation/system.ngc" -uc system.ucf system.ngd 
+ngdbuild -p xc6slx16csg324-3 -nt timestamp -bm system.bmm "/home/ga38kud/vivin_gsm/gsm_sim/gsm_sim_v_1_0_fifo/implementation/system.ngc" -uc system.ucf system.ngd 
 
 #
 # Command line for map

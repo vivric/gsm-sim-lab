@@ -1,0 +1,4 @@
+vhdl work "uart_tx.vhd"
+vhdl work "uart_rx.vhd"
+vhdl work "Control.vhd"
+vhdl work "uart_top.vhd"

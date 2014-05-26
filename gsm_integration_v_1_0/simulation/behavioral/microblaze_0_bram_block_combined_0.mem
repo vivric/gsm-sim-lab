@@ -1,0 +1,18 @@
+// Mem file initialization records.
+//
+// Release 14.6 - Data2MEM P.20131013, build 3.0.10 Apr 3, 2013
+// Copyright (c) 1995-2014 Xilinx, Inc.  All rights reserved.
+//
+// Command: data2mem -bm system_sim.bmm -bd /home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/bootloops/microblaze_0.elf tag microblaze_0 -bx /home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/simulation/behavioral -u -p "xc6slx16csg324-3"
+//
+// Created on Monday May 26, 2014 - 09:00:17 pm, from:
+//
+//     Map file     - system_sim.bmm
+//     Data file(s) - /home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/bootloops/microblaze_0.elf
+//
+// Address space 'microblaze_0.microblaze_0_bram_block_combined', bit lane [31:24].
+//
+// Bus width = 32 bits, number of bus blocks = 1.
+
+@00000000
+    0B8

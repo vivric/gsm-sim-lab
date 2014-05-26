@@ -1,0 +1,668 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> 
+Reading design: uart_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "uart_top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "uart_top"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : uart_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/ga38qol/Downloads/sc_uart_interface/uart_tx.vhd" into library work
+Parsing entity <UART_TX_CTRL>.
+Parsing architecture <Behavioral> of entity <uart_tx_ctrl>.
+Parsing VHDL file "/home/ga38qol/Downloads/sc_uart_interface/uart_rx.vhd" into library work
+Parsing entity <UART_RX_CTRL>.
+Parsing architecture <Behavioral> of entity <uart_rx_ctrl>.
+Parsing VHDL file "/home/ga38qol/Downloads/sc_uart_interface/Control.vhd" into library work
+Parsing entity <Control>.
+Parsing architecture <Behavioral> of entity <control>.
+Parsing VHDL file "/home/ga38qol/Downloads/sc_uart_interface/uart_top.vhd" into library work
+Parsing entity <uart_top>.
+Parsing architecture <Behavioral> of entity <uart_top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <uart_top> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <UART_TX_CTRL> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:871 - "/home/ga38qol/Downloads/sc_uart_interface/uart_tx.vhd" Line 20: Using initial value "101110011" for bit_tmr_max_tx since it is never assigned
+WARNING:HDLCompiler:92 - "/home/ga38qol/Downloads/sc_uart_interface/uart_tx.vhd" Line 63: sig_tx should be on the sensitivity list of the process
+INFO:HDLCompiler:679 - "/home/ga38qol/Downloads/sc_uart_interface/uart_tx.vhd" Line 83. Case statement is complete. others clause is never selected
+WARNING:HDLCompiler:92 - "/home/ga38qol/Downloads/sc_uart_interface/uart_tx.vhd" Line 91: sig_tx should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/ga38qol/Downloads/sc_uart_interface/uart_tx.vhd" Line 109: sig_tx should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/ga38qol/Downloads/sc_uart_interface/uart_tx.vhd" Line 120: sig_tx should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/ga38qol/Downloads/sc_uart_interface/uart_tx.vhd" Line 130: sig_tx should be on the sensitivity list of the process
+
+Elaborating entity <UART_RX_CTRL> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "/home/ga38qol/Downloads/sc_uart_interface/uart_rx.vhd" Line 48: sig_rx should be on the sensitivity list of the process
+INFO:HDLCompiler:679 - "/home/ga38qol/Downloads/sc_uart_interface/uart_rx.vhd" Line 67. Case statement is complete. others clause is never selected
+WARNING:HDLCompiler:92 - "/home/ga38qol/Downloads/sc_uart_interface/uart_rx.vhd" Line 75: sig_rx should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/ga38qol/Downloads/sc_uart_interface/uart_rx.vhd" Line 93: sig_rx should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/ga38qol/Downloads/sc_uart_interface/uart_rx.vhd" Line 104: sig_rx should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/ga38qol/Downloads/sc_uart_interface/uart_rx.vhd" Line 112: sig_rx should be on the sensitivity list of the process
+
+Elaborating entity <Control> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <uart_top>.
+    Related source file is "/home/ga38qol/Downloads/sc_uart_interface/uart_top.vhd".
+    Summary:
+	no macro.
+Unit <uart_top> synthesized.
+
+Synthesizing Unit <UART_TX_CTRL>.
+    Related source file is "/home/ga38qol/Downloads/sc_uart_interface/uart_tx.vhd".
+    Found 2-bit register for signal <txState>.
+    Found 31-bit register for signal <bitTmr_tx>.
+    Found 31-bit register for signal <bitIndex>.
+    Found 11-bit register for signal <Packed_Data>.
+    Found 1-bit register for signal <txBit>.
+    Found 1-bit register for signal <tx_sent>.
+    Found 31-bit register for signal <delay>.
+    Found finite state machine <FSM_0> for signal <txState>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 4                                              |
+    | Outputs            | 3                                              |
+    | Clock              | CLK (rising_edge)                              |
+    | Power Up State     | rdy                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 31-bit adder for signal <delay[30]_GND_7_o_add_1_OUT> created at line 70.
+    Found 31-bit adder for signal <bitTmr_tx[30]_GND_7_o_add_14_OUT> created at line 98.
+    Found 31-bit adder for signal <bitIndex[30]_GND_7_o_add_22_OUT> created at line 113.
+    Found 1-bit 11-to-1 multiplexer for signal <bitIndex[3]_X_7_o_Mux_31_o> created at line 134.
+    Found 1-bit tristate buffer for signal <UART> created at line 154
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred 106 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+	inferred   1 Tristate(s).
+	inferred   1 Finite State Machine(s).
+Unit <UART_TX_CTRL> synthesized.
+
+Synthesizing Unit <UART_RX_CTRL>.
+    Related source file is "/home/ga38qol/Downloads/sc_uart_interface/uart_rx.vhd".
+    Found 2-bit register for signal <rxState>.
+    Found 8-bit register for signal <RX_data>.
+    Found 9-bit register for signal <bitTmr_rx>.
+    Found 31-bit register for signal <bitIndex>.
+    Found 11-bit register for signal <packed_data>.
+    Found 1-bit register for signal <RX_valid>.
+    Found finite state machine <FSM_1> for signal <rxState>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 4                                              |
+    | Outputs            | 5                                              |
+    | Clock              | CLK (rising_edge)                              |
+    | Power Up State     | rdy                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 9-bit adder for signal <bitTmr_rx[8]_GND_9_o_add_14_OUT> created at line 82.
+    Found 31-bit adder for signal <bitIndex[30]_GND_9_o_add_22_OUT> created at line 97.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  60 D-type flip-flop(s).
+	inferred  12 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <UART_RX_CTRL> synthesized.
+
+Synthesizing Unit <Control>.
+    Related source file is "/home/ga38qol/Downloads/sc_uart_interface/Control.vhd".
+    Found 2-bit register for signal <state>.
+    Found 1-bit register for signal <sig_valid_reset>.
+    Found 1-bit register for signal <sig_tx>.
+    Found 1-bit register for signal <sig_rx>.
+    Found 1-bit register for signal <UART_IO_T>.
+    Found 31-bit register for signal <tb>.
+    Found 1-bit register for signal <valid_reset>.
+    Found 31-bit register for signal <tc>.
+    Found finite state machine <FSM_2> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 12                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 5                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Power Up State     | idle                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 31-bit adder for signal <tc[30]_GND_10_o_add_0_OUT> created at line 66.
+    Found 31-bit adder for signal <tb[30]_GND_10_o_add_19_OUT> created at line 154.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  67 D-type flip-flop(s).
+	inferred   1 Finite State Machine(s).
+Unit <Control> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 7
+ 31-bit adder                                          : 6
+ 9-bit adder                                           : 1
+# Registers                                            : 18
+ 1-bit register                                        : 8
+ 11-bit register                                       : 2
+ 31-bit register                                       : 6
+ 8-bit register                                        : 1
+ 9-bit register                                        : 1
+# Multiplexers                                         : 15
+ 1-bit 11-to-1 multiplexer                             : 1
+ 1-bit 2-to-1 multiplexer                              : 11
+ 31-bit 2-to-1 multiplexer                             : 2
+ 9-bit 2-to-1 multiplexer                              : 1
+# Tristates                                            : 1
+ 1-bit tristate buffer                                 : 1
+# FSMs                                                 : 3
+# Xors                                                 : 1
+ 1-bit xor8                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <Packed_Data_0> (without init value) has a constant value of 0 in block <TX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Packed_Data_10> (without init value) has a constant value of 1 in block <TX>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <Control>.
+The following registers are absorbed into counter <tb>: 1 register on signal <tb>.
+The following registers are absorbed into counter <tc>: 1 register on signal <tc>.
+Unit <Control> synthesized (advanced).
+
+Synthesizing (advanced) Unit <UART_RX_CTRL>.
+The following registers are absorbed into counter <bitTmr_rx>: 1 register on signal <bitTmr_rx>.
+The following registers are absorbed into counter <bitIndex>: 1 register on signal <bitIndex>.
+Unit <UART_RX_CTRL> synthesized (advanced).
+
+Synthesizing (advanced) Unit <UART_TX_CTRL>.
+The following registers are absorbed into counter <delay>: 1 register on signal <delay>.
+The following registers are absorbed into counter <bitTmr_tx>: 1 register on signal <bitTmr_tx>.
+The following registers are absorbed into counter <bitIndex>: 1 register on signal <bitIndex>.
+Unit <UART_TX_CTRL> synthesized (advanced).
+WARNING:Xst:2677 - Node <packed_data_0> of sequential type is unconnected in block <UART_RX_CTRL>.
+WARNING:Xst:2677 - Node <packed_data_9> of sequential type is unconnected in block <UART_RX_CTRL>.
+WARNING:Xst:2677 - Node <packed_data_10> of sequential type is unconnected in block <UART_RX_CTRL>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 7
+ 31-bit up counter                                     : 6
+ 9-bit up counter                                      : 1
+# Registers                                            : 35
+ Flip-Flops                                            : 35
+# Multiplexers                                         : 9
+ 1-bit 11-to-1 multiplexer                             : 1
+ 1-bit 2-to-1 multiplexer                              : 8
+# FSMs                                                 : 3
+# Xors                                                 : 1
+ 1-bit xor8                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <Packed_Data_0> (without init value) has a constant value of 0 in block <UART_TX_CTRL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Packed_Data_10> (without init value) has a constant value of 1 in block <UART_TX_CTRL>. This FF/Latch will be trimmed during the optimization process.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <TX/FSM_0> on signal <txState[1:2]> with user encoding.
+----------------------
+ State    | Encoding
+----------------------
+ rdy      | 00
+ load_bit | 01
+ send_bit | 10
+----------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <RX/FSM_1> on signal <rxState[1:2]> with user encoding.
+-------------------------
+ State       | Encoding
+-------------------------
+ rdy         | 00
+ load_bit    | 01
+ receive_bit | 10
+-------------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <CTRL/FSM_2> on signal <state[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ idle  | 00
+ rst   | 01
+ tx    | 10
+ rx    | 11
+-------------------
+WARNING:Xst:2677 - Node <bitTmr_tx_10> of sequential type is unconnected in block <UART_TX_CTRL>.
+WARNING:Xst:2677 - Node <bitTmr_tx_11> of sequential type is unconnected in block <UART_TX_CTRL>.
+WARNING:Xst:2677 - Node <bitTmr_tx_12> of sequential type is unconnected in block <UART_TX_CTRL>.
+WARNING:Xst:2677 - Node <bitTmr_tx_13> of sequential type is unconnected in block <UART_TX_CTRL>.
+WARNING:Xst:2677 - Node <bitTmr_tx_14> of sequential type is unconnected in block <UART_TX_CTRL>.
+WARNING:Xst:2677 - Node <bitTmr_tx_15> of sequential type is unconnected in block <UART_TX_CTRL>.
+WARNING:Xst:2677 - Node <bitTmr_tx_16> of sequential type is unconnected in block <UART_TX_CTRL>.
+WARNING:Xst:2677 - Node <bitTmr_tx_17> of sequential type is unconnected in block <UART_TX_CTRL>.
+WARNING:Xst:2677 - Node <bitTmr_tx_18> of sequential type is unconnected in block <UART_TX_CTRL>.
+WARNING:Xst:2677 - Node <bitTmr_tx_19> of sequential type is unconnected in block <UART_TX_CTRL>.
+WARNING:Xst:2677 - Node <bitTmr_tx_20> of sequential type is unconnected in block <UART_TX_CTRL>.
+WARNING:Xst:2677 - Node <bitTmr_tx_21> of sequential type is unconnected in block <UART_TX_CTRL>.
+WARNING:Xst:2677 - Node <bitTmr_tx_22> of sequential type is unconnected in block <UART_TX_CTRL>.
+WARNING:Xst:2677 - Node <bitTmr_tx_23> of sequential type is unconnected in block <UART_TX_CTRL>.
+WARNING:Xst:2677 - Node <bitTmr_tx_24> of sequential type is unconnected in block <UART_TX_CTRL>.
+WARNING:Xst:2677 - Node <bitTmr_tx_25> of sequential type is unconnected in block <UART_TX_CTRL>.
+WARNING:Xst:2677 - Node <bitTmr_tx_26> of sequential type is unconnected in block <UART_TX_CTRL>.
+WARNING:Xst:2677 - Node <bitTmr_tx_27> of sequential type is unconnected in block <UART_TX_CTRL>.
+WARNING:Xst:2677 - Node <bitTmr_tx_28> of sequential type is unconnected in block <UART_TX_CTRL>.
+WARNING:Xst:2677 - Node <bitTmr_tx_29> of sequential type is unconnected in block <UART_TX_CTRL>.
+WARNING:Xst:2677 - Node <bitTmr_tx_30> of sequential type is unconnected in block <UART_TX_CTRL>.
+
+Optimizing unit <uart_top> ...
+
+Optimizing unit <UART_RX_CTRL> ...
+
+Optimizing unit <Control> ...
+WARNING:Xst:1293 - FF/Latch <CTRL/tc_27> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tc_28> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tc_29> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tc_30> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tb_9> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tb_10> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tb_11> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tb_12> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tb_13> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tb_14> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tb_15> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tb_16> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tb_17> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tb_18> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tb_19> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tb_20> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tb_21> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tc_9> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tc_10> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tc_11> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tc_12> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tc_13> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tc_14> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tc_15> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tc_16> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tc_17> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tc_18> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tc_19> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tc_20> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tc_21> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tc_22> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tc_23> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tc_24> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tc_25> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tc_26> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TX/delay_15> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TX/delay_16> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TX/delay_17> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TX/delay_18> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TX/delay_19> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TX/delay_20> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TX/delay_21> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TX/delay_22> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TX/delay_23> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TX/delay_24> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TX/delay_25> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TX/delay_26> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TX/delay_27> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TX/delay_28> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TX/delay_29> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TX/delay_30> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TX/bitTmr_tx_9> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tb_22> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tb_23> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tb_24> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tb_25> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tb_26> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tb_27> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tb_28> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tb_29> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CTRL/tb_30> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RX/bitTmr_rx_4> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RX/bitTmr_rx_5> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RX/bitTmr_rx_6> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RX/bitTmr_rx_7> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RX/bitTmr_rx_8> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TX/delay_11> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TX/delay_12> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TX/delay_13> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TX/delay_14> has a constant value of 0 in block <uart_top>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block uart_top, actual ratio is 2.
+FlipFlop CTRL/sig_tx has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 144
+ Flip-Flops                                            : 144
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : uart_top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 416
+#      GND                         : 1
+#      INV                         : 6
+#      LUT1                        : 87
+#      LUT2                        : 10
+#      LUT3                        : 7
+#      LUT4                        : 32
+#      LUT5                        : 11
+#      LUT6                        : 59
+#      MUXCY                       : 97
+#      MUXF7                       : 1
+#      VCC                         : 1
+#      XORCY                       : 104
+# FlipFlops/Latches                : 144
+#      FD                          : 23
+#      FDE                         : 36
+#      FDRE                        : 84
+#      FDSE                        : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 24
+#      IBUF                        : 11
+#      OBUF                        : 12
+#      OBUFT                       : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             144  out of  18224     0%  
+ Number of Slice LUTs:                  212  out of   9112     2%  
+    Number used as Logic:               212  out of   9112     2%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    218
+   Number with an unused Flip Flop:      74  out of    218    33%  
+   Number with an unused LUT:             6  out of    218     2%  
+   Number of fully used LUT-FF pairs:   138  out of    218    63%  
+   Number of unique control sets:         9
+
+IO Utilization: 
+ Number of IOs:                          25
+ Number of bonded IOBs:                  25  out of    232    10%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+ME_CLK                             | BUFGP                  | 144   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.922ns (Maximum Frequency: 254.969MHz)
+   Minimum input arrival time before clock: 4.644ns
+   Maximum output required time after clock: 5.108ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ME_CLK'
+  Clock period: 3.922ns (frequency: 254.969MHz)
+  Total number of paths / destination ports: 3083 / 341
+-------------------------------------------------------------------------
+Delay:               3.922ns (Levels of Logic = 3)
+  Source:            RX/bitIndex_25 (FF)
+  Destination:       RX/rxState_FSM_FFd2 (FF)
+  Source Clock:      ME_CLK rising
+  Destination Clock: ME_CLK rising
+
+  Data Path: RX/bitIndex_25 to RX/rxState_FSM_FFd2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.447   0.981  RX/bitIndex_25 (RX/bitIndex_25)
+     LUT6:I0->O            1   0.203   0.924  RX/GND_9_o_bitIndex[30]_equal_2_o<30>5 (RX/GND_9_o_bitIndex[30]_equal_2_o<30>4)
+     LUT6:I1->O           10   0.203   0.857  RX/GND_9_o_bitIndex[30]_equal_2_o<30>6 (RX/GND_9_o_bitIndex[30]_equal_2_o)
+     LUT6:I5->O            1   0.205   0.000  RX/rxState_FSM_FFd2-In1 (RX/rxState_FSM_FFd2-In)
+     FD:D                      0.102          RX/rxState_FSM_FFd2
+    ----------------------------------------
+    Total                      3.922ns (1.160ns logic, 2.762ns route)
+                                       (29.6% logic, 70.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'ME_CLK'
+  Total number of paths / destination ports: 67 / 49
+-------------------------------------------------------------------------
+Offset:              4.644ns (Levels of Logic = 3)
+  Source:            reset (PAD)
+  Destination:       CTRL/tb_8 (FF)
+  Destination Clock: ME_CLK rising
+
+  Data Path: reset to CTRL/tb_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             7   1.222   1.138  reset_IBUF (reset_IBUF)
+     LUT6:I0->O            2   0.203   0.617  CTRL/_n0078_SW0 (N8)
+     LUT6:I5->O            9   0.205   0.829  CTRL/_n0078 (CTRL/_n0078)
+     FDRE:R                    0.430          CTRL/tb_0
+    ----------------------------------------
+    Total                      4.644ns (2.060ns logic, 2.584ns route)
+                                       (44.4% logic, 55.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'ME_CLK'
+  Total number of paths / destination ports: 14 / 13
+-------------------------------------------------------------------------
+Offset:              5.108ns (Levels of Logic = 2)
+  Source:            CTRL/sig_tx (FF)
+  Destination:       UART_IO_O (PAD)
+  Source Clock:      ME_CLK rising
+
+  Data Path: CTRL/sig_tx to UART_IO_O
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              33   0.447   1.305  CTRL/sig_tx (CTRL/sig_tx)
+     INV:I->O              1   0.206   0.579  TX/sig_tx_inv1_INV_0 (TX/sig_tx_inv)
+     OBUFT:T->O                2.571          UART_IO_O_OBUFT (UART_IO_O)
+    ----------------------------------------
+    Total                      5.108ns (3.224ns logic, 1.884ns route)
+                                       (63.1% logic, 36.9% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock ME_CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+ME_CLK         |    3.922|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.39 secs
+ 
+--> 
+
+
+Total memory usage is 387536 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  109 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

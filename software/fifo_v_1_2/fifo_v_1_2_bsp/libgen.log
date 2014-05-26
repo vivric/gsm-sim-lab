@@ -5,18 +5,10 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Command Line: libgen -hw ../gsm_sim_v_1_0_fifo_hw_platform/system.xml -pe
 microblaze_0 -log libgen.log system.mss 
 
-
-Staging source files.
-Running DRCs.
-Running generate.
-Running post_generate.
-Running include - 'gmake -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
-"COMPILER_FLAGS=-mlittle-endian -mno-xl-soft-mul -mxl-barrel-shift
--mxl-pattern-compare -mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g
--ffunction-sections -fdata-sections"'.
-
-Running libs - 'gmake -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
-"COMPILER_FLAGS=-mlittle-endian -mno-xl-soft-mul -mxl-barrel-shift
--mxl-pattern-compare -mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g
--ffunction-sections -fdata-sections"'.
-Running execs_generate.
+ERROR:EDK:410 - intc -
+   /home/ga38kud/vivin_gsm/gsm_sim/software/fifo_v_1_2/fifo_v_1_2_bsp/system.mss
+   line 21 - No IP instance named axi_intc_0 is present in the hardware!
+ERROR:EDK:410 - generic -
+   /home/ga38kud/vivin_gsm/gsm_sim/software/fifo_v_1_2/fifo_v_1_2_bsp/system.mss
+   line 69 - No IP instance named sc_uart_0 is present in the hardware!
+ERROR:EDK:1206 - Errors occured while parsing MSS file.

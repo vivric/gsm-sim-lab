@@ -1,0 +1,15 @@
+##############################################################################
+## Filename:          /home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/drivers/sc_uart_interface_modified_v2_00_a/data/sc_uart_interface_modified_v2_1_0.mdd
+## Description:       Microprocessor Driver Definition
+## Date:              Mon May 26 19:48:20 2014 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+OPTION psf_version = 2.1.0;
+
+BEGIN DRIVER sc_uart_interface_modified
+
+  OPTION supported_peripherals = (sc_uart_interface_modified);
+  OPTION depends = (common_v1_00_a);
+  OPTION copyfiles = all;
+
+END DRIVER

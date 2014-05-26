@@ -1,0 +1,9 @@
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../gsm_integration_v_1_0_hw_platform/system.xml
+-pe microblaze_0 sc_uart_v_2_0.elf 
+
+ELF file	: sc_uart_v_2_0.elf
+elfcheck passed.

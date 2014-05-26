@@ -1,0 +1,125 @@
+20:06:16.586 INFO  - Processing command line option -hwspec /home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/SDK/SDK_Export/hw/system.xml. 
+20:16:30.320 INFO  - FPGA configured successfully with bitstream "/home/ga38kud/vivin_gsm/gsm_sim/software/fifo_v_2_0/gsm_integration_v_1_0_hw_platform/download.bit" 
+20:20:46.989 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+20:22:04.837 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+20:37:51.388 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+20:37:51.396 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+20:42:30.797 INFO  - Processing command line option -hwspec /home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/SDK/SDK_Export/hw/system.xml. 
+20:42:32.087 INFO  - The hardware specification for project 'gsm_integration_v_1_0_hw_platform' is different from /home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/SDK/SDK_Export/hw/system.xml. 
+20:42:32.277 INFO  - Copied contents of /home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/SDK/SDK_Export/hw/system.xml into /gsm_integration_v_1_0_hw_platform/system.xml. 
+20:42:32.294 INFO  - Copied contents of /home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/SDK/SDK_Export/hw/system.bit into /gsm_integration_v_1_0_hw_platform/system.bit. 
+20:42:32.299 INFO  - Copied contents of /home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/SDK/SDK_Export/hw/system_bd.bmm into /gsm_integration_v_1_0_hw_platform/system_bd.bmm. 
+20:42:32.657 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+20:42:34.783 INFO  - Updating hardware inferred compiler options for sc_uart_v_2_0. 
+20:42:34.898 INFO  - Clearing existing target manager status. 
+20:42:59.239 INFO  - FPGA configured successfully with bitstream "/home/ga38kud/vivin_gsm/gsm_sim/software/fifo_v_2_0/gsm_integration_v_1_0_hw_platform/download.bit" 
+20:45:17.063 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+20:45:17.095 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+20:45:34.652 INFO  - Processing command line option -hwspec /home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/SDK/SDK_Export/hw/system.xml. 
+20:50:53.557 INFO  - Processing command line option -hwspec /home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/SDK/SDK_Export/hw/system.xml. 
+20:50:53.791 INFO  - The hardware specification for project 'gsm_integration_v_1_0_hw_platform' is different from /home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/SDK/SDK_Export/hw/system.xml. 
+20:50:54.721 INFO  - Copied contents of /home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/SDK/SDK_Export/hw/system.xml into /gsm_integration_v_1_0_hw_platform/system.xml. 
+20:50:54.749 INFO  - Copied contents of /home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/SDK/SDK_Export/hw/system.bit into /gsm_integration_v_1_0_hw_platform/system.bit. 
+20:50:54.788 INFO  - Copied contents of /home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/SDK/SDK_Export/hw/system_bd.bmm into /gsm_integration_v_1_0_hw_platform/system_bd.bmm. 
+20:50:54.941 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+20:50:57.899 INFO  - Updating hardware inferred compiler options for sc_uart_v_2_0. 
+20:50:57.913 INFO  - Clearing existing target manager status. 
+20:51:00.310 INFO  - Closing and re-opening the MSS file of ther project sc_uart_v_2_0_bsp 
+20:51:10.363 INFO  - FPGA configured successfully with bitstream "/home/ga38kud/vivin_gsm/gsm_sim/software/fifo_v_2_0/gsm_integration_v_1_0_hw_platform/download.bit" 
+20:57:28.453 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+20:57:32.166 INFO  - System reset is completed. 
+20:57:33.322 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Error creating session
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(Unknown Source)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(Unknown Source)
+
+20:57:52.763 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+20:57:54.679 INFO  - System reset is completed. 
+20:57:55.798 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Error creating session
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(Unknown Source)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(Unknown Source)
+
+20:58:48.924 INFO  - System reset is completed. 
+20:58:49.945 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Error creating session
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(Unknown Source)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(Unknown Source)
+
+21:05:22.562 WARN  - Terminating existing sessions on processor microblaze_0 
+21:05:25.537 INFO  - FPGA configured successfully with bitstream "/home/ga38kud/vivin_gsm/gsm_sim/software/fifo_v_2_0/gsm_integration_v_1_0_hw_platform/download.bit" 
+21:20:53.141 ERROR - Unexpected error while launching program. java.lang.RuntimeException: The program file specified in the launch configuration does not exist
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(Unknown Source)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(Unknown Source)
+
+21:28:15.664 ERROR - Unexpected error while launching program. java.lang.RuntimeException: The program file specified in the launch configuration does not exist
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(Unknown Source)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(Unknown Source)
+
+21:29:09.632 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+21:29:11.731 ERROR - Unexpected error while launching program. java.lang.RuntimeException: No Active System
+
+	at com.xilinx.sdk.targetmanager.internal.TM.stop(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.CPURunSession.terminate(Unknown Source)
+
+21:29:18.839 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+21:29:21.739 ERROR - Unexpected error while launching program. java.lang.RuntimeException: No Active System
+
+	at com.xilinx.sdk.targetmanager.internal.TM.stop(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.CPURunSession.terminate(Unknown Source)
+
+21:29:59.391 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+21:30:00.688 ERROR - Unexpected error while launching program. java.lang.RuntimeException: No Active System
+
+	at com.xilinx.sdk.targetmanager.internal.TM.stop(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.CPURunSession.terminate(Unknown Source)
+
+21:30:05.055 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+21:30:06.280 ERROR - Unexpected error while launching program. java.lang.RuntimeException: No Active System
+
+	at com.xilinx.sdk.targetmanager.internal.TM.stop(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.CPURunSession.terminate(Unknown Source)
+
+21:30:16.890 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+21:30:18.289 ERROR - Unexpected error while launching program. java.lang.RuntimeException: No Active System
+
+	at com.xilinx.sdk.targetmanager.internal.TM.stop(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.CPURunSession.terminate(Unknown Source)
+
+21:30:29.700 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+21:30:31.099 ERROR - Unexpected error while launching program. java.lang.RuntimeException: No Active System
+
+	at com.xilinx.sdk.targetmanager.internal.TM.stop(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.CPURunSession.terminate(Unknown Source)
+
+21:30:39.417 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+21:30:41.916 ERROR - Unexpected error while launching program. java.lang.RuntimeException: No Active System
+
+	at com.xilinx.sdk.targetmanager.internal.TM.stop(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.CPURunSession.terminate(Unknown Source)
+
+21:30:48.765 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+21:30:50.464 ERROR - Unexpected error while launching program. java.lang.RuntimeException: No Active System
+
+	at com.xilinx.sdk.targetmanager.internal.TM.stop(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.CPURunSession.terminate(Unknown Source)
+
+21:30:56.219 WARN  - Terminating existing sessions on processor microblaze_0 
+21:31:06.756 WARN  - Terminating existing sessions on processor microblaze_0 
+21:31:15.872 WARN  - Terminating existing sessions on processor microblaze_0 
+21:31:41.293 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+21:31:42.493 ERROR - Unexpected error while launching program. java.lang.RuntimeException: No Active System
+
+	at com.xilinx.sdk.targetmanager.internal.TM.stop(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.CPURunSession.terminate(Unknown Source)
+
+21:32:01.919 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+21:32:03.617 ERROR - Unexpected error while launching program. java.lang.RuntimeException: No Active System
+
+	at com.xilinx.sdk.targetmanager.internal.TM.stop(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.CPURunSession.terminate(Unknown Source)
+
+21:35:17.180 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

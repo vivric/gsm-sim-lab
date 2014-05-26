@@ -2,8 +2,8 @@
 Release 14.7 Trace  (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-/home/vivric/Documents/xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -e 3
--xml system.twx system.ncd system.pcf
+/nfs/tools/xilinx/ise/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -e 3 -xml
+system.twx system.ncd system.pcf
 
 Design file:              system.ncd
 Physical constraint file: system.pcf
@@ -42,6 +42,13 @@ Timing constraint: PATH "TS_TIG_microblaze_0_Interrupt_path" TIG;
 --------------------------------------------------------------------------------
 
 ================================================================================
+Timing constraint: PATH "TS_axi4lite_0_reset_resync_path" TIG;
+
+ 3 paths analyzed, 3 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+--------------------------------------------------------------------------------
+
+================================================================================
 Timing constraint: PATH "TS_sync_axi_intc_0_path" TIG;
 
  3 paths analyzed, 2 endpoints analyzed, 0 failing endpoints
@@ -65,14 +72,7 @@ Timing constraint: PATH "TS_MB_AXI_FP_axi_intc_0_path" TIG;
 ================================================================================
 Timing constraint: PATH "TS_AXI_MB_FP_axi_intc_0_path" TIG;
 
- 211124 paths analyzed, 10128 endpoints analyzed, 0 failing endpoints
- 0 timing errors detected. (0 setup errors, 0 hold errors)
---------------------------------------------------------------------------------
-
-================================================================================
-Timing constraint: PATH "TS_axi4lite_0_reset_resync_path" TIG;
-
- 8 paths analyzed, 8 endpoints analyzed, 0 failing endpoints
+ 211128 paths analyzed, 10132 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors)
 --------------------------------------------------------------------------------
 
@@ -136,7 +136,7 @@ Clock to Setup on destination clock GCLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-GCLK           |    9.362|         |         |         |
+GCLK           |   10.173|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -145,13 +145,13 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 211139 paths, 0 nets, and 12056 connections
+Constraints cover 211138 paths, 0 nets, and 12078 connections
 
 Design statistics:
    Minimum period:   3.334ns   (Maximum frequency: 299.940MHz)
 
 
-Analysis completed Sat May 24 21:51:22 2014 
+Analysis completed Mon May 26 19:32:51 2014 
 --------------------------------------------------------------------------------
 
 Trace Settings:

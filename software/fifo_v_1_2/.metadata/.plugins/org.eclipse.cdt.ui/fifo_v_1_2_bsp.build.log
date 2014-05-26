@@ -1,6 +1,26 @@
-10:25:12 **** Auto Build of project fifo_v_1_2_bsp ****
+20:03:16 **** Auto Build of project fifo_v_1_2_bsp ****
 make -k all 
-Finished building libraries
+libgen -hw ../gsm_sim_v_1_0_fifo_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-10:25:12 Build Finished (took 75ms)
+Command Line: libgen -hw ../gsm_sim_v_1_0_fifo_hw_platform/system.xml -pe
+microblaze_0 -log libgen.log system.mss 
+
+ERROR:EDK:410 - intc -
+   /home/ga38kud/vivin_gsm/gsm_sim/software/fifo_v_1_2/fifo_v_1_2_bsp/system.mss
+   line 21 - No IP instance named axi_intc_0 is present in the hardware!
+ERROR:EDK:410 - generic -
+   /home/ga38kud/vivin_gsm/gsm_sim/software/fifo_v_1_2/fifo_v_1_2_bsp/system.mss
+   line 69 - No IP instance named sc_uart_0 is present in the hardware!
+ERROR:EDK:1206 - Errors occured while parsing MSS file.
+make: *** [microblaze_0/lib/libxil.a] Error 2
+make: Target `all' not remade because of errors.
+
+20:03:17 Build Finished (took 1s.221ms)
 

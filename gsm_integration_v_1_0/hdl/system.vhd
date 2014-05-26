@@ -16,7 +16,10 @@ entity system is
     LEDs_8Bits_TRI_O : out std_logic_vector(7 downto 0);
     GCLK : in std_logic;
     DIP_Switches_8Bits_TRI_I : in std_logic_vector(7 downto 0);
-    exa_0_io : inout std_logic
+    sc_uart_interface_modified_0_led_pin : out std_logic_vector(6 downto 0);
+    sc_uart_interface_modified_0_UART_IO : inout std_logic;
+    sc_uart_interface_modified_0_UART_CLK_pin : in std_logic;
+    sc_uart_interface_modified_0_UART_RST_pin : in std_logic
   );
 end system;
 
@@ -1722,11 +1725,14 @@ architecture STRUCTURE of system is
     );
   end component;
 
-  component system_exa_0_wrapper is
+  component system_sc_uart_interface_modified_0_wrapper is
     port (
-      io_T : out std_logic;
-      io_O : out std_logic;
-      io_I : in std_logic;
+      led : out std_logic_vector(7 downto 1);
+      UART_IO_I : in std_logic;
+      UART_IO_O : out std_logic;
+      UART_IO_T : out std_logic;
+      UART_CLK : in std_logic;
+      UART_RST : in std_logic;
       S_AXI_ACLK : in std_logic;
       S_AXI_ARESETN : in std_logic;
       S_AXI_AWADDR : in std_logic_vector(31 downto 0);
@@ -1818,9 +1824,6 @@ architecture STRUCTURE of system is
   signal axi4lite_0_S_WSTRB : std_logic_vector(3 downto 0);
   signal axi4lite_0_S_WVALID : std_logic_vector(0 to 0);
   signal clk_100_0000MHz : std_logic_vector(0 to 0);
-  signal exa_0_io_I : std_logic;
-  signal exa_0_io_O : std_logic;
-  signal exa_0_io_T : std_logic;
   signal microblaze_0_d_bram_ctrl_2_microblaze_0_bram_block_BRAM_Addr : std_logic_vector(0 to 31);
   signal microblaze_0_d_bram_ctrl_2_microblaze_0_bram_block_BRAM_Clk : std_logic;
   signal microblaze_0_d_bram_ctrl_2_microblaze_0_bram_block_BRAM_Din : std_logic_vector(0 to 31);
@@ -1903,6 +1906,12 @@ architecture STRUCTURE of system is
   signal proc_sys_reset_0_Interconnect_aresetn : std_logic_vector(0 to 0);
   signal proc_sys_reset_0_MB_Debug_Sys_Rst : std_logic;
   signal proc_sys_reset_0_MB_Reset : std_logic;
+  signal sc_uart_interface_modified_0_UART_CLK : std_logic;
+  signal sc_uart_interface_modified_0_UART_IO_I : std_logic;
+  signal sc_uart_interface_modified_0_UART_IO_O : std_logic;
+  signal sc_uart_interface_modified_0_UART_IO_T : std_logic;
+  signal sc_uart_interface_modified_0_UART_RST : std_logic;
+  signal sc_uart_interface_modified_0_led : std_logic_vector(6 downto 0);
 
   attribute BOX_TYPE : STRING;
   attribute BOX_TYPE of system_proc_sys_reset_0_wrapper : component is "user_black_box";
@@ -1919,12 +1928,15 @@ architecture STRUCTURE of system is
   attribute BOX_TYPE of system_push_buttons_4bits_wrapper : component is "user_black_box";
   attribute BOX_TYPE of system_leds_8bits_wrapper : component is "user_black_box";
   attribute BOX_TYPE of system_dip_switches_8bits_wrapper : component is "user_black_box";
-  attribute BOX_TYPE of system_exa_0_wrapper : component is "user_black_box";
+  attribute BOX_TYPE of system_sc_uart_interface_modified_0_wrapper : component is "user_black_box";
 
 begin
 
   -- Internal assignments
 
+  sc_uart_interface_modified_0_led_pin <= sc_uart_interface_modified_0_led;
+  sc_uart_interface_modified_0_UART_CLK <= sc_uart_interface_modified_0_UART_CLK_pin;
+  sc_uart_interface_modified_0_UART_RST <= sc_uart_interface_modified_0_UART_RST_pin;
   pgassign1(5 downto 5) <= clk_100_0000MHz(0 to 0);
   pgassign1(4 downto 4) <= clk_100_0000MHz(0 to 0);
   pgassign1(3 downto 3) <= clk_100_0000MHz(0 to 0);
@@ -3629,11 +3641,14 @@ begin
       GPIO2_IO_T => open
     );
 
-  exa_0 : system_exa_0_wrapper
+  sc_uart_interface_modified_0 : system_sc_uart_interface_modified_0_wrapper
     port map (
-      io_T => exa_0_io_T,
-      io_O => exa_0_io_O,
-      io_I => exa_0_io_I,
+      led => sc_uart_interface_modified_0_led,
+      UART_IO_I => sc_uart_interface_modified_0_UART_IO_I,
+      UART_IO_O => sc_uart_interface_modified_0_UART_IO_O,
+      UART_IO_T => sc_uart_interface_modified_0_UART_IO_T,
+      UART_CLK => sc_uart_interface_modified_0_UART_CLK,
+      UART_RST => sc_uart_interface_modified_0_UART_RST,
       S_AXI_ACLK => pgassign1(5),
       S_AXI_ARESETN => axi4lite_0_M_ARESETN(5),
       S_AXI_AWADDR => axi4lite_0_M_AWADDR(191 downto 160),
@@ -3657,10 +3672,10 @@ begin
 
   iobuf_0 : IOBUF
     port map (
-      I => exa_0_io_O,
-      IO => exa_0_io,
-      O => exa_0_io_I,
-      T => exa_0_io_T
+      I => sc_uart_interface_modified_0_UART_IO_O,
+      IO => sc_uart_interface_modified_0_UART_IO,
+      O => sc_uart_interface_modified_0_UART_IO_I,
+      T => sc_uart_interface_modified_0_UART_IO_T
     );
 
 end architecture STRUCTURE;

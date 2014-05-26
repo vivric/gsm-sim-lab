@@ -212,7 +212,7 @@ BEGIN axi_intc
  PORT S_AXI_ACLK = clk_100_0000MHz
  PORT Intr = fit_timer_0_Interrupt
  PORT Processor_clk = clk_100_0000MHz
- PORT Processor_rst = proc_sys_reset_0_Peripheral_aresetn
+ PORT Processor_rst = proc_sys_reset_0_Peripheral_Reset
 END
 
 BEGIN sc_uart

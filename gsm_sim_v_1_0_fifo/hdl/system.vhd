@@ -17,9 +17,9 @@ entity system is
     GCLK : in std_logic;
     DIP_Switches_8Bits_TRI_I : in std_logic_vector(7 downto 0);
     sc_uart_0_tx_data_pin : out std_logic_vector(7 downto 0);
+    sc_uart_0_rx_data_pin : in std_logic_vector(7 downto 0);
     sc_uart_0_master_status_pin : out std_logic_vector(2 downto 0);
-    sc_uart_0_slave_status_pin : in std_logic_vector(2 downto 0);
-    sc_uart_0_rx_data_pin : in std_logic_vector(7 downto 0)
+    sc_uart_0_slave_status_pin : in std_logic_vector(2 downto 0)
   );
 end system;
 
@@ -1940,7 +1940,6 @@ architecture STRUCTURE of system is
   signal proc_sys_reset_0_MB_Debug_Sys_Rst : std_logic;
   signal proc_sys_reset_0_MB_Reset : std_logic;
   signal proc_sys_reset_0_Peripheral_Reset : std_logic_vector(0 to 0);
-  signal proc_sys_reset_0_Peripheral_aresetn : std_logic_vector(0 to 0);
   signal sc_uart_0_master_status : std_logic_vector(2 downto 0);
   signal sc_uart_0_rx_data : std_logic_vector(7 downto 0);
   signal sc_uart_0_slave_status : std_logic_vector(2 downto 0);
@@ -1970,9 +1969,9 @@ begin
   -- Internal assignments
 
   sc_uart_0_tx_data_pin <= sc_uart_0_tx_data;
+  sc_uart_0_rx_data <= sc_uart_0_rx_data_pin;
   sc_uart_0_master_status_pin <= sc_uart_0_master_status;
   sc_uart_0_slave_status <= sc_uart_0_slave_status_pin;
-  sc_uart_0_rx_data <= sc_uart_0_rx_data_pin;
   pgassign1(6 downto 6) <= clk_100_0000MHz(0 to 0);
   pgassign1(5 downto 5) <= clk_100_0000MHz(0 to 0);
   pgassign1(4 downto 4) <= clk_100_0000MHz(0 to 0);
@@ -2015,7 +2014,7 @@ begin
       Bus_Struct_Reset => proc_sys_reset_0_BUS_STRUCT_RESET(0 to 0),
       Peripheral_Reset => proc_sys_reset_0_Peripheral_Reset(0 to 0),
       Interconnect_aresetn => proc_sys_reset_0_Interconnect_aresetn(0 to 0),
-      Peripheral_aresetn => proc_sys_reset_0_Peripheral_aresetn(0 to 0)
+      Peripheral_aresetn => open
     );
 
   microblaze_0_ilmb : system_microblaze_0_ilmb_wrapper
@@ -3711,7 +3710,7 @@ begin
       Interrupt_address => axi_intc_0_INTERRUPT_Interrupt_Address(0 to 31),
       Processor_ack => axi_intc_0_INTERRUPT_Interrupt_Ack,
       Processor_clk => pgassign1(6),
-      Processor_rst => proc_sys_reset_0_Peripheral_aresetn(0),
+      Processor_rst => proc_sys_reset_0_Peripheral_Reset(0),
       Interrupt_address_in => net_gnd32(0 to 31),
       Processor_ack_out => open
     );
