@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "D:/Digilent/Projects/Nexys3/Nexsy3_EDK_Ssg_Decoder/pcores/ssg_decoder_v1_00_a/devl/projnav/ssg_decoder.xst" -ofn "D:/Digilent/Projects/Nexys3/Nexsy3_EDK_Ssg_Decoder/pcores/ssg_decoder_v1_00_a/devl/projnav/ssg_decoder.syr" 
+xst -intstyle ise -ifn "D:/Digilent/Projects/Nexys3/Nexsy3_EDK_Ssg_Decoder/pcores/ssg_decoder_v1_00_a/devl/projnav/ssg_decoder.xst" -ofn "D:/Digilent/Projects/Nexys3/Nexsy3_EDK_Ssg_Decoder/pcores/ssg_decoder_v1_00_a/devl/projnav/ssg_decoder.syr" 

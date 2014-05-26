@@ -1,0 +1,641 @@
+21:56:09 **** Build of project fifo_v_1_2_bsp ****
+make -k all 
+libgen -hw ../gsm_sim_v_1_0_fifo_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../gsm_sim_v_1_0_fifo_hw_platform/system.xml -pe
+microblaze_0 -log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'gmake -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mlittle-endian -mno-xl-soft-mul -mxl-barrel-shift
+-mxl-pattern-compare -mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g
+-ffunction-sections -fdata-sections"'.
+
+Running libs - 'gmake -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mlittle-endian -mno-xl-soft-mul -mxl-barrel-shift
+-mxl-pattern-compare -mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g
+-ffunction-sections -fdata-sections"'.
+Compiling common
+Compiling standalone
+Compiling intc
+Compiling uartlite
+Compiling gpio
+Compiling bram
+Compiling cpu
+Running execs_generate.
+Finished building libraries
+21:56:23 **** Build of configuration Debug for project fifo_v_1_2 ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../fifo_v_1_2_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../fifo_v_1_2_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: fifo_v_1_2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fifo_v_1_2_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fifo_v_1_2.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: fifo_v_1_2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size fifo_v_1_2.elf  |tee "fifo_v_1_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2430	    308	   2084	   4822	   12d6	fifo_v_1_2.elf
+Finished building: fifo_v_1_2.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck fifo_v_1_2.elf -hw ../../gsm_sim_v_1_0_fifo_hw_platform/system.xml -pe microblaze_0  |tee "fifo_v_1_2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../gsm_sim_v_1_0_fifo_hw_platform/system.xml -pe
+microblaze_0 fifo_v_1_2.elf 
+
+ELF file	: fifo_v_1_2.elf
+elfcheck passed.
+Finished building: fifo_v_1_2.elf.elfcheck
+ 
+21:56:50 **** Build of configuration Debug for project fifo_v_1_2 ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../fifo_v_1_2_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../fifo_v_1_2_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: fifo_v_1_2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fifo_v_1_2_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fifo_v_1_2.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: fifo_v_1_2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size fifo_v_1_2.elf  |tee "fifo_v_1_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2430	    308	   2084	   4822	   12d6	fifo_v_1_2.elf
+Finished building: fifo_v_1_2.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck fifo_v_1_2.elf -hw ../../gsm_sim_v_1_0_fifo_hw_platform/system.xml -pe microblaze_0  |tee "fifo_v_1_2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../gsm_sim_v_1_0_fifo_hw_platform/system.xml -pe
+microblaze_0 fifo_v_1_2.elf 
+
+ELF file	: fifo_v_1_2.elf
+elfcheck passed.
+Finished building: fifo_v_1_2.elf.elfcheck
+ 
+21:57:22 **** Build of configuration Debug for project fifo_v_1_2 ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../fifo_v_1_2_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../fifo_v_1_2_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: fifo_v_1_2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fifo_v_1_2_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fifo_v_1_2.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: fifo_v_1_2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size fifo_v_1_2.elf  |tee "fifo_v_1_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2430	    308	   2084	   4822	   12d6	fifo_v_1_2.elf
+Finished building: fifo_v_1_2.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck fifo_v_1_2.elf -hw ../../gsm_sim_v_1_0_fifo_hw_platform/system.xml -pe microblaze_0  |tee "fifo_v_1_2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../gsm_sim_v_1_0_fifo_hw_platform/system.xml -pe
+microblaze_0 fifo_v_1_2.elf 
+
+ELF file	: fifo_v_1_2.elf
+elfcheck passed.
+Finished building: fifo_v_1_2.elf.elfcheck
+ 
+21:58:33 **** Auto Build of project fifo_v_1_2_bsp ****
+make -k all 
+Finished building libraries
+21:58:34 **** Auto Build of configuration Debug for project fifo_v_1_2 ****
+make all 
+make: Nothing to be done for `all'.
+21:58:37 **** Auto Build of configuration Debug for project fifo_v_1_2 ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../fifo_v_1_2_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:84:2: warning: passing argument 4 of 'XIntc_RegisterHandler' makes pointer from integer without a cast [enabled by default]
+Finished building: ../src/helloworld.c
+ 
+Building target: fifo_v_1_2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fifo_v_1_2_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fifo_v_1_2.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+../../fifo_v_1_2_bsp/microblaze_0/include/xintc_l.h:320:6: note: expected 'void *' but argument is of type 'int'
+Finished building target: fifo_v_1_2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size fifo_v_1_2.elf  |tee "fifo_v_1_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2926	    308	   2084	   5318	   14c6	fifo_v_1_2.elf
+Finished building: fifo_v_1_2.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck fifo_v_1_2.elf -hw ../../gsm_sim_v_1_0_fifo_hw_platform/system.xml -pe microblaze_0  |tee "fifo_v_1_2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../gsm_sim_v_1_0_fifo_hw_platform/system.xml -pe
+microblaze_0 fifo_v_1_2.elf 
+
+ELF file	: fifo_v_1_2.elf
+elfcheck passed.
+Finished building: fifo_v_1_2.elf.elfcheck
+ 
+22:03:13 **** Auto Build of project fifo_v_1_2_bsp ****
+make -k all 
+Finished building libraries
+22:05:51 **** Incremental Build of configuration Debug for project fifo_v_1_2 ****
+make all 
+make: Nothing to be done for `all'.
+01:54:17 **** Auto Build of configuration Debug for project fifo_v_1_2 ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../fifo_v_1_2_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:57:2: warning: "/*" within comment [-Wcomment]
+Finished building: ../src/helloworld.c
+ 
+Building target: fifo_v_1_2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fifo_v_1_2_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fifo_v_1_2.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: fifo_v_1_2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size fifo_v_1_2.elf  |tee "fifo_v_1_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2822	    308	   2092	   5222	   1466	fifo_v_1_2.elf
+Finished building: fifo_v_1_2.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck fifo_v_1_2.elf -hw ../../gsm_sim_v_1_0_fifo_hw_platform/system.xml -pe microblaze_0  |tee "fifo_v_1_2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../gsm_sim_v_1_0_fifo_hw_platform/system.xml -pe
+microblaze_0 fifo_v_1_2.elf 
+
+ELF file	: fifo_v_1_2.elf
+elfcheck passed.
+Finished building: fifo_v_1_2.elf.elfcheck
+ 
+01:54:59 **** Auto Build of project fifo_v_1_2_bsp ****
+make -k all 
+Finished building libraries
+01:57:43 **** Incremental Build of configuration Debug for project fifo_v_1_2 ****
+make all 
+make: Nothing to be done for `all'.
+02:00:01 **** Auto Build of configuration Debug for project fifo_v_1_2 ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../fifo_v_1_2_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:57:2: warning: "/*" within comment [-Wcomment]
+Finished building: ../src/helloworld.c
+ 
+Building target: fifo_v_1_2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fifo_v_1_2_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fifo_v_1_2.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: fifo_v_1_2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size fifo_v_1_2.elf  |tee "fifo_v_1_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2822	    308	   2092	   5222	   1466	fifo_v_1_2.elf
+Finished building: fifo_v_1_2.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck fifo_v_1_2.elf -hw ../../gsm_sim_v_1_0_fifo_hw_platform/system.xml -pe microblaze_0  |tee "fifo_v_1_2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../gsm_sim_v_1_0_fifo_hw_platform/system.xml -pe
+microblaze_0 fifo_v_1_2.elf 
+
+ELF file	: fifo_v_1_2.elf
+elfcheck passed.
+Finished building: fifo_v_1_2.elf.elfcheck
+ 
+02:00:06 **** Incremental Build of configuration Debug for project fifo_v_1_2 ****
+make all 
+make: Nothing to be done for `all'.
+00:59:35 **** Auto Build of configuration Debug for project fifo_v_1_2 ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../fifo_v_1_2_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:54:9: warning: type defaults to 'int' in declaration of 'state' [-Wimplicit-int]
+../src/helloworld.c:54:1: error: typedef 'state' is initialized (use __typeof__ instead)
+../src/helloworld.c:54:16: error: 'transmit_mode' undeclared here (not in a function)
+../src/helloworld.c:54:30: error: 'recieve_mode' undeclared here (not in a function)
+../src/helloworld.c:54:1: warning: excess elements in scalar initializer [enabled by default]
+../src/helloworld.c:54:1: warning: (near initialization for 'state') [enabled by default]
+../src/helloworld.c:54:43: error: 'ATR' undeclared here (not in a function)
+../src/helloworld.c:54:1: warning: excess elements in scalar initializer [enabled by default]
+../src/helloworld.c:54:1: warning: (near initialization for 'state') [enabled by default]
+../src/helloworld.c:62:2: warning: "/*" within comment [-Wcomment]
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:101:4: warning: implicit declaration of function 'initialize' [-Wimplicit-function-declaration]
+../src/helloworld.c:102:9: error: expected identifier or '(' before '=' token
+../src/helloworld.c:107:11: error: expected expression before 'state'
+make: *** [src/helloworld.o] Error 1
+01:00:50 **** Auto Build of configuration Debug for project fifo_v_1_2 ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../fifo_v_1_2_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:54:11: error: expected identifier or '(' before '=' token
+../src/helloworld.c:62:2: warning: "/*" within comment [-Wcomment]
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:101:4: warning: implicit declaration of function 'initialize' [-Wimplicit-function-declaration]
+../src/helloworld.c:102:4: error: 'state' undeclared (first use in this function)
+../src/helloworld.c:102:4: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:102:10: error: 'transmit_mode' undeclared (first use in this function)
+make: *** [src/helloworld.o] Error 1
+01:02:15 **** Auto Build of configuration Debug for project fifo_v_1_2 ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../fifo_v_1_2_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:62:2: warning: "/*" within comment [-Wcomment]
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:101:4: warning: implicit declaration of function 'initialize' [-Wimplicit-function-declaration]
+../src/helloworld.c:102:4: error: 'state' undeclared (first use in this function)
+../src/helloworld.c:102:4: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/helloworld.o] Error 1
+01:03:40 **** Auto Build of configuration Debug for project fifo_v_1_2 ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../fifo_v_1_2_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:55:1: error: unknown type name 'mode'
+../src/helloworld.c:62:2: warning: "/*" within comment [-Wcomment]
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:101:4: warning: implicit declaration of function 'initialize' [-Wimplicit-function-declaration]
+make: *** [src/helloworld.o] Error 1
+01:05:20 **** Auto Build of configuration Debug for project fifo_v_1_2 ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../fifo_v_1_2_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:62:2: warning: "/*" within comment [-Wcomment]
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:101:4: warning: implicit declaration of function 'initialize' [-Wimplicit-function-declaration]
+../src/helloworld.c:107:4: warning: enumeration value 'transmit_mode' not handled in switch [-Wswitch]
+../src/helloworld.c:107:4: warning: enumeration value 'recieve_mode' not handled in switch [-Wswitch]
+../src/helloworld.c:107:4: warning: enumeration value 'ATR' not handled in switch [-Wswitch]
+Finished building: ../src/helloworld.c
+ 
+Building target: fifo_v_1_2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fifo_v_1_2_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fifo_v_1_2.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/helloworld.o: In function `main':
+/home/vivric/Documents/workspace/gsm_sim/software/fifo_v_1_2/fifo_v_1_2/Debug/../src/helloworld.c:101: undefined reference to `initialize'
+collect2: ld returned 1 exit status
+make: *** [fifo_v_1_2.elf] Error 1
+02:38:34 **** Auto Build of configuration Debug for project fifo_v_1_2 ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../fifo_v_1_2_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:69:2: warning: "/*" within comment [-Wcomment]
+../src/helloworld.c: In function 'transmit_ATR_fn':
+../src/helloworld.c:106:3: error: expected ';' before 'state'
+../src/helloworld.c: In function 'transmit_fn':
+../src/helloworld.c:120:2: error: expected ';' before 'state'
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:169:4: warning: enumeration value 'ATR' not handled in switch [-Wswitch]
+make: *** [src/helloworld.o] Error 1
+02:39:47 **** Auto Build of configuration Debug for project fifo_v_1_2 ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../fifo_v_1_2_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:69:2: warning: "/*" within comment [-Wcomment]
+Finished building: ../src/helloworld.c
+ 
+Building target: fifo_v_1_2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fifo_v_1_2_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fifo_v_1_2.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: fifo_v_1_2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size fifo_v_1_2.elf  |tee "fifo_v_1_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3690	    308	   2106	   6104	   17d8	fifo_v_1_2.elf
+Finished building: fifo_v_1_2.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck fifo_v_1_2.elf -hw ../../gsm_sim_v_1_0_fifo_hw_platform/system.xml -pe microblaze_0  |tee "fifo_v_1_2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../gsm_sim_v_1_0_fifo_hw_platform/system.xml -pe
+microblaze_0 fifo_v_1_2.elf 
+
+ELF file	: fifo_v_1_2.elf
+elfcheck passed.
+Finished building: fifo_v_1_2.elf.elfcheck
+ 
+02:40:22 **** Auto Build of configuration Debug for project fifo_v_1_2 ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../fifo_v_1_2_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:69:2: warning: "/*" within comment [-Wcomment]
+Finished building: ../src/helloworld.c
+ 
+Building target: fifo_v_1_2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fifo_v_1_2_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fifo_v_1_2.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: fifo_v_1_2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size fifo_v_1_2.elf  |tee "fifo_v_1_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3690	    308	   2106	   6104	   17d8	fifo_v_1_2.elf
+Finished building: fifo_v_1_2.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck fifo_v_1_2.elf -hw ../../gsm_sim_v_1_0_fifo_hw_platform/system.xml -pe microblaze_0  |tee "fifo_v_1_2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../gsm_sim_v_1_0_fifo_hw_platform/system.xml -pe
+microblaze_0 fifo_v_1_2.elf 
+
+ELF file	: fifo_v_1_2.elf
+elfcheck passed.
+Finished building: fifo_v_1_2.elf.elfcheck
+ 
+02:42:46 **** Auto Build of project fifo_v_1_2_bsp ****
+make -k all 
+Finished building libraries
+02:43:45 **** Incremental Build of configuration Debug for project fifo_v_1_2 ****
+make all 
+make: Nothing to be done for `all'.
+02:48:44 **** Auto Build of configuration Debug for project fifo_v_1_2 ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../fifo_v_1_2_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:69:2: warning: "/*" within comment [-Wcomment]
+Finished building: ../src/helloworld.c
+ 
+Building target: fifo_v_1_2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fifo_v_1_2_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fifo_v_1_2.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: fifo_v_1_2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size fifo_v_1_2.elf  |tee "fifo_v_1_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3678	    308	   2100	   6086	   17c6	fifo_v_1_2.elf
+Finished building: fifo_v_1_2.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck fifo_v_1_2.elf -hw ../../gsm_sim_v_1_0_fifo_hw_platform/system.xml -pe microblaze_0  |tee "fifo_v_1_2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../gsm_sim_v_1_0_fifo_hw_platform/system.xml -pe
+microblaze_0 fifo_v_1_2.elf 
+
+ELF file	: fifo_v_1_2.elf
+elfcheck passed.
+Finished building: fifo_v_1_2.elf.elfcheck
+ 
+02:49:15 **** Auto Build of configuration Debug for project fifo_v_1_2 ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../fifo_v_1_2_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:69:2: warning: "/*" within comment [-Wcomment]
+Finished building: ../src/helloworld.c
+ 
+Building target: fifo_v_1_2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fifo_v_1_2_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fifo_v_1_2.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: fifo_v_1_2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size fifo_v_1_2.elf  |tee "fifo_v_1_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3690	    308	   2106	   6104	   17d8	fifo_v_1_2.elf
+Finished building: fifo_v_1_2.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck fifo_v_1_2.elf -hw ../../gsm_sim_v_1_0_fifo_hw_platform/system.xml -pe microblaze_0  |tee "fifo_v_1_2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../gsm_sim_v_1_0_fifo_hw_platform/system.xml -pe
+microblaze_0 fifo_v_1_2.elf 
+
+ELF file	: fifo_v_1_2.elf
+elfcheck passed.
+Finished building: fifo_v_1_2.elf.elfcheck
+ 
+02:49:18 **** Incremental Build of configuration Debug for project fifo_v_1_2 ****
+make all 
+make: Nothing to be done for `all'.
+02:54:01 **** Auto Build of configuration Debug for project fifo_v_1_2 ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../fifo_v_1_2_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:69:2: warning: "/*" within comment [-Wcomment]
+Finished building: ../src/helloworld.c
+ 
+Building target: fifo_v_1_2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fifo_v_1_2_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fifo_v_1_2.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: fifo_v_1_2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size fifo_v_1_2.elf  |tee "fifo_v_1_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3690	    308	   2106	   6104	   17d8	fifo_v_1_2.elf
+Finished building: fifo_v_1_2.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck fifo_v_1_2.elf -hw ../../gsm_sim_v_1_0_fifo_hw_platform/system.xml -pe microblaze_0  |tee "fifo_v_1_2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../gsm_sim_v_1_0_fifo_hw_platform/system.xml -pe
+microblaze_0 fifo_v_1_2.elf 
+
+ELF file	: fifo_v_1_2.elf
+elfcheck passed.
+Finished building: fifo_v_1_2.elf.elfcheck
+ 
+02:54:05 **** Incremental Build of configuration Debug for project fifo_v_1_2 ****
+make all 
+make: Nothing to be done for `all'.
+02:56:24 **** Incremental Build of configuration Debug for project fifo_v_1_2 ****
+make all 
+make: Nothing to be done for `all'.
+02:58:56 **** Auto Build of configuration Debug for project fifo_v_1_2 ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../fifo_v_1_2_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:69:2: warning: "/*" within comment [-Wcomment]
+Finished building: ../src/helloworld.c
+ 
+Building target: fifo_v_1_2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fifo_v_1_2_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fifo_v_1_2.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: fifo_v_1_2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size fifo_v_1_2.elf  |tee "fifo_v_1_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3674	    308	   2106	   6088	   17c8	fifo_v_1_2.elf
+Finished building: fifo_v_1_2.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck fifo_v_1_2.elf -hw ../../gsm_sim_v_1_0_fifo_hw_platform/system.xml -pe microblaze_0  |tee "fifo_v_1_2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../gsm_sim_v_1_0_fifo_hw_platform/system.xml -pe
+microblaze_0 fifo_v_1_2.elf 
+
+ELF file	: fifo_v_1_2.elf
+elfcheck passed.
+Finished building: fifo_v_1_2.elf.elfcheck
+ 
+02:58:59 **** Incremental Build of configuration Debug for project fifo_v_1_2 ****
+make all 
+make: Nothing to be done for `all'.
+03:02:54 **** Auto Build of configuration Debug for project fifo_v_1_2 ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../fifo_v_1_2_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:69:2: warning: "/*" within comment [-Wcomment]
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:165:4: error: expected ';' before 'while'
+../src/helloworld.c:167:4: error: expected ';' before 'state'
+make: *** [src/helloworld.o] Error 1
+03:02:59 **** Auto Build of configuration Debug for project fifo_v_1_2 ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../fifo_v_1_2_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: fifo_v_1_2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fifo_v_1_2_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fifo_v_1_2.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+../src/helloworld.c:69:2: warning: "/*" within comment [-Wcomment]
+Finished building target: fifo_v_1_2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size fifo_v_1_2.elf  |tee "fifo_v_1_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3802	    308	   2106	   6216	   1848	fifo_v_1_2.elf
+Finished building: fifo_v_1_2.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck fifo_v_1_2.elf -hw ../../gsm_sim_v_1_0_fifo_hw_platform/system.xml -pe microblaze_0  |tee "fifo_v_1_2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../gsm_sim_v_1_0_fifo_hw_platform/system.xml -pe
+microblaze_0 fifo_v_1_2.elf 
+
+ELF file	: fifo_v_1_2.elf
+elfcheck passed.
+Finished building: fifo_v_1_2.elf.elfcheck
+ 
+03:03:03 **** Incremental Build of configuration Debug for project fifo_v_1_2 ****
+make all 
+make: Nothing to be done for `all'.
+03:04:43 **** Auto Build of configuration Debug for project fifo_v_1_2 ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../fifo_v_1_2_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+../src/helloworld.c:69:2: warning: "/*" within comment [-Wcomment]
+ 
+Building target: fifo_v_1_2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fifo_v_1_2_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fifo_v_1_2.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: fifo_v_1_2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size fifo_v_1_2.elf  |tee "fifo_v_1_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3882	    308	   2106	   6296	   1898	fifo_v_1_2.elf
+Finished building: fifo_v_1_2.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck fifo_v_1_2.elf -hw ../../gsm_sim_v_1_0_fifo_hw_platform/system.xml -pe microblaze_0  |tee "fifo_v_1_2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../gsm_sim_v_1_0_fifo_hw_platform/system.xml -pe
+microblaze_0 fifo_v_1_2.elf 
+
+ELF file	: fifo_v_1_2.elf
+elfcheck passed.
+Finished building: fifo_v_1_2.elf.elfcheck
+ 
+03:04:47 **** Incremental Build of configuration Debug for project fifo_v_1_2 ****
+make all 
+make: Nothing to be done for `all'.

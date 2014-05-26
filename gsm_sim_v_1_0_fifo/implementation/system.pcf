@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu May 22 02:01:49 2014
+// Written by: Map P.20131013 on Sat May 24 21:50:24 2014
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -571,6 +571,7 @@ TIMEGRP Processor_clk_axi_intc_0 = PIN
         "proc_sys_reset_0/proc_sys_reset_0/EXT_LPF/asr_lpf_2" BEL
         "proc_sys_reset_0/proc_sys_reset_0/EXT_LPF/exr_lpf_3" BEL
         "proc_sys_reset_0/proc_sys_reset_0/EXT_LPF/asr_lpf_3" BEL
+        "proc_sys_reset_0/proc_sys_reset_0/Peripheral_aresetn_0" BEL
         "proc_sys_reset_0/proc_sys_reset_0/Interconnect_aresetn_0" BEL
         "proc_sys_reset_0/proc_sys_reset_0/MB_Reset" BEL
         "proc_sys_reset_0/proc_sys_reset_0/Bus_Struct_Reset_0" BEL
@@ -829,6 +830,7 @@ TIMEGRP Processor_clk_axi_intc_0 = PIN
         "axi_intc_0/axi_intc_0/INTC_CORE_I/cie_0" BEL
         "axi_intc_0/axi_intc_0/INTC_CORE_I/isr_0" BEL
         "axi_intc_0/axi_intc_0/INTC_CORE_I/hw_intr_0" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/Irq" BEL
         "axi_intc_0/axi_intc_0/INTC_CORE_I/ier_0" BEL
         "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bvalid_i"
         BEL
@@ -896,6 +898,8 @@ TIMEGRP Processor_clk_axi_intc_0 = PIN
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_28_2"
         BEL
+        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_valid_jump_1"
+        BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_30_1"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_29_1"
@@ -931,6 +935,8 @@ TIMEGRP Processor_clk_axi_intc_0 = PIN
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_valid"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_read_imm_reg_ii"
+        BEL
+        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_Ext_BRK_i"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_read_imm_reg"
         BEL
@@ -1006,6 +1012,8 @@ TIMEGRP Processor_clk_axi_intc_0 = PIN
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/if_fetch_in_progress"
         BEL
+        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_set_MSR_IE_hold"
+        BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_reservation"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ext_nm_brk_hold"
@@ -1015,6 +1023,8 @@ TIMEGRP Processor_clk_axi_intc_0 = PIN
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/if_missed_fetch_already_tested"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_jump_hold"
+        BEL
+        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_Take_Interrupt_hold"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_Take_Ext_BRK_hold"
         BEL
@@ -1045,6 +1055,8 @@ TIMEGRP Processor_clk_axi_intc_0 = PIN
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/msr_reg_i/Using_FPGA_2.MSR_Bits[29].Using_FDR.MSR_ex_I"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/msr_reg_i/Using_FPGA_2.MSR_Bits[30].Using_FDR.MSR_ex_I"
+        BEL
+        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/msr_reg_i/Using_FPGA_2.MSR_Bits[30].Using_FDR.MSR_of_I"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Data_Flow_Logic_I/WB_MEM_Result_31"
         BEL
@@ -2498,17 +2510,15 @@ TIMEGRP Processor_clk_axi_intc_0 = PIN
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_first_cycle"
         BEL
-        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_Ext_NM_BRK_i"
+        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_Interrupt_i"
         BEL
-        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_Ext_BRK_i"
+        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_Ext_NM_BRK_i"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_Interrupt_Brk_combo"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_atomic_Instruction_Pair"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Dbg_Clean_Stop"
-        BEL
-        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_delayslot_Instr"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_opcode_5"
         BEL
@@ -2522,17 +2532,21 @@ TIMEGRP Processor_clk_axi_intc_0 = PIN
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_opcode_0"
         BEL
+        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_branch_with_delayslot"
+        BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_which_branch_10"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_which_branch_9"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_which_branch_8"
         BEL
-        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_branch_with_delayslot"
+        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_delayslot_Instr"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/EX_SWAP_BYTE_Instr"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_not_mul_op_i"
+        BEL
+        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_set_MSR_IE_instr"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_is_multi_or_load_instr"
         BEL
@@ -2562,9 +2576,9 @@ TIMEGRP Processor_clk_axi_intc_0 = PIN
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/mem_doublet_access"
         BEL
-        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/mem_read_imm_reg"
-        BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/mem_delayslot_instr"
+        BEL
+        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/mem_read_imm_reg"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/WB_Byte_Access"
         BEL
@@ -2712,6 +2726,7 @@ TIMEGRP Processor_clk_axi_intc_0 = PIN
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.wb_dlmb_valid_read_data_0"
         BEL "microblaze_0/microblaze_0/MicroBlaze_Core_I/Reset_DFF.reset_temp"
+        BEL "microblaze_0/microblaze_0/MicroBlaze_Core_I/external_interrupt"
         BEL "microblaze_0/microblaze_0/MicroBlaze_Core_I/sync_reset" BEL
         "microblaze_0_i_bram_ctrl/microblaze_0_i_bram_ctrl/Sl_Rdy" BEL
         "microblaze_0_i_bram_ctrl/microblaze_0_i_bram_ctrl/lmb_as" BEL
@@ -3668,6 +3683,7 @@ TIMEGRP S_AXI_ACLK_axi_intc_0 = PIN
         "proc_sys_reset_0/proc_sys_reset_0/EXT_LPF/asr_lpf_2" BEL
         "proc_sys_reset_0/proc_sys_reset_0/EXT_LPF/exr_lpf_3" BEL
         "proc_sys_reset_0/proc_sys_reset_0/EXT_LPF/asr_lpf_3" BEL
+        "proc_sys_reset_0/proc_sys_reset_0/Peripheral_aresetn_0" BEL
         "proc_sys_reset_0/proc_sys_reset_0/Interconnect_aresetn_0" BEL
         "proc_sys_reset_0/proc_sys_reset_0/MB_Reset" BEL
         "proc_sys_reset_0/proc_sys_reset_0/Bus_Struct_Reset_0" BEL
@@ -3926,6 +3942,7 @@ TIMEGRP S_AXI_ACLK_axi_intc_0 = PIN
         "axi_intc_0/axi_intc_0/INTC_CORE_I/cie_0" BEL
         "axi_intc_0/axi_intc_0/INTC_CORE_I/isr_0" BEL
         "axi_intc_0/axi_intc_0/INTC_CORE_I/hw_intr_0" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/Irq" BEL
         "axi_intc_0/axi_intc_0/INTC_CORE_I/ier_0" BEL
         "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bvalid_i"
         BEL
@@ -3993,6 +4010,8 @@ TIMEGRP S_AXI_ACLK_axi_intc_0 = PIN
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_28_2"
         BEL
+        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_valid_jump_1"
+        BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_30_1"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_29_1"
@@ -4028,6 +4047,8 @@ TIMEGRP S_AXI_ACLK_axi_intc_0 = PIN
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_valid"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_read_imm_reg_ii"
+        BEL
+        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_Ext_BRK_i"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_read_imm_reg"
         BEL
@@ -4103,6 +4124,8 @@ TIMEGRP S_AXI_ACLK_axi_intc_0 = PIN
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/if_fetch_in_progress"
         BEL
+        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_set_MSR_IE_hold"
+        BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_reservation"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ext_nm_brk_hold"
@@ -4112,6 +4135,8 @@ TIMEGRP S_AXI_ACLK_axi_intc_0 = PIN
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/if_missed_fetch_already_tested"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_jump_hold"
+        BEL
+        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_Take_Interrupt_hold"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_Take_Ext_BRK_hold"
         BEL
@@ -4142,6 +4167,8 @@ TIMEGRP S_AXI_ACLK_axi_intc_0 = PIN
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/msr_reg_i/Using_FPGA_2.MSR_Bits[29].Using_FDR.MSR_ex_I"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/msr_reg_i/Using_FPGA_2.MSR_Bits[30].Using_FDR.MSR_ex_I"
+        BEL
+        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/msr_reg_i/Using_FPGA_2.MSR_Bits[30].Using_FDR.MSR_of_I"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Data_Flow_Logic_I/WB_MEM_Result_31"
         BEL
@@ -5595,17 +5622,15 @@ TIMEGRP S_AXI_ACLK_axi_intc_0 = PIN
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_first_cycle"
         BEL
-        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_Ext_NM_BRK_i"
+        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_Interrupt_i"
         BEL
-        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_Ext_BRK_i"
+        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_Ext_NM_BRK_i"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_Interrupt_Brk_combo"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_atomic_Instruction_Pair"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Dbg_Clean_Stop"
-        BEL
-        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_delayslot_Instr"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_opcode_5"
         BEL
@@ -5619,17 +5644,21 @@ TIMEGRP S_AXI_ACLK_axi_intc_0 = PIN
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_opcode_0"
         BEL
+        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_branch_with_delayslot"
+        BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_which_branch_10"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_which_branch_9"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_which_branch_8"
         BEL
-        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_branch_with_delayslot"
+        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_delayslot_Instr"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/EX_SWAP_BYTE_Instr"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_not_mul_op_i"
+        BEL
+        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_set_MSR_IE_instr"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_is_multi_or_load_instr"
         BEL
@@ -5659,9 +5688,9 @@ TIMEGRP S_AXI_ACLK_axi_intc_0 = PIN
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/mem_doublet_access"
         BEL
-        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/mem_read_imm_reg"
-        BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/mem_delayslot_instr"
+        BEL
+        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/mem_read_imm_reg"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/WB_Byte_Access"
         BEL
@@ -5809,6 +5838,7 @@ TIMEGRP S_AXI_ACLK_axi_intc_0 = PIN
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.wb_dlmb_valid_read_data_0"
         BEL "microblaze_0/microblaze_0/MicroBlaze_Core_I/Reset_DFF.reset_temp"
+        BEL "microblaze_0/microblaze_0/MicroBlaze_Core_I/external_interrupt"
         BEL "microblaze_0/microblaze_0/MicroBlaze_Core_I/sync_reset" BEL
         "microblaze_0_i_bram_ctrl/microblaze_0_i_bram_ctrl/Sl_Rdy" BEL
         "microblaze_0_i_bram_ctrl/microblaze_0_i_bram_ctrl/lmb_as" BEL
@@ -6765,6 +6795,7 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0 = PIN
         "proc_sys_reset_0/proc_sys_reset_0/EXT_LPF/asr_lpf_2" BEL
         "proc_sys_reset_0/proc_sys_reset_0/EXT_LPF/exr_lpf_3" BEL
         "proc_sys_reset_0/proc_sys_reset_0/EXT_LPF/asr_lpf_3" BEL
+        "proc_sys_reset_0/proc_sys_reset_0/Peripheral_aresetn_0" BEL
         "proc_sys_reset_0/proc_sys_reset_0/Interconnect_aresetn_0" BEL
         "proc_sys_reset_0/proc_sys_reset_0/MB_Reset" BEL
         "proc_sys_reset_0/proc_sys_reset_0/Bus_Struct_Reset_0" BEL
@@ -7024,6 +7055,7 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0 = PIN
         "axi_intc_0/axi_intc_0/INTC_CORE_I/cie_0" BEL
         "axi_intc_0/axi_intc_0/INTC_CORE_I/isr_0" BEL
         "axi_intc_0/axi_intc_0/INTC_CORE_I/hw_intr_0" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/Irq" BEL
         "axi_intc_0/axi_intc_0/INTC_CORE_I/ier_0" BEL
         "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bvalid_i"
         BEL
@@ -7091,6 +7123,8 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0 = PIN
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_28_2"
         BEL
+        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_valid_jump_1"
+        BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_30_1"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_29_1"
@@ -7126,6 +7160,8 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0 = PIN
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_valid"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_read_imm_reg_ii"
+        BEL
+        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_Ext_BRK_i"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_read_imm_reg"
         BEL
@@ -7201,6 +7237,8 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0 = PIN
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/if_fetch_in_progress"
         BEL
+        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_set_MSR_IE_hold"
+        BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_reservation"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ext_nm_brk_hold"
@@ -7210,6 +7248,8 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0 = PIN
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/if_missed_fetch_already_tested"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_jump_hold"
+        BEL
+        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_Take_Interrupt_hold"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_Take_Ext_BRK_hold"
         BEL
@@ -7240,6 +7280,8 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0 = PIN
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/msr_reg_i/Using_FPGA_2.MSR_Bits[29].Using_FDR.MSR_ex_I"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/msr_reg_i/Using_FPGA_2.MSR_Bits[30].Using_FDR.MSR_ex_I"
+        BEL
+        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/msr_reg_i/Using_FPGA_2.MSR_Bits[30].Using_FDR.MSR_of_I"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Data_Flow_Logic_I/WB_MEM_Result_31"
         BEL
@@ -8693,17 +8735,15 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0 = PIN
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_first_cycle"
         BEL
-        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_Ext_NM_BRK_i"
+        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_Interrupt_i"
         BEL
-        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_Ext_BRK_i"
+        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_Ext_NM_BRK_i"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_Interrupt_Brk_combo"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_atomic_Instruction_Pair"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Dbg_Clean_Stop"
-        BEL
-        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_delayslot_Instr"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_opcode_5"
         BEL
@@ -8717,17 +8757,21 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0 = PIN
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_opcode_0"
         BEL
+        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_branch_with_delayslot"
+        BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_which_branch_10"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_which_branch_9"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_which_branch_8"
         BEL
-        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_branch_with_delayslot"
+        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_delayslot_Instr"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/EX_SWAP_BYTE_Instr"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_not_mul_op_i"
+        BEL
+        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_set_MSR_IE_instr"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_is_multi_or_load_instr"
         BEL
@@ -8757,9 +8801,9 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0 = PIN
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/mem_doublet_access"
         BEL
-        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/mem_read_imm_reg"
-        BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/mem_delayslot_instr"
+        BEL
+        "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/mem_read_imm_reg"
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/WB_Byte_Access"
         BEL
@@ -8907,6 +8951,7 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0 = PIN
         BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.wb_dlmb_valid_read_data_0"
         BEL "microblaze_0/microblaze_0/MicroBlaze_Core_I/Reset_DFF.reset_temp"
+        BEL "microblaze_0/microblaze_0/MicroBlaze_Core_I/external_interrupt"
         BEL "microblaze_0/microblaze_0/MicroBlaze_Core_I/sync_reset" BEL
         "microblaze_0_i_bram_ctrl/microblaze_0_i_bram_ctrl/Sl_Rdy" BEL
         "microblaze_0_i_bram_ctrl/microblaze_0_i_bram_ctrl/lmb_as" BEL
@@ -9370,6 +9415,8 @@ TIMEGRP axi4lite_0_reset_resync = BEL
         "axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync_2";
 TIMEGRP microblaze_0_Reset_dst = BEL
         "microblaze_0/microblaze_0/MicroBlaze_Core_I/Reset_DFF.reset_temp";
+TIMEGRP microblaze_0_Interrupt_dst = BEL
+        "microblaze_0/microblaze_0/MicroBlaze_Core_I/external_interrupt";
 PIN SP6_BUFIO2_INSERT_PLL1_ML_BUFIO2_1_pins<0> = BEL
         "SP6_BUFIO2_INSERT_PLL1_ML_BUFIO2_1" PINNAME DIVCLK;
 PIN
@@ -9388,6 +9435,9 @@ TIMEGRP "FFS" = FFS(*);
 PATH TS_TIG_microblaze_0_Reset_path = FROM TIMEGRP "FFS" TO TIMEGRP
         "microblaze_0_Reset_dst";
 PATH "TS_TIG_microblaze_0_Reset_path" TIG;
+PATH TS_TIG_microblaze_0_Interrupt_path = FROM TIMEGRP "FFS" TO TIMEGRP
+        "microblaze_0_Interrupt_dst";
+PATH "TS_TIG_microblaze_0_Interrupt_path" TIG;
 PATH TS_sync_axi_intc_0_path = TO TIMEGRP "GRP_INTC_intr_sync_axi_intc_0";
 PATH "TS_sync_axi_intc_0_path" TIG;
 PATH TS_intr_sync_p1_axi_intc_0_path = FROM TIMEGRP

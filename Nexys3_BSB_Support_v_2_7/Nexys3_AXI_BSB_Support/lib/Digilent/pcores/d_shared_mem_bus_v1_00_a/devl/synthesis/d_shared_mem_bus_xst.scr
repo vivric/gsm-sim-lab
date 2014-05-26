@@ -1,0 +1,12 @@
+run
+-opt_level 2
+-opt_mode speed
+-ifmt mixed
+-ifn "E:\Nexys3\Nexys3_13_3_AXI_Mem_Bus_Mux\pcores\d_shared_mem_bus_v1_00_a\devl\synthesis\d_shared_mem_bus_xst.prj"
+-top d_shared_mem_bus
+-p virtex6
+-ofn "E:\Nexys3\Nexys3_13_3_AXI_Mem_Bus_Mux\pcores\d_shared_mem_bus_v1_00_a\devl\synthesis\d_shared_mem_bus_xst.ngc"
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /
+-work_lib d_shared_mem_bus_v1_00_a

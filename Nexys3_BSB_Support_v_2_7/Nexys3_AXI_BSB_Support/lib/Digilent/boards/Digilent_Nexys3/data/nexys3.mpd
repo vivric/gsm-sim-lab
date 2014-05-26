@@ -1,0 +1,176 @@
+#-- DISCLAIMER OF LIABILITY
+#--
+#-- This file contains proprietary and confidential information of
+#-- Xilinx, Inc. ("Xilinx"), that is distributed under a license
+#-- from Xilinx, and may be used, copied and/or disclosed only
+#-- pursuant to the terms of a valid license agreement with Xilinx.
+#--
+#-- XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION
+#-- ("MATERIALS") "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER
+#-- EXPRESSED, IMPLIED, OR STATUTORY, INCLUDING WITHOUT
+#-- LIMITATION, ANY WARRANTY WITH RESPECT TO NONINFRINGEMENT,
+#-- MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE. Xilinx
+#-- does not warrant that functions included in the Materials will
+#-- meet the requirements of Licensee, or that the operation of the
+#-- Materials will be uninterrupted or error-free, or that defects
+#-- in the Materials will be corrected. Furthermore, Xilinx does
+#-- not warrant or make any representations regarding use, or the
+#-- results of the use, of the Materials in terms of correctness,
+#-- accuracy, reliability or otherwise.
+#--
+#-- Xilinx products are not designed or intended to be fail-safe,
+#-- or for use in any application requiring fail-safe performance,
+#-- such as life-support or safety devices or systems, Class III
+#-- medical devices, nuclear facilities, applications related to
+#-- the deployment of airbags, or any other applications that could
+#-- lead to death, personal injury or severe property or
+#-- environmental damage (individually and collectively, "critical
+#-- applications"). Customer assumes the sole risk and liability
+#-- of any use of Xilinx products in critical applications,
+#-- subject only to applicable laws and regulations governing
+#-- limitations on product liability.
+#--
+#-- Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+#--
+#-- This disclaimer and copyright notice must be retained as part
+#-- of this file at all times.
+#--
+
+BEGIN nexys3
+
+OPTION VLNV = digilent|bsb_lib.boards|nexys3|B
+
+## OPTION -> spirit:parameter
+OPTION FAMILY = spartan6
+OPTION DEVICE = xc6slx16
+OPTION PACKAGE = csg324
+OPTION SPEED_GRADE = -3
+OPTION JTAG_POSITION = 1
+OPTION SPEC_URL = www.digilentinc.com
+OPTION CONTACT_INFO_URL = www.digilentinc.com
+OPTION VendorName = Digilent
+OPTION DisplayName = Digilent Nexys3 FPGA Board
+OPTION LONG_DESC = 'The Nexys3 board features a Xilinx Spartan-6 XC6SLX16-CSG324C FPGA device; 128Mbit Micron Quad-Mode SPI PCM; 128Mbit Micron Parallel PCM; 128Mbit Micron Cellular RAM; SMSC LAN8710 10/100 PHY device with MII interface; HID Host for USB mouse, keyboard or memory stick; USB-UART bridge for the serial port; 8-bit VGA output; 4 double-wide Pmod connectors; 1 VHDC connector; 8 slide switches; 5 push buttons in gamepad configuration; and 8 LEDs'
+
+## IO_INTERFACE -> spirit:busInterface
+IO_INTERFACE IO_IF = clock_0, IO_TYPE = xilinx.com|bsb_lib.rtl_busdefs|clock|1.0
+IO_INTERFACE IO_IF = reset_0, IO_TYPE = xilinx.com|bsb_lib.rtl_busdefs|reset|1.0
+IO_INTERFACE IO_IF = RS232_Uart_1, IO_TYPE = xilinx.com|bsb_lib.rtl_busdefs|uart|1.0
+IO_INTERFACE IO_IF = DIP_Switches_8Bits, IO_TYPE = xilinx.com|bsb_lib.rtl_busdefs|gpio|1.0
+IO_INTERFACE IO_IF = LEDs_8Bits, IO_TYPE = xilinx.com|bsb_lib.rtl_busdefs|gpio|1.0
+IO_INTERFACE IO_IF = Push_Buttons_4Bits, IO_TYPE = xilinx.com|bsb_lib.rtl_busdefs|gpio|1.0
+IO_INTERFACE IO_IF = Digilent_Shared_Mem_Bus_Mux, IO_TYPE = xilinx.com|bsb_lib.rtl_busdefs|d_shared_mem_bus|1.0
+IO_INTERFACE IO_IF = Digilent_Usb_Epp, IO_TYPE = xilinx.com|bsb_lib.rtl_busdefs|d_usb_epp_dstm_axi|1.0
+IO_INTERFACE IO_IF = Digilent_SevSeg_Disp, IO_TYPE = xilinx.com|bsb_lib.rtl_busdefs|svn_seg_axi|1.0
+IO_INTERFACE IO_IF = Ethernet_Lite, IO_TYPE = xilinx.com|bsb_lib.rtl_busdefs|mii|1.0
+IO_INTERFACE IO_IF = ETHERNET, IO_TYPE = xilinx.com|bsb_lib.rtl_busdefs|gmii|1.0 
+
+## PARAMETER -> spirit:modelParameter
+PARAMETER refclk_frequency_0 = 100000000, DT = INTEGER, RANGE=(100000000:100000000), ASSIGNMENT=CONSTANT, IO_IF = clock_0, IO_IS = frequency
+PARAMETER reset_polarity = 1, DT = STRING, ASSIGNMENT=CONSTANT, IO_IF = reset_0, IO_IS = RST_POLARITY
+
+# DIP_Switches_8Bits
+PARAMETER DIP_Switches_8Bits_GPIO_WIDTH_ID = 8, DT = STRING, ASSIGNMENT=CONSTANT, IO_IF = DIP_Switches_8Bits, IO_IS = C_GPIO_WIDTH
+PARAMETER DIP_Switches_8Bits_ALL_INPUTS_ID = 1, DT = STRING, ASSIGNMENT=CONSTANT, IO_IF = DIP_Switches_8Bits, IO_IS = C_ALL_INPUTS
+PARAMETER DIP_Switches_8Bits_IS_DUAL_ID = 0, DT = STRING, IO_IF = DIP_Switches_8Bits, IO_IS = C_IS_DUAL
+
+# LEDs_8Bits
+PARAMETER LEDs_8Bits_GPIO_WIDTH_ID = 8, DT = STRING, ASSIGNMENT=CONSTANT, IO_IF = LEDs_8Bits, IO_IS = C_GPIO_WIDTH
+PARAMETER LEDs_8Bits_ALL_INPUTS_ID = 0, DT = STRING, ASSIGNMENT=CONSTANT, IO_IF = LEDs_8Bits, IO_IS = C_ALL_INPUTS
+PARAMETER LEDs_8Bits_IS_DUAL_ID = 0, DT = STRING, ASSIGNMENT=CONSTANT, IO_IF = LEDs_8Bits, IO_IS = C_IS_DUAL
+
+# Push_Buttons_4Bits
+PARAMETER Push_Buttons_4Bits_GPIO_WIDTH_ID = 4, DT = STRING, ASSIGNMENT=CONSTANT, IO_IF = Push_Buttons_4Bits, IO_IS = C_GPIO_WIDTH
+PARAMETER Push_Buttons_4Bits_ALL_INPUTS_ID = 1, DT = STRING, ASSIGNMENT=CONSTANT, IO_IF = Push_Buttons_4Bits, IO_IS = C_ALL_INPUTS
+PARAMETER Push_Buttons_4Bits_IS_DUAL_ID = 0, DT = STRING, ASSIGNMENT=CONSTANT, IO_IF = Push_Buttons_4Bits, IO_IS = C_IS_DUAL
+
+# Ethernet_Lite - MII
+PARAMETER Ethernet_Lite_EXCLUSIVE = ETHERNET, DT = STRING, ASSIGNMENT=CONSTANT, IO_IF = Ethernet_Lite, IO_IS = EXCLUSIVE
+
+# ETHERNET - Soft Temac confifgured as MII
+PARAMETER ethernet_PHY_TYPE_0 = MII, DT = STRING, ASSIGNMENT=CONSTANT, IO_IF = ETHERNET, IO_IS = PHY_TYPE
+PARAMETER ethernet_IMP_TYPE_0 = 0, DT = INTEGER, ASSIGNMENT=CONSTANT, IO_IF = ETHERNET, IO_IS = IMP_TYPE
+PARAMETER ethernet_DUPLEX_0 = FULL, DT = STRING, ASSIGNMENT=CONSTANT, IO_IF = ETHERNET, IO_IS = DUPLEX
+PARAMETER ethernet_DMA_TYPE = 1, DT = INTEGER, ASSIGNMENT=CONSTANT, IO_IF = ETHERNET, IO_IS = C_DMA_TYPE
+PARAMETER ETHERNET_EXCLUSIVE = Ethernet_Lite, DT = STRING, ASSIGNMENT=CONSTANT, IO_IF = ETHERNET, IO_IS = EXCLUSIVE
+
+## Ports
+PORT GCLK = "", DIR = I, IO_IF = clock_0, IO_IS = CLK, SIGIS = CLK, ASSIGNMENT = REQUIRE
+PORT RESET = "", DIR = I, IO_IF = reset_0, IO_IS = RESET, SIGIS = RST, ASSIGNMENT = REQUIRE
+
+# RS232_Uart_1
+PORT RS232_Uart_1_sout = "", DIR = O, IO_IF = RS232_Uart_1, IO_IS = sout
+PORT RS232_Uart_1_sin = "", DIR = I, IO_IF = RS232_Uart_1, IO_IS = sin
+
+# GPIO
+PORT DIP_Switches_8Bits_TRI_I = "", DIR = I, VEC = [7:0], IO_IF = DIP_Switches_8Bits, IO_IS = TRI_I
+PORT LEDs_8Bits_TRI_O = "", DIR = O, VEC = [7:0], IO_IF = LEDs_8Bits, IO_IS = TRI_O
+PORT Push_Buttons_4Bits_TRI_I = "", DIR = I, VEC = [0:3], IO_IF = Push_Buttons_4Bits, IO_IS = TRI_I
+
+# Digilent Usb Epp
+PORT Digilent_Usb_Epp_IFCLK_pin = "", DIR = I, IO_IF = Digilent_Usb_Epp, IO_IS = usb_ifclk
+PORT Digilent_Usb_Epp_STMEN_pin = "", DIR = I, IO_IF = Digilent_Usb_Epp, IO_IS = usb_stmen
+PORT Digilent_Usb_Epp_FLAGA_pin = "", DIR = I, IO_IF = Digilent_Usb_Epp, IO_IS = usb_flaga
+PORT Digilent_Usb_Epp_FLAGB_pin = "", DIR = I, IO_IF = Digilent_Usb_Epp, IO_IS = usb_flagb
+PORT Digilent_Usb_Epp_FLAGC_pin = "", DIR = I, IO_IF = Digilent_Usb_Epp, IO_IS = usb_flagc
+PORT Digilent_Usb_Epp_SLRD_pin = "", DIR = O, IO_IF = Digilent_Usb_Epp, IO_IS = usb_slrd
+PORT Digilent_Usb_Epp_SLWR_pin = "", DIR = O, IO_IF = Digilent_Usb_Epp, IO_IS = usb_slwr
+PORT Digilent_Usb_Epp_SLOE_pin = "", DIR = O, IO_IF = Digilent_Usb_Epp, IO_IS = usb_sloe
+PORT Digilent_Usb_Epp_FIFOADR_pin = "", DIR = O, VEC = [1:0], IO_IF = Digilent_Usb_Epp, IO_IS = usb_fifoaddr
+PORT Digilent_Usb_Epp_PKTEND_pin = "", DIR = O, IO_IF = Digilent_Usb_Epp, IO_IS = usb_pktend
+PORT Digilent_Usb_Epp_EPPRST_pin = "", DIR = I, IO_IF = Digilent_Usb_Epp, IO_IS = usb_epprst
+PORT Digilent_Usb_Epp_DB = "", DIR = IO, VEC = [7:0], IO_IF = Digilent_Usb_Epp, IO_IS = usb_dq
+PORT Digilent_Usb_Epp_IRQ_EPP_pin = "", DIR = O, IO_IF = Digilent_Usb_Epp, IO_IS = usb_irq_epp, SIGIS=INTERRUPT, SENSITIVITY=LEVEL_HIGH, INTERRUPT_PRIORITY=HIGH
+
+# Digilent SevSeg Disp
+PORT Digilent_SevSeg_Disp_AN_pin = "", DIR = O, VEC = [3:0], IO_IF = Digilent_SevSeg_Disp, IO_IS = svn_seg_an
+PORT Digilent_SevSeg_Disp_SEG_pin = "", DIR = O, VEC = [7:0], IO_IF = Digilent_SevSeg_Disp, IO_IS = svn_seg_seg
+
+# Digilent Shared Memory Bus Multiplexer
+PORT Digilent_Shared_Mem_Bus_Mux_Mem_Addr_O_pin = "", DIR = O, VEC = [25:0], IO_IF = Digilent_Shared_Mem_Bus_Mux, IO_IS = mem_bus_mux_mem_addr_o
+PORT Digilent_Shared_Mem_Bus_Mux_Mem_DQ = "", DIR = IO, VEC = [16:0], IO_IF = Digilent_Shared_Mem_Bus_Mux, IO_IS = mem_bus_mux_mem_dq
+PORT Digilent_Shared_Mem_Bus_Mux_Mem_OEN_O_pin = "", DIR = O, IO_IF = Digilent_Shared_Mem_Bus_Mux, IO_IS = mem_bus_mux_mem_oen_o
+PORT Digilent_Shared_Mem_Bus_Mux_Mem_WEN_O_pin = "", DIR = O, IO_IF = Digilent_Shared_Mem_Bus_Mux, IO_IS = mem_bus_mux_mem_wen_o
+PORT Digilent_Shared_Mem_Bus_Mux_QSPI_Mem_S_O_pin = "", DIR = O, IO_IF = Digilent_Shared_Mem_Bus_Mux, IO_IS = mem_bus_mux_qspi_mem_s_o
+PORT Digilent_Shared_Mem_Bus_Mux_QSPI_Mem_C_O_pin = "", DIR = O, IO_IF = Digilent_Shared_Mem_Bus_Mux, IO_IS = mem_bus_mux_qspi_mem_c_o
+PORT Digilent_Shared_Mem_Bus_Mux_FLASH_Mem_CEN_O_pin = "", DIR = O, IO_IF = Digilent_Shared_Mem_Bus_Mux, IO_IS = mem_bus_mux_flash_mem_cen_o
+PORT Digilent_Shared_Mem_Bus_Mux_FLASH_Mem_RPN_O_pin = "", DIR = O, IO_IF = Digilent_Shared_Mem_Bus_Mux, IO_IS = mem_bus_mux_flash_mem_rpn_o
+PORT Digilent_Shared_Mem_Bus_Mux_PSRAM_Mem_CEN_O_pin = "", DIR = O, IO_IF = Digilent_Shared_Mem_Bus_Mux, IO_IS = mem_bus_mux_psram_mem_cen_o
+PORT Digilent_Shared_Mem_Bus_Mux_PSRAM_Mem_ADV_O_pin = "", DIR = O, IO_IF = Digilent_Shared_Mem_Bus_Mux, IO_IS = mem_bus_mux_psram_mem_adv_o
+PORT Digilent_Shared_Mem_Bus_Mux_PSRAM_Mem_CRE_O_pin = "", DIR = O, IO_IF = Digilent_Shared_Mem_Bus_Mux, IO_IS = mem_bus_mux_psram_mem_cre_o
+PORT Digilent_Shared_Mem_Bus_Mux_PSRAM_Mem_CLK_O_pin = "", DIR = O, IO_IF = Digilent_Shared_Mem_Bus_Mux, IO_IS = mem_bus_mux_psram_mem_clk_o
+PORT Digilent_Shared_Mem_Bus_Mux_PSRAM_Mem_Wait_I_pin = "", DIR = I, IO_IF = Digilent_Shared_Mem_Bus_Mux, IO_IS = mem_bus_mux_psram_mem_wait_i
+PORT Digilent_Shared_Mem_Bus_Mux_PSRAM_Mem_UB_O_pin = "", DIR = O, IO_IF = Digilent_Shared_Mem_Bus_Mux, IO_IS = mem_bus_mux_psram_mem_ub_o
+PORT Digilent_Shared_Mem_Bus_Mux_PSRAM_Mem_LB_O_pin = "", DIR = O, IO_IF = Digilent_Shared_Mem_Bus_Mux, IO_IS = mem_bus_mux_psram_mem_lb_o
+
+# 10/100 Ethernet MAC
+PORT Ethernet_Lite_MDIO = "", DIR = IO, IO_IF = Ethernet_Lite, IO_IS = MDIO
+PORT Ethernet_Lite_MDC = "", DIR = O, IO_IF = Ethernet_Lite, IO_IS = MDC
+PORT Ethernet_Lite_TXD = "", DIR = O, VEC = [3:0], IO_IF = Ethernet_Lite, IO_IS = TXD
+PORT Ethernet_Lite_TX_EN = "", DIR = O, IO_IF = Ethernet_Lite, IO_IS = TX_EN
+PORT Ethernet_Lite_TX_CLK = "", DIR = I, IO_IF = Ethernet_Lite, IO_IS = TX_CLK
+PORT Ethernet_Lite_COL = "", DIR = I, IO_IF = Ethernet_Lite, IO_IS = COL
+PORT Ethernet_Lite_RXD = "", DIR = I, VEC = [3:0], IO_IF = Ethernet_Lite, IO_IS = RXD
+PORT Ethernet_Lite_RX_ER = "", DIR = I, IO_IF = Ethernet_Lite, IO_IS = RX_ER
+PORT Ethernet_Lite_RX_CLK = "", DIR = I, IO_IF = Ethernet_Lite, IO_IS = RX_CLK
+PORT Ethernet_Lite_CRS = "", DIR = I, IO_IF = Ethernet_Lite, IO_IS = CRS
+PORT Ethernet_Lite_RX_DV = "", DIR = I, IO_IF = Ethernet_Lite, IO_IS = RX_DV
+PORT Ethernet_Lite_PHY_RST_N = "", DIR = O, IO_IF = Ethernet_Lite, IO_IS = PHY_RST_N
+PORT Ethernet_Lite_TX_ER = "", DIR = O, IO_IF = Ethernet_Lite
+
+# ETHERNET - GMII
+PORT ETHERNET_MDIO = "", DIR = IO, IO_IF = ETHERNET, IO_IS = MDIO
+PORT ETHERNET_MDC = "", DIR = O, IO_IF = ETHERNET, IO_IS = MDC
+PORT ETHERNET_TX_ER = "", DIR = O, IO_IF = ETHERNET, IO_IS = MII_TX_ER
+PORT ETHERNET_TXD = "", DIR = O, VEC = [3:0], IO_IF = ETHERNET, IO_IS = MII_TXD
+PORT ETHERNET_TX_EN = "", DIR = O, IO_IF = ETHERNET, IO_IS = MII_TX_EN
+PORT ETHERNET_MII_TX_CLK = "", DIR = I, IO_IF = ETHERNET, IO_IS = MII_TX_CLK
+PORT ETHERNET_RXD = "", DIR = I, VEC = [3:0], IO_IF = ETHERNET, IO_IS = MII_RXD
+PORT ETHERNET_RX_ER = "", DIR = I, IO_IF = ETHERNET, IO_IS = MII_RX_ER
+PORT ETHERNET_RX_CLK = "", DIR = I, IO_IF = ETHERNET, IO_IS = MII_RX_CLK
+PORT ETHERNET_RX_DV = "", DIR = I, IO_IF = ETHERNET, IO_IS = MII_RX_DV
+PORT ETHERNET_CRS = "", DIR = I, IO_IF = ETHERNET, IO_IS = MII_COL
+PORT ETHERNET_COL = "", DIR = I, IO_IF = ETHERNET, IO_IS = MII_CRS
+PORT ETHERNET_PHY_RST_N = "", DIR = O, IO_IF = ETHERNET, IO_IS = PhyResetN
+
+END

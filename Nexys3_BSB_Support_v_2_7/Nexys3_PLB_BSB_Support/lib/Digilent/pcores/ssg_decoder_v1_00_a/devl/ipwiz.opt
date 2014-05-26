@@ -1,0 +1,10 @@
+-batch 
+-create ssg_decoder 
+-ver 1.00.a 
+-dir "D:\Digilent\Projects\Nexys3\Nexsy3_EDK_Ssg_Decoder" 
+-lang vhdl 
+-bus plbv46 s 
+-reg 4 
+-xps 
+-ise 
+-driver 

@@ -1,11 +1,11 @@
 Release 14.7 - xst P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> 
-Parameter TMPDIR set to /home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/synthesis/xst_temp_dir/
+Parameter TMPDIR set to /home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/synthesis/xst_temp_dir/
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> 
 
@@ -37,7 +37,7 @@ TABLE OF CONTENTS
 ---- Source Parameters
 Input Format                       : MIXED
 Input File Name                    : "system_microblaze_0_wrapper_xst.prj"
-Verilog Include Directory          : {"/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/pcores/" "/home/vivric/Documents/Nexys3_BSB_Support_v_2_7/Nexys3_AXI_BSB_Support/lib/Digilent/pcores/" "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/" "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
+Verilog Include Directory          : {"/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/pcores/" "/home/vivric/Documents/Nexys3_BSB_Support_v_2_7/Nexys3_AXI_BSB_Support/lib/Digilent/pcores/" "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/" "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
 
 ---- Target Parameters
 Target Device                      : xc6slx16csg324-3
@@ -64,303 +64,303 @@ Cores Search Directories           : {../implementation}
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_types_pkg.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_types_pkg.vhd" into library microblaze_v8_50_c
 Parsing package <MicroBlaze_Types>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_types_pkg_body.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_types_pkg_body.vhd" into library microblaze_v8_50_c
 Parsing package body <MicroBlaze_Types>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_isa_be_pkg.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_isa_be_pkg.vhd" into library microblaze_v8_50_c
 Parsing package <MicroBlaze_ISA>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_primitives.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_primitives.vhd" into library microblaze_v8_50_c
 Parsing entity <MB_SRL16E>.
 Parsing architecture <IMP> of entity <mb_srl16e>.
 Parsing entity <MB_SRLC16E>.
 Parsing architecture <IMP> of entity <mb_srlc16e>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mux_bus.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mux_bus.vhd" into library microblaze_v8_50_c
 Parsing entity <mux_bus>.
 Parsing architecture <IMP> of entity <mux_bus>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/parity.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/parity.vhd" into library microblaze_v8_50_c
 Parsing entity <Parity_Recursive_LUT6>.
 Parsing architecture <IMP> of entity <parity_recursive_lut6>.
 Parsing entity <Parity>.
 Parsing architecture <IMP> of entity <parity>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/comparator.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/comparator.vhd" into library microblaze_v8_50_c
 Parsing entity <comparator>.
 Parsing architecture <IMP> of entity <comparator>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/carry_and.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/carry_and.vhd" into library microblaze_v8_50_c
 Parsing entity <carry_and>.
 Parsing architecture <IMP> of entity <carry_and>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/carry_or.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/carry_or.vhd" into library microblaze_v8_50_c
 Parsing entity <carry_or>.
 Parsing architecture <IMP> of entity <carry_or>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/carry_equal.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/carry_equal.vhd" into library microblaze_v8_50_c
 Parsing entity <carry_equal>.
 Parsing architecture <IMP> of entity <carry_equal>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/carry_compare.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/carry_compare.vhd" into library microblaze_v8_50_c
 Parsing entity <carry_compare>.
 Parsing architecture <IMP> of entity <carry_compare>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/carry_compare_mask.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/carry_compare_mask.vhd" into library microblaze_v8_50_c
 Parsing entity <carry_compare_mask>.
 Parsing architecture <IMP> of entity <carry_compare_mask>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/carry_compare_const.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/carry_compare_const.vhd" into library microblaze_v8_50_c
 Parsing entity <carry_compare_const>.
 Parsing architecture <IMP> of entity <carry_compare_const>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/find_first_bit.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/find_first_bit.vhd" into library microblaze_v8_50_c
 Parsing entity <find_first_bit>.
 Parsing architecture <IMP> of entity <find_first_bit>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mux4_8.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mux4_8.vhd" into library microblaze_v8_50_c
 Parsing entity <mux4_8>.
 Parsing architecture <IMP> of entity <mux4_8>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mux4.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mux4.vhd" into library microblaze_v8_50_c
 Parsing entity <mux4>.
 Parsing architecture <IMP> of entity <mux4>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/vec_mux.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/vec_mux.vhd" into library microblaze_v8_50_c
 Parsing entity <vec_mux>.
 Parsing architecture <IMP> of entity <vec_mux>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/gen_srlfifo.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/gen_srlfifo.vhd" into library microblaze_v8_50_c
 Parsing entity <srl_fifo>.
 Parsing architecture <IMP> of entity <srl_fifo>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/alu_bit.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/alu_bit.vhd" into library microblaze_v8_50_c
 Parsing entity <ALU_Bit>.
 Parsing architecture <IMP> of entity <alu_bit>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/alu.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/alu.vhd" into library microblaze_v8_50_c
 Parsing entity <ALU>.
 Parsing architecture <IMP> of entity <alu>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/msr_reg_bit.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/msr_reg_bit.vhd" into library microblaze_v8_50_c
 Parsing entity <MSR_Reg_Bit>.
 Parsing architecture <IMP> of entity <msr_reg_bit>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/msr_reg.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/msr_reg.vhd" into library microblaze_v8_50_c
 Parsing entity <MSR_Reg>.
 Parsing architecture <IMP> of entity <msr_reg>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/msr_reg_gti.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/msr_reg_gti.vhd" into library microblaze_v8_50_c
 Parsing entity <msr_reg_gti>.
 Parsing architecture <msr_reg> of entity <msr_reg_gti>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/dsp_module.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/dsp_module.vhd" into library microblaze_v8_50_c
 Parsing entity <dsp_module>.
 Parsing architecture <IMP> of entity <dsp_module>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mul_unit.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mul_unit.vhd" into library microblaze_v8_50_c
 Parsing entity <mul_unit>.
 Parsing architecture <IMP> of entity <mul_unit>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/div_unit.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/div_unit.vhd" into library microblaze_v8_50_c
 Parsing entity <Div_unit>.
 Parsing architecture <IMP> of entity <div_unit>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/div_unit_gti.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/div_unit_gti.vhd" into library microblaze_v8_50_c
 Parsing entity <Div_unit_gti>.
 Parsing architecture <IMP> of entity <div_unit_gti>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/operand_select_bit.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/operand_select_bit.vhd" into library microblaze_v8_50_c
 Parsing entity <Operand_Select_Bit>.
 Parsing architecture <IMP> of entity <operand_select_bit>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/operand_select.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/operand_select.vhd" into library microblaze_v8_50_c
 Parsing entity <Operand_Select>.
 Parsing architecture <IMP> of entity <operand_select>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/operand_select_gti.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/operand_select_gti.vhd" into library microblaze_v8_50_c
 Parsing entity <Operand_Select_gti>.
 Parsing architecture <IMP> of entity <operand_select_gti>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/pc_bit.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/pc_bit.vhd" into library microblaze_v8_50_c
 Parsing entity <PC_Bit>.
 Parsing architecture <IMP> of entity <pc_bit>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/pc_module.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/pc_module.vhd" into library microblaze_v8_50_c
 Parsing entity <PC_Module>.
 Parsing architecture <IMP> of entity <pc_module>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/pc_module_gti.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/pc_module_gti.vhd" into library microblaze_v8_50_c
 Parsing entity <PC_Module_gti>.
 Parsing architecture <IMP> of entity <pc_module_gti>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/prefetch_buffer.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/prefetch_buffer.vhd" into library microblaze_v8_50_c
 Parsing entity <PreFetch_Buffer>.
 Parsing architecture <IMP> of entity <prefetch_buffer>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/prefetch_buffer_gti.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/prefetch_buffer_gti.vhd" into library microblaze_v8_50_c
 Parsing entity <PreFetch_Buffer_gti>.
 Parsing architecture <IMP> of entity <prefetch_buffer_gti>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/register_file_bit.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/register_file_bit.vhd" into library microblaze_v8_50_c
 Parsing entity <Register_File_Bit>.
 Parsing architecture <IMP> of entity <register_file_bit>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/register_file.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/register_file.vhd" into library microblaze_v8_50_c
 Parsing entity <Register_File>.
 Parsing architecture <IMP> of entity <register_file>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/register_file_gti.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/register_file_gti.vhd" into library microblaze_v8_50_c
 Parsing entity <Register_File_gti>.
 Parsing architecture <IMP> of entity <register_file_gti>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/count_leading_zero.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/count_leading_zero.vhd" into library microblaze_v8_50_c
 Parsing entity <count_leading_zeros>.
 Parsing architecture <IMP> of entity <count_leading_zeros>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/shift_logic_bit.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/shift_logic_bit.vhd" into library microblaze_v8_50_c
 Parsing entity <Shift_Logic_Bit>.
 Parsing architecture <IMP> of entity <shift_logic_bit>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/shift_logic.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/shift_logic.vhd" into library microblaze_v8_50_c
 Parsing entity <Shift_Logic_Module>.
 Parsing architecture <IMP> of entity <shift_logic_module>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/shift_logic_gti.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/shift_logic_gti.vhd" into library microblaze_v8_50_c
 Parsing entity <Shift_Logic_Module_gti>.
 Parsing architecture <IMP> of entity <shift_logic_module_gti>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/zero_detect.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/zero_detect.vhd" into library microblaze_v8_50_c
 Parsing entity <Zero_Detect>.
 Parsing architecture <IMP> of entity <zero_detect>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/zero_detect_gti.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/zero_detect_gti.vhd" into library microblaze_v8_50_c
 Parsing entity <Zero_Detect_gti>.
 Parsing architecture <IMP> of entity <zero_detect_gti>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/barrel_shifter.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/barrel_shifter.vhd" into library microblaze_v8_50_c
 Parsing entity <barrel_shift>.
 Parsing architecture <IMP> of entity <barrel_shift>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/barrel_shifter_gti.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/barrel_shifter_gti.vhd" into library microblaze_v8_50_c
 Parsing entity <Barrel_Shifter_gti>.
 Parsing architecture <IMP> of entity <barrel_shifter_gti>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/wb_mux_bit_gti.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/wb_mux_bit_gti.vhd" into library microblaze_v8_50_c
 Parsing entity <WB_Mux_Bit>.
 Parsing architecture <IMP> of entity <wb_mux_bit>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/wb_mux_gti.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/wb_mux_gti.vhd" into library microblaze_v8_50_c
 Parsing entity <WB_Mux>.
 Parsing architecture <IMP> of entity <wb_mux>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/data_read_steering.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/data_read_steering.vhd" into library microblaze_v8_50_c
 Parsing entity <Data_Read_Steering>.
 Parsing architecture <IMP> of entity <data_read_steering>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/byte_doublet_handle.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/byte_doublet_handle.vhd" into library microblaze_v8_50_c
 Parsing entity <Byte_Doublet_Handle>.
 Parsing architecture <IMP> of entity <byte_doublet_handle>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/byte_doublet_handle_gti.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/byte_doublet_handle_gti.vhd" into library microblaze_v8_50_c
 Parsing entity <Byte_Doublet_Handle_gti>.
 Parsing architecture <IMP> of entity <byte_doublet_handle_gti>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/data_flow_logic_gti.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/data_flow_logic_gti.vhd" into library microblaze_v8_50_c
 Parsing entity <Data_Flow_Logic>.
 Parsing architecture <IMP> of entity <data_flow_logic>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/fsl_module.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/fsl_module.vhd" into library microblaze_v8_50_c
 Parsing entity <FSL_Module>.
 Parsing architecture <IMP> of entity <fsl_module>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/streaming_axi.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/streaming_axi.vhd" into library microblaze_v8_50_c
 Parsing entity <Streaming_AXI>.
 Parsing architecture <IMP> of entity <streaming_axi>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/exception_registers.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/exception_registers.vhd" into library microblaze_v8_50_c
 Parsing entity <exception_registers>.
 Parsing architecture <IMP> of entity <exception_registers>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/exception_registers_gti.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/exception_registers_gti.vhd" into library microblaze_v8_50_c
 Parsing entity <exception_registers_gti>.
 Parsing architecture <IMP> of entity <exception_registers_gti>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/fpu_addsub.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/fpu_addsub.vhd" into library microblaze_v8_50_c
 Parsing entity <FPU_ADDSUB>.
 Parsing architecture <IMP> of entity <fpu_addsub>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/fpu_div.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/fpu_div.vhd" into library microblaze_v8_50_c
 Parsing entity <FPU_DIV>.
 Parsing architecture <IMP> of entity <fpu_div>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/fpu_mul.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/fpu_mul.vhd" into library microblaze_v8_50_c
 Parsing entity <FPU_MUL>.
 Parsing architecture <IMP> of entity <fpu_mul>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/fpu_conv.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/fpu_conv.vhd" into library microblaze_v8_50_c
 Parsing entity <fpu_conv>.
 Parsing architecture <IMP> of entity <fpu_conv>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/fpu_sqrt.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/fpu_sqrt.vhd" into library microblaze_v8_50_c
 Parsing entity <fpu_sqrt>.
 Parsing architecture <IMP> of entity <fpu_sqrt>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/fpu.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/fpu.vhd" into library microblaze_v8_50_c
 Parsing entity <Fpu>.
 Parsing architecture <IMP> of entity <fpu>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/pvr.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/pvr.vhd" into library microblaze_v8_50_c
 Parsing entity <PVR>.
 Parsing architecture <IMP> of entity <pvr>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/result_mux_bit.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/result_mux_bit.vhd" into library microblaze_v8_50_c
 Parsing entity <Result_Mux_Bit>.
 Parsing architecture <IMP> of entity <result_mux_bit>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/result_mux.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/result_mux.vhd" into library microblaze_v8_50_c
 Parsing entity <Result_Mux>.
 Parsing architecture <IMP> of entity <result_mux>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/stack_protection.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/stack_protection.vhd" into library microblaze_v8_50_c
 Parsing entity <stack_protection>.
 Parsing architecture <IMP> of entity <stack_protection>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/data_flow.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/data_flow.vhd" into library microblaze_v8_50_c
 Parsing entity <Data_Flow>.
 Parsing architecture <IMP> of entity <data_flow>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/data_flow_gti.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/data_flow_gti.vhd" into library microblaze_v8_50_c
 Parsing entity <Data_Flow_gti>.
 Parsing architecture <IMP> of entity <data_flow_gti>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/jump_logic_gti.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/jump_logic_gti.vhd" into library microblaze_v8_50_c
 Parsing entity <jump_logic>.
 Parsing architecture <IMP> of entity <jump_logic>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/decode.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/decode.vhd" into library microblaze_v8_50_c
 Parsing entity <Decode>.
 Parsing architecture <IMP> of entity <decode>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/decode_gti.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/decode_gti.vhd" into library microblaze_v8_50_c
 Parsing entity <Decode_gti>.
 Parsing architecture <IMP> of entity <decode_gti>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/address_hit.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/address_hit.vhd" into library microblaze_v8_50_c
 Parsing entity <address_hit>.
 Parsing architecture <IMP> of entity <address_hit>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/address_data_hit.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/address_data_hit.vhd" into library microblaze_v8_50_c
 Parsing entity <address_data_hit>.
 Parsing architecture <IMP> of entity <address_data_hit>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/debug.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/debug.vhd" into library microblaze_v8_50_c
 Parsing entity <Debug>.
 Parsing architecture <IMP> of entity <debug>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/iplb_interface.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/iplb_interface.vhd" into library microblaze_v8_50_c
 Parsing entity <IPLB_Interface>.
 Parsing architecture <IMP> of entity <iplb_interface>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/dplb_interface.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/dplb_interface.vhd" into library microblaze_v8_50_c
 Parsing entity <DPLB_Interface>.
 Parsing architecture <IMP> of entity <dplb_interface>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/daxi_interface.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/daxi_interface.vhd" into library microblaze_v8_50_c
 Parsing entity <DAXI_interface>.
 Parsing architecture <IMP> of entity <daxi_interface>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/iaxi_interface.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/iaxi_interface.vhd" into library microblaze_v8_50_c
 Parsing entity <IAXI_Interface>.
 Parsing architecture <IMP> of entity <iaxi_interface>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/ram_module.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/ram_module.vhd" into library microblaze_v8_50_c
 Parsing entity <RAM_Module>.
 Parsing architecture <IMP> of entity <ram_module>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/victim_cache.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/victim_cache.vhd" into library microblaze_v8_50_c
 Parsing entity <LRU_Module>.
 Parsing architecture <LRU_Module> of entity <lru_module>.
 Parsing entity <victim_cache>.
 Parsing architecture <IMP> of entity <victim_cache>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/stream_cache.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/stream_cache.vhd" into library microblaze_v8_50_c
 Parsing entity <stream_cache>.
 Parsing architecture <IMP> of entity <stream_cache>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/cache_interface.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/cache_interface.vhd" into library microblaze_v8_50_c
 Parsing entity <Cache_Interface>.
 Parsing architecture <IMP> of entity <cache_interface>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/icache.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/icache.vhd" into library microblaze_v8_50_c
 Parsing entity <Icache>.
 Parsing architecture <IMP> of entity <icache>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/dcache.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/dcache.vhd" into library microblaze_v8_50_c
 Parsing entity <DCache>.
 Parsing architecture <IMP> of entity <dcache>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/dcache_gti.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/dcache_gti.vhd" into library microblaze_v8_50_c
 Parsing entity <DCache_gti>.
 Parsing architecture <IMP> of entity <dcache_gti>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/cache_valid_bit_detect.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/cache_valid_bit_detect.vhd" into library microblaze_v8_50_c
 Parsing entity <cache_valid_bit_detect>.
 Parsing architecture <IMP> of entity <cache_valid_bit_detect>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/cachehit_detect.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/cachehit_detect.vhd" into library microblaze_v8_50_c
 Parsing entity <cachehit_detect>.
 Parsing architecture <IMP> of entity <cachehit_detect>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/dcache_wb.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/dcache_wb.vhd" into library microblaze_v8_50_c
 Parsing entity <DCache_wb>.
 Parsing architecture <IMP> of entity <dcache_wb>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/instr_mux.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/instr_mux.vhd" into library microblaze_v8_50_c
 Parsing entity <instr_mux>.
 Parsing architecture <IMP> of entity <instr_mux>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/read_data_mux_gti.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/read_data_mux_gti.vhd" into library microblaze_v8_50_c
 Parsing entity <read_data_mux>.
 Parsing architecture <IMP> of entity <read_data_mux>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/interrupt_mode_converter.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/interrupt_mode_converter.vhd" into library microblaze_v8_50_c
 Parsing entity <interrupt_mode_converter>.
 Parsing architecture <IMP> of entity <interrupt_mode_converter>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mmu_types_pkg.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mmu_types_pkg.vhd" into library microblaze_v8_50_c
 Parsing package <MMU_Types>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mmu_tlb.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mmu_tlb.vhd" into library microblaze_v8_50_c
 Parsing entity <MMU_TLB>.
 Parsing architecture <IMP> of entity <mmu_tlb>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mmu_utlb_ram.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mmu_utlb_ram.vhd" into library microblaze_v8_50_c
 Parsing entity <MMU_UTLB_RAM>.
 Parsing architecture <IMP> of entity <mmu_utlb_ram>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mmu_utlb.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mmu_utlb.vhd" into library microblaze_v8_50_c
 Parsing entity <MMU_UTLB>.
 Parsing architecture <IMP> of entity <mmu_utlb>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mmu.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mmu.vhd" into library microblaze_v8_50_c
 Parsing entity <MMU>.
 Parsing architecture <IMP> of entity <mmu>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" into library microblaze_v8_50_c
 Parsing entity <MicroBlaze_Core>.
 Parsing architecture <IMP> of entity <microblaze_core>.
-Parsing VHDL file "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze.vhd" into library microblaze_v8_50_c
+Parsing VHDL file "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze.vhd" into library microblaze_v8_50_c
 Parsing entity <MicroBlaze>.
 Parsing architecture <IMP> of entity <microblaze>.
-Parsing VHDL file "/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/hdl/system_microblaze_0_wrapper.vhd" into library work
+Parsing VHDL file "/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/hdl/system_microblaze_0_wrapper.vhd" into library work
 Parsing entity <system_microblaze_0_wrapper>.
 Parsing architecture <STRUCTURE> of entity <system_microblaze_0_wrapper>.
 
@@ -369,10 +369,10 @@ Parsing architecture <STRUCTURE> of entity <system_microblaze_0_wrapper>.
 =========================================================================
 
 Elaborating entity <system_microblaze_0_wrapper> (architecture <STRUCTURE>) from library <work>.
-WARNING:HDLCompiler:760 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_types_pkg.vhd" Line 164: Resolution function resolve_boolean without synthesis directive will use three-state wiring
-INFO:HDLCompiler:1408 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_types_pkg.vhd" Line 158. resolve_boolean is declared here
-WARNING:HDLCompiler:760 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_types_pkg.vhd" Line 173: Resolution function resolve_integer without synthesis directive will use three-state wiring
-INFO:HDLCompiler:1408 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_types_pkg.vhd" Line 170. resolve_integer is declared here
+WARNING:HDLCompiler:760 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_types_pkg.vhd" Line 164: Resolution function resolve_boolean without synthesis directive will use three-state wiring
+INFO:HDLCompiler:1408 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_types_pkg.vhd" Line 158. resolve_boolean is declared here
+WARNING:HDLCompiler:760 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_types_pkg.vhd" Line 173: Resolution function resolve_integer without synthesis directive will use three-state wiring
+INFO:HDLCompiler:1408 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_types_pkg.vhd" Line 170. resolve_integer is declared here
 
 Elaborating entity <MicroBlaze> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
 
@@ -385,29 +385,29 @@ Elaborating entity <Decode_gti> (architecture <IMP>) with generics from library 
 Elaborating entity <PC_Module_gti> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
 
 Elaborating entity <PreFetch_Buffer_gti> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
-WARNING:HDLCompiler:1127 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/prefetch_buffer_gti.vhd" Line 311: Assignment to jump_load ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/prefetch_buffer_gti.vhd" Line 317: Assignment to valid_fetch_i ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/prefetch_buffer_gti.vhd" Line 311: Assignment to jump_load ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/prefetch_buffer_gti.vhd" Line 317: Assignment to valid_fetch_i ignored, since the identifier is never used
 
 Elaborating entity <carry_and> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
-WARNING:HDLCompiler:1127 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/decode_gti.vhd" Line 2089: Assignment to of_piperun_s ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/decode_gti.vhd" Line 2089: Assignment to of_piperun_s ignored, since the identifier is never used
 
 Elaborating entity <jump_logic> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
-WARNING:HDLCompiler:1127 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/decode_gti.vhd" Line 3014: Assignment to ex_ignore_delayslot_hold ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/decode_gti.vhd" Line 4419: Assignment to ex_fpu_div_op ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/decode_gti.vhd" Line 3014: Assignment to ex_ignore_delayslot_hold ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/decode_gti.vhd" Line 4419: Assignment to ex_fpu_div_op ignored, since the identifier is never used
 
 Elaborating entity <carry_or> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
-WARNING:HDLCompiler:1127 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/decode_gti.vhd" Line 4534: Assignment to mem_is_fsl_instr ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/decode_gti.vhd" Line 5648: Assignment to ex_fsl_atomic ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/decode_gti.vhd" Line 4534: Assignment to mem_is_fsl_instr ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/decode_gti.vhd" Line 5648: Assignment to ex_fsl_atomic ignored, since the identifier is never used
 
 Elaborating entity <Data_Flow_gti> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
 
 Elaborating entity <Register_File_gti> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
-WARNING:HDLCompiler:321 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/register_file_gti.vhd" Line 229: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/register_file_gti.vhd" Line 229: Comparison between arrays of unequal length always returns FALSE.
 
 Elaborating entity <Operand_Select_gti> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
-INFO:HDLCompiler:679 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/operand_select_gti.vhd" Line 270. Case statement is complete. others clause is never selected
-INFO:HDLCompiler:679 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/operand_select_gti.vhd" Line 356. Case statement is complete. others clause is never selected
-INFO:HDLCompiler:679 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/operand_select_gti.vhd" Line 428. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/operand_select_gti.vhd" Line 270. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/operand_select_gti.vhd" Line 356. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/operand_select_gti.vhd" Line 428. Case statement is complete. others clause is never selected
 
 Elaborating entity <ALU> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
 
@@ -438,8 +438,8 @@ Elaborating entity <WB_Mux_Bit> (architecture <IMP>) with generics from library 
 Elaborating entity <Zero_Detect_gti> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
 
 Elaborating entity <Byte_Doublet_Handle_gti> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
-INFO:HDLCompiler:679 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/byte_doublet_handle_gti.vhd" Line 316. Case statement is complete. others clause is never selected
-INFO:HDLCompiler:679 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/byte_doublet_handle_gti.vhd" Line 325. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/byte_doublet_handle_gti.vhd" Line 316. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/byte_doublet_handle_gti.vhd" Line 325. Case statement is complete. others clause is never selected
 
 Elaborating entity <Data_Flow_Logic> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
 
@@ -462,7 +462,7 @@ Elaborating entity <instr_mux> (architecture <IMP>) with generics from library <
 Elaborating entity <Debug> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
 
 Elaborating entity <MB_SRL16E> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
-WARNING:HDLCompiler:321 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_primitives.vhd" Line 134: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_primitives.vhd" Line 134: Comparison between arrays of unequal length always returns FALSE.
 
 Elaborating entity <MB_SRL16E> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
 
@@ -475,29 +475,29 @@ Elaborating entity <MB_SRL16E> (architecture <IMP>) with generics from library <
 Elaborating entity <MB_SRL16E> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
 
 Elaborating entity <MB_SRL16E> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
-INFO:HDLCompiler:679 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/debug.vhd" Line 882. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/debug.vhd" Line 882. Case statement is complete. others clause is never selected
 
 Elaborating entity <address_hit> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
 
 Elaborating entity <MB_SRLC16E> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
-WARNING:HDLCompiler:321 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_primitives.vhd" Line 211: Comparison between arrays of unequal length always returns FALSE.
-WARNING:HDLCompiler:746 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/debug.vhd" Line 1975: Range is empty (null range)
+WARNING:HDLCompiler:321 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_primitives.vhd" Line 211: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:746 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/debug.vhd" Line 1975: Range is empty (null range)
 
 Elaborating entity <MMU> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
-WARNING:HDLCompiler:634 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze.vhd" Line 2509: Net <local_sig[186]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze.vhd" Line 2509: Net <local_sig[186]> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <system_microblaze_0_wrapper>.
-    Related source file is "/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/hdl/system_microblaze_0_wrapper.vhd".
+    Related source file is "/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/hdl/system_microblaze_0_wrapper.vhd".
     Summary:
 	no macro.
 Unit <system_microblaze_0_wrapper> synthesized.
 
 Synthesizing Unit <MicroBlaze>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze.vhd".
         C_SCO = 0
         C_FREQ = 100000000
         C_USE_CONFIG_RESET = 0
@@ -552,7 +552,7 @@ Synthesizing Unit <MicroBlaze>.
         C_FPU_EXCEPTION = 0
         C_FSL_EXCEPTION = 0
         C_USE_STACK_PROTECTION = 0
-        C_USE_INTERRUPT = 0
+        C_USE_INTERRUPT = 1
         C_USE_EXT_BRK = 1
         C_USE_EXT_NM_BRK = 1
         C_USE_MMU = 0
@@ -660,8 +660,8 @@ Synthesizing Unit <MicroBlaze>.
         C_M_AXI_DC_RUSER_WIDTH = 1
         C_M_AXI_DC_BUSER_WIDTH = 1
 WARNING:Xst:647 - Input <LOCKSTEP_Slave_In<44:4095>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze.vhd" line 3116: Output port <DCACHE_Stat> of the instance <MicroBlaze_Core_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze.vhd" line 3116: Output port <ICACHE_Stat> of the instance <MicroBlaze_Core_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze.vhd" line 3116: Output port <DCACHE_Stat> of the instance <MicroBlaze_Core_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze.vhd" line 3116: Output port <ICACHE_Stat> of the instance <MicroBlaze_Core_I> is unconnected or connected to loadless signal.
 WARNING:Xst:2935 - Signal 'local_sig<186:197>', unconnected in block 'MicroBlaze', is tied to its initial value (000000000000).
 WARNING:Xst:2935 - Signal 'local_sig<253:348>', unconnected in block 'MicroBlaze', is tied to its initial value (000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000).
 WARNING:Xst:2935 - Signal 'local_sig<424:435>', unconnected in block 'MicroBlaze', is tied to its initial value (000000000000).
@@ -676,7 +676,7 @@ WARNING:Xst:2935 - Signal 'local_sig<3455:3514>', unconnected in block 'MicroBla
 Unit <MicroBlaze> synthesized.
 
 Synthesizing Unit <MicroBlaze_Core>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd".
         C_SCO = 0
         C_FREQ = 100000000
         C_USE_CONFIG_RESET = 0
@@ -731,7 +731,7 @@ Synthesizing Unit <MicroBlaze_Core>.
         C_FPU_EXCEPTION = 0
         C_FSL_EXCEPTION = 0
         C_USE_STACK_PROTECTION = 0
-        C_USE_INTERRUPT = 0
+        C_USE_INTERRUPT = 1
         C_USE_EXT_BRK = 1
         C_USE_EXT_NM_BRK = 1
         C_USE_MMU = 0
@@ -1068,74 +1068,75 @@ WARNING:Xst:647 - Input <S_Dbg_State> is never used. This port will be preserved
 WARNING:Xst:647 - Input <S_Stop_CPU> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <S_MB_Halted> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <S_Dbg_Wakeup> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <EX_DataBus_Exclusive> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <EX_Write_DCache> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <EX_Write_DCache_Flush> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <EX_Write_DCache_Tag> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <EX_Write_Dcache_Ext> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <EX_Write_ICache> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <Snoop_Req_I_DVM_Sync> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <Snoop_Req_D_DVM_Sync> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <Snoop_Req_BTC_Invalidate> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <Snoop_BTC_Done> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <FSL_Will_Dbg_Break> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <OF_Valid_Instr> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <FSL_Get> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <FSL_Get_Test> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <FSL_Get_Inhibit> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <FSL_Get_Control> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <FSL_Get_Blocking> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <FSL_Get_Break> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <FSL_Put> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <FSL_Put_Test> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <FSL_Put_Inhibit> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <FSL_Put_Control> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <FSL_Put_Blocking> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <FSL_Put_Break> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7905: Output port <FSL_Get_No> of the instance <Performance.Data_Flow_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7905: Output port <FSL_Put_No> of the instance <Performance.Data_Flow_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7905: Output port <FSL_Put_Data> of the instance <Performance.Data_Flow_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 8314: Output port <MEM_DAXI_Exception> of the instance <Performance.Use_DBUS.Using_D_AXI.DAXI_Interface_I1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_control_reg> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_status_Reg> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_data_rd_reg> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Stop_CPU> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Dbg_Inhibit_EX> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_stop_cpu_i> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_dbg_inhibit_ex_i> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_dbg_stop_instr_fetch_i> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_stopping_allowed> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_pc_brk_insert> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_single_Step_CPU> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_single_Step_CPU_1> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_single_Step_CPU_2> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_dbg_clean_stop_i> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_new_dbg_instr_shifting_CLK> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_start_dbg_exec> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_start_single_step> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_continue_from_brk> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_force_stop_cmd> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_point_hit> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_of_brki_hit> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_pc_brk> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_watchpoint_brk_hold> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_normal_stop_cmd> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_if_debug_ready_i> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_read_register_PC_1> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_read_register_MSR_1> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_capture_info> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9894: Output port <IB_Addr_MMU> of the instance <Performance.MMU_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9894: Output port <IB_Cache_Addr_MMU> of the instance <Performance.MMU_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9894: Output port <MEM_PID> of the instance <Performance.MMU_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9894: Output port <Snoop_Req_TLB_Addr> of the instance <Performance.MMU_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9894: Output port <Snoop_Req_TLB_PID> of the instance <Performance.MMU_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9894: Output port <IB_Valid_TLB_Addr> of the instance <Performance.MMU_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9894: Output port <IF_ICache_Inhibit> of the instance <Performance.MMU_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9894: Output port <EX_DCache_Inhibit> of the instance <Performance.MMU_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9894: Output port <EX_DCache_WriteThrough> of the instance <Performance.MMU_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9894: Output port <Snoop_Req_TLB_Invalidate> of the instance <Performance.MMU_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9894: Output port <Snoop_TLB_Done> of the instance <Performance.MMU_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <EX_DataBus_Exclusive> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <EX_Write_DCache> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <EX_Write_DCache_Flush> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <EX_Write_DCache_Tag> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <EX_Write_Dcache_Ext> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <EX_Write_ICache> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <Snoop_Req_I_DVM_Sync> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <Snoop_Req_D_DVM_Sync> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <Snoop_Req_BTC_Invalidate> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <Snoop_BTC_Done> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <FSL_Will_Dbg_Break> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <OF_Valid_Instr> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <FSL_Get> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <FSL_Get_Test> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <FSL_Get_Inhibit> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <FSL_Get_Control> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <FSL_Get_Blocking> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <FSL_Get_Break> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <FSL_Put> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <FSL_Put_Test> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <FSL_Put_Inhibit> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <FSL_Put_Control> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <FSL_Put_Blocking> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7552: Output port <FSL_Put_Break> of the instance <Performance.Decode_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7905: Output port <FSL_Get_No> of the instance <Performance.Data_Flow_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7905: Output port <FSL_Put_No> of the instance <Performance.Data_Flow_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 7905: Output port <FSL_Put_Data> of the instance <Performance.Data_Flow_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 8314: Output port <MEM_DAXI_Exception> of the instance <Performance.Use_DBUS.Using_D_AXI.DAXI_Interface_I1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_control_reg> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_status_Reg> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_data_rd_reg> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Stop_CPU> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Dbg_Inhibit_EX> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_stop_cpu_i> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_dbg_inhibit_ex_i> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_dbg_stop_instr_fetch_i> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_stopping_allowed> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_pc_brk_insert> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_single_Step_CPU> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_single_Step_CPU_1> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_single_Step_CPU_2> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_dbg_clean_stop_i> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_new_dbg_instr_shifting_CLK> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_start_dbg_exec> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_start_single_step> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_continue_from_brk> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_force_stop_cmd> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_point_hit> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_of_brki_hit> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_pc_brk> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_watchpoint_brk_hold> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_normal_stop_cmd> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_if_debug_ready_i> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_read_register_PC_1> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_read_register_MSR_1> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9651: Output port <Debug_capture_info> of the instance <Performance.Use_Debug_Logic.Master_Core.Debug_Perf> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9894: Output port <IB_Addr_MMU> of the instance <Performance.MMU_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9894: Output port <IB_Cache_Addr_MMU> of the instance <Performance.MMU_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9894: Output port <MEM_PID> of the instance <Performance.MMU_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9894: Output port <Snoop_Req_TLB_Addr> of the instance <Performance.MMU_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9894: Output port <Snoop_Req_TLB_PID> of the instance <Performance.MMU_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9894: Output port <IB_Valid_TLB_Addr> of the instance <Performance.MMU_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9894: Output port <IF_ICache_Inhibit> of the instance <Performance.MMU_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9894: Output port <EX_DCache_Inhibit> of the instance <Performance.MMU_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9894: Output port <EX_DCache_WriteThrough> of the instance <Performance.MMU_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9894: Output port <Snoop_Req_TLB_Invalidate> of the instance <Performance.MMU_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" line 9894: Output port <Snoop_TLB_Done> of the instance <Performance.MMU_I> is unconnected or connected to loadless signal.
     Found 1-bit register for signal <Reset_DFF.reset_temp>.
+    Found 1-bit register for signal <external_interrupt>.
     Found 32-bit register for signal <Performance.interrupt_address_d1>.
     Found 32-bit register for signal <Performance.wb_dlmb_valid_read_data>.
     Found 1-bit register for signal <Performance.wb_dlmb_data_strobe>.
@@ -1147,11 +1148,11 @@ INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProc
     Found 4-bit register for signal <Trace_Data_Byte_Enable>.
     Found 1-bit register for signal <sync_reset>.
     Summary:
-	inferred 138 D-type flip-flop(s).
+	inferred 139 D-type flip-flop(s).
 Unit <MicroBlaze_Core> synthesized.
 
 Synthesizing Unit <interrupt_mode_converter>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/interrupt_mode_converter.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/interrupt_mode_converter.vhd".
         C_INTERRUPT_IS_EDGE = false
         C_EDGE_IS_POSITIVE = true
 WARNING:Xst:647 - Input <Clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -1161,14 +1162,14 @@ WARNING:Xst:647 - Input <Interrupt_taken> is never used. This port will be prese
 Unit <interrupt_mode_converter> synthesized.
 
 Synthesizing Unit <Decode_gti>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/decode_gti.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/decode_gti.vhd".
         C_TARGET = spartan6
         C_ALLOW_LUT6 = true
         C_BASE_VECTORS = "00000000000000000000000000000000"
         C_USE_SRL16 = "yes"
         C_USE_LUTRAM = "yes"
         C_FAULT_TOLERANT = 0
-        C_USE_INTERRUPT = 0
+        C_USE_INTERRUPT = 1
         C_USE_EXT_BRK = true
         C_USE_EXT_NM_BRK = true
         C_PVR = 0
@@ -1211,14 +1212,14 @@ Synthesizing Unit <Decode_gti>.
     Set property "KEEP = TRUE" for signal <ex_valid_jump>.
 WARNING:Xst:647 - Input <OF_MSR<0:21>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <OF_MSR<23:27>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <OF_MSR<29:31>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <OF_MSR<29:29>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <OF_MSR<31:31>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <EX_MSR<0:22>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <EX_MSR<24:31>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <MEM_MSR<0:22>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <MEM_MSR<24:31>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <WB_MSR> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <EX_Addr_Low_Bits> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <Internal_interrupt> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <MEM_DataBus_Exception> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <MEM_DataBus_ECC_Exception> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <MEM_DataBus_Exclusive_Failed> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -1238,13 +1239,14 @@ WARNING:Xst:647 - Input <FSL_Get_Succesful> is never used. This port will be pre
 WARNING:Xst:647 - Input <FSL_Put_Succesful> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <FSL_Stall> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <EX_FSL_Control_Error> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/decode_gti.vhd" line 1337: Output port <OF_Instr_ECC_Exception> of the instance <PreFetch_Buffer_I1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/decode_gti.vhd" line 1337: Output port <OF_Instr_Zone_Protect> of the instance <PreFetch_Buffer_I1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/decode_gti.vhd" line 2045: Output port <Carry_OUT> of the instance <Use_MuxCy[11].OF_Piperun_Stage> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/decode_gti.vhd" line 1337: Output port <OF_Instr_ECC_Exception> of the instance <PreFetch_Buffer_I1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/decode_gti.vhd" line 1337: Output port <OF_Instr_Zone_Protect> of the instance <PreFetch_Buffer_I1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/decode_gti.vhd" line 2045: Output port <Carry_OUT> of the instance <Use_MuxCy[11].OF_Piperun_Stage> is unconnected or connected to loadless signal.
     Found 1-bit register for signal <if_fetch_in_progress>.
     Found 1-bit register for signal <dbg_Stop_Instr_Fetch_delay>.
     Found 1-bit register for signal <if_missed_fetch>.
     Found 1-bit register for signal <if_missed_fetch_already_tested>.
+    Found 1-bit register for signal <of_Take_Interrupt_hold>.
     Found 1-bit register for signal <of_Take_Ext_BRK_hold>.
     Found 1-bit register for signal <ex_mfsmsr_i>.
     Found 1-bit register for signal <ex_MSR_set_decode>.
@@ -1259,6 +1261,7 @@ INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProc
     Found 1-bit register for signal <ex_Sel_SPR_SHR>.
     Found 4-bit register for signal <ex_PVR_Select>.
     Found 1-bit register for signal <of_read_imm_reg_ii>.
+    Found 1-bit register for signal <ex_Interrupt_i>.
     Found 1-bit register for signal <ex_Ext_NM_BRK_i>.
     Found 1-bit register for signal <ex_Ext_BRK_i>.
     Found 1-bit register for signal <ex_exception_no_load_store_unmask>.
@@ -1410,7 +1413,7 @@ INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProc
     Found 1-bit register for signal <WB_SW_Instr>.
     Found 1-bit register for signal <WB_Word_Access>.
     Found 1-bit register for signal <ext_nm_brk_hold>.
-    Found 8x2-bit Read Only RAM for signal <_n2357>
+    Found 8x2-bit Read Only RAM for signal <_n2028>
     Found 2-bit 4-to-1 multiplexer for signal <PWR_11_o_PWR_11_o_mux_65_OUT> created at line 3096.
     Found 5-bit comparator equal for signal <of_op1_read_addr[0]_ex_gpr_write_addr[0]_equal_22_o> created at line 2070
     Found 5-bit comparator equal for signal <of_op2_read_addr[0]_ex_gpr_write_addr[0]_equal_23_o> created at line 2072
@@ -1425,13 +1428,13 @@ INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProc
     WARNING:Xst:2404 -  FFs/Latches <WB_Div_Overflow<0:0>> (without init value) have a constant value of 0 in block <Decode_gti>.
     Summary:
 	inferred   1 RAM(s).
-	inferred 330 D-type flip-flop(s).
+	inferred 332 D-type flip-flop(s).
 	inferred   9 Comparator(s).
-	inferred  37 Multiplexer(s).
+	inferred  39 Multiplexer(s).
 Unit <Decode_gti> synthesized.
 
 Synthesizing Unit <PC_Module_gti>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/pc_module_gti.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/pc_module_gti.vhd".
         C_TARGET = spartan6
         C_ALLOW_LUT6 = true
         C_USE_MMU = 0
@@ -1487,7 +1490,7 @@ WARNING:Xst:647 - Input <Snoop_BTC_Invalidate> is never used. This port will be 
 Unit <PC_Module_gti> synthesized.
 
 Synthesizing Unit <PreFetch_Buffer_gti>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/prefetch_buffer_gti.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/prefetch_buffer_gti.vhd".
         C_ALLOW_LUT6 = true
         C_TARGET = spartan6
         C_IEXT_BUS_EXCEPTION = false
@@ -1518,14 +1521,14 @@ WARNING:Xst:647 - Input <IF_Fetch_In_Progress> is never used. This port will be 
 Unit <PreFetch_Buffer_gti> synthesized.
 
 Synthesizing Unit <carry_and>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/carry_and.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/carry_and.vhd".
         C_TARGET = spartan6
     Summary:
 	no macro.
 Unit <carry_and> synthesized.
 
 Synthesizing Unit <jump_logic>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/jump_logic_gti.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/jump_logic_gti.vhd".
         C_TARGET = spartan6
 WARNING:Xst:647 - Input <OF_instr<6:7>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <OF_instr<11:31>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -1550,14 +1553,14 @@ WARNING:Xst:647 - Input <EX_Opcode> is never used. This port will be preserved a
 Unit <jump_logic> synthesized.
 
 Synthesizing Unit <carry_or>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/carry_or.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/carry_or.vhd".
         C_TARGET = spartan6
     Summary:
 	no macro.
 Unit <carry_or> synthesized.
 
 Synthesizing Unit <Data_Flow_gti>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/data_flow_gti.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/data_flow_gti.vhd".
         C_DATA_SIZE = 32
         C_TARGET = spartan6
         C_ALLOW_LUT6 = true
@@ -1672,14 +1675,14 @@ WARNING:Xst:647 - Input <MEM_Sel_SPR_SHR> is never used. This port will be prese
 WARNING:Xst:647 - Input <MEM_MTS_SLR> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <MEM_MTS_SHR> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <Check_Stack_Address> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/data_flow_gti.vhd" line 2022: Output port <MEM_FPU_Done> of the instance <FPU_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/data_flow_gti.vhd" line 2022: Output port <WB_FPU_Excep> of the instance <FPU_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/data_flow_gti.vhd" line 2022: Output port <MEM_FPU_Done> of the instance <FPU_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/data_flow_gti.vhd" line 2022: Output port <WB_FPU_Excep> of the instance <FPU_I> is unconnected or connected to loadless signal.
     Summary:
 	inferred   5 Multiplexer(s).
 Unit <Data_Flow_gti> synthesized.
 
 Synthesizing Unit <Register_File_gti>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/register_file_gti.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/register_file_gti.vhd".
         C_TARGET = spartan6
         C_USE_LUTRAM = "yes"
     Set property "ram_style = distributed".
@@ -1721,7 +1724,7 @@ WARNING:Xst:647 - Input <Config_Reset> is never used. This port will be preserve
 Unit <Register_File_gti> synthesized.
 
 Synthesizing Unit <Operand_Select_gti>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/operand_select_gti.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/operand_select_gti.vhd".
         C_ALLOW_LUT6 = true
         C_TARGET = spartan6
         C_EXCEPTION_ADDR = "00000000000000000000000000100000"
@@ -1744,7 +1747,7 @@ WARNING:Xst:647 - Input <OF_Op1_Sel_SPR_MSR> is never used. This port will be pr
 Unit <Operand_Select_gti> synthesized.
 
 Synthesizing Unit <ALU>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/alu.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/alu.vhd".
         C_AREA_OPTIMIZED = 0
         C_ALLOW_LUT6 = true
         C_TARGET = spartan6
@@ -1753,7 +1756,7 @@ Synthesizing Unit <ALU>.
 Unit <ALU> synthesized.
 
 Synthesizing Unit <ALU_Bit_1>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/alu_bit.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/alu_bit.vhd".
         C_TARGET = spartan6
         C_ALLOW_LUT6 = true
         C_LAST_BIT = false
@@ -1764,7 +1767,7 @@ WARNING:Xst:647 - Input <EX_Unsigned_Op> is never used. This port will be preser
 Unit <ALU_Bit_1> synthesized.
 
 Synthesizing Unit <ALU_Bit_2>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/alu_bit.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/alu_bit.vhd".
         C_TARGET = spartan6
         C_ALLOW_LUT6 = true
         C_LAST_BIT = true
@@ -1772,7 +1775,7 @@ Synthesizing Unit <ALU_Bit_2>.
 Unit <ALU_Bit_2> synthesized.
 
 Synthesizing Unit <Shift_Logic_Module_gti>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/shift_logic_gti.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/shift_logic_gti.vhd".
         C_USE_PCMP_INSTR = true
         C_ALLOW_LUT6 = true
         C_TARGET = spartan6
@@ -1782,16 +1785,16 @@ Synthesizing Unit <Shift_Logic_Module_gti>.
     Set property "KEEP = TRUE" for signal <mask_16_23>.
 WARNING:Xst:647 - Input <EX_Sign_Extend_Sel> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <EX_Logic_Sel> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/shift_logic_gti.vhd" line 636: Output port <Is_Equal_2> of the instance <Use_PCMP_instr.Using_FPGA_PCMP.carry_equal_byte1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/shift_logic_gti.vhd" line 649: Output port <Is_Equal_2> of the instance <Use_PCMP_instr.Using_FPGA_PCMP.carry_equal_byte2> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/shift_logic_gti.vhd" line 662: Output port <Is_Equal_2> of the instance <Use_PCMP_instr.Using_FPGA_PCMP.carry_equal_byte3> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/shift_logic_gti.vhd" line 675: Output port <Is_Equal_2> of the instance <Use_PCMP_instr.Using_FPGA_PCMP.carry_equal_byte4> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/shift_logic_gti.vhd" line 636: Output port <Is_Equal_2> of the instance <Use_PCMP_instr.Using_FPGA_PCMP.carry_equal_byte1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/shift_logic_gti.vhd" line 649: Output port <Is_Equal_2> of the instance <Use_PCMP_instr.Using_FPGA_PCMP.carry_equal_byte2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/shift_logic_gti.vhd" line 662: Output port <Is_Equal_2> of the instance <Use_PCMP_instr.Using_FPGA_PCMP.carry_equal_byte3> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/shift_logic_gti.vhd" line 675: Output port <Is_Equal_2> of the instance <Use_PCMP_instr.Using_FPGA_PCMP.carry_equal_byte4> is unconnected or connected to loadless signal.
     Summary:
 	inferred  11 Multiplexer(s).
 Unit <Shift_Logic_Module_gti> synthesized.
 
 Synthesizing Unit <count_leading_zeros>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/count_leading_zero.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/count_leading_zero.vhd".
 WARNING:Xst:647 - Input <Data<7:7>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <Data<15:15>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <Data<23:23>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -1801,14 +1804,14 @@ WARNING:Xst:647 - Input <Data<31:31>> is never used. This port will be preserved
 Unit <count_leading_zeros> synthesized.
 
 Synthesizing Unit <carry_equal>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/carry_equal.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/carry_equal.vhd".
         C_TARGET = spartan6
         Size = 8
     Summary:
 Unit <carry_equal> synthesized.
 
 Synthesizing Unit <mul_unit>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mul_unit.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mul_unit.vhd".
         C_TARGET = spartan6
         C_USE_HW_MUL = true
         C_USE_MUL64 = false
@@ -1817,10 +1820,10 @@ WARNING:Xst:647 - Input <EX_Not_Mul_Op> is never used. This port will be preserv
 WARNING:Xst:647 - Input <EX_Mulh_Instr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <EX_Mulhu_Instr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <EX_Mulhsu_Instr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mul_unit.vhd" line 656: Output port <DETECT> of the instance <Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mul_unit.vhd" line 690: Output port <DETECT> of the instance <Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mul_unit.vhd" line 720: Output port <PCOUT> of the instance <Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mul_unit.vhd" line 720: Output port <DETECT> of the instance <Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mul_unit.vhd" line 656: Output port <DETECT> of the instance <Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mul_unit.vhd" line 690: Output port <DETECT> of the instance <Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mul_unit.vhd" line 720: Output port <PCOUT> of the instance <Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mul_unit.vhd" line 720: Output port <DETECT> of the instance <Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3> is unconnected or connected to loadless signal.
     Found 1-bit register for signal <WB_Mul_Result<16>>.
     Found 1-bit register for signal <WB_Mul_Result<17>>.
     Found 1-bit register for signal <WB_Mul_Result<18>>.
@@ -1843,7 +1846,7 @@ INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProc
 Unit <mul_unit> synthesized.
 
 Synthesizing Unit <dsp_module_1>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/dsp_module.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/dsp_module.vhd".
         C_TARGET = spartan6
         C_A_WIDTH = 18
         C_B_WIDTH = 18
@@ -1865,7 +1868,7 @@ WARNING:Xst:653 - Signal <DETECT> is used but never assigned. This sourceless si
 Unit <dsp_module_1> synthesized.
 
 Synthesizing Unit <dsp_module_2>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/dsp_module.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/dsp_module.vhd".
         C_TARGET = spartan6
         C_A_WIDTH = 18
         C_B_WIDTH = 18
@@ -1888,7 +1891,7 @@ WARNING:Xst:653 - Signal <DETECT> is used but never assigned. This sourceless si
 Unit <dsp_module_2> synthesized.
 
 Synthesizing Unit <dsp_module_3>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/dsp_module.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/dsp_module.vhd".
         C_TARGET = spartan6
         C_A_WIDTH = 18
         C_B_WIDTH = 18
@@ -1909,7 +1912,7 @@ WARNING:Xst:653 - Signal <DETECT> is used but never assigned. This sourceless si
 Unit <dsp_module_3> synthesized.
 
 Synthesizing Unit <Barrel_Shifter_gti>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/barrel_shifter_gti.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/barrel_shifter_gti.vhd".
         C_TARGET = spartan6
         C_ALLOW_LUT6 = true
         C_USE_BARREL = true
@@ -1969,7 +1972,7 @@ Synthesizing Unit <Barrel_Shifter_gti>.
 Unit <Barrel_Shifter_gti> synthesized.
 
 Synthesizing Unit <WB_Mux>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/wb_mux_gti.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/wb_mux_gti.vhd".
         C_TARGET = spartan6
         C_FSL_EXCEPTION = false
         C_USE_EXCEPTIONS = false
@@ -2004,7 +2007,7 @@ WARNING:Xst:647 - Input <WB_Sel_SPR_SHR> is never used. This port will be preser
 Unit <WB_Mux> synthesized.
 
 Synthesizing Unit <WB_Mux_Bit>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/wb_mux_bit_gti.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/wb_mux_bit_gti.vhd".
         C_TARGET = spartan6
         C_LUT_SIZE = 6
         C_DATA_WIDTH = 3
@@ -2015,14 +2018,14 @@ WARNING:Xst:647 - Input <Select_Bits> is never used. This port will be preserved
 Unit <WB_Mux_Bit> synthesized.
 
 Synthesizing Unit <Zero_Detect_gti>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/zero_detect_gti.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/zero_detect_gti.vhd".
         C_TARGET = spartan6
     Summary:
 	no macro.
 Unit <Zero_Detect_gti> synthesized.
 
 Synthesizing Unit <Byte_Doublet_Handle_gti>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/byte_doublet_handle_gti.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/byte_doublet_handle_gti.vhd".
         C_TARGET = spartan6
         C_USE_REORDER_INSTR = 1
         C_ENDIANNESS = 1
@@ -2043,7 +2046,7 @@ Synthesizing Unit <Byte_Doublet_Handle_gti>.
 Unit <Byte_Doublet_Handle_gti> synthesized.
 
 Synthesizing Unit <Data_Flow_Logic>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/data_flow_logic_gti.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/data_flow_logic_gti.vhd".
         C_TARGET = spartan6
         C_FSL_LINKS = 0
         C_MAX_FSL_LINKS = 16
@@ -2060,7 +2063,7 @@ WARNING:Xst:647 - Input <MEM_Sel_FSL> is never used. This port will be preserved
 Unit <Data_Flow_Logic> synthesized.
 
 Synthesizing Unit <msr_reg_gti>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/msr_reg_gti.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/msr_reg_gti.vhd".
         C_TARGET = spartan6
         C_RESET_MSR = "000000000000000"
         C_PVR = 0
@@ -2083,7 +2086,7 @@ WARNING:Xst:647 - Input <WB_MSR_Clear_EE> is never used. This port will be prese
 Unit <msr_reg_gti> synthesized.
 
 Synthesizing Unit <exception_registers_gti>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/exception_registers_gti.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/exception_registers_gti.vhd".
         C_TARGET = spartan6
         C_ALLOW_LUT6 = true
         C_DIV_ZERO_EXCEPTION = false
@@ -2118,7 +2121,7 @@ WARNING:Xst:647 - Input <WB_ECC_Exception> is never used. This port will be pres
 Unit <exception_registers_gti> synthesized.
 
 Synthesizing Unit <mux_bus>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mux_bus.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mux_bus.vhd".
         C_TARGET = spartan6
         C_ALLOW_LUT6 = true
         C_SIZE = 32
@@ -2127,7 +2130,7 @@ Synthesizing Unit <mux_bus>.
 Unit <mux_bus> synthesized.
 
 Synthesizing Unit <Fpu>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/fpu.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/fpu.vhd".
         C_TARGET = spartan6
         C_USE_FPU = 0
         C_FPU_EXCEPTION = 0
@@ -2152,7 +2155,7 @@ WARNING:Xst:647 - Input <MEM_Valid_Instr> is never used. This port will be prese
 Unit <Fpu> synthesized.
 
 Synthesizing Unit <PVR>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/pvr.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/pvr.vhd".
         C_PVR = 0
         C_MB_VERSION = "00011110"
         C_PVR_USER1 = "00000000"
@@ -2245,7 +2248,7 @@ WARNING:Xst:647 - Input <WB_Sel_SPR_PVR> is never used. This port will be preser
 Unit <PVR> synthesized.
 
 Synthesizing Unit <read_data_mux>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/read_data_mux_gti.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/read_data_mux_gti.vhd".
         C_USE_D_EXT = true
         C_USE_D_LMB = true
         C_USE_DCACHE = false
@@ -2255,7 +2258,7 @@ WARNING:Xst:647 - Input <WB_DLMB_data_strobe> is never used. This port will be p
 Unit <read_data_mux> synthesized.
 
 Synthesizing Unit <DAXI_interface>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/daxi_interface.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/daxi_interface.vhd".
         C_M_AXI_DP_THREAD_ID_WIDTH = 1
         C_M_AXI_DP_DATA_WIDTH = 32
         C_M_AXI_DP_ADDR_WIDTH = 32
@@ -2288,7 +2291,7 @@ WARNING:Xst:647 - Input <MEM_DataBus_Enable_BusLock> is never used. This port wi
 Unit <DAXI_interface> synthesized.
 
 Synthesizing Unit <instr_mux>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/instr_mux.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/instr_mux.vhd".
         C_TARGET = spartan6
         C_ALLOW_LUT6 = true
         C_USE_I_EXT = false
@@ -2304,7 +2307,7 @@ WARNING:Xst:647 - Input <IEXT_data_strobe> is never used. This port will be pres
 Unit <instr_mux> synthesized.
 
 Synthesizing Unit <Debug>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/debug.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/debug.vhd".
         C_BASE_VECTORS = "00000000000000000000000000000000"
         C_AREA_OPTIMIZED = 0
         C_USE_BARREL = 1
@@ -2436,7 +2439,7 @@ WARNING:Xst:647 - Input <Ok_To_Stop> is never used. This port will be preserved 
 Unit <Debug> synthesized.
 
 Synthesizing Unit <MB_SRL16E_1>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_primitives.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_primitives.vhd".
         C_USE_SRL16 = "yes"
         C_STATIC = true
         INIT = "0000000000011011"
@@ -2445,7 +2448,7 @@ Synthesizing Unit <MB_SRL16E_1>.
 Unit <MB_SRL16E_1> synthesized.
 
 Synthesizing Unit <MB_SRL16E_2>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_primitives.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_primitives.vhd".
         C_USE_SRL16 = "yes"
         C_STATIC = true
         INIT = "0000001000111000"
@@ -2454,7 +2457,7 @@ Synthesizing Unit <MB_SRL16E_2>.
 Unit <MB_SRL16E_2> synthesized.
 
 Synthesizing Unit <MB_SRL16E_3>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_primitives.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_primitives.vhd".
         C_USE_SRL16 = "yes"
         C_STATIC = true
         INIT = "1111111111111111"
@@ -2463,7 +2466,7 @@ Synthesizing Unit <MB_SRL16E_3>.
 Unit <MB_SRL16E_3> synthesized.
 
 Synthesizing Unit <MB_SRL16E_4>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_primitives.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_primitives.vhd".
         C_USE_SRL16 = "yes"
         C_STATIC = true
         INIT = "0011111111111111"
@@ -2472,7 +2475,7 @@ Synthesizing Unit <MB_SRL16E_4>.
 Unit <MB_SRL16E_4> synthesized.
 
 Synthesizing Unit <MB_SRL16E_5>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_primitives.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_primitives.vhd".
         C_USE_SRL16 = "yes"
         C_STATIC = true
         INIT = "0000000000000000"
@@ -2481,7 +2484,7 @@ Synthesizing Unit <MB_SRL16E_5>.
 Unit <MB_SRL16E_5> synthesized.
 
 Synthesizing Unit <MB_SRL16E_6>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_primitives.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_primitives.vhd".
         C_USE_SRL16 = "yes"
         C_STATIC = true
         INIT = "0000000000100100"
@@ -2490,7 +2493,7 @@ Synthesizing Unit <MB_SRL16E_6>.
 Unit <MB_SRL16E_6> synthesized.
 
 Synthesizing Unit <MB_SRL16E_7>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_primitives.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_primitives.vhd".
         C_USE_SRL16 = "yes"
         C_STATIC = true
         INIT = "0001111000000000"
@@ -2499,18 +2502,18 @@ Synthesizing Unit <MB_SRL16E_7>.
 Unit <MB_SRL16E_7> synthesized.
 
 Synthesizing Unit <address_hit>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/address_hit.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/address_hit.vhd".
         C_TARGET = spartan6
         C_FIRST = true
         C_USE_SRL16 = "yes"
         No_Bits = 32
-INFO:Xst:3210 - "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/address_hit.vhd" line 161: Output port <Q15> of the instance <Using_FPGA.Compare[0].SRLC16E_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/address_hit.vhd" line 161: Output port <Q15> of the instance <Using_FPGA.Compare[0].SRLC16E_I> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <address_hit> synthesized.
 
 Synthesizing Unit <MB_SRLC16E>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_primitives.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_primitives.vhd".
         C_USE_SRL16 = "yes"
         INIT = "0000000000000000"
 WARNING:Xst:647 - Input <Config_Reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -2519,7 +2522,7 @@ WARNING:Xst:647 - Input <Config_Reset> is never used. This port will be preserve
 Unit <MB_SRLC16E> synthesized.
 
 Synthesizing Unit <MMU>.
-    Related source file is "/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mmu.vhd".
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mmu.vhd".
         C_TARGET = spartan6
         C_ALLOW_LUT6 = true
         C_DCACHE_USE_WRITEBACK = 0
@@ -2580,8 +2583,8 @@ Macro Statistics
 # Adders/Subtractors                                   : 2
  2-bit subtractor                                      : 1
  8-bit adder                                           : 1
-# Registers                                            : 322
- 1-bit register                                        : 245
+# Registers                                            : 325
+ 1-bit register                                        : 248
  10-bit register                                       : 1
  13-bit register                                       : 2
  15-bit register                                       : 1
@@ -2601,7 +2604,7 @@ Macro Statistics
  8-bit register                                        : 1
 # Comparators                                          : 9
  5-bit comparator equal                                : 9
-# Multiplexers                                         : 269
+# Multiplexers                                         : 271
  1-bit 16-to-1 multiplexer                             : 1
  1-bit 2-to-1 multiplexer                              : 150
  1-bit 28-to-1 multiplexer                             : 1
@@ -2617,7 +2620,7 @@ Macro Statistics
  33-bit 2-to-1 multiplexer                             : 4
  4-bit 2-to-1 multiplexer                              : 2
  43-bit 4-to-1 multiplexer                             : 1
- 5-bit 2-to-1 multiplexer                              : 5
+ 5-bit 2-to-1 multiplexer                              : 7
  6-bit 2-to-1 multiplexer                              : 4
  8-bit 2-to-1 multiplexer                              : 6
  8-bit 4-to-1 multiplexer                              : 2
@@ -2638,7 +2641,7 @@ The following registers are absorbed into counter <single_step_count>: 1 registe
 Unit <Debug> synthesized (advanced).
 
 Synthesizing (advanced) Unit <Decode_gti>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n2357> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n2028> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -2780,13 +2783,13 @@ Macro Statistics
 # Counters                                             : 2
  2-bit down counter                                    : 1
  8-bit up counter                                      : 1
-# Registers                                            : 5748
- Flip-Flops                                            : 5748
+# Registers                                            : 5751
+ Flip-Flops                                            : 5751
 # Shift Registers                                      : 75
  4-bit dynamic shift register                          : 75
 # Comparators                                          : 9
  5-bit comparator equal                                : 9
-# Multiplexers                                         : 263
+# Multiplexers                                         : 265
  1-bit 16-to-1 multiplexer                             : 1
  1-bit 2-to-1 multiplexer                              : 148
  1-bit 28-to-1 multiplexer                             : 1
@@ -2801,7 +2804,7 @@ Macro Statistics
  32-bit 4-to-1 multiplexer                             : 3
  33-bit 2-to-1 multiplexer                             : 4
  4-bit 2-to-1 multiplexer                              : 2
- 5-bit 2-to-1 multiplexer                              : 5
+ 5-bit 2-to-1 multiplexer                              : 7
  6-bit 2-to-1 multiplexer                              : 4
  8-bit 2-to-1 multiplexer                              : 5
  8-bit 4-to-1 multiplexer                              : 2
@@ -4437,11 +4440,10 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ex_PVR_Select_3> (w
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ex_Sel_SPR_SHR> (without init value) has a constant value of 0 in block <Decode_gti>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ex_Sel_SPR_SLR> (without init value) has a constant value of 0 in block <Decode_gti>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ex_Sel_SPR_BTR> (without init value) has a constant value of 0 in block <Decode_gti>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ex_Sel_SPR_PVR> (without init value) has a constant value of 0 in block <Decode_gti>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ex_Sel_SPR_FSR> (without init value) has a constant value of 0 in block <Decode_gti>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ex_Sel_SPR_EDR> (without init value) has a constant value of 0 in block <Decode_gti>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <FSL_Will_Dbg_Break> (without init value) has a constant value of 0 in block <Decode_gti>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <WB_Sel_SPR_SHR> (without init value) has a constant value of 0 in block <Decode_gti>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <of_set_MSR_IE_hold> has a constant value of 0 in block <Decode_gti>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <wb_is_fpu_instr> (without init value) has a constant value of 0 in block <Decode_gti>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <WB_Sel_SPR_ESR> (without init value) has a constant value of 0 in block <Decode_gti>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <WB_Sel_SPR_EAR> (without init value) has a constant value of 0 in block <Decode_gti>. This FF/Latch will be trimmed during the optimization process.
@@ -4454,7 +4456,7 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MEM_DataBus_Exclusi
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mem_Write_DCache> (without init value) has a constant value of 0 in block <Decode_gti>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ex_Sel_SPR_ESR> (without init value) has a constant value of 0 in block <Decode_gti>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ex_Sel_SPR_EAR> (without init value) has a constant value of 0 in block <Decode_gti>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ex_Sel_SPR_EDR> (without init value) has a constant value of 0 in block <Decode_gti>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ex_Sel_SPR_PVR> (without init value) has a constant value of 0 in block <Decode_gti>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mem_potential_exception_i> (without init value) has a constant value of 0 in block <Decode_gti>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MEM_PVR_Select_0> (without init value) has a constant value of 0 in block <Decode_gti>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MEM_PVR_Select_1> (without init value) has a constant value of 0 in block <Decode_gti>. This FF/Latch will be trimmed during the optimization process.
@@ -4468,7 +4470,6 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mem_Sel_SPR_FSR_I> 
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mem_Sel_SPR_EDR_I> (without init value) has a constant value of 0 in block <Decode_gti>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mem_Sel_SPR_EAR_I> (without init value) has a constant value of 0 in block <Decode_gti>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mem_Sel_SPR_ESR_I> (without init value) has a constant value of 0 in block <Decode_gti>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ex_set_MSR_IE_instr> (without init value) has a constant value of 0 in block <Decode_gti>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <WB_Sel_SPR_PVR> (without init value) has a constant value of 0 in block <Decode_gti>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <ex_write_icache_done_i> of sequential type is unconnected in block <Decode_gti>.
 WARNING:Xst:1293 - FF/Latch <status_reg_26> has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
@@ -7110,6 +7111,7 @@ WARNING:Xst:1293 - FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I
 WARNING:Xst:1293 - FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Using_FPGA.Gen_Bits[27].MEM_EX_Result_Inst> has a constant value of 0 in block <system_microblaze_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Using_FPGA.Gen_Bits[27].MEM_EX_Result_Inst> has a constant value of 0 in block <system_microblaze_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
 FlipFlop microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_Take_Intr_or_Exc has been replicated 1 time(s)
+FlipFlop microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_valid_jump has been replicated 1 time(s)
 FlipFlop microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_i has been replicated 1 time(s)
 FlipFlop microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_28 has been replicated 2 time(s)
 FlipFlop microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_29 has been replicated 1 time(s)
@@ -7123,8 +7125,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1570
- Flip-Flops                                            : 1570
+# Registers                                            : 1576
+ Flip-Flops                                            : 1576
 
 =========================================================================
 WARNING:Xst:1293 - FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Using_FPGA.Gen_Bits[27].MEM_EX_Result_Inst> has a constant value of 0 in block <system_microblaze_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
@@ -7149,29 +7151,29 @@ Top Level Output File Name         : system_microblaze_0_wrapper.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1820
+# BELS                             : 1831
 #      GND                         : 1
 #      INV                         : 8
 #      LUT1                        : 35
 #      LUT2                        : 84
-#      LUT3                        : 345
-#      LUT4                        : 167
-#      LUT5                        : 198
-#      LUT6                        : 498
+#      LUT3                        : 348
+#      LUT4                        : 153
+#      LUT5                        : 206
+#      LUT6                        : 513
 #      LUT6_2                      : 96
 #      MULT_AND                    : 2
 #      MUXCY                       : 16
 #      MUXCY_L                     : 149
-#      MUXF7                       : 118
+#      MUXF7                       : 117
 #      VCC                         : 1
 #      XORCY                       : 102
-# FlipFlops/Latches                : 1570
-#      FD                          : 85
+# FlipFlops/Latches                : 1576
+#      FD                          : 87
 #      FDC                         : 1
 #      FDCE                        : 7
 #      FDE                         : 280
-#      FDR                         : 577
-#      FDRE                        : 581
+#      FDR                         : 579
+#      FDRE                        : 583
 #      FDS                         : 2
 #      FDSE                        : 37
 # RAMS                             : 16
@@ -7191,18 +7193,18 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1570  out of  18224     8%  
- Number of Slice LUTs:                 1582  out of   9112    17%  
-    Number used as Logic:              1431  out of   9112    15%  
+ Number of Slice Registers:            1576  out of  18224     8%  
+ Number of Slice LUTs:                 1594  out of   9112    17%  
+    Number used as Logic:              1443  out of   9112    15%  
     Number used as Memory:              151  out of   2176     6%  
        Number used as RAM:               64
        Number used as SRL:               87
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   2378
-   Number with an unused Flip Flop:     808  out of   2378    33%  
-   Number with an unused LUT:           796  out of   2378    33%  
-   Number of fully used LUT-FF pairs:   774  out of   2378    32%  
+ Number of LUT Flip Flop pairs used:   2390
+   Number with an unused Flip Flop:     814  out of   2390    34%  
+   Number with an unused LUT:           796  out of   2390    33%  
+   Number of fully used LUT-FF pairs:   780  out of   2390    32%  
    Number of unique control sets:        43
 
 IO Utilization: 
@@ -7233,7 +7235,7 @@ Clock Information:
 -----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)                                                                                                             | Load  |
 -----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+-------+
-DCACHE_FSL_OUT_CLK                 | NONE(microblaze_0/LOCKSTEP_Out_0)                                                                                                 | 1519  |
+DCACHE_FSL_OUT_CLK                 | NONE(microblaze_0/LOCKSTEP_Out_0)                                                                                                 | 1525  |
 DBG_CLK                            | NONE(microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Use_SRL16.SRL16E_4/Use_unisim.MB_SRL16E_I1)| 145   |
 DBG_UPDATE                         | NONE(microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/command_reg_0)                             | 12    |
 -----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+-------+
@@ -7247,8 +7249,8 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 6.843ns (Maximum Frequency: 146.128MHz)
-   Minimum input arrival time before clock: 4.104ns
+   Minimum period: 6.880ns (Maximum Frequency: 145.358MHz)
+   Minimum input arrival time before clock: 4.105ns
    Maximum output required time after clock: 7.538ns
    Maximum combinational path delay: 2.580ns
 
@@ -7258,10 +7260,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'DCACHE_FSL_OUT_CLK'
-  Clock period: 6.843ns (frequency: 146.128MHz)
-  Total number of paths / destination ports: 246260 / 3616
+  Clock period: 6.880ns (frequency: 145.358MHz)
+  Total number of paths / destination ports: 248597 / 3627
 -------------------------------------------------------------------------
-Delay:               6.843ns (Levels of Logic = 7)
+Delay:               6.880ns (Levels of Logic = 7)
   Source:            microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/PreFetch_Buffer_I1/Using_FPGA_Buffers_Mux.Instruction_Prefetch_Mux[3].Gen_Instr_DFF (FF)
   Destination:       microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/jump_logic_I1/FPGA_TARGET.use_Reg_Neg_DI (FF)
   Source Clock:      DCACHE_FSL_OUT_CLK rising
@@ -7271,18 +7273,18 @@ Delay:               6.843ns (Levels of Logic = 7)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q             29   0.447   1.478  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/PreFetch_Buffer_I1/Using_FPGA_Buffers_Mux.Instruction_Prefetch_Mux[3].Gen_Instr_DFF (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_instr<3>)
-     LUT3:I0->O           11   0.205   0.883  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/PWR_11_o_of_opcode[0]_equal_35_o<0>11 (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/PWR_11_o_of_opcode[0]_equal_35_o<0>1)
+     FDR:C->Q             28   0.447   1.463  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/PreFetch_Buffer_I1/Using_FPGA_Buffers_Mux.Instruction_Prefetch_Mux[3].Gen_Instr_DFF (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_instr<3>)
+     LUT3:I0->O           13   0.205   0.933  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/PWR_11_o_of_opcode[0]_equal_35_o<0>11 (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/PWR_11_o_of_opcode[0]_equal_35_o<0>1)
      LUT6:I5->O            1   0.205   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_pipe_ctrl<7>1 (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_pipe_ctrl<7>)
      MUXCY_L:S->LO         1   0.172   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Use_MuxCy[7].OF_Piperun_Stage/Using_FPGA.MUXCY_I (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_PipeRun_carry<7>)
      MUXCY_L:CI->LO        1   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Use_MuxCy[8].OF_Piperun_Stage/Using_FPGA.MUXCY_I (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_PipeRun_carry<8>)
      MUXCY_L:CI->LO        1   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Use_MuxCy[9].OF_Piperun_Stage/Using_FPGA.MUXCY_I (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_PipeRun_carry<9>)
-     MUXCY_L:CI->LO      386   0.019   2.079  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Use_MuxCy[10].OF_Piperun_Stage/Using_FPGA.MUXCY_I (Trace_OF_PipeRun)
+     MUXCY_L:CI->LO      390   0.019   2.079  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Use_MuxCy[10].OF_Piperun_Stage/Using_FPGA.MUXCY_I (Trace_OF_PipeRun)
      LUT3:I2->O            4   0.205   0.683  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/jump_logic_I1/Reset_OR_DriverANDClockEnable1 (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/jump_logic_I1/Reset_OR_DriverANDClockEnable)
      FDRE:R                    0.430          microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/jump_logic_I1/FPGA_TARGET.use_Reg_Neg_DI
     ----------------------------------------
-    Total                      6.843ns (1.721ns logic, 5.122ns route)
-                                       (25.1% logic, 74.9% route)
+    Total                      6.880ns (1.721ns logic, 5.159ns route)
+                                       (25.0% logic, 75.0% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'DBG_CLK'
@@ -7313,9 +7315,9 @@ Delay:               2.427ns (Levels of Logic = 6)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'DCACHE_FSL_OUT_CLK'
-  Total number of paths / destination ports: 1874 / 1539
+  Total number of paths / destination ports: 1884 / 1545
 -------------------------------------------------------------------------
-Offset:              4.104ns (Levels of Logic = 15)
+Offset:              4.105ns (Levels of Logic = 15)
   Source:            DREADY (PAD)
   Destination:       microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/jump_logic_I1/FPGA_TARGET.use_Reg_Neg_DI (FF)
   Destination Clock: DCACHE_FSL_OUT_CLK rising
@@ -7330,18 +7332,18 @@ Offset:              4.104ns (Levels of Logic = 15)
      MUXCY_L:CI->LO      238   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/mem_PipeRun_carry_and/Using_FPGA.MUXCY_I (Trace_MEM_PipeRun)
      MUXCY_L:CI->LO        1   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Use_MuxCy[1].OF_Piperun_Stage/Using_FPGA.MUXCY_I (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_PipeRun_carry<1>)
      MUXCY_L:CI->LO        1   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Use_MuxCy[2].OF_Piperun_Stage/Using_FPGA.MUXCY_I (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_PipeRun_carry<2>)
-     MUXCY_L:CI->LO      266   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Use_MuxCy[3].OF_Piperun_Stage/Using_FPGA.MUXCY_I (Trace_EX_PipeRun)
+     MUXCY_L:CI->LO      267   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Use_MuxCy[3].OF_Piperun_Stage/Using_FPGA.MUXCY_I (Trace_EX_PipeRun)
      MUXCY_L:CI->LO        1   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Use_MuxCy[4].OF_Piperun_Stage/Using_FPGA.MUXCY_I (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_PipeRun_carry<4>)
      MUXCY_L:CI->LO        1   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Use_MuxCy[5].OF_Piperun_Stage/Using_FPGA.MUXCY_I (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_PipeRun_carry<5>)
      MUXCY_L:CI->LO        1   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Use_MuxCy[6].OF_Piperun_Stage/Using_FPGA.MUXCY_I (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_PipeRun_carry<6>)
      MUXCY_L:CI->LO        1   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Use_MuxCy[7].OF_Piperun_Stage/Using_FPGA.MUXCY_I (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_PipeRun_carry<7>)
      MUXCY_L:CI->LO        1   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Use_MuxCy[8].OF_Piperun_Stage/Using_FPGA.MUXCY_I (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_PipeRun_carry<8>)
      MUXCY_L:CI->LO        1   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Use_MuxCy[9].OF_Piperun_Stage/Using_FPGA.MUXCY_I (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_PipeRun_carry<9>)
-     MUXCY_L:CI->LO      386   0.019   2.079  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Use_MuxCy[10].OF_Piperun_Stage/Using_FPGA.MUXCY_I (Trace_OF_PipeRun)
+     MUXCY_L:CI->LO      390   0.019   2.079  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Use_MuxCy[10].OF_Piperun_Stage/Using_FPGA.MUXCY_I (Trace_OF_PipeRun)
      LUT3:I2->O            4   0.205   0.683  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/jump_logic_I1/Reset_OR_DriverANDClockEnable1 (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/jump_logic_I1/Reset_OR_DriverANDClockEnable)
      FDRE:R                    0.430          microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/jump_logic_I1/FPGA_TARGET.use_Reg_Neg_DI
     ----------------------------------------
-    Total                      4.104ns (1.343ns logic, 2.761ns route)
+    Total                      4.105ns (1.343ns logic, 2.762ns route)
                                        (32.7% logic, 67.3% route)
 
 =========================================================================
@@ -7387,7 +7389,7 @@ Offset:              2.606ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'DCACHE_FSL_OUT_CLK'
-  Total number of paths / destination ports: 22556 / 816
+  Total number of paths / destination ports: 22584 / 816
 -------------------------------------------------------------------------
 Offset:              5.305ns (Levels of Logic = 2)
   Source:            microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48A.Normal_in_fabric.DSP48A_I1 (DSP)
@@ -7399,7 +7401,7 @@ Offset:              5.305ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      DSP48A1:CLK->P14      1   3.373   0.580  microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48A.Normal_in_fabric.DSP48A_I1 (microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/WB_Mux_I/FPGA_Target.ALL_Bits[0].Wb_Mux_I1/Data_Bits<2>)
-     LUT3:I2->O            1   0.205   0.684  microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/WB_Mux_I/FPGA_Target.ALL_Bits[0].Wb_Mux_I1/Data_Bits[0]_Data_Bits[2]_OR_435_o<0>1 (microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/WB_Mux_I/FPGA_Target.ALL_Bits[0].Wb_Mux_I1/Data_Bits[0]_Data_Bits[2]_OR_435_o)
+     LUT3:I2->O            1   0.205   0.684  microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/WB_Mux_I/FPGA_Target.ALL_Bits[0].Wb_Mux_I1/Data_Bits[0]_Data_Bits[2]_OR_437_o<0>1 (microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/WB_Mux_I/FPGA_Target.ALL_Bits[0].Wb_Mux_I1/Data_Bits[0]_Data_Bits[2]_OR_437_o)
      LUT3:I1->O            9   0.463   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/WB_Mux_I/FPGA_Target.ALL_Bits[0].Wb_Mux_I1/wb_fwd_i (microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/WB_Mux_I/FPGA_Target.ALL_Bits[0].Wb_Mux_I1/wb_fwd_i)
     ----------------------------------------
     Total                      5.305ns (4.041ns logic, 1.264ns route)
@@ -7479,7 +7481,7 @@ Clock to Setup on destination clock DBG_CLK
 Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------+---------+---------+---------+---------+
 DBG_CLK           |    2.427|         |         |         |
-DCACHE_FSL_OUT_CLK|    5.158|         |         |         |
+DCACHE_FSL_OUT_CLK|    5.037|         |         |         |
 ------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock DBG_UPDATE
@@ -7498,21 +7500,21 @@ Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------+---------+---------+---------+---------+
 DBG_CLK           |    4.360|         |         |         |
 DBG_UPDATE        |    3.477|         |         |         |
-DCACHE_FSL_OUT_CLK|    6.843|         |         |         |
+DCACHE_FSL_OUT_CLK|    6.880|         |         |         |
 ------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 65.00 secs
-Total CPU time to Xst completion: 61.91 secs
+Total REAL time to Xst completion: 58.00 secs
+Total CPU time to Xst completion: 49.20 secs
  
 --> 
 
 
-Total memory usage is 521688 kilobytes
+Total memory usage is 521792 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings : 4667 (   0 filtered)
+Number of warnings : 4665 (   0 filtered)
 Number of infos    :  149 (   0 filtered)
 

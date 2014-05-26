@@ -1,0 +1,22 @@
+##############################################################################
+## Filename:          E:\Nexys3\Nexys3_13_3_AXI_Mem_Bus_Mux\pcores/d_shared_mem_bus_v1_00_a/data/d_shared_mem_bus_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Tue Jan 10 21:09:37 2012 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib proc_common_v3_00_a proc_common_pkg vhdl
+lib proc_common_v3_00_a family_support vhdl
+lib proc_common_v3_00_a pselect_f vhdl
+lib proc_common_v3_00_a ipif_pkg vhdl
+lib d_shared_mem_bus_v1_00_a spi_tr8 verilog
+lib d_shared_mem_bus_v1_00_a spi_fifo_send verilog
+lib d_shared_mem_bus_v1_00_a spi_fifo_receive verilog
+lib proc_common_v3_00_a counter_f vhdl
+lib axi_lite_ipif_v1_01_a address_decoder vhdl
+lib d_shared_mem_bus_v1_00_a spi_sf verilog
+lib axi_lite_ipif_v1_01_a slave_attachment vhdl
+lib d_shared_mem_bus_v1_00_a qspi_cntrl_core vhdl
+lib d_shared_mem_bus_v1_00_a psram_cntrl_core vhdl
+lib d_shared_mem_bus_v1_00_a pflash_cntrl_core vhdl
+lib axi_lite_ipif_v1_01_a axi_lite_ipif vhdl
+lib d_shared_mem_bus_v1_00_a d_shared_mem_bus vhdl

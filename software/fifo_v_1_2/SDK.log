@@ -1,0 +1,23 @@
+21:54:41.017 INFO  - Processing command line option -hwspec /home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/system.xml. 
+22:03:12.765 INFO  - FPGA configured successfully with bitstream "/home/vivric/Documents/workspace/gsm_sim/software/fifo_v_1_2/gsm_sim_v_1_0_fifo_hw_platform/download.bit" 
+01:25:15.915 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+01:52:10.261 INFO  - Processing command line option -hwspec /home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/system.xml. 
+01:54:57.208 INFO  - FPGA configured successfully with bitstream "/home/vivric/Documents/workspace/gsm_sim/software/fifo_v_1_2/gsm_sim_v_1_0_fifo_hw_platform/download.bit" 
+02:00:06.794 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+02:07:37.382 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+02:07:37.412 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+02:42:44.429 INFO  - FPGA configured successfully with bitstream "/home/vivric/Documents/workspace/gsm_sim/software/fifo_v_1_2/gsm_sim_v_1_0_fifo_hw_platform/download.bit" 
+02:49:19.189 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+02:54:05.774 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+02:56:25.647 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+02:58:59.892 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+03:03:04.340 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+03:04:48.274 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+03:06:00.082 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+03:06:00.105 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

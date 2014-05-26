@@ -1,0 +1,58 @@
+HDL language for the peripheral (top level) design unit mem_bus_mux is vhdl ...
+WARNING:EDK:2221 - Project file
+   D:\Digilent\Projects\Nexys3\Nexys3_13_2_PLB_Custom_Cores_Shared_Memory_Bus\pc
+   ores/mem_bus_mux.prj already exists, will be overwrite and removed afterward
+   ...
+INFO:EDK:3391 - Create temporary xst project file:
+   D:\Digilent\Projects\Nexys3\Nexys3_13_2_PLB_Custom_Cores_Shared_Memory_Bus\pc
+   ores/mem_bus_mux.prj
+Compiling vhdl file
+"D:/Digilent/Projects/Nexys3/Ise_Mem_Bus_Mux/mem_bus_mux.vhd" in Library
+mem_bus_mux_v1_00_a.
+Entity <mem_bus_mux> compiled.
+Entity <mem_bus_mux> (Architecture <Behavioral>) compiled.
+
+
+Analyzing HDL attributes ...
+Entity name = mem_bus_mux
+INFO:EDK:1607 - IPTYPE set to value : PERIPHERAL
+INFO:EDK:1511 - IMP_NETLIST set to value : TRUE
+INFO:EDK:1486 - HDL set to value : VHDL
+WARNING:EDK:3590 - Unable to delete temporary project file
+   D:\Digilent\Projects\Nexys3\Nexys3_13_2_PLB_Custom_Cores_Shared_Memory_Bus\pc
+   ores\mem_bus_mux.prj : 13
+Copying file mem_bus_mux.vhd to
+D:\Digilent\Projects\Nexys3\Nexys3_13_2_PLB_Custom_Cores_Shared_Memory_Bus\pcore
+s/mem_bus_mux_v1_00_a/hdl/vhdl/ ...
+
+Thank you for using Create and Import Peripheral Wizard! Please find your
+imported peripheral under
+D:\Digilent\Projects\Nexys3\Nexys3_13_2_PLB_Custom_Cores_Shared_Memory_Bus\pcore
+s\mem_bus_mux_v1_00_a.
+
+Summary:
+
+  Logical library     : mem_bus_mux_v1_00_a
+  Version             : 1.00.a
+  Bus interface(s)    : None
+
+The following sub-directories will be created:
+
+  - mem_bus_mux_v1_00_a\data
+  - mem_bus_mux_v1_00_a\hdl
+  - mem_bus_mux_v1_00_a\hdl\verilog
+  - mem_bus_mux_v1_00_a\hdl\vhdl
+
+
+The following HDL source files will be copied into the
+mem_bus_mux_v1_00_a\hdl\vhdl directory:
+
+  - mem_bus_mux.vhd
+
+The following files will be created under the mem_bus_mux_v1_00_a\data
+directory:
+
+  - mem_bus_mux_v2_1_0.mpd
+  - mem_bus_mux_v2_1_0.pao
+
+

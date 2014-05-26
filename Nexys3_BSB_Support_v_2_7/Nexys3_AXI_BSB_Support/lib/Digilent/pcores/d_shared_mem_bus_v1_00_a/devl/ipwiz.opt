@@ -1,0 +1,9 @@
+-batch 
+-create d_shared_mem_bus 
+-ver 1.00.a 
+-dir "E:\Nexys3\Nexys3_13_3_AXI_Mem_Bus_Mux" 
+-lang vhdl 
+-bus axi4lite s 
+-reg 11 
+-xps 
+-ise 

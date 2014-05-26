@@ -1,0 +1,12 @@
+run
+-opt_level 2
+-opt_mode speed
+-ifmt mixed
+-ifn "D:\Digilent\Projects\Nexys3\Nexsy3_EDK_Ssg_Decoder\pcores\ssg_decoder_v1_00_a\devl\synthesis\ssg_decoder_xst.prj"
+-top ssg_decoder
+-p virtex6
+-ofn "D:\Digilent\Projects\Nexys3\Nexsy3_EDK_Ssg_Decoder\pcores\ssg_decoder_v1_00_a\devl\synthesis\ssg_decoder_xst.ngc"
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /
+-work_lib ssg_decoder_v1_00_a

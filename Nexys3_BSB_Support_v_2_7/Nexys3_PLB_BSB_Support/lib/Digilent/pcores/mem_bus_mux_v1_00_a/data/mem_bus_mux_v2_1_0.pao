@@ -1,0 +1,7 @@
+##############################################################################
+## Filename:          D:\Digilent\Projects\Nexys3\Nexys3_13_2_PLB_Custom_Cores_Shared_Memory_Bus\pcores/mem_bus_mux_v1_00_a/data/mem_bus_mux_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Fri Aug 12 17:24:28 2011 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib mem_bus_mux_v1_00_a mem_bus_mux vhdl

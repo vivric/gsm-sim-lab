@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "E:/Nexys3/Nexys3_13_3_AXI_Mem_Bus_Mux/pcores/d_shared_mem_bus_v1_00_a/devl/projnav/d_shared_mem_bus.xst" -ofn "E:/Nexys3/Nexys3_13_3_AXI_Mem_Bus_Mux/pcores/d_shared_mem_bus_v1_00_a/devl/projnav/d_shared_mem_bus.syr" 

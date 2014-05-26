@@ -1,0 +1,1030 @@
+# Digilent_Nexys3_v2_2_0.xbd
+# This file is Xilinx board definition file for Nexys 3 rev B board
+# for Xilinx Base System Builder
+# ------------------------------------------------------------
+# ------------------------------------------------------------
+# History:
+# 	Author: Albert Fazakas
+#   Contact: Albert.Fazakas@digilentinc.com
+#	2.3 Renamed cores to the corresponding names from the AXI BSB
+#	Support. Updated documentation and version number to be identical
+#   to the AXI BSB Support. Changed GPIO endianness to big endian
+#	Added constraints for xps_ethernetlite
+# 	Author: Albert Fazakas
+#   Contact: Albert.Fazakas@digilentinc.com
+#   1.6 Added Memory Bus Multiplexer core to allow
+#	multiple memories in the Base System 15AUG2011
+# 	Author: Albert Fazakas
+#   Contact: Albert.Fazakas@digilentinc.com
+#	1.5 Added Custom Cores for Digilent USB Interface,
+#   Quad SPI Interface and 7 Segment Display Core 13AUG2011
+#   Author: WANG Tinghui
+# 	Contact: steven.wang@digilentchina.com
+#	1.0	pre-release	WANG, Tinghui	1FEB2011
+# ------------------------------------------------------------
+# Cores Included:
+# - Standard Cores: 4 PushButtons (except BTNS, connected to processor reset), 8 LEDs, 
+#					8 Switches, UART, Micron PSRAM in Asynchronous SRAM Mode, 
+#					Numonyx PCM FLASH, PS2 Keyboard and Mouse for USB-HID interface and
+#					Ethernetlite/Soft_Temac
+# - Custom Cores: Digilent USB-EPP interface, Quad SPI Interface, 
+#				  Seven Segment Decoder	Interface
+#
+# -------------------------------------------------------------
+
+ATTRIBUTE VENDOR = Digilent
+ATTRIBUTE NAME = Nexys 3 Board
+ATTRIBUTE REVISION = B
+ATTRIBUTE SPEC_URL = www.digilentinc.com
+ATTRIBUTE CONTACT_INFO_URL = http://www.digilentinc.com/
+ATTRIBUTE DESC = Digilent Nexys3 FPGA Board
+ATTRIBUTE LONG_DESC = 'The Nexys3 board features a Xilinx Spartan-6 XC6SLX16-3CSG324C FPGA device, 512Mb or 256Mb (x16) CDRAM component for use with Spartan-6, 128Mbit Numonyx Parallel PCM Flash memory,  128Mbit Numonyx N25Q 128(x4) SPI PCM Flash memory, SMSC LAN8710 PHY with MII interface for use with 10/100Mbps speed, HID Host for USB mouse, keyboard, USB-UART bridge for the serial port, 8 slide switches, 5 pushbuttons in “Gamepad” configuration and 8 LEDs'
+
+##################################
+### IP CORE CONFIGURATION
+##################################
+
+BEGIN IO_INTERFACE
+  ATTRIBUTE INSTANCE = gclk
+  ATTRIBUTE IOTYPE = XIL_CLOCK_V1
+  PARAMETER CLK_FREQ = 100000000, IO_IS=clk_freq, RANGE=(100000000) # 100 Mhz Clock
+  PORT gclk = GCLK, IO_IS=ext_clk
+END
+
+BEGIN IO_INTERFACE
+  ATTRIBUTE INSTANCE = rst_1
+  ATTRIBUTE IOTYPE = XIL_RESET_V1
+  PARAMETER RST_POLARITY = 1, IO_IS = polarity, VALUE_NOTE = Active High #(review needed)
+  PORT FPGA.RESET = sys_rst, IO_IS = ext_rst
+END
+
+### RS232_Uart_1
+BEGIN IO_INTERFACE
+   ATTRIBUTE INSTANCE = RS232_Uart_1
+   ATTRIBUTE IOTYPE = XIL_UART_V1
+   PORT RX = uart1_sin, IO_IS = serial_in
+   PORT TX = uart1_sout, IO_IS = serial_out
+END
+
+### DIP_Switches_8Bits
+BEGIN IO_INTERFACE
+   ATTRIBUTE IOTYPE = XIL_GPIO_V1
+   ATTRIBUTE INSTANCE = DIP_Switches_8Bits
+
+   PARAMETER num_bits =8, IO_IS=num_bits
+   PARAMETER is_dual=0, IO_IS=is_dual 
+   PARAMETER bidir_data=0, IO_IS=is_bidir     # Non-bidir data pins
+   PARAMETER all_inputs=1, IO_IS=all_inputs   # All inputs
+
+   # Endianness inversion is done at the ucf constraints
+   PORT Switch_Buttons_8Bits_I_0 = Switch_Buttons_8Bits_I_0, IO_IS = gpio_data_in[0]
+   PORT Switch_Buttons_8Bits_I_1 = Switch_Buttons_8Bits_I_1, IO_IS = gpio_data_in[1]
+   PORT Switch_Buttons_8Bits_I_2 = Switch_Buttons_8Bits_I_2, IO_IS = gpio_data_in[2]
+   PORT Switch_Buttons_8Bits_I_3 = Switch_Buttons_8Bits_I_3, IO_IS = gpio_data_in[3]
+   PORT Switch_Buttons_8Bits_I_4 = Switch_Buttons_8Bits_I_4, IO_IS = gpio_data_in[4]
+   PORT Switch_Buttons_8Bits_I_5 = Switch_Buttons_8Bits_I_5, IO_IS = gpio_data_in[5]
+   PORT Switch_Buttons_8Bits_I_6 = Switch_Buttons_8Bits_I_6, IO_IS = gpio_data_in[6]
+   PORT Switch_Buttons_8Bits_I_7 = Switch_Buttons_8Bits_I_7, IO_IS = gpio_data_in[7]
+END 
+
+### LEDs_8Bits
+BEGIN IO_INTERFACE
+   ATTRIBUTE IOTYPE = XIL_GPIO_V1
+   ATTRIBUTE INSTANCE = LEDs_8Bits
+
+   PARAMETER num_bits =8, IO_IS=num_bits
+   PARAMETER is_dual=0, IO_IS=is_dual 
+   PARAMETER bidir_data=0, IO_IS=is_bidir     # Non-bidir data pins
+   PARAMETER all_inputs =0, IO_IS=all_inputs   # All outputs
+
+   # Endianness inversion is done at the ucf constraints
+   PORT LEDs_8Bits_O_0 = LEDs_8Bits_O_0, IO_IS = gpio_data_out[0], INITIALVAL = GND
+   PORT LEDs_8Bits_O_1 = LEDs_8Bits_O_1, IO_IS = gpio_data_out[1], INITIALVAL = GND
+   PORT LEDs_8Bits_O_2 = LEDs_8Bits_O_2, IO_IS = gpio_data_out[2], INITIALVAL = GND
+   PORT LEDs_8Bits_O_3 = LEDs_8Bits_O_3, IO_IS = gpio_data_out[3], INITIALVAL = GND
+   PORT LEDs_8Bits_O_4 = LEDs_8Bits_O_4, IO_IS = gpio_data_out[4], INITIALVAL = GND
+   PORT LEDs_8Bits_O_5 = LEDs_8Bits_O_5, IO_IS = gpio_data_out[5], INITIALVAL = GND
+   PORT LEDs_8Bits_O_6 = LEDs_8Bits_O_6, IO_IS = gpio_data_out[6], INITIALVAL = GND
+   PORT LEDs_8Bits_O_7 = LEDs_8Bits_O_7, IO_IS = gpio_data_out[7], INITIALVAL = GND
+END
+
+
+### Push_Buttons_4Bits
+BEGIN IO_INTERFACE
+   ATTRIBUTE IOTYPE = XIL_GPIO_V1
+   ATTRIBUTE INSTANCE = Push_Buttons_4Bits
+
+   PARAMETER num_bits =4, IO_IS=num_bits
+   PARAMETER is_dual=0, IO_IS=is_dual 
+   PARAMETER bidir_data=0, IO_IS=is_bidir     # Non-bidir data pins
+   PARAMETER all_inputs =1, IO_IS=all_inputs   # All inputs
+
+   # Endianness inversion is done at the ucf constraints
+   PORT Push_Buttons_4Bits_I_0 = Push_Buttons_4Bits_I_0, IO_IS = gpio_data_in[0]
+   PORT Push_Buttons_4Bits_I_1 = Push_Buttons_4Bits_I_1, IO_IS = gpio_data_in[1]
+   PORT Push_Buttons_4Bits_I_2 = Push_Buttons_4Bits_I_2, IO_IS = gpio_data_in[2]
+   PORT Push_Buttons_4Bits_I_3 = Push_Buttons_4Bits_I_3, IO_IS = gpio_data_in[3]
+END  
+
+
+### 10/100M Ethernet Lite
+BEGIN IO_INTERFACE
+   ATTRIBUTE IOTYPE = XIL_ETHERNET_V1
+   ATTRIBUTE INSTANCE = Ethernet_Lite
+   ATTRIBUTE EXCLUSIVE =  Ethernet
+
+   PORT RESET = phy_rst_n, IO_IS=PHY_RESETn, INITIALVAL = VCC
+#  PORT MDINT = phy_mii_int_n, IO_IS=INTERRUPT
+   PORT CRS = phy_crs, IO_IS=ETH_CRS
+   PORT COL = phy_col, IO_IS=ETH_COL
+
+   PORT RXD3 = phy_rx_data_3, IO_IS = ETH_RXD[3]
+   PORT RXD2 = phy_rx_data_2, IO_IS = ETH_RXD[2]
+   PORT RXD1 = phy_rx_data_1, IO_IS = ETH_RXD[1]
+   PORT RXD0 = phy_rx_data_0, IO_IS = ETH_RXD[0]
+   PORT TXD3 = phy_tx_data_3, IO_IS = ETH_TXD[3]
+   PORT TXD2 = phy_tx_data_2, IO_IS = ETH_TXD[2]
+   PORT TXD1 = phy_tx_data_1, IO_IS = ETH_TXD[1]
+   PORT TXD0 = phy_tx_data_0, IO_IS = ETH_TXD[0]
+   PORT RX_DV = phy_dv, IO_IS=ETH_RXDV
+   PORT RX_ER = phy_rx_er, IO_IS=ETH_RXER
+   PORT RX_CLK = phy_rx_clk, IO_IS=ETH_RXC
+   PORT TX_EN = phy_tx_en, IO_IS=ETH_TXEN
+   PORT TX_CLK = phy_tx_clk, IO_IS=ETH_TXC
+   PORT TX_ER = phy_tx_er, IO_IS=ETH_TXER, INITIALVAL = GND
+   PORT PHY_MDC = phy_mii_clk, IO_IS=ETH_MDC
+   PORT PHY_MDIO = phy_mii_data, IO_IS=ETH_MDIO
+END
+
+
+### Soft_TEMAC
+BEGIN IO_INTERFACE
+  ATTRIBUTE IOTYPE = XIL_TEMAC_V1
+  ATTRIBUTE INSTANCE = ETHERNET
+  ATTRIBUTE EXCLUSIVE = Ethernet
+  PARAMETER C_PHY_TYPE = 0, IO_IS=C_PHY_TYPE
+  PARAMETER C_TEMAC1_ENABLED= 0, IO_IS=C_TEMAC1_ENABLED
+  PARAMETER C_TEMAC_TYPE = 2, IO_IS=C_TEMAC_TYPE
+  PARAMETER C_TEMAC0_PHYADDR = "0b00000", IO_IS=C_TEMAC0_PHYADDR
+  
+  PORT TemacPhy_RST_n = phy_rst_n, IO_IS = PhyResetN
+
+  PORT TXD3 = phy_tx_data_3, IO_IS = MII_TXD_0[3]
+  PORT TXD2 = phy_tx_data_2, IO_IS = MII_TXD_0[2]
+  PORT TXD1 = phy_tx_data_1, IO_IS = MII_TXD_0[1]
+  PORT TXD0 = phy_tx_data_0, IO_IS = MII_TXD_0[0]
+  PORT TX_EN = phy_tx_en, IO_IS=MII_TX_EN_0
+  PORT TX_ER = phy_tx_er, IO_IS=MII_TX_ER_0
+  
+  PORT RXD3 = phy_rx_data_3, IO_IS = MII_RXD_0[3]
+  PORT RXD2 = phy_rx_data_2, IO_IS = MII_RXD_0[2]
+  PORT RXD1 = phy_rx_data_1, IO_IS = MII_RXD_0[1]
+  PORT RXD0 = phy_rx_data_0, IO_IS = MII_RXD_0[0]
+  PORT RX_DV = phy_dv, IO_IS=MII_RX_DV_0
+  PORT RX_ER = phy_rx_er, IO_IS=MII_RX_ER_0
+  
+  PORT RX_CLK = phy_rx_clk, IO_IS=MII_RX_CLK_0
+
+  PORT TX_CLK = phy_tx_clk, IO_IS=MII_TX_CLK_0
+  PORT PHY_MDC = phy_mii_clk, IO_IS=MDC_0
+  PORT PHY_MDIO = phy_mii_data, IO_IS=MDIO_0
+END
+
+
+### PS/2 Port 1 Keyboard
+### PS/2 Port 2 Mouse
+BEGIN IO_INTERFACE
+  ATTRIBUTE IOTYPE = XIL_PS2_V1
+  ATTRIBUTE INSTANCE = PS2_Mouse_Keyboard
+  PARAMETER C_IS_DUAL = 1, IO_IS = is_dual
+
+  PORT PS2_1_CLK = ps2_1_clk, IO_IS=ps2_1_clk
+  PORT PS2_1_DATA = ps2_1_data, IO_IS=ps2_1_data
+  PORT PS2_2_CLK = ps2_2_clk, IO_IS=ps2_2_clk
+  PORT PS2_2_DATA = ps2_2_data, IO_IS=ps2_2_data
+  PORT IP2INTC_Irpt_1 = ps2_1_IP2INTC_Irpt_1, IO_IS = ip2intc_irpt_1, SIGIS = INTERRUPT, SENSITIVITY = LEVEL_HIGH, INTERRUPT_PRIORITY = MEDIUM
+  PORT IP2INTC_Irpt_2 = ps2_1_IP2INTC_Irpt_2, IO_IS = ip2intc_irpt_2, SIGIS = INTERRUPT, SENSITIVITY = LEVEL_HIGH, INTERRUPT_PRIORITY = MEDIUM
+END
+
+
+### 128Mb MICRON RAM
+### *PART NO. MT45W8MW16BGX-701 IT (70 NS, 104MHZ)
+### *FBGA NO. PW510
+
+BEGIN IO_INTERFACE
+   ATTRIBUTE IOTYPE = XIL_EMC_V1
+   ATTRIBUTE INSTANCE = Micron_RAM
+#   ATTRIBUTE EXCLUSIVE = RAM_FLASH
+
+   PARAMETER C_NUM_BANKS_MEM = 1, IO_IS=C_NUM_BANKS_MEM
+   PARAMETER C_NUM_CHANNELS = 0, IO_IS = C_NUM_CHANNELS
+   PARAMETER C_DEV_MIR_ENABLE = 0, IO_IS=C_DEV_MIR_ENABLE
+   PARAMETER C_MAX_MEM_WIDTH = 16, IO_IS=C_MAX_MEM_WIDTH
+   PARAMETER C_MEM0_BASEADDR = 0x0, IO_IS=C_MEM0_BASEADDR, SHORT_DESC=RAM
+   PARAMETER C_MEM0_HIGHADDR = 0xFFFFFF, IO_IS=C_MEM0_HIGHADDR
+   PARAMETER C_MEM0_WIDTH = 16, IO_IS=C_MEM0_WIDTH
+   PARAMETER C_INCLUDE_DATAWIDTH_MATCHING_0 = 1, IO_IS=C_INCLUDE_DATAWIDTH_MATCHING_0
+   PARAMETER C_SYNCH_MEM_0 = 0, IO_IS=C_SYNCH_MEM_0
+   PARAMETER C_SYNCH_PIPEDELAY_0 = 2, IO_IS=C_SYNCH_PIPEDELAY_0
+
+   PARAMETER C_TCEDV_PS_MEM_0 = 70000, IO_IS = C_READ_ADDR_TO_OUT_SLOW_PS_0  #Tco
+   PARAMETER C_TAVDV_PS_MEM_0 = 70000, IO_IS = C_READ_ADDR_TO_OUT_FAST_PS_0  #Taa
+   PARAMETER C_THZCE_PS_MEM_0 = 8000, IO_IS = C_READ_RECOVERY_BEFORE_WRITE_PS_0  #Thz
+   PARAMETER C_THZOE_PS_MEM_0 = 8000, IO_IS = C_READ_RECOVERY_BEFORE_WRITE_2_PS_0  #Tohz
+
+
+   PARAMETER C_TWC_PS_MEM_0 = 70000, IO_IS = C_WRITE_ADDR_TO_OUT_SLOW_PS_0   #
+   PARAMETER C_TWP_PS_MEM_0 = 45000, IO_IS = C_WRITE_ADDR_TO_OUT_FAST_PS_0
+   PARAMETER C_TLZWE_PS_MEM_0 = 10000, IO_IS = C_WRITE_RECOVERY_BEFORE_READ_PS_0
+
+   # Endianness inversion is done at the ucf constraints
+   PORT  A31 = Micron_RAM_Mem_A_31, IO_IS = emc_addr[31]
+   PORT  A30 = Micron_RAM_Mem_A_30, IO_IS = emc_addr[30]   
+   PORT  A29 = Micron_RAM_Mem_A_29, IO_IS = emc_addr[29]
+   PORT  A28 = Micron_RAM_Mem_A_28, IO_IS = emc_addr[28]
+   PORT  A27 = Micron_RAM_Mem_A_27, IO_IS = emc_addr[27]
+   PORT  A26 = Micron_RAM_Mem_A_26, IO_IS = emc_addr[26]
+   PORT  A25 = Micron_RAM_Mem_A_25, IO_IS = emc_addr[25]
+   PORT  A24 = Micron_RAM_Mem_A_24, IO_IS = emc_addr[24]
+   PORT  A23 = Micron_RAM_Mem_A_23, IO_IS = emc_addr[23]
+   PORT  A22 = Micron_RAM_Mem_A_22, IO_IS = emc_addr[22]
+   PORT  A21 = Micron_RAM_Mem_A_21, IO_IS = emc_addr[21]
+   PORT  A20 = Micron_RAM_Mem_A_20, IO_IS = emc_addr[20]
+   PORT  A19 = Micron_RAM_Mem_A_19, IO_IS = emc_addr[19]
+   PORT  A18 = Micron_RAM_Mem_A_18, IO_IS = emc_addr[18]
+   PORT  A17 = Micron_RAM_Mem_A_17, IO_IS = emc_addr[17]
+   PORT  A16 = Micron_RAM_Mem_A_16, IO_IS = emc_addr[16]
+   PORT  A15 = Micron_RAM_Mem_A_15, IO_IS = emc_addr[15]
+   PORT  A14 = Micron_RAM_Mem_A_14, IO_IS = emc_addr[14]
+   PORT  A13 = Micron_RAM_Mem_A_13, IO_IS = emc_addr[13]
+   PORT  A12 = Micron_RAM_Mem_A_12, IO_IS = emc_addr[12]
+   PORT  A11 = Micron_RAM_Mem_A_11, IO_IS = emc_addr[11]
+   PORT  A10 = Micron_RAM_Mem_A_10, IO_IS = emc_addr[10]
+   PORT  A9 = Micron_RAM_Mem_A_9, IO_IS = emc_addr[9]
+   PORT  A8 = Micron_RAM_Mem_A_8, IO_IS = emc_addr[8]
+   PORT  A7 = Micron_RAM_Mem_A_7, IO_IS = emc_addr[7]
+   PORT  A6 = Micron_RAM_Mem_A_6, IO_IS = emc_addr[6]
+   PORT  A5 = Micron_RAM_Mem_A_5, IO_IS = emc_addr[5]
+   PORT  A4 = Micron_RAM_Mem_A_4, IO_IS = emc_addr[4]
+   PORT  A3 = Micron_RAM_Mem_A_3, IO_IS = emc_addr[3]
+   PORT  A2 = Micron_RAM_Mem_A_2, IO_IS = emc_addr[2]
+   PORT  A1 = Micron_RAM_Mem_A_1, IO_IS = emc_addr[1]
+   PORT  A0 = Micron_RAM_Mem_A_0, IO_IS = emc_addr[0]
+   
+   PORT DQ_O_15 = Micron_RAM_Mem_DQ_O_15, IO_IS = emc_data_O[15]
+   PORT DQ_O_14 = Micron_RAM_Mem_DQ_O_14, IO_IS = emc_data_O[14]
+   PORT DQ_O_13 = Micron_RAM_Mem_DQ_O_13, IO_IS = emc_data_O[13]
+   PORT DQ_O_12 = Micron_RAM_Mem_DQ_O_12, IO_IS = emc_data_O[12]
+   PORT DQ_O_11 = Micron_RAM_Mem_DQ_O_11, IO_IS = emc_data_O[11]
+   PORT DQ_O_10 = Micron_RAM_Mem_DQ_O_10, IO_IS = emc_data_O[10]
+   PORT DQ_O_9 = Micron_RAM_Mem_DQ_O_9, IO_IS = emc_data_O[9]
+   PORT DQ_O_8 = Micron_RAM_Mem_DQ_O_8, IO_IS = emc_data_O[8]
+   PORT DQ_O_7 = Micron_RAM_Mem_DQ_O_7, IO_IS = emc_data_O[7]
+   PORT DQ_O_6 = Micron_RAM_Mem_DQ_O_6, IO_IS = emc_data_O[6]
+   PORT DQ_O_5 = Micron_RAM_Mem_DQ_O_5, IO_IS = emc_data_O[5]
+   PORT DQ_O_4 = Micron_RAM_Mem_DQ_O_4, IO_IS = emc_data_O[4]
+   PORT DQ_O_3 = Micron_RAM_Mem_DQ_O_3, IO_IS = emc_data_O[3]
+   PORT DQ_O_2 = Micron_RAM_Mem_DQ_O_2, IO_IS = emc_data_O[2]
+   PORT DQ_O_1 = Micron_RAM_Mem_DQ_O_1, IO_IS = emc_data_O[1]
+   PORT DQ_O_0 = Micron_RAM_Mem_DQ_O_0, IO_IS = emc_data_O[0]   
+   
+   PORT DQ_T_15 = Micron_RAM_Mem_DQ_T_15, IO_IS = emc_data_T[15]
+   PORT DQ_T_14 = Micron_RAM_Mem_DQ_T_14, IO_IS = emc_data_T[14]
+   PORT DQ_T_13 = Micron_RAM_Mem_DQ_T_13, IO_IS = emc_data_T[13]
+   PORT DQ_T_12 = Micron_RAM_Mem_DQ_T_12, IO_IS = emc_data_T[12]
+   PORT DQ_T_11 = Micron_RAM_Mem_DQ_T_11, IO_IS = emc_data_T[11]
+   PORT DQ_T_10 = Micron_RAM_Mem_DQ_T_10, IO_IS = emc_data_T[10]
+   PORT DQ_T_9 = Micron_RAM_Mem_DQ_T_9, IO_IS = emc_data_T[9]
+   PORT DQ_T_8 = Micron_RAM_Mem_DQ_T_8, IO_IS = emc_data_T[8]
+   PORT DQ_T_7 = Micron_RAM_Mem_DQ_T_7, IO_IS = emc_data_T[7]
+   PORT DQ_T_6 = Micron_RAM_Mem_DQ_T_6, IO_IS = emc_data_T[6]
+   PORT DQ_T_5 = Micron_RAM_Mem_DQ_T_5, IO_IS = emc_data_T[5]
+   PORT DQ_T_4 = Micron_RAM_Mem_DQ_T_4, IO_IS = emc_data_T[4]
+   PORT DQ_T_3 = Micron_RAM_Mem_DQ_T_3, IO_IS = emc_data_T[3]
+   PORT DQ_T_2 = Micron_RAM_Mem_DQ_T_2, IO_IS = emc_data_T[2]
+   PORT DQ_T_1 = Micron_RAM_Mem_DQ_T_1, IO_IS = emc_data_T[1]
+   PORT DQ_T_0 = Micron_RAM_Mem_DQ_T_0, IO_IS = emc_data_T[0] 
+   
+   PORT DQ_I_15 = Micron_RAM_Mem_DQ_I_15, IO_IS = emc_data_I[15]
+   PORT DQ_I_14 = Micron_RAM_Mem_DQ_I_14, IO_IS = emc_data_I[14]
+   PORT DQ_I_13 = Micron_RAM_Mem_DQ_I_13, IO_IS = emc_data_I[13]
+   PORT DQ_I_12 = Micron_RAM_Mem_DQ_I_12, IO_IS = emc_data_I[12]
+   PORT DQ_I_11 = Micron_RAM_Mem_DQ_I_11, IO_IS = emc_data_I[11]
+   PORT DQ_I_10 = Micron_RAM_Mem_DQ_I_10, IO_IS = emc_data_I[10]
+   PORT DQ_I_9 = Micron_RAM_Mem_DQ_I_9, IO_IS = emc_data_I[9]
+   PORT DQ_I_8 = Micron_RAM_Mem_DQ_I_8, IO_IS = emc_data_I[8]
+   PORT DQ_I_7 = Micron_RAM_Mem_DQ_I_7, IO_IS = emc_data_I[7]
+   PORT DQ_I_6 = Micron_RAM_Mem_DQ_I_6, IO_IS = emc_data_I[6]
+   PORT DQ_I_5 = Micron_RAM_Mem_DQ_I_5, IO_IS = emc_data_I[5]
+   PORT DQ_I_4 = Micron_RAM_Mem_DQ_I_4, IO_IS = emc_data_I[4]
+   PORT DQ_I_3 = Micron_RAM_Mem_DQ_I_3, IO_IS = emc_data_I[3]
+   PORT DQ_I_2 = Micron_RAM_Mem_DQ_I_2, IO_IS = emc_data_I[2]
+   PORT DQ_I_1 = Micron_RAM_Mem_DQ_I_1, IO_IS = emc_data_I[1]
+   PORT DQ_I_0 = Micron_RAM_Mem_DQ_I_0, IO_IS = emc_data_I[0]    
+   
+   PORT BEN_RAM_I_1 = Micron_RAM_Mem_BEN_1, IO_IS = emc_ben[1]
+   PORT BEN_RAM_I_0 = Micron_RAM_Mem_BEN_0, IO_IS = emc_ben[0]
+   
+   PORT CEN_RAM_I = Micron_RAM_Mem_CEN, IO_IS = emc_csn
+   PORT OEN_RAM_I = Micron_RAM_Mem_OEN, IO_IS = emc_oen
+   PORT WEN_RAM_I = Micron_RAM_Mem_WEN, IO_IS = emc_wen
+END
+
+### 128MB Numonyx Parallel PCM
+BEGIN IO_INTERFACE
+   ATTRIBUTE IOTYPE = XIL_EMC_V1
+   ATTRIBUTE INSTANCE = Numonyx_PCM
+#   ATTRIBUTE EXCLUSIVE = RAM_FLASH
+   PARAMETER C_NUM_BANKS_MEM = 1, IO_IS=C_NUM_BANKS_MEM
+   PARAMETER C_NUM_CHANNELS = 0, IO_IS = C_NUM_CHANNELS
+   PARAMETER C_DEV_MIR_ENABLE = 0, IO_IS=C_DEV_MIR_ENABLE
+   PARAMETER C_MAX_MEM_WIDTH = 16, IO_IS=C_MAX_MEM_WIDTH
+   PARAMETER C_MEM0_BASEADDR = 0x0, IO_IS=C_MEM0_BASEADDR, SHORT_DESC=FLASH
+   PARAMETER C_MEM0_HIGHADDR = 0xFFFFFF, IO_IS=C_MEM0_HIGHADDR
+   PARAMETER C_MEM0_WIDTH = 16, IO_IS=C_MEM0_WIDTH
+   PARAMETER C_INCLUDE_DATAWIDTH_MATCHING_0 = 1, IO_IS=C_INCLUDE_DATAWIDTH_MATCHING_0
+   PARAMETER C_SYNCH_MEM_0 = 0, IO_IS=C_SYNCH_MEM_0
+   PARAMETER C_SYNCH_PIPEDELAY_0 = 2, IO_IS=C_SYNCH_PIPEDELAY_0
+   PARAMETER C_PAGEMODE_FLASH_0 = 1, IO_IS = C_PAGEMODE_FLASH_0
+   
+   PARAMETER C_TCEDV_PS_MEM_0 = 115000, IO_IS = C_READ_ADDR_TO_OUT_SLOW_PS_0  #Tco
+   PARAMETER C_TAVDV_PS_MEM_0 = 115000, IO_IS = C_READ_ADDR_TO_OUT_FAST_PS_0  #Taa
+   PARAMETER C_THZCE_PS_MEM_0 = 24000, IO_IS = C_READ_RECOVERY_BEFORE_WRITE_PS_0  #Thz
+   PARAMETER C_THZOE_PS_MEM_0 = 24000, IO_IS = C_READ_RECOVERY_BEFORE_WRITE_2_PS_0  #Tohz
+   PARAMETER C_TPACC_PS_FLASH_0 = 25000, IO_IS = C_READ_ADDR_TO_OUT_PAGEMODE_PS_0  #Pagemode is default 0
+
+   PARAMETER C_TWC_PS_MEM_0 = 50000, IO_IS = C_WRITE_ADDR_TO_OUT_SLOW_PS_0
+   PARAMETER C_TWP_PS_MEM_0 = 50000, IO_IS = C_WRITE_ADDR_TO_OUT_FAST_PS_0
+   PARAMETER C_TLZWE_PS_MEM_0 = 35000, IO_IS = C_WRITE_RECOVERY_BEFORE_READ_PS_0
+
+   # Endianness inversion is done at the ucf constraints
+   PORT A31 = Numonx_FLASH_Mem_A_31, IO_IS = emc_addr[31]
+   PORT A30 = Numonx_FLASH_Mem_A_30, IO_IS = emc_addr[30]
+   PORT A29 = Numonx_FLASH_Mem_A_29, IO_IS = emc_addr[29]
+   PORT A28 = Numonx_FLASH_Mem_A_28, IO_IS = emc_addr[28]
+   PORT A27 = Numonx_FLASH_Mem_A_27, IO_IS = emc_addr[27]
+   PORT A26 = Numonx_FLASH_Mem_A_26, IO_IS = emc_addr[26]
+   PORT A25 = Numonx_FLASH_Mem_A_25, IO_IS = emc_addr[25]
+   PORT A24 = Numonx_FLASH_Mem_A_24, IO_IS = emc_addr[24]
+   PORT A23 = Numonx_FLASH_Mem_A_23, IO_IS = emc_addr[23]
+   PORT A22 = Numonx_FLASH_Mem_A_22, IO_IS = emc_addr[22]
+   PORT A21 = Numonx_FLASH_Mem_A_21, IO_IS = emc_addr[21]
+   PORT A20 = Numonx_FLASH_Mem_A_20, IO_IS = emc_addr[20]
+   PORT A19 = Numonx_FLASH_Mem_A_19, IO_IS = emc_addr[19]
+   PORT A18 = Numonx_FLASH_Mem_A_18, IO_IS = emc_addr[18]
+   PORT A17 = Numonx_FLASH_Mem_A_17, IO_IS = emc_addr[17]
+   PORT A16 = Numonx_FLASH_Mem_A_16, IO_IS = emc_addr[16]
+   PORT A15 = Numonx_FLASH_Mem_A_15, IO_IS = emc_addr[15]
+   PORT A14 = Numonx_FLASH_Mem_A_14, IO_IS = emc_addr[14]
+   PORT A13 = Numonx_FLASH_Mem_A_13, IO_IS = emc_addr[13]
+   PORT A12 = Numonx_FLASH_Mem_A_12, IO_IS = emc_addr[12]
+   PORT A11 = Numonx_FLASH_Mem_A_11, IO_IS = emc_addr[11]
+   PORT A10 = Numonx_FLASH_Mem_A_10, IO_IS = emc_addr[10]
+   PORT A9 = Numonx_FLASH_Mem_A_9, IO_IS = emc_addr[9]
+   PORT A8 = Numonx_FLASH_Mem_A_8, IO_IS = emc_addr[8]
+   PORT A7 = Numonx_FLASH_Mem_A_7, IO_IS = emc_addr[7]
+   PORT A6 = Numonx_FLASH_Mem_A_6, IO_IS = emc_addr[6]
+   PORT A5 = Numonx_FLASH_Mem_A_5, IO_IS = emc_addr[5]
+   PORT A4 = Numonx_FLASH_Mem_A_4, IO_IS = emc_addr[4]
+   PORT A3 = Numonx_FLASH_Mem_A_3, IO_IS = emc_addr[3]
+   PORT A2 = Numonx_FLASH_Mem_A_2, IO_IS = emc_addr[2]
+   PORT A1 = Numonx_FLASH_Mem_A_1, IO_IS = emc_addr[1]
+   PORT A0 = Numonx_FLASH_Mem_A_0, IO_IS = emc_addr[0]
+   
+	  
+   PORT DQ_O_FLASH_15 = Numonx_FLASH_Mem_DQ_O_15, IO_IS = emc_data_O[15]
+   PORT DQ_O_FLASH_14 = Numonx_FLASH_Mem_DQ_O_14, IO_IS = emc_data_O[14]
+   PORT DQ_O_FLASH_13 = Numonx_FLASH_Mem_DQ_O_13, IO_IS = emc_data_O[13]
+   PORT DQ_O_FLASH_12 = Numonx_FLASH_Mem_DQ_O_12, IO_IS = emc_data_O[12]
+   PORT DQ_O_FLASH_11 = Numonx_FLASH_Mem_DQ_O_11, IO_IS = emc_data_O[11]
+   PORT DQ_O_FLASH_10 = Numonx_FLASH_Mem_DQ_O_10, IO_IS = emc_data_O[10]
+   PORT DQ_O_FLASH_9 = Numonx_FLASH_Mem_DQ_O_9, IO_IS = emc_data_O[9]
+   PORT DQ_O_FLASH_8 = Numonx_FLASH_Mem_DQ_O_8, IO_IS = emc_data_O[8]
+   PORT DQ_O_FLASH_7 = Numonx_FLASH_Mem_DQ_O_7, IO_IS = emc_data_O[7]
+   PORT DQ_O_FLASH_6 = Numonx_FLASH_Mem_DQ_O_6, IO_IS = emc_data_O[6]
+   PORT DQ_O_FLASH_5 = Numonx_FLASH_Mem_DQ_O_5, IO_IS = emc_data_O[5]
+   PORT DQ_O_FLASH_4 = Numonx_FLASH_Mem_DQ_O_4, IO_IS = emc_data_O[4]
+   PORT DQ_O_FLASH_3 = Numonx_FLASH_Mem_DQ_O_3, IO_IS = emc_data_O[3]
+   PORT DQ_O_FLASH_2 = Numonx_FLASH_Mem_DQ_O_2, IO_IS = emc_data_O[2]
+   PORT DQ_O_FLASH_1 = Numonx_FLASH_Mem_DQ_O_1, IO_IS = emc_data_O[1]
+   PORT DQ_O_FLASH_0 = Numonx_FLASH_Mem_DQ_O_0, IO_IS = emc_data_O[0]
+   
+   PORT DQ_T_FLASH_15 = Numonx_FLASH_Mem_DQ_T_15, IO_IS = emc_data_T[15]
+   PORT DQ_T_FLASH_14 = Numonx_FLASH_Mem_DQ_T_14, IO_IS = emc_data_T[14]
+   PORT DQ_T_FLASH_13 = Numonx_FLASH_Mem_DQ_T_13, IO_IS = emc_data_T[13]
+   PORT DQ_T_FLASH_12 = Numonx_FLASH_Mem_DQ_T_12, IO_IS = emc_data_T[12]
+   PORT DQ_T_FLASH_11 = Numonx_FLASH_Mem_DQ_T_11, IO_IS = emc_data_T[11]
+   PORT DQ_T_FLASH_10 = Numonx_FLASH_Mem_DQ_T_10, IO_IS = emc_data_T[10]
+   PORT DQ_T_FLASH_9 = Numonx_FLASH_Mem_DQ_T_9, IO_IS = emc_data_T[9]
+   PORT DQ_T_FLASH_8 = Numonx_FLASH_Mem_DQ_T_8, IO_IS = emc_data_T[8]
+   PORT DQ_T_FLASH_7 = Numonx_FLASH_Mem_DQ_T_7, IO_IS = emc_data_T[7]
+   PORT DQ_T_FLASH_6 = Numonx_FLASH_Mem_DQ_T_6, IO_IS = emc_data_T[6]
+   PORT DQ_T_FLASH_5 = Numonx_FLASH_Mem_DQ_T_5, IO_IS = emc_data_T[5]
+   PORT DQ_T_FLASH_4 = Numonx_FLASH_Mem_DQ_T_4, IO_IS = emc_data_T[4]
+   PORT DQ_T_FLASH_3 = Numonx_FLASH_Mem_DQ_T_3, IO_IS = emc_data_T[3]
+   PORT DQ_T_FLASH_2 = Numonx_FLASH_Mem_DQ_T_2, IO_IS = emc_data_T[2]
+   PORT DQ_T_FLASH_1 = Numonx_FLASH_Mem_DQ_T_1, IO_IS = emc_data_T[1]
+   PORT DQ_T_FLASH_0 = Numonx_FLASH_Mem_DQ_T_0, IO_IS = emc_data_T[0]
+   
+   PORT DQ_I_FLASH_15 = Numonx_FLASH_Mem_DQ_I_15, IO_IS = emc_data_I[15]
+   PORT DQ_I_FLASH_14 = Numonx_FLASH_Mem_DQ_I_14, IO_IS = emc_data_I[14]
+   PORT DQ_I_FLASH_13 = Numonx_FLASH_Mem_DQ_I_13, IO_IS = emc_data_I[13]
+   PORT DQ_I_FLASH_12 = Numonx_FLASH_Mem_DQ_I_12, IO_IS = emc_data_I[12]
+   PORT DQ_I_FLASH_11 = Numonx_FLASH_Mem_DQ_I_11, IO_IS = emc_data_I[11]
+   PORT DQ_I_FLASH_10 = Numonx_FLASH_Mem_DQ_I_10, IO_IS = emc_data_I[10]
+   PORT DQ_I_FLASH_9 = Numonx_FLASH_Mem_DQ_I_9, IO_IS = emc_data_I[9]
+   PORT DQ_I_FLASH_8 = Numonx_FLASH_Mem_DQ_I_8, IO_IS = emc_data_I[8]
+   PORT DQ_I_FLASH_7 = Numonx_FLASH_Mem_DQ_I_7, IO_IS = emc_data_I[7]
+   PORT DQ_I_FLASH_6 = Numonx_FLASH_Mem_DQ_I_6, IO_IS = emc_data_I[6]
+   PORT DQ_I_FLASH_5 = Numonx_FLASH_Mem_DQ_I_5, IO_IS = emc_data_I[5]
+   PORT DQ_I_FLASH_4 = Numonx_FLASH_Mem_DQ_I_4, IO_IS = emc_data_I[4]
+   PORT DQ_I_FLASH_3 = Numonx_FLASH_Mem_DQ_I_3, IO_IS = emc_data_I[3]
+   PORT DQ_I_FLASH_2 = Numonx_FLASH_Mem_DQ_I_2, IO_IS = emc_data_I[2]
+   PORT DQ_I_FLASH_1 = Numonx_FLASH_Mem_DQ_I_1, IO_IS = emc_data_I[1]
+   PORT DQ_I_FLASH_0 = Numonx_FLASH_Mem_DQ_I_0, IO_IS = emc_data_I[0]
+   
+   PORT RPN_FLASH_I = Numonx_FLASH_Mem_RPN, IO_IS = emc_rst
+   PORT CEN_FLASH_I = Numonx_FLASH_Mem_CEN, IO_IS = emc_csn
+   PORT OEN_FLASH_I = Numonx_FLASH_Mem_OEN, IO_IS = emc_oen
+   PORT WEN_FLASH_I = Numonx_FLASH_Mem_WEN, IO_IS = emc_wen
+ 
+END
+
+### SPI FLASH
+### Replaced by the Quad SPI Interface
+#BEGIN IO_INTERFACE
+#   ATTRIBUTE IOTYPE = XIL_SPI_V1
+#   ATTRIBUTE INSTANCE = SPI_FLASH
+#   ATTRIBUTE EXCLUSIVE = RAM_FLASH
+
+#   PARAMETER C_NUM_SS_BITS=1, IO_IS=ss_bits
+#   PARAMETER C_SCK_RATIO = 32, IO_IS = clk_freq
+#   PARAMETER C_NUM_TRANSFER_BITS = 8, IO_IS = num_transfer_bits
+
+#   PORT SPISEL= net_vcc, IO_IS=slave_select_n
+#   PORT MISO=spi_MISO, IO_IS=data_out
+#   PORT MOSI=spi_MOSI, IO_IS=data_in
+#   PORT SCK=spi_SCK, IO_IS=clk_out
+#   PORT SS0=spi_cs_0_, IO_IS=chip_select[0]
+#END
+
+### DIGILENT USB INTERFACE
+BEGIN IO_INTERFACE
+ ATTRIBUTE IOTYPE = XIL_USB_EPP
+ ATTRIBUTE INSTANCE = Digilent_Usb_Epp
+ ATTRIBUTE CORENAME = d_usb_epp_dstm
+ 
+ PARAMETER C_NUM_USER_REGS = 256, IO_IS = num_user_regs
+ #PARAMETER C_EPP_INTERRUPT_PRESENT = 1, IO_IS = epp_interrupt_present
+ 
+ PORT IFCLK = d_usb_epp_dstm_0_IFCLK, IO_IS = usb_ifclk
+ PORT STMEN = d_usb_epp_dstm_0_STMEN, IO_IS = usb_stmen
+ PORT FLAGA = d_usb_epp_dstm_0_FLAGA, IO_IS = usb_flaga
+ PORT FLAGB = d_usb_epp_dstm_0_FLAGB, IO_IS = usb_flagb
+ PORT FLAGC = d_usb_epp_dstm_0_FLAGC, IO_IS = usb_flagc
+ PORT SLRD = d_usb_epp_dstm_0_SLRD, IO_IS = usb_slrd
+ PORT SLWR = d_usb_epp_dstm_0_SLWR, IO_IS = usb_slwr
+ PORT SLOE = d_usb_epp_dstm_0_SLOE, IO_IS = usb_sloe
+ PORT FIFOADR_0 = d_usb_epp_dstm_0_FIFOADR_0, IO_IS = usb_fifoaddr[0]
+ PORT FIFOADR_1 = d_usb_epp_dstm_0_FIFOADR_1, IO_IS = usb_fifoaddr[1]
+ PORT PKTEND = d_usb_epp_dstm_0_PKTEND, IO_IS = usb_pktend
+ PORT EPPRST = d_usb_epp_dstm_0_EPPRST, IO_IS = usb_epprst
+ PORT DB0 = d_usb_epp_dstm_0_DB_0, IO_IS = usb_db[0]
+ PORT DB1 = d_usb_epp_dstm_0_DB_1, IO_IS = usb_db[1]
+ PORT DB2 = d_usb_epp_dstm_0_DB_2, IO_IS = usb_db[2]
+ PORT DB3 = d_usb_epp_dstm_0_DB_3, IO_IS = usb_db[3]
+ PORT DB4 = d_usb_epp_dstm_0_DB_4, IO_IS = usb_db[4]
+ PORT DB5 = d_usb_epp_dstm_0_DB_5, IO_IS = usb_db[5]
+ PORT DB6 = d_usb_epp_dstm_0_DB_6, IO_IS = usb_db[6]
+ PORT DB7 = d_usb_epp_dstm_0_DB_7, IO_IS = usb_db[7]
+ PORT IRQ_EPP = d_usb_epp_dstm_0_IRQ_EPP, IO_IS = usb_irq_epp, SIGIS=INTERRUPT, SENSITIVITY=LEVEL_HIGH, INTERRUPT_PRIORITY=HIGH
+ #PORT IRQ_DSTM = d_usb_epp_dstm_0_IRQ_DSTM, IO_IS = usb_irq_dstm
+END
+
+### DIGILENT QUAD SPI INTERFACE
+BEGIN IO_INTERFACE
+ ATTRIBUTE IOTYPE = D_QUAD_SPI_IF
+ ATTRIBUTE INSTANCE = Digilent_QuadSPI_Cntlr
+# ATTRIBUTE EXCLUSIVE = RAM_FLASH
+ ATTRIBUTE CORENAME = quad_spi_if
+ 
+ PORT C = Quad_SPI_FLASH_C, IO_IS = c
+ PORT S = Quad_SPI_FLASH_S, IO_IS = s
+ 
+ PORT DQ_O_QUAD_SPI_3 = Quad_SPI_FLASH_DQ_O_3, IO_IS = dq_o[3]
+ PORT DQ_O_QUAD_SPI_2 = Quad_SPI_FLASH_DQ_O_2, IO_IS = dq_o[2]
+ PORT DQ_O_QUAD_SPI_1 = Quad_SPI_FLASH_DQ_O_1, IO_IS = dq_o[1]
+ PORT DQ_O_QUAD_SPI_0 = Quad_SPI_FLASH_DQ_O_0, IO_IS = dq_o[0]
+
+ PORT DQ_T_QUAD_SPI_3 = Quad_SPI_FLASH_DQ_T_3, IO_IS = dq_t[3]
+ PORT DQ_T_QUAD_SPI_2 = Quad_SPI_FLASH_DQ_T_2, IO_IS = dq_t[2]
+ PORT DQ_T_QUAD_SPI_1 = Quad_SPI_FLASH_DQ_T_1, IO_IS = dq_t[1]
+ PORT DQ_T_QUAD_SPI_0 = Quad_SPI_FLASH_DQ_T_0, IO_IS = dq_t[0]
+ 
+ PORT DQ_I_QUAD_SPI_3 = Quad_SPI_FLASH_DQ_I_3, IO_IS = dq_i[3]
+ PORT DQ_I_QUAD_SPI_2 = Quad_SPI_FLASH_DQ_I_2, IO_IS = dq_i[2]
+ PORT DQ_I_QUAD_SPI_1 = Quad_SPI_FLASH_DQ_I_1, IO_IS = dq_i[1]
+ PORT DQ_I_QUAD_SPI_0 = Quad_SPI_FLASH_DQ_I_0, IO_IS = dq_i[0]
+ 
+END
+
+### SEVEN SEGMENT DECODER
+BEGIN IO_INTERFACE
+ ATTRIBUTE IOTYPE = D_SSG_DEC
+ ATTRIBUTE INSTANCE = Digilent_SevSeg_Disp
+ ATTRIBUTE CORENAME = ssg_decoder
+ 
+ PARAMETER ANODE_ACTIVE_LOW = 1, IO_IS = anode_active_low
+ 
+ PORT AN3 = Ssg_Decoder_0_AN_3, IO_IS = an[3]
+ PORT AN2 = Ssg_Decoder_0_AN_2, IO_IS = an[2]
+ PORT AN1 = Ssg_Decoder_0_AN_1, IO_IS = an[1]
+ PORT AN0 = Ssg_Decoder_0_AN_0, IO_IS = an[0]
+ 
+ PORT SEG7 = Ssg_Decoder_0_SEG_7, IO_IS= seg[7]
+ PORT SEG6 = Ssg_Decoder_0_SEG_6, IO_IS= seg[6]
+ PORT SEG5 = Ssg_Decoder_0_SEG_5, IO_IS= seg[5]
+ PORT SEG4 = Ssg_Decoder_0_SEG_4, IO_IS= seg[4]
+ PORT SEG3 = Ssg_Decoder_0_SEG_3, IO_IS= seg[3]
+ PORT SEG2 = Ssg_Decoder_0_SEG_2, IO_IS= seg[2]
+ PORT SEG1 = Ssg_Decoder_0_SEG_1, IO_IS= seg[1]
+ PORT SEG0 = Ssg_Decoder_0_SEG_0, IO_IS= seg[0]
+ END
+
+### MEMORY BUS MULTIPLEXER
+BEGIN IO_INTERFACE
+ATTRIBUTE IOTYPE = D_NEXYS3_MEM_MUX
+ATTRIBUTE INSTANCE = mem_bus_mux_0
+ATTRIBUTE CORENAME = mem_bus_mux
+
+ # RAM SIGNALS
+ PORT ADDR_RAM_IN_31 = Micron_RAM_Mem_A_31, IO_IS = addr_ram_in_0[31]
+ PORT ADDR_RAM_IN_30 = Micron_RAM_Mem_A_30, IO_IS = addr_ram_in_0[30]
+ PORT ADDR_RAM_IN_29 = Micron_RAM_Mem_A_29, IO_IS = addr_ram_in_0[29]
+ PORT ADDR_RAM_IN_28 = Micron_RAM_Mem_A_28, IO_IS = addr_ram_in_0[28]
+ PORT ADDR_RAM_IN_27 = Micron_RAM_Mem_A_27, IO_IS = addr_ram_in_0[27]
+ PORT ADDR_RAM_IN_26 = Micron_RAM_Mem_A_26, IO_IS = addr_ram_in_0[26]
+ PORT ADDR_RAM_IN_25 = Micron_RAM_Mem_A_25, IO_IS = addr_ram_in_0[25]
+ PORT ADDR_RAM_IN_24 = Micron_RAM_Mem_A_24, IO_IS = addr_ram_in_0[24]
+ PORT ADDR_RAM_IN_23 = Micron_RAM_Mem_A_23, IO_IS = addr_ram_in_0[23]
+ PORT ADDR_RAM_IN_22 = Micron_RAM_Mem_A_22, IO_IS = addr_ram_in_0[22]
+ PORT ADDR_RAM_IN_21 = Micron_RAM_Mem_A_21, IO_IS = addr_ram_in_0[21]
+ PORT ADDR_RAM_IN_20 = Micron_RAM_Mem_A_20, IO_IS = addr_ram_in_0[20]
+ PORT ADDR_RAM_IN_19 = Micron_RAM_Mem_A_19, IO_IS = addr_ram_in_0[19]
+ PORT ADDR_RAM_IN_18 = Micron_RAM_Mem_A_18, IO_IS = addr_ram_in_0[18]
+ PORT ADDR_RAM_IN_17 = Micron_RAM_Mem_A_17, IO_IS = addr_ram_in_0[17]
+ PORT ADDR_RAM_IN_16 = Micron_RAM_Mem_A_16, IO_IS = addr_ram_in_0[16]
+ PORT ADDR_RAM_IN_15 = Micron_RAM_Mem_A_15, IO_IS = addr_ram_in_0[15]
+ PORT ADDR_RAM_IN_14 = Micron_RAM_Mem_A_14, IO_IS = addr_ram_in_0[14]
+ PORT ADDR_RAM_IN_13 = Micron_RAM_Mem_A_13, IO_IS = addr_ram_in_0[13]
+ PORT ADDR_RAM_IN_12 = Micron_RAM_Mem_A_12, IO_IS = addr_ram_in_0[12]
+ PORT ADDR_RAM_IN_11 = Micron_RAM_Mem_A_11, IO_IS = addr_ram_in_0[11]
+ PORT ADDR_RAM_IN_10 = Micron_RAM_Mem_A_10, IO_IS = addr_ram_in_0[10]
+ PORT ADDR_RAM_IN_9 = Micron_RAM_Mem_A_9, IO_IS = addr_ram_in_0[9]
+ PORT ADDR_RAM_IN_8 = Micron_RAM_Mem_A_8, IO_IS = addr_ram_in[8]
+ PORT ADDR_RAM_IN_7 = Micron_RAM_Mem_A_7, IO_IS = addr_ram_in[7]
+ PORT ADDR_RAM_IN_6 = Micron_RAM_Mem_A_6, IO_IS = addr_ram_in[6]
+ PORT ADDR_RAM_IN_5 = Micron_RAM_Mem_A_5, IO_IS = addr_ram_in[5]
+ PORT ADDR_RAM_IN_4 = Micron_RAM_Mem_A_4, IO_IS = addr_ram_in[4]
+ PORT ADDR_RAM_IN_3 = Micron_RAM_Mem_A_3, IO_IS = addr_ram_in[3]
+ PORT ADDR_RAM_IN_2 = Micron_RAM_Mem_A_2, IO_IS = addr_ram_in[2]
+ PORT ADDR_RAM_IN_1 = Micron_RAM_Mem_A_1, IO_IS = addr_ram_in[1]
+ PORT ADDR_RAM_IN_0 = Micron_RAM_Mem_A_0, IO_IS = addr_ram_in[0]
+  
+ PORT DQ_O_RAM_15 = Micron_RAM_Mem_DQ_O_15, IO_IS = dq_o_ram[15]
+ PORT DQ_O_RAM_14 = Micron_RAM_Mem_DQ_O_14, IO_IS = dq_o_ram[14]
+ PORT DQ_O_RAM_13 = Micron_RAM_Mem_DQ_O_13, IO_IS = dq_o_ram[13]
+ PORT DQ_O_RAM_12 = Micron_RAM_Mem_DQ_O_12, IO_IS = dq_o_ram[12]
+ PORT DQ_O_RAM_11 = Micron_RAM_Mem_DQ_O_11, IO_IS = dq_o_ram[11]
+ PORT DQ_O_RAM_10 = Micron_RAM_Mem_DQ_O_10, IO_IS = dq_o_ram[10]
+ PORT DQ_O_RAM_9 = Micron_RAM_Mem_DQ_O_9, IO_IS = dq_o_ram[9]
+ PORT DQ_O_RAM_8 = Micron_RAM_Mem_DQ_O_8, IO_IS = dq_o_ram[8]
+ PORT DQ_O_RAM_7 = Micron_RAM_Mem_DQ_O_7, IO_IS = dq_o_ram[7]
+ PORT DQ_O_RAM_6 = Micron_RAM_Mem_DQ_O_6, IO_IS = dq_o_ram[6]
+ PORT DQ_O_RAM_5 = Micron_RAM_Mem_DQ_O_5, IO_IS = dq_o_ram[5]
+ PORT DQ_O_RAM_4 = Micron_RAM_Mem_DQ_O_4, IO_IS = dq_o_ram[4]
+ PORT DQ_O_RAM_3 = Micron_RAM_Mem_DQ_O_3, IO_IS = dq_o_ram[3]
+ PORT DQ_O_RAM_2 = Micron_RAM_Mem_DQ_O_2, IO_IS = dq_o_ram[2]
+ PORT DQ_O_RAM_1 = Micron_RAM_Mem_DQ_O_1, IO_IS = dq_o_ram[1]
+ PORT DQ_O_RAM_0 = Micron_RAM_Mem_DQ_O_0, IO_IS = dq_o_ram[0]
+ 
+ PORT DQ_T_RAM_15 = Micron_RAM_Mem_DQ_T_15, IO_IS = dq_t_ram[15]
+ PORT DQ_T_RAM_14 = Micron_RAM_Mem_DQ_T_14, IO_IS = dq_t_ram[14]
+ PORT DQ_T_RAM_13 = Micron_RAM_Mem_DQ_T_13, IO_IS = dq_t_ram[13]
+ PORT DQ_T_RAM_12 = Micron_RAM_Mem_DQ_T_12, IO_IS = dq_t_ram[12]
+ PORT DQ_T_RAM_11 = Micron_RAM_Mem_DQ_T_11, IO_IS = dq_t_ram[11]
+ PORT DQ_T_RAM_10 = Micron_RAM_Mem_DQ_T_10, IO_IS = dq_t_ram[10]
+ PORT DQ_T_RAM_9 = Micron_RAM_Mem_DQ_T_9, IO_IS = dq_t_ram[9]
+ PORT DQ_T_RAM_8 = Micron_RAM_Mem_DQ_T_8, IO_IS = dq_t_ram[8]
+ PORT DQ_T_RAM_7 = Micron_RAM_Mem_DQ_T_7, IO_IS = dq_t_ram[7]
+ PORT DQ_T_RAM_6 = Micron_RAM_Mem_DQ_T_6, IO_IS = dq_t_ram[6]
+ PORT DQ_T_RAM_5 = Micron_RAM_Mem_DQ_T_5, IO_IS = dq_t_ram[5]
+ PORT DQ_T_RAM_4 = Micron_RAM_Mem_DQ_T_4, IO_IS = dq_t_ram[4]
+ PORT DQ_T_RAM_3 = Micron_RAM_Mem_DQ_T_3, IO_IS = dq_t_ram[3]
+ PORT DQ_T_RAM_2 = Micron_RAM_Mem_DQ_T_2, IO_IS = dq_t_ram[2]
+ PORT DQ_T_RAM_1 = Micron_RAM_Mem_DQ_T_1, IO_IS = dq_t_ram[1]
+ PORT DQ_T_RAM_0 = Micron_RAM_Mem_DQ_T_0, IO_IS = dq_t_ram[0]
+
+ PORT DQ_I_RAM_15 = Micron_RAM_Mem_DQ_I_15, IO_IS = dq_i_ram[15]
+ PORT DQ_I_RAM_14 = Micron_RAM_Mem_DQ_I_14, IO_IS = dq_i_ram[14]
+ PORT DQ_I_RAM_13 = Micron_RAM_Mem_DQ_I_13, IO_IS = dq_i_ram[13]
+ PORT DQ_I_RAM_12 = Micron_RAM_Mem_DQ_I_12, IO_IS = dq_i_ram[12]
+ PORT DQ_I_RAM_11 = Micron_RAM_Mem_DQ_I_11, IO_IS = dq_i_ram[11]
+ PORT DQ_I_RAM_10 = Micron_RAM_Mem_DQ_I_10, IO_IS = dq_i_ram[10]
+ PORT DQ_I_RAM_9 = Micron_RAM_Mem_DQ_I_9, IO_IS = dq_i_ram[9]
+ PORT DQ_I_RAM_8 = Micron_RAM_Mem_DQ_I_8, IO_IS = dq_i_ram[8]
+ PORT DQ_I_RAM_7 = Micron_RAM_Mem_DQ_I_7, IO_IS = dq_i_ram[7]
+ PORT DQ_I_RAM_6 = Micron_RAM_Mem_DQ_I_6, IO_IS = dq_i_ram[6]
+ PORT DQ_I_RAM_5 = Micron_RAM_Mem_DQ_I_5, IO_IS = dq_i_ram[5]
+ PORT DQ_I_RAM_4 = Micron_RAM_Mem_DQ_I_4, IO_IS = dq_i_ram[4]
+ PORT DQ_I_RAM_3 = Micron_RAM_Mem_DQ_I_3, IO_IS = dq_i_ram[3]
+ PORT DQ_I_RAM_2 = Micron_RAM_Mem_DQ_I_2, IO_IS = dq_i_ram[2]
+ PORT DQ_I_RAM_1 = Micron_RAM_Mem_DQ_I_1, IO_IS = dq_i_ram[1]
+ PORT DQ_I_RAM_0 = Micron_RAM_Mem_DQ_I_0, IO_IS = dq_i_ram[0]
+
+ PORT BEN_RAM_I_1 = Micron_RAM_Mem_BEN_1, IO_IS = ben_ram_i[1]
+ PORT BEN_RAM_I_0 = Micron_RAM_Mem_BEN_0, IO_IS = ben_ram_i[0]
+ 
+ PORT CEN_RAM_I = Micron_RAM_Mem_CEN, IO_IS = cen_ram_i
+ PORT OEN_RAM_I = Micron_RAM_Mem_OEN, IO_IS = oen_ram_i
+ PORT WEN_RAM_I = Micron_RAM_Mem_WEN, IO_IS = wen_ram_i
+
+  
+ ### LINEAR FLASH SIGNALS
+#PORT ADDR_FLASH_IN_31 = Numonx_FLASH_Mem_A_31, IO_IS = addr_flash_in_0[31]
+ PORT ADDR_FLASH_IN_30 = Numonx_FLASH_Mem_A_30, IO_IS = addr_flash_in_0[30]
+ PORT ADDR_FLASH_IN_29 = Numonx_FLASH_Mem_A_29, IO_IS = addr_flash_in_0[29]
+ PORT ADDR_FLASH_IN_28 = Numonx_FLASH_Mem_A_28, IO_IS = addr_flash_in_0[28]
+ PORT ADDR_FLASH_IN_27 = Numonx_FLASH_Mem_A_27, IO_IS = addr_flash_in_0[27]
+ PORT ADDR_FLASH_IN_26 = Numonx_FLASH_Mem_A_26, IO_IS = addr_flash_in_0[26]
+ PORT ADDR_FLASH_IN_25 = Numonx_FLASH_Mem_A_25, IO_IS = addr_flash_in_0[25]
+ PORT ADDR_FLASH_IN_24 = Numonx_FLASH_Mem_A_24, IO_IS = addr_flash_in_0[24]
+ PORT ADDR_FLASH_IN_23 = Numonx_FLASH_Mem_A_23, IO_IS = addr_flash_in_0[23]
+ PORT ADDR_FLASH_IN_22 = Numonx_FLASH_Mem_A_22, IO_IS = addr_flash_in_0[22]
+ PORT ADDR_FLASH_IN_21 = Numonx_FLASH_Mem_A_21, IO_IS = addr_flash_in_0[21]
+ PORT ADDR_FLASH_IN_20 = Numonx_FLASH_Mem_A_20, IO_IS = addr_flash_in_0[20]
+ PORT ADDR_FLASH_IN_19 = Numonx_FLASH_Mem_A_19, IO_IS = addr_flash_in_0[19]
+ PORT ADDR_FLASH_IN_18 = Numonx_FLASH_Mem_A_18, IO_IS = addr_flash_in_0[18]
+ PORT ADDR_FLASH_IN_17 = Numonx_FLASH_Mem_A_17, IO_IS = addr_flash_in_0[17]
+ PORT ADDR_FLASH_IN_16 = Numonx_FLASH_Mem_A_16, IO_IS = addr_flash_in_0[16]
+ PORT ADDR_FLASH_IN_15 = Numonx_FLASH_Mem_A_15, IO_IS = addr_flash_in_0[15]
+ PORT ADDR_FLASH_IN_14 = Numonx_FLASH_Mem_A_14, IO_IS = addr_flash_in_0[14]
+ PORT ADDR_FLASH_IN_13 = Numonx_FLASH_Mem_A_13, IO_IS = addr_flash_in_0[13]
+ PORT ADDR_FLASH_IN_12 = Numonx_FLASH_Mem_A_12, IO_IS = addr_flash_in_0[12]
+ PORT ADDR_FLASH_IN_11 = Numonx_FLASH_Mem_A_11, IO_IS = addr_flash_in_0[11]
+ PORT ADDR_FLASH_IN_10 = Numonx_FLASH_Mem_A_10, IO_IS = addr_flash_in_0[10]
+ PORT ADDR_FLASH_IN_9 = Numonx_FLASH_Mem_A_9, IO_IS = addr_flash_in_0[9]
+ PORT ADDR_FLASH_IN_8 = Numonx_FLASH_Mem_A_8, IO_IS = addr_flash_in_0[8]
+ PORT ADDR_FLASH_IN_7 = Numonx_FLASH_Mem_A_7, IO_IS = addr_flash_in_0[7]
+ PORT ADDR_FLASH_IN_6 = Numonx_FLASH_Mem_A_6, IO_IS = addr_flash_in_0[6]
+ PORT ADDR_FLASH_IN_5 = Numonx_FLASH_Mem_A_5, IO_IS = addr_flash_in_0[5]
+ PORT ADDR_FLASH_IN_4 = Numonx_FLASH_Mem_A_4, IO_IS = addr_flash_in_0[4]
+ PORT ADDR_FLASH_IN_3 = Numonx_FLASH_Mem_A_3, IO_IS = addr_flash_in_0[3]
+ PORT ADDR_FLASH_IN_2 = Numonx_FLASH_Mem_A_2, IO_IS = addr_flash_in_0[2]
+ PORT ADDR_FLASH_IN_1 = Numonx_FLASH_Mem_A_1, IO_IS = addr_flash_in_0[1]
+ PORT ADDR_FLASH_IN_0 = Numonx_FLASH_Mem_A_0, IO_IS = addr_flash_in_0[0]
+
+ PORT DQ_O_FLASH_15 = Numonx_FLASH_Mem_DQ_O_15, IO_IS = dq_o_flash[15]
+ PORT DQ_O_FLASH_14 = Numonx_FLASH_Mem_DQ_O_14, IO_IS = dq_o_flash[14]
+ PORT DQ_O_FLASH_13 = Numonx_FLASH_Mem_DQ_O_13, IO_IS = dq_o_flash[13]
+ PORT DQ_O_FLASH_12 = Numonx_FLASH_Mem_DQ_O_12, IO_IS = dq_o_flash[12]
+ PORT DQ_O_FLASH_11 = Numonx_FLASH_Mem_DQ_O_11, IO_IS = dq_o_flash[11]
+ PORT DQ_O_FLASH_10 = Numonx_FLASH_Mem_DQ_O_10, IO_IS = dq_o_flash[10]
+ PORT DQ_O_FLASH_9 = Numonx_FLASH_Mem_DQ_O_9, IO_IS = dq_o_flash[9]
+ PORT DQ_O_FLASH_8 = Numonx_FLASH_Mem_DQ_O_8, IO_IS = dq_o_flash[8]
+ PORT DQ_O_FLASH_7 = Numonx_FLASH_Mem_DQ_O_7, IO_IS = dq_o_flash[7]
+ PORT DQ_O_FLASH_6 = Numonx_FLASH_Mem_DQ_O_6, IO_IS = dq_o_flash[6]
+ PORT DQ_O_FLASH_5 = Numonx_FLASH_Mem_DQ_O_5, IO_IS = dq_o_flash[5]
+ PORT DQ_O_FLASH_4 = Numonx_FLASH_Mem_DQ_O_4, IO_IS = dq_o_flash[4]
+ PORT DQ_O_FLASH_3 = Numonx_FLASH_Mem_DQ_O_3, IO_IS = dq_o_flash[3]
+ PORT DQ_O_FLASH_2 = Numonx_FLASH_Mem_DQ_O_2, IO_IS = dq_o_flash[2]
+ PORT DQ_O_FLASH_1 = Numonx_FLASH_Mem_DQ_O_1, IO_IS = dq_o_flash[1]
+ PORT DQ_O_FLASH_0 = Numonx_FLASH_Mem_DQ_O_0, IO_IS = dq_o_flash[0]
+ 
+ PORT DQ_T_FLASH_15 = Numonx_FLASH_Mem_DQ_T_15, IO_IS = dq_t_flash[15]
+ PORT DQ_T_FLASH_14 = Numonx_FLASH_Mem_DQ_T_14, IO_IS = dq_t_flash[14]
+ PORT DQ_T_FLASH_13 = Numonx_FLASH_Mem_DQ_T_13, IO_IS = dq_t_flash[13]
+ PORT DQ_T_FLASH_12 = Numonx_FLASH_Mem_DQ_T_12, IO_IS = dq_t_flash[12]
+ PORT DQ_T_FLASH_11 = Numonx_FLASH_Mem_DQ_T_11, IO_IS = dq_t_flash[11]
+ PORT DQ_T_FLASH_10 = Numonx_FLASH_Mem_DQ_T_10, IO_IS = dq_t_flash[10]
+ PORT DQ_T_FLASH_9 = Numonx_FLASH_Mem_DQ_T_9, IO_IS = dq_t_flash[9]
+ PORT DQ_T_FLASH_8 = Numonx_FLASH_Mem_DQ_T_8, IO_IS = dq_t_flash[8]
+ PORT DQ_T_FLASH_7 = Numonx_FLASH_Mem_DQ_T_7, IO_IS = dq_t_flash[7]
+ PORT DQ_T_FLASH_6 = Numonx_FLASH_Mem_DQ_T_6, IO_IS = dq_t_flash[6]
+ PORT DQ_T_FLASH_5 = Numonx_FLASH_Mem_DQ_T_5, IO_IS = dq_t_flash[5]
+ PORT DQ_T_FLASH_4 = Numonx_FLASH_Mem_DQ_T_4, IO_IS = dq_t_flash[4]
+ PORT DQ_T_FLASH_3 = Numonx_FLASH_Mem_DQ_T_3, IO_IS = dq_t_flash[3]
+ PORT DQ_T_FLASH_2 = Numonx_FLASH_Mem_DQ_T_2, IO_IS = dq_t_flash[2]
+ PORT DQ_T_FLASH_1 = Numonx_FLASH_Mem_DQ_T_1, IO_IS = dq_t_flash[1]
+ PORT DQ_T_FLASH_0 = Numonx_FLASH_Mem_DQ_T_0, IO_IS = dq_t_flash[0]
+ 
+ PORT DQ_I_FLASH_15 = Numonx_FLASH_Mem_DQ_I_15, IO_IS = dq_i_flash[15]
+ PORT DQ_I_FLASH_14 = Numonx_FLASH_Mem_DQ_I_14, IO_IS = dq_i_flash[14]
+ PORT DQ_I_FLASH_13 = Numonx_FLASH_Mem_DQ_I_13, IO_IS = dq_i_flash[13]
+ PORT DQ_I_FLASH_12 = Numonx_FLASH_Mem_DQ_I_12, IO_IS = dq_i_flash[12]
+ PORT DQ_I_FLASH_11 = Numonx_FLASH_Mem_DQ_I_11, IO_IS = dq_i_flash[11]
+ PORT DQ_I_FLASH_10 = Numonx_FLASH_Mem_DQ_I_10, IO_IS = dq_i_flash[10]
+ PORT DQ_I_FLASH_9 = Numonx_FLASH_Mem_DQ_I_9, IO_IS = dq_i_flash[9]
+ PORT DQ_I_FLASH_8 = Numonx_FLASH_Mem_DQ_I_8, IO_IS = dq_i_flash[8]
+ PORT DQ_I_FLASH_7 = Numonx_FLASH_Mem_DQ_I_7, IO_IS = dq_i_flash[7]
+ PORT DQ_I_FLASH_6 = Numonx_FLASH_Mem_DQ_I_6, IO_IS = dq_i_flash[6]
+ PORT DQ_I_FLASH_5 = Numonx_FLASH_Mem_DQ_I_5, IO_IS = dq_i_flash[5]
+ PORT DQ_I_FLASH_4 = Numonx_FLASH_Mem_DQ_I_4, IO_IS = dq_i_flash[4]
+ PORT DQ_I_FLASH_3 = Numonx_FLASH_Mem_DQ_I_3, IO_IS = dq_i_flash[3]
+ PORT DQ_I_FLASH_2 = Numonx_FLASH_Mem_DQ_I_2, IO_IS = dq_i_flash[2]
+ PORT DQ_I_FLASH_1 = Numonx_FLASH_Mem_DQ_I_1, IO_IS = dq_i_flash[1]
+ PORT DQ_I_FLASH_0 = Numonx_FLASH_Mem_DQ_I_0, IO_IS = dq_i_flash[0]
+  
+ PORT RPN_FLASH_I = Numonx_FLASH_Mem_RPN, IO_IS = rpn_flash_i
+ PORT CEN_FLASH_I = Numonx_FLASH_Mem_CEN, IO_IS = cen_flash_i
+ PORT OEN_FLASH_I = Numonx_FLASH_Mem_OEN, IO_IS = oen_flash_i
+ PORT WEN_FLASH_I = Numonx_FLASH_Mem_WEN, IO_IS = wen_flash_i
+ 
+ ###QUAD SPI SIGNALS
+ PORT C_QUAD_SPI_I = Quad_SPI_FLASH_C, IO_IS = c_quad_spi_i
+ PORT S_QUAD_SPI_I = Quad_SPI_FLASH_S, IO_IS = s_quad_spi_i
+ 
+ PORT DQ_O_QUAD_SPI_3 = Quad_SPI_FLASH_DQ_O_3, IO_IS = dq_o_quad_spi_i[3]
+ PORT DQ_O_QUAD_SPI_2 = Quad_SPI_FLASH_DQ_O_2, IO_IS = dq_o_quad_spi_i[2]
+ PORT DQ_O_QUAD_SPI_1 = Quad_SPI_FLASH_DQ_O_1, IO_IS = dq_o_quad_spi_i[1]
+ PORT DQ_O_QUAD_SPI_0 = Quad_SPI_FLASH_DQ_O_0, IO_IS = dq_o_quad_spi_i[0]
+
+ PORT DQ_T_QUAD_SPI_3 = Quad_SPI_FLASH_DQ_T_3, IO_IS = dq_t_quad_spi_i[3]
+ PORT DQ_T_QUAD_SPI_2 = Quad_SPI_FLASH_DQ_T_2, IO_IS = dq_t_quad_spi_i[2]
+ PORT DQ_T_QUAD_SPI_1 = Quad_SPI_FLASH_DQ_T_1, IO_IS = dq_t_quad_spi_i[1]
+ PORT DQ_T_QUAD_SPI_0 = Quad_SPI_FLASH_DQ_T_0, IO_IS = dq_t_quad_spi_i[0]
+ 
+ PORT DQ_I_QUAD_SPI_3 = Quad_SPI_FLASH_DQ_I_3, IO_IS = dq_i_quad_spi_i[3]
+ PORT DQ_I_QUAD_SPI_2 = Quad_SPI_FLASH_DQ_I_2, IO_IS = dq_i_quad_spi_i[2]
+ PORT DQ_I_QUAD_SPI_1 = Quad_SPI_FLASH_DQ_I_1, IO_IS = dq_i_quad_spi_i[1]
+ PORT DQ_I_QUAD_SPI_0 = Quad_SPI_FLASH_DQ_I_0, IO_IS = dq_i_quad_spi_i[0]
+ 
+ ### COMMON MEMORY EXTERNAL PORTS
+ PORT MEM_FLASH_ADDR_22 = MEM_FLASH_ADDR_22, IO_IS = mem_addr[22]
+ PORT MEM_FLASH_ADDR_21 = MEM_FLASH_ADDR_21, IO_IS = mem_addr[21]
+ PORT MEM_FLASH_ADDR_20 = MEM_FLASH_ADDR_20, IO_IS = mem_addr[20]
+ PORT MEM_FLASH_ADDR_19 = MEM_FLASH_ADDR_19, IO_IS = mem_addr[19]
+ PORT MEM_FLASH_ADDR_18 = MEM_FLASH_ADDR_18, IO_IS = mem_addr[18]
+ PORT MEM_FLASH_ADDR_17 = MEM_FLASH_ADDR_17, IO_IS = mem_addr[17]
+ PORT MEM_FLASH_ADDR_16 = MEM_FLASH_ADDR_16, IO_IS = mem_addr[16]
+ PORT MEM_FLASH_ADDR_15 = MEM_FLASH_ADDR_15, IO_IS = mem_addr[15]
+ PORT MEM_FLASH_ADDR_14 = MEM_FLASH_ADDR_14, IO_IS = mem_addr[14]
+ PORT MEM_FLASH_ADDR_13 = MEM_FLASH_ADDR_13, IO_IS = mem_addr[13]
+ PORT MEM_FLASH_ADDR_12 = MEM_FLASH_ADDR_12, IO_IS = mem_addr[12]
+ PORT MEM_FLASH_ADDR_11 = MEM_FLASH_ADDR_11, IO_IS = mem_addr[11]
+ PORT MEM_FLASH_ADDR_10 = MEM_FLASH_ADDR_10, IO_IS = mem_addr[10]
+ PORT MEM_FLASH_ADDR_9 = MEM_FLASH_ADDR_9, IO_IS = mem_addr[9]
+ PORT MEM_FLASH_ADDR_8 = MEM_FLASH_ADDR_8, IO_IS = mem_addr[8]
+ PORT MEM_FLASH_ADDR_7 = MEM_FLASH_ADDR_7, IO_IS = mem_addr[7]
+ PORT MEM_FLASH_ADDR_6 = MEM_FLASH_ADDR_6, IO_IS = mem_addr[6]
+ PORT MEM_FLASH_ADDR_5 = MEM_FLASH_ADDR_5, IO_IS = mem_addr[5]
+ PORT MEM_FLASH_ADDR_4 = MEM_FLASH_ADDR_4, IO_IS = mem_addr[4]
+ PORT MEM_FLASH_ADDR_3 = MEM_FLASH_ADDR_3, IO_IS = mem_addr[3]
+ PORT MEM_FLASH_ADDR_2 = MEM_FLASH_ADDR_2, IO_IS = mem_addr[2]
+ PORT MEM_FLASH_ADDR_1 = MEM_FLASH_ADDR_1, IO_IS = mem_addr[1]
+ PORT MEM_FLASH_ADDR_0 = MEM_FLASH_ADDR_0, IO_IS = mem_addr[0]
+
+ PORT DQ_15 = MEM_DQ_15, IO_IS = dq[15]
+ PORT DQ_14 = MEM_DQ_14, IO_IS = dq[14]
+ PORT DQ_13 = MEM_DQ_13, IO_IS = dq[13]
+ PORT DQ_12 = MEM_DQ_12, IO_IS = dq[12]
+ PORT DQ_11 = MEM_DQ_11, IO_IS = dq[11]
+ PORT DQ_10 = MEM_DQ_10, IO_IS = dq[10]
+ PORT DQ_9 = MEM_DQ_9, IO_IS = dq[9]
+ PORT DQ_8 = MEM_DQ_8, IO_IS = dq[8]
+ PORT DQ_7 = MEM_DQ_7, IO_IS = dq[7]
+ PORT DQ_6 = MEM_DQ_6, IO_IS = dq[6]
+ PORT DQ_5 = MEM_DQ_5, IO_IS = dq[5]
+ PORT DQ_4 = MEM_DQ_4, IO_IS = dq[4]
+ PORT DQ_3 = MEM_DQ_3, IO_IS = dq[3]
+ PORT DQ_2 = MEM_DQ_2, IO_IS = dq[2]
+ PORT DQ_1 = MEM_DQ_1, IO_IS = dq[1]
+ PORT DQ_0 = MEM_DQ_0, IO_IS = dq[0]
+	
+ PORT MEM_OEN = RAM_FLASH_OEN, IO_IS = mem_oen
+ PORT MEM_WEN = RAM_FLASH_WEN, IO_IS = mem_wen	
+
+ ### RAM SPECIFIC PORTS
+ PORT RAM_CEN_O = RAM_CEN_O, IO_IS = ram_cen_o
+ PORT RAM_BEN_O_1 = RAM_BEN_O_1, IO_IS = ram_ben_o[1]
+ PORT RAM_BEN_O_0 = RAM_BEN_O_0, IO_IS = ram_ben_o[0]
+
+ ### FLASH specific ports
+ PORT FLASH_ADDR_5 = FLASH_ADDR_5, IO_IS = flash_addr[5]
+ PORT FLASH_ADDR_6 = FLASH_ADDR_6, IO_IS = flash_addr[6]
+ PORT FLASH_ADDR_7 = FLASH_ADDR_7, IO_IS = flash_addr[7]
+ PORT FLASH_CEN_O = FLASH_CEN_O, IO_IS = flash_cen_o
+ PORT FLASH_RPN_O = FLASH_RPN_O, IO_IS = flash_rpn_o   
+	
+ ### QUAD SPI specific ports
+ PORT QUAD_SPI_C_O = QUAD_SPI_C, IO_IS = quad_spi_c_o
+ PORT QUAD_SPI_S_O = QUAD_SPI_S, IO_IS = quad_spi_s_o
+ PORT MOSI_QUAD_SPI = MOSI_QUAD_SPI, IO_IS = mosi_quad_spi
+ 
+END
+ 
+##################################
+### USER CONSTRAINTS
+##################################
+
+BEGIN FPGA
+   ATTRIBUTE INSTANCE = fpga_0
+   ATTRIBUTE FAMILY = spartan6
+   ATTRIBUTE DEVICE = xc6slx16
+   ATTRIBUTE PACKAGE = csg324
+   ATTRIBUTE SPEED_GRADE = -3
+   ATTRIBUTE JTAG_POSITION = 1
+
+   PORT GCLK = GCLK, UCF_NET_STRING=("LOC=V10", "IOSTANDARD=LVCMOS33")
+
+   PORT EXT_RST = sys_rst, UCF_NET_STRING=("LOC=B8", "IOSTANDARD=LVCMOS33") #BTNS
+
+   ### RS232_Uart_1
+   PORT RXD = uart1_sin, UCF_NET_STRING = ("LOC=N17", "IOSTANDARD=LVCMOS33")
+   PORT TXD = uart1_sout, UCF_NET_STRING = ("LOC=N18","IOSTANDARD=LVCMOS33")
+
+   ### DIP_Switches_8Bits
+   PORT Switch_Buttons_8Bits_I_7 = Switch_Buttons_8Bits_I_7, UCF_NET_STRING=("LOC=T10", "IOSTANDARD = LVCMOS33")
+   PORT Switch_Buttons_8Bits_I_6 = Switch_Buttons_8Bits_I_6, UCF_NET_STRING=("LOC=T9", "IOSTANDARD = LVCMOS33")
+   PORT Switch_Buttons_8Bits_I_5 = Switch_Buttons_8Bits_I_5, UCF_NET_STRING=("LOC=V9", "IOSTANDARD = LVCMOS33")
+   PORT Switch_Buttons_8Bits_I_4 = Switch_Buttons_8Bits_I_4, UCF_NET_STRING=("LOC=M8", "IOSTANDARD = LVCMOS33")
+   PORT Switch_Buttons_8Bits_I_3 = Switch_Buttons_8Bits_I_3, UCF_NET_STRING=("LOC=N8", "IOSTANDARD = LVCMOS33")
+   PORT Switch_Buttons_8Bits_I_2 = Switch_Buttons_8Bits_I_2, UCF_NET_STRING=("LOC=U8", "IOSTANDARD = LVCMOS33")
+   PORT Switch_Buttons_8Bits_I_1 = Switch_Buttons_8Bits_I_1, UCF_NET_STRING=("LOC=V8", "IOSTANDARD = LVCMOS33")
+   PORT Switch_Buttons_8Bits_I_0 = Switch_Buttons_8Bits_I_0, UCF_NET_STRING=("LOC=T5", "IOSTANDARD = LVCMOS33")
+
+   ### LEDs_8Bits
+   PORT LEDs_8Bits_O_7 = LEDs_8Bits_O_7, UCF_NET_STRING=("LOC=U16", "IOSTANDARD = LVCMOS33")
+   PORT LEDs_8Bits_O_6 = LEDs_8Bits_O_6, UCF_NET_STRING=("LOC=V16", "IOSTANDARD = LVCMOS33")
+   PORT LEDs_8Bits_O_5 = LEDs_8Bits_O_5, UCF_NET_STRING=("LOC=U15", "IOSTANDARD = LVCMOS33")
+   PORT LEDs_8Bits_O_4 = LEDs_8Bits_O_4, UCF_NET_STRING=("LOC=V15", "IOSTANDARD = LVCMOS33")
+   PORT LEDs_8Bits_O_3 = LEDs_8Bits_O_3, UCF_NET_STRING=("LOC=M11", "IOSTANDARD = LVCMOS33")
+   PORT LEDs_8Bits_O_2 = LEDs_8Bits_O_2, UCF_NET_STRING=("LOC=N11", "IOSTANDARD = LVCMOS33")
+   PORT LEDs_8Bits_O_1 = LEDs_8Bits_O_1, UCF_NET_STRING=("LOC=R11", "IOSTANDARD = LVCMOS33")
+   PORT LEDs_8Bits_O_0 = LEDs_8Bits_O_0, UCF_NET_STRING=("LOC=T11", "IOSTANDARD = LVCMOS33")
+
+   ### Push_Buttons_5Bits
+   PORT Push_Buttons_4Bits_I_3 = Push_Buttons_4Bits_I_3, UCF_NET_STRING=("LOC=A8", "IOSTANDARD = LVCMOS33")
+   PORT Push_Buttons_4Bits_I_2 = Push_Buttons_4Bits_I_2, UCF_NET_STRING=("LOC=C4", "IOSTANDARD = LVCMOS33")
+   PORT Push_Buttons_4Bits_I_1 = Push_Buttons_4Bits_I_1, UCF_NET_STRING=("LOC=C9", "IOSTANDARD = LVCMOS33") 
+   PORT Push_Buttons_4Bits_I_0 = Push_Buttons_4Bits_I_0, UCF_NET_STRING=("LOC=D9", "IOSTANDARD = LVCMOS33")
+
+   ### SPI FLASH
+   #PORT MISO = spi_MISO, UCF_NET_STRING=("LOC=R13", "IOSTANDARD=LVCMOS33")
+   #PORT MOSI = spi_MOSI, UCF_NET_STRING=("LOC=T13", "IOSTANDARD=LVCMOS33")
+   #PORT SCK = spi_SCK,   UCF_NET_STRING=("LOC=R15", "IOSTANDARD=LVCMOS33")
+   #PORT SS0 = spi_cs_0_, UCF_NET_STRING=("LOC=V3", "IOSTANDARD=LVCMOS33")
+
+   ### 10/100M Ethernet MAC
+   PORT PHY_RESET = phy_rst_n, UCF_NET_STRING=("LOC=P3", "TIG", "IOSTANDARD=LVCMOS33")
+#  *PORT PHY_MDINT = phy_mii_int_n, UCF_NET_STRING=("LOC=L16", "IOSTANDARD=LVCMOS33")
+   PORT PHY_CRS = phy_crs, UCF_NET_STRING=("LOC=N3", "IOSTANDARD=LVCMOS33")
+   PORT PHY_COL = phy_col, UCF_NET_STRING=("LOC=P4", "IOSTANDARD=LVCMOS33")
+
+   PORT PHY_RXD3 = phy_rx_data_3, UCF_NET_STRING=("LOC=M3", "IOSTANDARD=LVCMOS33")
+   PORT PHY_RXD2 = phy_rx_data_2, UCF_NET_STRING=("LOC=N1", "IOSTANDARD=LVCMOS33")
+   PORT PHY_RXD1 = phy_rx_data_1, UCF_NET_STRING=("LOC=N2", "IOSTANDARD=LVCMOS33")
+   PORT PHY_RXD0 = phy_rx_data_0, UCF_NET_STRING=("LOC=P1", "IOSTANDARD=LVCMOS33")
+
+   PORT PHY_TXD3 = phy_tx_data_3, UCF_NET_STRING=("LOC=T1", "IOSTANDARD=LVCMOS33")
+   PORT PHY_TXD2 = phy_tx_data_2, UCF_NET_STRING=("LOC=T2", "IOSTANDARD=LVCMOS33")
+   PORT PHY_TXD1 = phy_tx_data_1, UCF_NET_STRING=("LOC=U1", "IOSTANDARD=LVCMOS33")
+   PORT PHY_TXD0 = phy_tx_data_0, UCF_NET_STRING=("LOC=U2", "IOSTANDARD=LVCMOS33")
+
+   PORT PHY_RX_DV  = phy_dv, UCF_NET_STRING=("LOC=L1", "IOSTANDARD=LVCMOS33")
+   PORT PHY_RX_ER  = phy_rx_er, UCF_NET_STRING=("LOC=M1", "IOSTANDARD=LVCMOS33")
+   PORT PHY_RX_CLK = phy_rx_clk, UCF_NET_STRING=("LOC=H4", "IOSTANDARD=LVCMOS33")
+
+   PORT PHY_TX_EN = phy_tx_en, UCF_NET_STRING=("LOC=L2", "IOSTANDARD=LVCMOS33")
+   PORT PHY_TX_ER = phy_tx_er, UCF_NET_STRING=("LOC=P2", "IOSTANDARD=LVCMOS33")
+   PORT PHY_TX_CLK = phy_tx_clk, UCF_NET_STRING=("LOC=L5", "IOSTANDARD=LVCMOS33")
+
+   PORT PHY_MDC = phy_mii_clk, UCF_NET_STRING=("LOC=M5", "IOSTANDARD=LVCMOS33")
+   PORT PHY_MDIO = phy_mii_data, UCF_NET_STRING=("LOC=L6", "IOSTANDARD=LVCMOS33")
+
+   ### PS/2 Port 1 Keyboard
+   PORT PS2_1_CLK = ps2_1_clk, UCF_NET_STRING=("LOC=L12", "SLEW = SLOW", "DRIVE = 2", "IOSTANDARD = LVCMOS33", "PULLUP") # Keyboard CLK
+   PORT PS2_1_DATA = ps2_1_data, UCF_NET_STRING=("LOC=J13", "SLEW = SLOW", "DRIVE = 2", "IOSTANDARD = LVCMOS33", "PULLUP") # Keyboard DATA
+
+   ### PS/2 Port 2 Mouse
+   PORT PS2_2_CLK = ps2_2_clk, UCF_NET_STRING=("LOC=L13", "SLEW = SLOW", "DRIVE = 2", "IOSTANDARD = LVCMOS33", "PULLUP") # Mouse CLK
+   PORT PS2_2_DATA = ps2_2_data, UCF_NET_STRING=("LOC=K14", "SLEW = SLOW", "DRIVE = 2", "IOSTANDARD = LVCMOS33", "PULLUP") # Mouse DATA
+
+   ### Memory Connection
+   
+ ### COMMON MEMORY EXTERNAL PORTS
+ PORT MEM_FLASH_ADDR_0 = MEM_FLASH_ADDR_0, UCF_NET_STRING=("LOC=C18", "IOSTANDARD = LVCMOS33", "DRIVE=2") #P30-A22
+ PORT MEM_FLASH_ADDR_1 = MEM_FLASH_ADDR_1, UCF_NET_STRING=("LOC=F14", "IOSTANDARD = LVCMOS33", "DRIVE=2")
+ PORT MEM_FLASH_ADDR_2 = MEM_FLASH_ADDR_2, UCF_NET_STRING=("LOC=G14", "IOSTANDARD = LVCMOS33", "DRIVE=2")
+ PORT MEM_FLASH_ADDR_3 = MEM_FLASH_ADDR_3, UCF_NET_STRING=("LOC=D17", "IOSTANDARD = LVCMOS33", "DRIVE=2")
+ PORT MEM_FLASH_ADDR_4 = MEM_FLASH_ADDR_4, UCF_NET_STRING=("LOC=D18", "IOSTANDARD = LVCMOS33", "DRIVE=2")     
+ PORT MEM_FLASH_ADDR_5 = MEM_FLASH_ADDR_5, UCF_NET_STRING=("LOC=H12", "IOSTANDARD = LVCMOS33", "DRIVE=2")
+ PORT MEM_FLASH_ADDR_6 = MEM_FLASH_ADDR_6, UCF_NET_STRING=("LOC=G13", "IOSTANDARD = LVCMOS33", "DRIVE=2")
+ PORT MEM_FLASH_ADDR_7 = MEM_FLASH_ADDR_7, UCF_NET_STRING=("LOC=E16", "IOSTANDARD = LVCMOS33", "DRIVE=2")
+ PORT MEM_FLASH_ADDR_8 = MEM_FLASH_ADDR_8, UCF_NET_STRING=("LOC=E18", "IOSTANDARD = LVCMOS33", "DRIVE=2")
+ PORT MEM_FLASH_ADDR_9 = MEM_FLASH_ADDR_9, UCF_NET_STRING=("LOC=K12", "IOSTANDARD = LVCMOS33", "DRIVE=2")
+ PORT MEM_FLASH_ADDR_10 = MEM_FLASH_ADDR_10, UCF_NET_STRING=("LOC=K13", "IOSTANDARD = LVCMOS33", "DRIVE=2")
+ PORT MEM_FLASH_ADDR_11 = MEM_FLASH_ADDR_11, UCF_NET_STRING=("LOC=F17", "IOSTANDARD = LVCMOS33", "DRIVE=2")
+ PORT MEM_FLASH_ADDR_12 = MEM_FLASH_ADDR_12, UCF_NET_STRING=("LOC=F18", "IOSTANDARD = LVCMOS33", "DRIVE=2")
+ PORT MEM_FLASH_ADDR_13 = MEM_FLASH_ADDR_13, UCF_NET_STRING=("LOC=H13", "IOSTANDARD = LVCMOS33", "DRIVE=2")
+ PORT MEM_FLASH_ADDR_14 = MEM_FLASH_ADDR_14, UCF_NET_STRING=("LOC=H14", "IOSTANDARD = LVCMOS33", "DRIVE=2")
+ PORT MEM_FLASH_ADDR_15 = MEM_FLASH_ADDR_15, UCF_NET_STRING=("LOC=H15", "IOSTANDARD = LVCMOS33", "DRIVE=2")
+ PORT MEM_FLASH_ADDR_16 = MEM_FLASH_ADDR_16, UCF_NET_STRING=("LOC=H16", "IOSTANDARD = LVCMOS33", "DRIVE=2")
+ PORT MEM_FLASH_ADDR_17 = MEM_FLASH_ADDR_17, UCF_NET_STRING=("LOC=G16", "IOSTANDARD = LVCMOS33", "DRIVE=2")
+ PORT MEM_FLASH_ADDR_18 = MEM_FLASH_ADDR_18, UCF_NET_STRING=("LOC=G18", "IOSTANDARD = LVCMOS33", "DRIVE=2")
+ PORT MEM_FLASH_ADDR_19 = MEM_FLASH_ADDR_19, UCF_NET_STRING=("LOC=J16", "IOSTANDARD = LVCMOS33", "DRIVE=2")
+ PORT MEM_FLASH_ADDR_20 = MEM_FLASH_ADDR_20, UCF_NET_STRING=("LOC=J18", "IOSTANDARD = LVCMOS33", "DRIVE=2")
+ PORT MEM_FLASH_ADDR_21 = MEM_FLASH_ADDR_21, UCF_NET_STRING=("LOC=K17", "IOSTANDARD = LVCMOS33", "DRIVE=2")
+ PORT MEM_FLASH_ADDR_22 = MEM_FLASH_ADDR_22, UCF_NET_STRING=("LOC=K18", "IOSTANDARD = LVCMOS33", "DRIVE=2")
+
+ PORT DQ_0 = MEM_DQ_0, UCF_NET_STRING=("LOC=T8", "IOSTANDARD = LVCMOS33", "DRIVE=2") #P30-DQ0
+ PORT DQ_1 = MEM_DQ_1, UCF_NET_STRING=("LOC=R8", "IOSTANDARD = LVCMOS33", "DRIVE=2")
+ PORT DQ_2 = MEM_DQ_2, UCF_NET_STRING=("LOC=U10", "IOSTANDARD = LVCMOS33", "DRIVE=2")
+ PORT DQ_3 = MEM_DQ_3, UCF_NET_STRING=("LOC=V13", "IOSTANDARD = LVCMOS33", "DRIVE=2")
+ PORT DQ_4 = MEM_DQ_4, UCF_NET_STRING=("LOC=U13", "IOSTANDARD = LVCMOS33", "DRIVE=2")
+ PORT DQ_5 = MEM_DQ_5, UCF_NET_STRING=("LOC=P12", "IOSTANDARD = LVCMOS33", "DRIVE=2")
+ PORT DQ_6 = MEM_DQ_6, UCF_NET_STRING=("LOC=P6", "IOSTANDARD = LVCMOS33", "DRIVE=2")
+ PORT DQ_7 = MEM_DQ_7, UCF_NET_STRING=("LOC=N5", "IOSTANDARD = LVCMOS33", "DRIVE=2")
+ PORT DQ_8 = MEM_DQ_8, UCF_NET_STRING=("LOC=R5", "IOSTANDARD = LVCMOS33", "DRIVE=2")
+ PORT DQ_9 = MEM_DQ_9, UCF_NET_STRING=("LOC=T3", "IOSTANDARD = LVCMOS33", "DRIVE=2")
+ PORT DQ_10 = MEM_DQ_10, UCF_NET_STRING=("LOC=R3", "IOSTANDARD = LVCMOS33", "DRIVE=2")
+ PORT DQ_11 = MEM_DQ_11, UCF_NET_STRING=("LOC=V5", "IOSTANDARD = LVCMOS33", "DRIVE=2")
+ PORT DQ_12 = MEM_DQ_12, UCF_NET_STRING=("LOC=U5", "IOSTANDARD = LVCMOS33", "DRIVE=2")
+ PORT DQ_13 = MEM_DQ_13, UCF_NET_STRING=("LOC=V14", "IOSTANDARD = LVCMOS33", "DRIVE=2")
+ PORT DQ_14 = MEM_DQ_14, UCF_NET_STRING=("LOC=T14", "IOSTANDARD = LVCMOS33", "DRIVE=2")
+ PORT DQ_15 = MEM_DQ_15, UCF_NET_STRING=("LOC=R13", "IOSTANDARD = LVCMOS33", "DRIVE=2")
+	
+ PORT MEM_OEN = RAM_FLASH_OEN, UCF_NET_STRING=("LOC=L18", "IOSTANDARD = LVCMOS33", "DRIVE=2", "PULLUP")
+ PORT MEM_WEN = RAM_FLASH_WEN, UCF_NET_STRING=("LOC=M16", "IOSTANDARD = LVCMOS33", "DRIVE=2")
+
+ ### RAM SPECIFIC PORTS
+ PORT RAM_CEN_O = RAM_CEN_O, UCF_NET_STRING=("LOC=L15", "IOSTANDARD = LVCMOS33", "DRIVE=2", "PULLUP")
+ PORT RAM_BEN_O_0 = RAM_BEN_O_0, UCF_NET_STRING=("LOC=K15", "IOSTANDARD = LVCMOS33", "DRIVE=2", "PULLDOWN")
+ PORT RAM_BEN_O_1 = RAM_BEN_O_1, UCF_NET_STRING=("LOC=K16", "IOSTANDARD = LVCMOS33", "DRIVE=2", "PULLDOWN")
+
+ ### FLASH specific ports
+ PORT FLASH_ADDR_5 = FLASH_ADDR_5, UCF_NET_STRING=("LOC=F15", "IOSTANDARD = LVCMOS33", "DRIVE=2") # FLASH_ADDR_25
+ PORT FLASH_ADDR_6 = FLASH_ADDR_6, UCF_NET_STRING=("LOC=F16", "IOSTANDARD = LVCMOS33", "DRIVE=2") # FLASH_ADDR_24
+ PORT FLASH_ADDR_7 = FLASH_ADDR_7, UCF_NET_STRING=("LOC=C17", "IOSTANDARD = LVCMOS33", "DRIVE=2") # FLASH_ADDR_23
+
+ PORT FLASH_CEN_O = FLASH_CEN_O, UCF_NET_STRING=("LOC=L17", "IOSTANDARD = LVCMOS33", "DRIVE=2", "PULLUP")
+ PORT FLASH_RPN_O = FLASH_RPN_O, UCF_NET_STRING=("LOC=T4", "IOSTANDARD = LVCMOS33", "DRIVE=2", "PULLUP")
+	
+ ### QUAD SPI specific ports
+ PORT QUAD_SPI_C_O = QUAD_SPI_C, UCF_NET_STRING = ("LOC = R15", "IOSTANDARD = LVCMOS33", "PULLUP")
+ PORT QUAD_SPI_S_O = QUAD_SPI_S, UCF_NET_STRING = ("LOC = V3", "IOSTANDARD = LVCMOS33", "PULLUP")
+ PORT MOSI_QUAD_SPI = MOSI_QUAD_SPI, UCF_NET_STRING = ("LOC = T13", "IOSTANDARD = LVCMOS33")
+
+#   PORT A25 = RAM_FLASH_A25, UCF_NET_STRING=("LOC=F15", "IOSTANDARD = LVCMOS33", "DRIVE=2")
+ 
+   PORT M_ADV = net_gnd, UCF_NET_STRING=("LOC=H18", "IOSTANDARD = LVCMOS33")
+   PORT M_CLK = net_gnd, UCF_NET_STRING=("LOC=R10", "IOSTANDARD = LVCMOS33")
+   PORT M_CRE = net_gnd, UCF_NET_STRING=("LOC=M18", "IOSTANDARD = LVCMOS33")
+#  PORT M_WAIT = Mem_WAIT, UCF_NET_STRING=("LOC=V4", "IOSTANDARD = LVCMOS33", "PULLDOWN")
+
+### DIGILENT USB INTERFACE
+ PORT IFCLK = d_usb_epp_dstm_0_IFCLK, UCF_NET_STRING = ("LOC = H2", "IOSTANDARD = LVCMOS33")
+ PORT STMEN = d_usb_epp_dstm_0_STMEN, UCF_NET_STRING = ("LOC = F6", "IOSTANDARD = LVCMOS33")
+ PORT FLAGA = d_usb_epp_dstm_0_FLAGA, UCF_NET_STRING = ("LOC = H1", "IOSTANDARD = LVCMOS33")
+ PORT FLAGB = d_usb_epp_dstm_0_FLAGB, UCF_NET_STRING = ("LOC = K4", "IOSTANDARD = LVCMOS33")
+ PORT FLAGC = d_usb_epp_dstm_0_FLAGC, UCF_NET_STRING = ("LOC = F5", "IOSTANDARD = LVCMOS33")
+ PORT SLRD = d_usb_epp_dstm_0_SLRD, UCF_NET_STRING = ("LOC = C2", "IOSTANDARD = LVCMOS33")
+ PORT SLWR = d_usb_epp_dstm_0_SLWR, UCF_NET_STRING = ("LOC = C1", "IOSTANDARD = LVCMOS33")
+ PORT SLOE = d_usb_epp_dstm_0_SLOE, UCF_NET_STRING = ("LOC = H6", "IOSTANDARD = LVCMOS33")
+ PORT FIFOADR_0 = d_usb_epp_dstm_0_FIFOADR_0, UCF_NET_STRING = ("LOC = H5", "IOSTANDARD = LVCMOS33")
+ PORT FIFOADR_1 = d_usb_epp_dstm_0_FIFOADR_1, UCF_NET_STRING = ("LOC = E3", "IOSTANDARD = LVCMOS33")
+ PORT PKTEND = d_usb_epp_dstm_0_PKTEND, UCF_NET_STRING = ("LOC = D3", "IOSTANDARD = LVCMOS33")
+ PORT EPPRST = d_usb_epp_dstm_0_EPPRST, UCF_NET_STRING = ("LOC = F1", "IOSTANDARD = LVCMOS33")
+ PORT DB0 = d_usb_epp_dstm_0_DB_0, UCF_NET_STRING = ("LOC = E1", "IOSTANDARD = LVCMOS33")
+ PORT DB1 = d_usb_epp_dstm_0_DB_1, UCF_NET_STRING = ("LOC = F4", "IOSTANDARD = LVCMOS33")
+ PORT DB2 = d_usb_epp_dstm_0_DB_2, UCF_NET_STRING = ("LOC = F3", "IOSTANDARD = LVCMOS33")
+ PORT DB3 = d_usb_epp_dstm_0_DB_3, UCF_NET_STRING = ("LOC = D2", "IOSTANDARD = LVCMOS33")
+ PORT DB4 = d_usb_epp_dstm_0_DB_4, UCF_NET_STRING = ("LOC = D1", "IOSTANDARD = LVCMOS33")
+ PORT DB5 = d_usb_epp_dstm_0_DB_5, UCF_NET_STRING = ("LOC = H7", "IOSTANDARD = LVCMOS33")
+ PORT DB6 = d_usb_epp_dstm_0_DB_6, UCF_NET_STRING = ("LOC = G6", "IOSTANDARD = LVCMOS33")
+ PORT DB7 = d_usb_epp_dstm_0_DB_7, UCF_NET_STRING = ("LOC = E4", "IOSTANDARD = LVCMOS33")
+
+### DIGILENT QUAD SPI INTERFACE
+# PORT C = Quad_SPI_FLASH_C,
+# PORT S = Quad_SPI_FLASH_S,
+# PORT DQ3 = Quad_SPI_FLASH_DQ_3, UCF_NET_STRING = ("LOC = V14", "IOSTANDARD = LVCMOS33")
+# PORT DQ2 = Quad_SPI_FLASH_DQ_2, UCF_NET_STRING = ("LOC = T14", "IOSTANDARD = LVCMOS33")
+# PORT DQ1 = Quad_SPI_FLASH_DQ_1, UCF_NET_STRING = ("LOC = R13", "IOSTANDARD = LVCMOS33")
+# PORT DQ0 = Quad_SPI_FLASH_DQ_0,
+
+### SEVEN SEGMENT DECODER
+ PORT AN3 = Ssg_Decoder_0_AN_3, UCF_NET_STRING = ("LOC = P17", "IOSTANDARD = LVCMOS33")
+ PORT AN2 = Ssg_Decoder_0_AN_2, UCF_NET_STRING = ("LOC = P18", "IOSTANDARD = LVCMOS33")
+ PORT AN1 = Ssg_Decoder_0_AN_1, UCF_NET_STRING = ("LOC = N15", "IOSTANDARD = LVCMOS33")
+ PORT AN0 = Ssg_Decoder_0_AN_0, UCF_NET_STRING = ("LOC = N16", "IOSTANDARD = LVCMOS33")
+ 
+ PORT SEG7 = Ssg_Decoder_0_SEG_7, UCF_NET_STRING = ("LOC = L14", "IOSTANDARD = LVCMOS33")
+ PORT SEG6 = Ssg_Decoder_0_SEG_6, UCF_NET_STRING = ("LOC = N14", "IOSTANDARD = LVCMOS33")
+ PORT SEG5 = Ssg_Decoder_0_SEG_5, UCF_NET_STRING = ("LOC = M14", "IOSTANDARD = LVCMOS33")
+ PORT SEG4 = Ssg_Decoder_0_SEG_4, UCF_NET_STRING = ("LOC = U18", "IOSTANDARD = LVCMOS33")
+ PORT SEG3 = Ssg_Decoder_0_SEG_3, UCF_NET_STRING = ("LOC = U17", "IOSTANDARD = LVCMOS33")
+ PORT SEG2 = Ssg_Decoder_0_SEG_2, UCF_NET_STRING = ("LOC = T18", "IOSTANDARD = LVCMOS33")
+ PORT SEG1 = Ssg_Decoder_0_SEG_1, UCF_NET_STRING = ("LOC = T17", "IOSTANDARD = LVCMOS33")
+ PORT SEG0 = Ssg_Decoder_0_SEG_0, UCF_NET_STRING = ("LOC = M13", "IOSTANDARD = LVCMOS33")
+ 
+END

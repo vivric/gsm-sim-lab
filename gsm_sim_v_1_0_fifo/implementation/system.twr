@@ -2,7 +2,7 @@
 Release 14.7 Trace  (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-/home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -e 3
+/home/vivric/Documents/xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -e 3
 -xml system.twx system.ncd system.pcf
 
 Design file:              system.ncd
@@ -35,6 +35,13 @@ Timing constraint: PATH "TS_TIG_microblaze_0_Reset_path" TIG;
 --------------------------------------------------------------------------------
 
 ================================================================================
+Timing constraint: PATH "TS_TIG_microblaze_0_Interrupt_path" TIG;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
 Timing constraint: PATH "TS_sync_axi_intc_0_path" TIG;
 
  3 paths analyzed, 2 endpoints analyzed, 0 failing endpoints
@@ -58,7 +65,7 @@ Timing constraint: PATH "TS_MB_AXI_FP_axi_intc_0_path" TIG;
 ================================================================================
 Timing constraint: PATH "TS_AXI_MB_FP_axi_intc_0_path" TIG;
 
- 205022 paths analyzed, 10079 endpoints analyzed, 0 failing endpoints
+ 211124 paths analyzed, 10128 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors)
 --------------------------------------------------------------------------------
 
@@ -129,7 +136,7 @@ Clock to Setup on destination clock GCLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-GCLK           |   10.540|         |         |         |
+GCLK           |    9.362|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -138,13 +145,13 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 205037 paths, 0 nets, and 12087 connections
+Constraints cover 211139 paths, 0 nets, and 12056 connections
 
 Design statistics:
    Minimum period:   3.334ns   (Maximum frequency: 299.940MHz)
 
 
-Analysis completed Thu May 22 02:02:57 2014 
+Analysis completed Sat May 24 21:51:22 2014 
 --------------------------------------------------------------------------------
 
 Trace Settings:

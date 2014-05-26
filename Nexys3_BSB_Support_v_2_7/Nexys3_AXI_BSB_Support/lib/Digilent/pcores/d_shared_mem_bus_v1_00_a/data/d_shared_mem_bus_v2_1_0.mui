@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE doc SYSTEM "../../ipdialog.dtd" [
+	<!ENTITY C_PSRAM_RW_CYCLE_NS '
+	<widget id="C_PSRAM_RW_CYCLE_NS">
+		<key>C_PSRAM_RW_CYCLE_NS</key>
+		<label>PSRAM R/W Cycle Time (ns)</label>
+		<tip></tip>
+	</widget>
+	'>
+	<!ENTITY C_FLASH_RD_CYCLE_NS '
+	<widget id="C_FLASH_RD_CYCLE_NS">
+		<key>C_FLASH_RD_CYCLE_NS</key>
+		<label>Flash Rd Cycle Time (ns)</label>
+		<tip></tip>
+	</widget>
+	'>
+	<!ENTITY C_FLASH_WR_CYCLE_NS '
+		<widget id="C_FLASH_WR_CYCLE_NS">
+		<key>C_FLASH_RD_CYCLE_NS</key>
+		<label>Flash Wr Cycle Time (ns)</label>
+		<tip></tip>
+        </widget>
+	'>
+	<!ENTITY C_QSPI_BASEADDR '
+		<widget id="C_QSPI_BASEADDR">
+		<key>C_QSPI_BASEADDR</key>
+		<label>C_QSPI_BASEADDR</label>
+		<tip></tip>
+        </widget>
+	'>
+	<!ENTITY C_QSPI_HIGHADDR '
+		<widget id="C_QSPI_HIGHADDR">
+		<key>C_QSPI_HIGHADDR</key>
+		<label>C_QSPI_HIGHADDR</label>
+		<tip></tip>
+        </widget>
+	'>
+	<!ENTITY C_PSRAM_BASEADDR '
+		<widget id="C_PSRAM_BASEADDR">
+		<key>C_PSRAM_BASEADDR</key>
+		<label>C_PSRAM_BASEADDR</label>
+		<tip></tip>
+        </widget>
+	'>
+	<!ENTITY C_PSRAM_HIGHADDR '
+		<widget id="C_PSRAM_HIGHADDR">
+		<key>C_PSRAM_HIGHADDR</key>
+		<label>C_PSRAM_HIGHADDR</label>
+		<tip></tip>
+        </widget>
+	'>
+	<!ENTITY C_FLASH_BASEADDR '
+		<widget id="C_FLASH_BASEADDR">
+		<key>C_FLASH_BASEADDR</key>
+		<label>C_FLASH_BASEADDR</label>
+		<tip></tip>
+        </widget>
+	'>
+	<!ENTITY C_FLASH_HIGHADDR '
+		<widget id="C_FLASH_HIGHADDR">
+		<key>C_FLASH_HIGHADDR</key>
+		<label>C_FLASH_HIGHADDR</label>
+		<tip></tip>
+        </widget>
+	'>
+	<!ENTITY C_S_AXI_PROTOCOL '
+		<widget id="C_S_AXI_PROTOCOL">
+		<key>C_S_AXI_PROTOCOL</key>
+		<label>AXI4Lite Protocol</label>
+		<tip></tip>
+        </widget>
+	'>
+]>
+
+<doc>
+	<view id="User">
+		<display>User</display>
+		<group id="Cntrl">
+			<display>Cntrl</display>
+			<item>&C_PSRAM_RW_CYCLE_NS;</item>
+			<item>&C_FLASH_RD_CYCLE_NS;</item>
+			<item>&C_FLASH_WR_CYCLE_NS;</item>		    	   
+		</group>
+		<group id="Hidden">
+			<display>Hidden</display>
+			<item>&C_S_AXI_PROTOCOL;</item>
+			<item>&C_QSPI_BASEADDR;</item>
+			<item>&C_QSPI_HIGHADDR;</item>
+			<item>&C_PSRAM_BASEADDR;</item>
+			<item>&C_PSRAM_HIGHADDR;</item>
+			<item>&C_FLASH_BASEADDR;</item>
+			<item>&C_FLASH_HIGHADDR;</item>
+		</group>
+	</view>
+</doc>

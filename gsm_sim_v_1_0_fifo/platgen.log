@@ -6,31 +6,31 @@ Command Line: platgen -p xc6slx16csg324-3 -lang vhdl -intstyle default -lp
 /home/vivric/Documents/Nexys3_BSB_Support_v_2_7/Nexys3_AXI_BSB_Support/lib/ -msg
 __xps/ise/xmsgprops.lst system.mhs 
 
-Parse /home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs ...
+Parse /home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs ...
 
 Read MPD definitions ...
 
 Overriding IP level properties ...
 INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
    PARAMETER C_ENDIANNESS value to 1 -
-   /home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pco
-   res/microblaze_v8_50_c/data/microblaze_v2_1_0.mpd line 198 
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   microblaze_v8_50_c/data/microblaze_v2_1_0.mpd line 198 
 INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
    PARAMETER C_ICACHE_USE_FSL value to 0 -
-   /home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pco
-   res/microblaze_v8_50_c/data/microblaze_v2_1_0.mpd line 339 
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   microblaze_v8_50_c/data/microblaze_v2_1_0.mpd line 339 
 INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
    PARAMETER C_DCACHE_USE_FSL value to 0 -
-   /home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pco
-   res/microblaze_v8_50_c/data/microblaze_v2_1_0.mpd line 369 
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   microblaze_v8_50_c/data/microblaze_v2_1_0.mpd line 369 
 INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4lite_0 - tcl is
    overriding PARAMETER C_BASEFAMILY value to spartan6 -
-   /home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pco
-   res/axi_interconnect_v1_06_a/data/axi_interconnect_v2_1_0.mpd line 81 
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   axi_interconnect_v1_06_a/data/axi_interconnect_v2_1_0.mpd line 81 
 INFO:EDK:4130 - IPNAME: axi_intc, INSTANCE:axi_intc_0 - tcl is overriding
    PARAMETER C_NUM_INTR_INPUTS value to 1 -
-   /home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pco
-   res/axi_intc_v1_04_a/data/axi_intc_v2_1_0.mpd line 85 
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   axi_intc_v1_04_a/data/axi_intc_v2_1_0.mpd line 85 
 
 Computing clock values...
 INFO:EDK:740 - Cannot determine the input clock associated with port :
@@ -55,16 +55,16 @@ Address Map for Processor microblaze_0
   (0x78c00000-0x78c0ffff) sc_uart_0	axi4lite_0
 INFO:EDK:4130 - IPNAME: lmb_v10, INSTANCE:microblaze_0_ilmb - tool is overriding
    PARAMETER C_LMB_NUM_SLAVES value to 1 -
-   /home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pco
-   res/lmb_v10_v2_00_b/data/lmb_v10_v2_1_0.mpd line 82 
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   lmb_v10_v2_00_b/data/lmb_v10_v2_1_0.mpd line 82 
 INFO:EDK:4130 - IPNAME: lmb_v10, INSTANCE:microblaze_0_dlmb - tool is overriding
    PARAMETER C_LMB_NUM_SLAVES value to 1 -
-   /home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pco
-   res/lmb_v10_v2_00_b/data/lmb_v10_v2_1_0.mpd line 82 
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   lmb_v10_v2_00_b/data/lmb_v10_v2_1_0.mpd line 82 
 INFO:EDK:4130 - IPNAME: bram_block, INSTANCE:microblaze_0_bram_block - tool is
    overriding PARAMETER C_MEMSIZE value to 0x2000 -
-   /home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pco
-   res/bram_block_v1_00_a/data/bram_block_v2_1_0.mpd line 78 
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   bram_block_v1_00_a/data/bram_block_v2_1_0.mpd line 78 
 
 Checking platform address map ...
 
@@ -76,12 +76,12 @@ IPNAME: axi_interconnect, INSTANCE: axi4lite_0 - 1 master(s) : 7 slave(s)
 Checking port drivers...
 WARNING:EDK:4180 - PORT: Interrupt_address_in, CONNECTOR: Interrupt_address_in -
    No driver found. Port will be driven to GND -
-   /home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pco
-   res/axi_intc_v1_04_a/data/axi_intc_v2_1_0.mpd line 131 
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   axi_intc_v1_04_a/data/axi_intc_v2_1_0.mpd line 131 
 WARNING:EDK:4181 - PORT: Processor_ack_out, CONNECTOR: Processor_ack_out -
    floating connection -
-   /home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pco
-   res/axi_intc_v1_04_a/data/axi_intc_v2_1_0.mpd line 132 
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   axi_intc_v1_04_a/data/axi_intc_v2_1_0.mpd line 132 
 
 Performing Clock DRCs...
 
@@ -90,50 +90,54 @@ Performing Reset DRCs...
 Overriding system level properties...
 INFO:EDK:4130 - IPNAME: lmb_bram_if_cntlr, INSTANCE:microblaze_0_i_bram_ctrl -
    tcl is overriding PARAMETER C_MASK value to 0x40000000 -
-   /home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pco
-   res/lmb_bram_if_cntlr_v3_10_c/data/lmb_bram_if_cntlr_v2_1_0.mpd line 92 
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   lmb_bram_if_cntlr_v3_10_c/data/lmb_bram_if_cntlr_v2_1_0.mpd line 92 
 INFO:EDK:4130 - IPNAME: lmb_bram_if_cntlr, INSTANCE:microblaze_0_d_bram_ctrl -
    tcl is overriding PARAMETER C_MASK value to 0x40000000 -
-   /home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pco
-   res/lmb_bram_if_cntlr_v3_10_c/data/lmb_bram_if_cntlr_v2_1_0.mpd line 92 
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   lmb_bram_if_cntlr_v3_10_c/data/lmb_bram_if_cntlr_v2_1_0.mpd line 92 
 INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
    PARAMETER C_D_AXI value to 1 -
-   /home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pco
-   res/microblaze_v8_50_c/data/microblaze_v2_1_0.mpd line 232 
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   microblaze_v8_50_c/data/microblaze_v2_1_0.mpd line 232 
 INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
    PARAMETER C_ADDR_TAG_BITS value to 0 -
-   /home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pco
-   res/microblaze_v8_50_c/data/microblaze_v2_1_0.mpd line 337 
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   microblaze_v8_50_c/data/microblaze_v2_1_0.mpd line 337 
 INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
    PARAMETER C_DCACHE_ADDR_TAG value to 0 -
-   /home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pco
-   res/microblaze_v8_50_c/data/microblaze_v2_1_0.mpd line 367 
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   microblaze_v8_50_c/data/microblaze_v2_1_0.mpd line 367 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_USE_INTERRUPT value to 1 -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   microblaze_v8_50_c/data/microblaze_v2_1_0.mpd line 401 
 INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
    PARAMETER C_USE_EXT_BRK value to 1 -
-   /home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pco
-   res/microblaze_v8_50_c/data/microblaze_v2_1_0.mpd line 402 
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   microblaze_v8_50_c/data/microblaze_v2_1_0.mpd line 402 
 INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
    PARAMETER C_USE_EXT_NM_BRK value to 1 -
-   /home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pco
-   res/microblaze_v8_50_c/data/microblaze_v2_1_0.mpd line 403 
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   microblaze_v8_50_c/data/microblaze_v2_1_0.mpd line 403 
 
 INFO: Setting C_RANGE_CHECK = ON for axi_interconnect axi4lite_0.
 INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4lite_0 - tcl is
    overriding PARAMETER C_RANGE_CHECK value to 1 -
-   /home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pco
-   res/axi_interconnect_v1_06_a/data/axi_interconnect_v2_1_0.mpd line 149 
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   axi_interconnect_v1_06_a/data/axi_interconnect_v2_1_0.mpd line 149 
 INFO:EDK:4130 - IPNAME: axi_intc, INSTANCE:axi_intc_0 - tcl is overriding
    PARAMETER C_KIND_OF_INTR value to 0b11111111111111111111111111111111 -
-   /home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pco
-   res/axi_intc_v1_04_a/data/axi_intc_v2_1_0.mpd line 87 
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   axi_intc_v1_04_a/data/axi_intc_v2_1_0.mpd line 87 
 INFO:EDK:4130 - IPNAME: axi_intc, INSTANCE:axi_intc_0 - tcl is overriding
    PARAMETER C_KIND_OF_EDGE value to 0b11111111111111111111111111111111 -
-   /home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pco
-   res/axi_intc_v1_04_a/data/axi_intc_v2_1_0.mpd line 88 
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   axi_intc_v1_04_a/data/axi_intc_v2_1_0.mpd line 88 
 INFO:EDK:4130 - IPNAME: axi_intc, INSTANCE:axi_intc_0 - tcl is overriding
    PARAMETER C_KIND_OF_LVL value to 0b11111111111111111111111111111111 -
-   /home/vivric/Documents/xilinx_ISE/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pco
-   res/axi_intc_v1_04_a/data/axi_intc_v2_1_0.mpd line 89 
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   axi_intc_v1_04_a/data/axi_intc_v2_1_0.mpd line 89 
 
 Running system level update procedures...
 
@@ -178,58 +182,58 @@ Managing hardware (BBD-specified) netlist files ...
 
 Managing cache ...
 IPNAME:proc_sys_reset INSTANCE:proc_sys_reset_0 -
-/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 27 -
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 27 -
 Copying cache implementation netlist
 IPNAME:lmb_v10 INSTANCE:microblaze_0_ilmb -
-/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 42 -
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 42 -
 Copying cache implementation netlist
 IPNAME:lmb_bram_if_cntlr INSTANCE:microblaze_0_i_bram_ctrl -
-/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 49 -
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 49 -
 Copying cache implementation netlist
 IPNAME:lmb_v10 INSTANCE:microblaze_0_dlmb -
-/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 58 -
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 58 -
 Copying cache implementation netlist
 IPNAME:lmb_bram_if_cntlr INSTANCE:microblaze_0_d_bram_ctrl -
-/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 65 -
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 65 -
 Copying cache implementation netlist
 IPNAME:bram_block INSTANCE:microblaze_0_bram_block -
-/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 74 -
-Copying cache implementation netlist
-IPNAME:microblaze INSTANCE:microblaze_0 -
-/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 81 -
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 74 -
 Copying cache implementation netlist
 IPNAME:mdm INSTANCE:debug_module -
-/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 104 -
-Copying cache implementation netlist
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 105
+- Copying cache implementation netlist
 IPNAME:axi_interconnect INSTANCE:axi4lite_0 -
-/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 129 -
-Copying cache implementation netlist
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 130
+- Copying cache implementation netlist
 IPNAME:axi_uartlite INSTANCE:rs232_uart_1 -
-/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 137 -
-Copying cache implementation netlist
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 138
+- Copying cache implementation netlist
 IPNAME:axi_gpio INSTANCE:push_buttons_4bits -
-/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 152 -
-Copying cache implementation netlist
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 153
+- Copying cache implementation netlist
 IPNAME:axi_gpio INSTANCE:leds_8bits -
-/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 166 -
-Copying cache implementation netlist
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 167
+- Copying cache implementation netlist
 IPNAME:axi_gpio INSTANCE:dip_switches_8bits -
-/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 180 -
-Copying cache implementation netlist
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 181
+- Copying cache implementation netlist
+IPNAME:fit_timer INSTANCE:fit_timer_0 -
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 195
+- Copying cache implementation netlist
 IPNAME:axi_intc INSTANCE:axi_intc_0 -
-/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 204 -
-Copying cache implementation netlist
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 205
+- Copying cache implementation netlist
 IPNAME:sc_uart INSTANCE:sc_uart_0 -
-/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 216 -
-Copying cache implementation netlist
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 218
+- Copying cache implementation netlist
 
 Elaborating instances ...
 IPNAME:bram_block INSTANCE:microblaze_0_bram_block -
-/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 74 -
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 74 -
 elaborating IP
 IPNAME:clock_generator INSTANCE:clock_generator_0 -
-/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 117 -
-elaborating IP
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 118
+- elaborating IP
 ClkGen elaborate status: PASSED
 ----------------------------------------
 ----------------------------------------
@@ -253,21 +257,24 @@ Running XST synthesis ...
 INFO:EDK:4211 - The following instances are synthesized with XST. The MPD option
    IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
    synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
+INSTANCE:microblaze_0 -
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 81 -
+Running XST synthesis
 INSTANCE:clock_generator_0 -
-/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 117 -
-Running XST synthesis
-INSTANCE:fit_timer_0 -
-/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 194 -
-Running XST synthesis
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 118
+- Running XST synthesis
 
 Running NGCBUILD ...
-IPNAME:system_clock_generator_0_wrapper INSTANCE:clock_generator_0 -
-/home/vivric/workspace/gsm_sim_lab/gsm_sim_v_1_0_fifo/system.mhs line 117 -
+IPNAME:system_microblaze_0_wrapper INSTANCE:microblaze_0 -
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 81 -
 Running NGCBUILD
+IPNAME:system_clock_generator_0_wrapper INSTANCE:clock_generator_0 -
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 118
+- Running NGCBUILD
 INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
    If any constraint needs to be overridden, this should be done by modifying
    the data/system.ucf file.
 
 Rebuilding cache ...
 
-Total run time: 53.00 seconds
+Total run time: 98.00 seconds

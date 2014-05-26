@@ -1852,6 +1852,9 @@ architecture STRUCTURE of system is
   signal axi4lite_0_S_WREADY : std_logic_vector(0 to 0);
   signal axi4lite_0_S_WSTRB : std_logic_vector(3 downto 0);
   signal axi4lite_0_S_WVALID : std_logic_vector(0 to 0);
+  signal axi_intc_0_INTERRUPT_Interrupt : std_logic;
+  signal axi_intc_0_INTERRUPT_Interrupt_Ack : std_logic_vector(1 downto 0);
+  signal axi_intc_0_INTERRUPT_Interrupt_Address : std_logic_vector(0 to 31);
   signal clk_100_0000MHz : std_logic_vector(0 to 0);
   signal fit_timer_0_Interrupt : std_logic_vector(0 downto 0);
   signal microblaze_0_d_bram_ctrl_2_microblaze_0_bram_block_BRAM_Addr : std_logic_vector(0 to 31);
@@ -2334,9 +2337,9 @@ begin
       CLK => pgassign1(6),
       RESET => microblaze_0_dlmb_LMB_Rst,
       MB_RESET => proc_sys_reset_0_MB_Reset,
-      INTERRUPT => net_gnd0,
-      INTERRUPT_ADDRESS => net_gnd32,
-      INTERRUPT_ACK => open,
+      INTERRUPT => axi_intc_0_INTERRUPT_Interrupt,
+      INTERRUPT_ADDRESS => axi_intc_0_INTERRUPT_Interrupt_Address,
+      INTERRUPT_ACK => axi_intc_0_INTERRUPT_Interrupt_Ack(1 downto 0),
       EXT_BRK => Ext_BRK,
       EXT_NM_BRK => Ext_NM_BRK,
       DBG_STOP => net_gnd0,
@@ -3704,9 +3707,9 @@ begin
       S_AXI_RVALID => axi4lite_0_M_RVALID(5),
       S_AXI_RREADY => axi4lite_0_M_RREADY(5),
       Intr => fit_timer_0_Interrupt(0 downto 0),
-      Irq => open,
-      Interrupt_address => open,
-      Processor_ack => net_gnd2(0 to 1),
+      Irq => axi_intc_0_INTERRUPT_Interrupt,
+      Interrupt_address => axi_intc_0_INTERRUPT_Interrupt_Address(0 to 31),
+      Processor_ack => axi_intc_0_INTERRUPT_Interrupt_Ack,
       Processor_clk => pgassign1(6),
       Processor_rst => proc_sys_reset_0_Peripheral_aresetn(0),
       Interrupt_address_in => net_gnd32(0 to 31),
