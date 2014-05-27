@@ -1,0 +1,10 @@
+Command line:
+   isim_system
+     -simmode  gui
+     -simrunnum  0
+     -socket  42008
+
+Mon May 26 21:04:33 2014
+
+
+ Elaboration Time: 0.43 sec

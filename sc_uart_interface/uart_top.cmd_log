@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/ga38qol/Downloads/sc_uart_interface/uart_top.xst" -ofn "/home/ga38qol/Downloads/sc_uart_interface/uart_top.syr" 

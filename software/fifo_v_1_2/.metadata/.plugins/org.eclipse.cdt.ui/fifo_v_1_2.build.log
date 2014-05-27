@@ -1,6 +1,6 @@
-03:04:47 **** Incremental Build of configuration Debug for project fifo_v_1_2 ****
+23:53:24 **** Incremental Build of configuration Debug for project fifo_v_1_2 ****
 make all 
 make: Nothing to be done for `all'.
 
-03:04:47 Build Finished (took 63ms)
+23:53:24 Build Finished (took 72ms)
 

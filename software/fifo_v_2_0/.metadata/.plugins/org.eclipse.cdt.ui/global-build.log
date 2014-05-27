@@ -1,0 +1,95 @@
+22:56:28 **** Clean-only build of configuration Release for project sc_uart_v_2_0 ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  sc_uart_v_2_0.elf.size  sc_uart_v_2_0.elf.elfcheck  sc_uart_v_2_0.elf
+ 
+22:56:28 **** Clean-only build of project sc_uart_v_2_0_bsp ****
+make -k clean 
+rm -rf microblaze_0
+22:56:28 **** Build of project sc_uart_v_2_0_bsp ****
+make -k all 
+libgen -hw ../gsm_integration_v_1_0_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../gsm_integration_v_1_0_hw_platform/system.xml -pe
+microblaze_0 -log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'gmake -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mlittle-endian -mno-xl-soft-mul -mxl-barrel-shift
+-mxl-pattern-compare -mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g
+-ffunction-sections -fdata-sections"'.
+
+Running libs - 'gmake -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mlittle-endian -mno-xl-soft-mul -mxl-barrel-shift
+-mxl-pattern-compare -mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g
+-ffunction-sections -fdata-sections"'.
+Compiling common
+Compiling standalone
+Compiling uartlite
+Compiling gpio
+Compiling bram
+Compiling cpu
+Running execs_generate.
+Finished building libraries
+22:56:34 **** Clean-only build of configuration Release for project sc_uart_v_2_0 ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  sc_uart_v_2_0.elf.size  sc_uart_v_2_0.elf.elfcheck  sc_uart_v_2_0.elf
+ 
+22:56:34 **** Build of configuration Release for project sc_uart_v_2_0 ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O2 -c -fmessage-length=0 -I../../sc_uart_v_2_0_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O2 -c -fmessage-length=0 -I../../sc_uart_v_2_0_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: sc_uart_v_2_0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sc_uart_v_2_0_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sc_uart_v_2_0.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sc_uart_v_2_0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size sc_uart_v_2_0.elf  |tee "sc_uart_v_2_0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3646	    356	   2100	   6102	   17d6	sc_uart_v_2_0.elf
+Finished building: sc_uart_v_2_0.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck sc_uart_v_2_0.elf -hw ../../gsm_integration_v_1_0_hw_platform/system.xml -pe microblaze_0  |tee "sc_uart_v_2_0.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../gsm_integration_v_1_0_hw_platform/system.xml
+-pe microblaze_0 sc_uart_v_2_0.elf 
+
+ELF file	: sc_uart_v_2_0.elf
+elfcheck passed.
+Finished building: sc_uart_v_2_0.elf.elfcheck
+ 
+22:57:33 **** Auto Build of project sc_uart_v_2_0_bsp ****
+make -k all 
+Finished building libraries
+22:58:35 **** Incremental Build of configuration Release for project sc_uart_v_2_0 ****
+make all 
+make: Nothing to be done for `all'.
+22:59:02 **** Auto Build of project sc_uart_v_2_0_bsp ****
+make -k all 
+Finished building libraries
+22:59:07 **** Incremental Build of configuration Release for project sc_uart_v_2_0 ****
+make all 
+make: Nothing to be done for `all'.

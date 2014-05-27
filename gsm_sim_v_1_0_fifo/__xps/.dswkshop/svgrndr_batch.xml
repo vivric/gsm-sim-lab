@@ -35,6 +35,12 @@
 
   <RENDERIMG RASNAME="/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/imgs/sc_uart_0.jpg" SVGNAME="/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/imgs/sc_uart_0.svg" TMPSVGFN="/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/__xps/.dswkshop/sc_uart_0.svg"/>
 
+  <RENDERIMG RASNAME="/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/imgs/chipscope_icon_0.jpg" SVGNAME="/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/imgs/chipscope_icon_0.svg" TMPSVGFN="/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/__xps/.dswkshop/chipscope_icon_0.svg"/>
+
+  <RENDERIMG RASNAME="/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/imgs/chipscope_axi_monitor_0.jpg" SVGNAME="/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/imgs/chipscope_axi_monitor_0.svg" TMPSVGFN="/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/__xps/.dswkshop/chipscope_axi_monitor_0.svg"/>
+
+  <RENDERIMG RASNAME="/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/imgs/chipscope_ila_0.jpg" SVGNAME="/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/imgs/chipscope_ila_0.svg" TMPSVGFN="/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/__xps/.dswkshop/chipscope_ila_0.svg"/>
+
   <RENDERIMG RASNAME="/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/imgs/system_blkd.jpg" SVGNAME="/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/imgs/system_blkd.svg" TMPSVGFN="/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/__xps/.dswkshop/system_blkd.svg"/>
 
 </RENDERBATCH>

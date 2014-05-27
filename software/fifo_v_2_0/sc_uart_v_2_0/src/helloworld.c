@@ -1,0 +1,242 @@
+/*
+ * Copyright (c) 2009-2012 Xilinx, Inc.  All rights reserved.
+ *
+ * Xilinx, Inc.
+ * XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS" AS A
+ * COURTESY TO YOU.  BY PROVIDING THIS DESIGN, CODE, OR INFORMATION AS
+ * ONE POSSIBLE   IMPLEMENTATION OF THIS FEATURE, APPLICATION OR
+ * STANDARD, XILINX IS MAKING NO REPRESENTATION THAT THIS IMPLEMENTATION
+ * IS FREE FROM ANY CLAIMS OF INFRINGEMENT, AND YOU ARE RESPONSIBLE
+ * FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE FOR YOUR IMPLEMENTATION.
+ * XILINX EXPRESSLY DISCLAIMS ANY WARRANTY WHATSOEVER WITH RESPECT TO
+ * THE ADEQUACY OF THE IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO
+ * ANY WARRANTIES OR REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE
+ * FROM CLAIMS OF INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY
+ * AND FITNESS FOR A PARTICULAR PURPOSE.
+ *
+ */
+
+/*
+ * helloworld.c: simple test application
+ *
+ * This application configures UART 16550 to baud rate 9600.
+ * PS7 UART (Zynq) is not initialized by this application, since
+ * bootrom/bsp configures it to baud rate 115200
+ *
+ * ------------------------------------------------
+ * | UART TYPE   BAUD RATE                        |
+ * ------------------------------------------------
+ *   uartns550   9600
+ *   uartlite    Configurable only in HW design
+ *   ps7_uart    115200 (configured by bootrom/bsp)
+ */
+
+#include <stdio.h>
+#include "platform.h"
+
+//#include "xio.h"
+//#include "xintc_l.h"
+#include "xparameters.h"
+#include "sc_uart_interface_modified.h"
+
+#define axi_rx_valid_mask 		0x80000000
+#define rx_data_mask 			0x000000FF
+#define uart_reset_mask			0x20000000
+
+#define axi_rx_recieved_true	0x40000000
+#define axi_rx_recieved_false	0x00000000
+#define axi_tx_valid_true		0x80000000
+#define axi_tx_valid_false		0x00000000
+#define axi_tx_recieved_mask	0x40000000
+#define N				256
+
+void print(char *str);
+void initialize();
+void transmit_ATR_fn();
+void recieve_fn();
+void transmit_fn();
+
+volatile u32 rx_reg, tx_reg = 0, rx_data = 0;
+volatile u32 atr_data[]={0x3B,0XBE,0X96,0X00,0x80,0x1f,0xc7,0x80,0x31,0xe0,0x73,0xfe,0x21,0x13,0x62,0x00,0x2a,0x83,0x81,0x90,0x00,0x44};
+volatile u32 data[N]={0};
+int read=0;
+int write=0;
+char fifo_full,fifo_empty;
+
+enum mode {transmit_ATR,transmit_mode,recieve_mode};
+enum mode state;
+void status_read() {
+
+// transmit protocol
+	int a=20;
+	while(a--)
+	print("Interrupt occurred and interrupt is disabled");
+	/*XIntc_MasterDisable(XPAR_INTC_SINGLE_BASEADDR);
+
+	rx_reg = SC_UART_INTERFACE_MODIFIED_mReadReg(XPAR_SC_UART_INTERFACE_MODIFIED_0_BASEADDR, SC_UART_INTERFACE_MODIFIED_SLV_REG1_OFFSET);
+	if ((rx_reg & axi_rx_valid_mask)) {
+		print("Data is ready to be fetched from the uart");
+		rx_data = rx_reg & rx_data_mask;
+		SC_UART_INTERFACE_MODIFIED_mWriteReg(XPAR_SC_UART_INTERFACE_MODIFIED_0_BASEADDR, SC_UART_INTERFACE_MODIFIED_SLV_REG0_OFFSET,
+				axi_rx_recieved_true);
+		print("Waiting for axi_rx_valid to be reset by uart");
+		while (SC_UART_INTERFACE_MODIFIED_mReadReg(XPAR_SC_UART_INTERFACE_MODIFIED_0_BASEADDR,
+				SC_UART_INTERFACE_MODIFIED_SLV_REG1_OFFSET) & axi_rx_valid_mask)
+			;
+		SC_UART_INTERFACE_MODIFIED_mWriteReg(XPAR_SC_UART_INTERFACE_MODIFIED_0_BASEADDR, SC_UART_INTERFACE_MODIFIED_SLV_REG0_OFFSET,
+				axi_rx_recieved_false);
+		print("Rx transaction successful");
+	}
+	XIntc_MasterEnable(XPAR_INTC_SINGLE_BASEADDR);*/
+
+}
+
+void push(u32 d){
+	if(((write+1)%N==read)){
+		print("Fifo is full ..... resetting to transmit mode");
+		fifo_full=1;
+		state=transmit_mode;
+	}
+	else
+	{
+	fifo_full=0;
+	data[write] = d;
+	write = (write+1) % N;
+	}
+}
+
+u32 pop(){
+	u32 d;
+	if(read==write){
+		print("Fifo empty...switching to recieve mode");
+		state=recieve_mode;
+		fifo_empty=1;
+		return(0xDEAD);
+	}
+	else{
+	fifo_empty=0;
+	d=data[read];
+	read=(read+1)%N;
+	return d;
+	}
+}
+
+void initialize()
+{
+	state=recieve_mode;
+	fifo_full =0;
+	fifo_empty=1;
+	print("Sim card initialized...\n");
+}
+
+void transmit_ATR_fn(){
+	int i=0;
+	//char buffer[15];
+	//vsprintf(buffer,"%d",rx_reg);
+
+	for (i=0;i<22;i++){
+		print("Transmitting ATR... \n");
+		SC_UART_INTERFACE_MODIFIED_mWriteReg(XPAR_SC_UART_INTERFACE_MODIFIED_0_BASEADDR, SC_UART_INTERFACE_MODIFIED_SLV_REG0_OFFSET,
+				axi_tx_valid_true|atr_data[i]);
+		print("Data written in the TX register ...Waiting for acknowledgment from SC_UART... \n");
+
+		while (!(SC_UART_INTERFACE_MODIFIED_mReadReg(XPAR_SC_UART_INTERFACE_MODIFIED_0_BASEADDR,
+									SC_UART_INTERFACE_MODIFIED_SLV_REG1_OFFSET) & axi_tx_recieved_mask));
+		SC_UART_INTERFACE_MODIFIED_mWriteReg(XPAR_SC_UART_INTERFACE_MODIFIED_0_BASEADDR, SC_UART_INTERFACE_MODIFIED_SLV_REG0_OFFSET,
+				axi_tx_valid_false);
+		print("axi_tx_valid resetted ...Waiting for SC_UART to reset axi_tx_recieved... \n");
+				while ((SC_UART_INTERFACE_MODIFIED_mReadReg(XPAR_SC_UART_INTERFACE_MODIFIED_0_BASEADDR,
+											SC_UART_INTERFACE_MODIFIED_SLV_REG1_OFFSET) & axi_tx_recieved_mask));
+		print("ATR byte transmitted... Switching to recieve mode... \n");
+	}
+	print("ATR 22 bytes transmitted... Switching to recieve mode... \n");
+		state=recieve_mode;
+}
+void transmit_fn()
+{
+	u32 tx_data=0x5;
+	print("Transmitting data ... \n");
+	SC_UART_INTERFACE_MODIFIED_mWriteReg(XPAR_SC_UART_INTERFACE_MODIFIED_0_BASEADDR, SC_UART_INTERFACE_MODIFIED_SLV_REG0_OFFSET,
+			axi_tx_valid_true|tx_data);
+	print("Data written in the TX register ...Waiting for acknowledgment from SC_UART... \n");
+	while (!(SC_UART_INTERFACE_MODIFIED_mReadReg(XPAR_SC_UART_INTERFACE_MODIFIED_0_BASEADDR,
+								SC_UART_INTERFACE_MODIFIED_SLV_REG1_OFFSET) & axi_tx_recieved_mask));
+	SC_UART_INTERFACE_MODIFIED_mWriteReg(XPAR_SC_UART_INTERFACE_MODIFIED_0_BASEADDR, SC_UART_INTERFACE_MODIFIED_SLV_REG0_OFFSET,
+			axi_tx_valid_false);
+	print("axi_tx_valid resetted ...Waiting for SC_UART to reset axi_tx_recieved... \n");
+		while ((SC_UART_INTERFACE_MODIFIED_mReadReg(XPAR_SC_UART_INTERFACE_MODIFIED_0_BASEADDR,
+									SC_UART_INTERFACE_MODIFIED_SLV_REG1_OFFSET) & axi_tx_recieved_mask));
+	print("Data transmitted... Switching to recieve mode... \n");
+	state=recieve_mode;
+
+}
+
+
+void recieve_fn()
+{
+	if ((rx_reg & axi_rx_valid_mask)) {
+					print("Data is ready to be fetched from the uart \n");
+					rx_data = rx_reg & rx_data_mask;
+					SC_UART_INTERFACE_MODIFIED_mWriteReg(XPAR_SC_UART_INTERFACE_MODIFIED_0_BASEADDR, SC_UART_INTERFACE_MODIFIED_SLV_REG0_OFFSET,
+							axi_rx_recieved_true);
+					print("Waiting for axi_rx_valid to be reset by uart \n");
+					while (SC_UART_INTERFACE_MODIFIED_mReadReg(XPAR_SC_UART_INTERFACE_MODIFIED_0_BASEADDR,
+							SC_UART_INTERFACE_MODIFIED_SLV_REG1_OFFSET) & axi_rx_valid_mask)
+						;
+					SC_UART_INTERFACE_MODIFIED_mWriteReg(XPAR_SC_UART_INTERFACE_MODIFIED_0_BASEADDR, SC_UART_INTERFACE_MODIFIED_SLV_REG0_OFFSET,
+							axi_rx_recieved_false);
+					print("Rx transaction successful \n");
+					state=transmit_mode;
+				}
+}
+
+int main() {
+	init_platform();
+	initialize();
+
+
+/*	microblaze_enable_interrupts();
+
+	XIntc_RegisterHandler(XPAR_INTC_SINGLE_BASEADDR, XPAR_INTC_0_DEVICE_ID,(XInterruptHandler)status_read, XPAR_INTC_SINGLE_BASEADDR);
+
+	XIntc_MasterEnable(XPAR_INTC_SINGLE_BASEADDR);
+
+	XIntc_EnableIntr(XPAR_INTC_SINGLE_BASEADDR,
+			XPAR_FIT_TIMER_0_INTERRUPT_MASK);
+
+	print("Wait for Interrupts.... \n\r");*/
+	while (1){
+
+		rx_reg = SC_UART_INTERFACE_MODIFIED_mReadReg(XPAR_SC_UART_INTERFACE_MODIFIED_0_BASEADDR, SC_UART_INTERFACE_MODIFIED_SLV_REG1_OFFSET);
+		if(rx_reg & uart_reset_mask){
+			initialize();
+			print("Reset active ...\n");
+			print("Waiting for reset to go low ...\n");
+			while(SC_UART_INTERFACE_MODIFIED_mReadReg(XPAR_SC_UART_INTERFACE_MODIFIED_0_BASEADDR, SC_UART_INTERFACE_MODIFIED_SLV_REG1_OFFSET)&uart_reset_mask);
+			print("Reset deactivated ...\n");
+			state=transmit_ATR;
+
+		}
+		else
+		{
+			switch(state){
+			case transmit_ATR:
+				transmit_ATR_fn();
+				//print("Current state : Transmit ATR\n");
+			//	state=recieve_mode;
+			break;
+			case recieve_mode:
+				recieve_fn();
+			//	state=transmit_mode;
+			break;
+			case transmit_mode:
+				transmit_fn();
+			//	state=recieve_mode;
+			break;
+			}
+
+		}
+	}
+
+	return 0;
+}

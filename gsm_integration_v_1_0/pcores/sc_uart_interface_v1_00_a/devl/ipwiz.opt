@@ -1,0 +1,11 @@
+-batch 
+-create sc_uart_interface 
+-ver 1.00.a 
+-dir "/home/ga37jom/GSM/prog" 
+-lang vhdl 
+-bus axi4lite s 
+-reg 2 
+-xps 
+-ise 
+-bfmsim all
+-driver 

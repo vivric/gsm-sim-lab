@@ -31,6 +31,10 @@ INFO:EDK:4130 - IPNAME: axi_intc, INSTANCE:axi_intc_0 - tcl is overriding
    PARAMETER C_NUM_INTR_INPUTS value to 1 -
    /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
    axi_intc_v1_04_a/data/axi_intc_v2_1_0.mpd line 85 
+AXI4 or AXI4-Lite Monitor Instantiated
+Setting port widths for BURST parameters equal to 8
+AXI4 or AXI4-Lite Monitor Instantiated
+Setting port widths for LOCK parameters equal to 1
 
 Computing clock values...
 INFO:EDK:740 - Cannot determine the input clock associated with port :
@@ -78,10 +82,45 @@ WARNING:EDK:4180 - PORT: Interrupt_address_in, CONNECTOR: Interrupt_address_in -
    No driver found. Port will be driven to GND -
    /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
    axi_intc_v1_04_a/data/axi_intc_v2_1_0.mpd line 131 
+WARNING:EDK:4180 - PORT: tdi_in, CONNECTOR: bscan_tdi - No driver found. Port
+   will be driven to GND -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   chipscope_icon_v1_06_a/data/chipscope_icon_v2_1_0.mpd line 101 
+WARNING:EDK:4180 - PORT: reset_in, CONNECTOR: bscan_reset - No driver found.
+   Port will be driven to GND -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   chipscope_icon_v1_06_a/data/chipscope_icon_v2_1_0.mpd line 102 
+WARNING:EDK:4180 - PORT: shift_in, CONNECTOR: bscan_shift - No driver found.
+   Port will be driven to GND -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   chipscope_icon_v1_06_a/data/chipscope_icon_v2_1_0.mpd line 103 
+WARNING:EDK:4180 - PORT: update_in, CONNECTOR: bscan_update - No driver found.
+   Port will be driven to GND -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   chipscope_icon_v1_06_a/data/chipscope_icon_v2_1_0.mpd line 104 
+WARNING:EDK:4180 - PORT: sel_in, CONNECTOR: bscan_sel1 - No driver found. Port
+   will be driven to GND -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   chipscope_icon_v1_06_a/data/chipscope_icon_v2_1_0.mpd line 105 
+WARNING:EDK:4180 - PORT: drck_in, CONNECTOR: bscan_drck1 - No driver found. Port
+   will be driven to GND -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   chipscope_icon_v1_06_a/data/chipscope_icon_v2_1_0.mpd line 106 
+WARNING:EDK:4180 - PORT: capture_in, CONNECTOR: bscan_capture - No driver found.
+   Port will be driven to GND -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   chipscope_icon_v1_06_a/data/chipscope_icon_v2_1_0.mpd line 107 
+WARNING:EDK:4181 - PORT: Peripheral_aresetn, CONNECTOR:
+   proc_sys_reset_0_Peripheral_aresetn - floating connection -
+   /home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line
+   39 
 WARNING:EDK:4181 - PORT: Processor_ack_out, CONNECTOR: Processor_ack_out -
    floating connection -
    /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
    axi_intc_v1_04_a/data/axi_intc_v2_1_0.mpd line 132 
+WARNING:EDK:4181 - PORT: tdo_out, CONNECTOR: bscan_tdo1 - floating connection -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   chipscope_icon_v1_06_a/data/chipscope_icon_v2_1_0.mpd line 108 
 
 Performing Clock DRCs...
 
@@ -138,6 +177,26 @@ INFO:EDK:4130 - IPNAME: axi_intc, INSTANCE:axi_intc_0 - tcl is overriding
    PARAMETER C_KIND_OF_LVL value to 0b11111111111111111111111111111111 -
    /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
    axi_intc_v1_04_a/data/axi_intc_v2_1_0.mpd line 89 
+INFO:EDK:4130 - IPNAME: chipscope_icon, INSTANCE:chipscope_icon_0 - tcl is
+   overriding PARAMETER C_SYSTEM_CONTAINS_MDM value to 1 -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   chipscope_icon_v1_06_a/data/chipscope_icon_v2_1_0.mpd line 81 
+chipscope_axi_monitor_0 is connected to instance: sc_uart_0
+Bus Name is: S_AXI 
+ISSUING nor ACCEPTANCE Parameter Not Found
+The value of MAXRBURSTS is set to 2
+INFO:EDK:4130 - IPNAME: chipscope_axi_monitor, INSTANCE:chipscope_axi_monitor_0
+   - tcl is overriding PARAMETER C_MON_AXI_PC_MAXRBURST value to 2 -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   chipscope_axi_monitor_v3_05_a/data/chipscope_axi_monitor_v2_1_0.mpd line 94 
+chipscope_axi_monitor_0 is connected to instance: sc_uart_0
+Bus Name is: S_AXI 
+ISSUING nor ACCEPTANCE Parameter Not Found
+The value of MAXWBURSTS is set to 2
+INFO:EDK:4130 - IPNAME: chipscope_axi_monitor, INSTANCE:chipscope_axi_monitor_0
+   - tcl is overriding PARAMETER C_MON_AXI_PC_MAXWBURST value to 2 -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   chipscope_axi_monitor_v3_05_a/data/chipscope_axi_monitor_v2_1_0.mpd line 95 
 
 Running system level update procedures...
 
@@ -149,6 +208,8 @@ Performing System level DRCs on properties...
 
 Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
 INTC INFO:: Both AXI clock and processor clock have same connection.
+Chipscope Integrate Controller, instance 'chipscope_icon', exists in System 
+Chipscope Integrate Controller, instance 'chipscope_icon', exists in System 
 
 Running UPDATE Tcl procedures for OPTION PLATGEN_SYSLEVEL_UPDATE_PROC...
 INFO: Setting timing constaints for microblaze_0_ilmb.
@@ -179,6 +240,15 @@ Completion time: 0.00 seconds
 Creating hardware output directories ...
 
 Managing hardware (BBD-specified) netlist files ...
+IPNAME:chipscope_icon INSTANCE:chipscope_icon_0 -
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 238
+- Copying (BBD-specified) netlist files.
+IPNAME:chipscope_axi_monitor INSTANCE:chipscope_axi_monitor_0 -
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 246
+- Copying (BBD-specified) netlist files.
+IPNAME:chipscope_ila INSTANCE:chipscope_ila_0 -
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 261
+- Copying (BBD-specified) netlist files.
 
 Managing cache ...
 IPNAME:proc_sys_reset INSTANCE:proc_sys_reset_0 -
@@ -200,31 +270,31 @@ IPNAME:bram_block INSTANCE:microblaze_0_bram_block -
 /home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 74 -
 Copying cache implementation netlist
 IPNAME:mdm INSTANCE:debug_module -
-/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 105
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 111
 - Copying cache implementation netlist
 IPNAME:axi_interconnect INSTANCE:axi4lite_0 -
-/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 130
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 137
 - Copying cache implementation netlist
 IPNAME:axi_uartlite INSTANCE:rs232_uart_1 -
-/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 138
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 145
 - Copying cache implementation netlist
 IPNAME:axi_gpio INSTANCE:push_buttons_4bits -
-/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 153
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 160
 - Copying cache implementation netlist
 IPNAME:axi_gpio INSTANCE:leds_8bits -
-/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 167
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 174
 - Copying cache implementation netlist
 IPNAME:axi_gpio INSTANCE:dip_switches_8bits -
-/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 181
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 188
 - Copying cache implementation netlist
 IPNAME:fit_timer INSTANCE:fit_timer_0 -
-/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 195
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 202
 - Copying cache implementation netlist
 IPNAME:axi_intc INSTANCE:axi_intc_0 -
-/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 205
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 212
 - Copying cache implementation netlist
 IPNAME:sc_uart INSTANCE:sc_uart_0 -
-/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 218
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 225
 - Copying cache implementation netlist
 
 Elaborating instances ...
@@ -232,16 +302,239 @@ IPNAME:bram_block INSTANCE:microblaze_0_bram_block -
 /home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 74 -
 elaborating IP
 IPNAME:clock_generator INSTANCE:clock_generator_0 -
-/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 118
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 125
 - elaborating IP
 ClkGen elaborate status: PASSED
 ----------------------------------------
 ----------------------------------------
+IPNAME:chipscope_icon INSTANCE:chipscope_icon_0 -
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 238
+- elaborating IP
+Created elaborate directory hdl/elaborate/chipscope_icon_0_v1_06_a/synhdl/vhdl/
+Generating ChipScope core: chipscope_icon_0 ...
+ChipScope Core Generator command: coregen -b
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/implementation/chips
+cope_icon_0.xco
+Release 14.7 - Xilinx CORE Generator P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+All runtime messages will be recorded in
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/implementation/chips
+cope_icon_0_wrapper/coregen.log
+Updating project device from '6slx16' to 'xc6slx16'.
+Wrote CGP file for project 'coregen'.
+Resolving generic values...
+Finished resolving generic values.
+Generating IP...
+Configuring files for chipscope_icon_0 root...
+Gathering HDL files for chipscope_icon_0 root...
+Creating XST project for chipscope_icon_0...
+Creating XST script file for chipscope_icon_0...
+Creating XST instantiation file for chipscope_icon_0...
+Running XST for chipscope_icon_0...
+XST: HDL Parsing
+XST: HDL Elaboration
+XST: HDL Synthesis
+XST: Advanced HDL Synthesis
+XST: Low Level Synthesis
+XST: Design Summary
+Not generating VHDL wrapper
+Not generating Verilog wrapper
+Skipping VHDL instantiation template for chipscope_icon_0...
+Skipping Verilog instantiation template for chipscope_icon_0...
+Finished Generation.
+Generating IP instantiation template...
+Generating ASY schematic symbol...
+Generating metadata file...
+Generating ISE project...
+XCO file found: chipscope_icon_0.xco
+XMDF file found: chipscope_icon_0_xmdf.tcl
+WARNING:EDK - : chipscope_icon_0.vhd does not exist, will not be added to ISE
+   project.
+
+WARNING:EDK - : chipscope_icon_0.vho does not exist, will not be added to ISE
+   project.
+
+Adding
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/implementation/chips
+cope_icon_0_wrapper/tmp/_cg/chipscope_icon_0.asy -view all -origin_type imported
+Adding
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/implementation/chips
+cope_icon_0_wrapper/tmp/_cg/chipscope_icon_0.ngc -view all -origin_type created
+Checking file
+"/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/implementation/chip
+scope_icon_0_wrapper/tmp/_cg/chipscope_icon_0.ngc" for project device match ...
+File
+"/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/implementation/chip
+scope_icon_0_wrapper/tmp/_cg/chipscope_icon_0.ngc" device information matches
+project device.
+INFO:TclTasksC:2116 - The automatic calculation of top has been turned-off.
+   Please set the new top explicitly by running the "project set top" command.
+   To re-calculate the new top automatically, set the "Auto Implementation Top"
+   property to true.
+Top level has been set to "/chipscope_icon_0"
+Generating README file...
+Generating FLIST file...
+Moving files to output directory...
+Finished moving files to output directory
+Saved CGP file for project 'coregen'.
+*************************************************************
+IPNAME:chipscope_axi_monitor INSTANCE:chipscope_axi_monitor_0 -
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 246
+- elaborating IP
+Created elaborate directory
+hdl/elaborate/chipscope_axi_monitor_0_v3_05_a/synhdl/vhdl/
+Generating ChipScope core: chipscope_axi_monitor_0 ...
+ChipScope Core Generator command: coregen   -b
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/implementation/chips
+cope_axi_monitor_0.xco
+Release 14.7 - Xilinx CORE Generator P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+All runtime messages will be recorded in
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/implementation/chips
+cope_axi_monitor_0_wrapper/coregen.log
+Updating project device from '6slx16' to 'xc6slx16'.
+Wrote CGP file for project 'coregen'.
+Resolving generic values...
+Finished resolving generic values.
+Generating IP...
+Configuring files for chipscope_axi_monitor_0 root...
+Gathering HDL files for chipscope_axi_monitor_0 root...
+Creating XST project for chipscope_axi_monitor_0...
+Creating XST script file for chipscope_axi_monitor_0...
+Creating XST instantiation file for chipscope_axi_monitor_0...
+Running XST for chipscope_axi_monitor_0...
+XST: HDL Parsing
+XST: HDL Elaboration
+XST: HDL Synthesis
+XST: Advanced HDL Synthesis
+XST: Low Level Synthesis
+XST: Design Summary
+Generating VHDL wrapper
+Not generating Verilog wrapper
+Creating ISE instantiation template for chipscope_axi_monitor_0...
+Skipping Verilog instantiation template for chipscope_axi_monitor_0...
+Finished Generation.
+Generating IP instantiation template...
+Generating ASY schematic symbol...
+Generating metadata file...
+Generating ISE project...
+XCO file found: chipscope_axi_monitor_0.xco
+XMDF file found: chipscope_axi_monitor_0_xmdf.tcl
+Adding
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/implementation/chips
+cope_axi_monitor_0_wrapper/tmp/_cg/chipscope_axi_monitor_0.asy -view all
+-origin_type imported
+Adding
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/implementation/chips
+cope_axi_monitor_0_wrapper/tmp/_cg/chipscope_axi_monitor_0.ngc -view all
+-origin_type created
+Checking file
+"/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/implementation/chip
+scope_axi_monitor_0_wrapper/tmp/_cg/chipscope_axi_monitor_0.ngc" for project
+device match ...
+File
+"/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/implementation/chip
+scope_axi_monitor_0_wrapper/tmp/_cg/chipscope_axi_monitor_0.ngc" device
+information matches project device.
+Adding
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/implementation/chips
+cope_axi_monitor_0_wrapper/tmp/_cg/chipscope_axi_monitor_0.vhd -view all
+-origin_type created
+INFO:HDLCompiler:1061 - Parsing VHDL file
+   "/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/implementation/c
+   hipscope_axi_monitor_0_wrapper/tmp/_cg/chipscope_axi_monitor_0.vhd" into
+   library work
+INFO:ProjectMgmt - Parsing design hierarchy completed successfully.
+Adding
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/implementation/chips
+cope_axi_monitor_0_wrapper/tmp/_cg/chipscope_axi_monitor_0.vho -view all
+-origin_type imported
+INFO:TclTasksC:2116 - The automatic calculation of top has been turned-off.
+   Please set the new top explicitly by running the "project set top" command.
+   To re-calculate the new top automatically, set the "Auto Implementation Top"
+   property to true.
+Top level has been set to "/chipscope_axi_monitor_0"
+Generating README file...
+Generating FLIST file...
+Moving files to output directory...
+Finished moving files to output directory
+Saved CGP file for project 'coregen'.
+IPNAME:chipscope_ila INSTANCE:chipscope_ila_0 -
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 261
+- elaborating IP
+Created elaborate directory hdl/elaborate/chipscope_ila_0_v1_05_a/synhdl/vhdl/
+Generating ChipScope core: chipscope_ila_0 ...
+ChipScope Core Generator command: coregen -b
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/implementation/chips
+cope_ila_0.xco
+Release 14.7 - Xilinx CORE Generator P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+All runtime messages will be recorded in
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/implementation/chips
+cope_ila_0_wrapper/coregen.log
+Updating project device from '6slx16' to 'xc6slx16'.
+Wrote CGP file for project 'coregen'.
+Resolving generic values...
+Finished resolving generic values.
+Generating IP...
+Configuring files for chipscope_ila_0 root...
+Gathering HDL files for chipscope_ila_0 root...
+Creating XST project for chipscope_ila_0...
+Creating XST script file for chipscope_ila_0...
+Creating XST instantiation file for chipscope_ila_0...
+Running XST for chipscope_ila_0...
+XST: HDL Parsing
+XST: HDL Elaboration
+XST: HDL Synthesis
+XST: Advanced HDL Synthesis
+XST: Low Level Synthesis
+XST: Design Summary
+Not generating VHDL wrapper
+Not generating Verilog wrapper
+Skipping VHDL instantiation template for chipscope_ila_0...
+Skipping Verilog instantiation template for chipscope_ila_0...
+Finished Generation.
+Generating IP instantiation template...
+Generating ASY schematic symbol...
+Generating metadata file...
+Generating ISE project...
+XCO file found: chipscope_ila_0.xco
+XMDF file found: chipscope_ila_0_xmdf.tcl
+WARNING:EDK - : chipscope_ila_0.vhd does not exist, will not be added to ISE
+   project.
+
+WARNING:EDK - : chipscope_ila_0.vho does not exist, will not be added to ISE
+   project.
+
+Adding
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/implementation/chips
+cope_ila_0_wrapper/tmp/_cg/chipscope_ila_0.asy -view all -origin_type imported
+Adding
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/implementation/chips
+cope_ila_0_wrapper/tmp/_cg/chipscope_ila_0.ngc -view all -origin_type created
+Checking file
+"/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/implementation/chip
+scope_ila_0_wrapper/tmp/_cg/chipscope_ila_0.ngc" for project device match ...
+File
+"/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/implementation/chip
+scope_ila_0_wrapper/tmp/_cg/chipscope_ila_0.ngc" device information matches
+project device.
+INFO:TclTasksC:2116 - The automatic calculation of top has been turned-off.
+   Please set the new top explicitly by running the "project set top" command.
+   To re-calculate the new top automatically, set the "Auto Implementation Top"
+   property to true.
+Top level has been set to "/chipscope_ila_0"
+Generating README file...
+Generating FLIST file...
+Moving files to output directory...
+Finished moving files to output directory
+Saved CGP file for project 'coregen'.
+*************************************************************
 
 Writing HDL for elaborated instances ...
 
 Inserting wrapper level ...
-Completion time: 1.00 seconds
+Completion time: 0.00 seconds
 
 Constructing platform-level connectivity ...
 Completion time: 0.00 seconds
@@ -261,7 +554,16 @@ INSTANCE:microblaze_0 -
 /home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 81 -
 Running XST synthesis
 INSTANCE:clock_generator_0 -
-/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 118
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 125
+- Running XST synthesis
+INSTANCE:chipscope_icon_0 -
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 238
+- Running XST synthesis
+INSTANCE:chipscope_axi_monitor_0 -
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 246
+- Running XST synthesis
+INSTANCE:chipscope_ila_0 -
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 261
 - Running XST synthesis
 
 Running NGCBUILD ...
@@ -269,7 +571,16 @@ IPNAME:system_microblaze_0_wrapper INSTANCE:microblaze_0 -
 /home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 81 -
 Running NGCBUILD
 IPNAME:system_clock_generator_0_wrapper INSTANCE:clock_generator_0 -
-/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 118
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 125
+- Running NGCBUILD
+IPNAME:system_chipscope_icon_0_wrapper INSTANCE:chipscope_icon_0 -
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 238
+- Running NGCBUILD
+IPNAME:system_chipscope_axi_monitor_0_wrapper INSTANCE:chipscope_axi_monitor_0 -
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 246
+- Running NGCBUILD
+IPNAME:system_chipscope_ila_0_wrapper INSTANCE:chipscope_ila_0 -
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line 261
 - Running NGCBUILD
 INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
    If any constraint needs to be overridden, this should be done by modifying
@@ -277,4 +588,4 @@ INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
 
 Rebuilding cache ...
 
-Total run time: 98.00 seconds
+Total run time: 500.00 seconds

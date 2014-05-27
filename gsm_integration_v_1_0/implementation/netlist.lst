@@ -1,0 +1,19 @@
+/home/vivric/Documents/workspace/gsm_sim/gsm_integration_v_1_0/implementation/system.ngc 1401223668
+/home/vivric/Documents/workspace/gsm_sim/gsm_integration_v_1_0/implementation/system_push_buttons_4bits_wrapper.ngc 1401223569
+/home/vivric/Documents/workspace/gsm_sim/gsm_integration_v_1_0/implementation/system_dip_switches_8bits_wrapper.ngc 1401223569
+/home/vivric/Documents/workspace/gsm_sim/gsm_integration_v_1_0/implementation/system_rs232_uart_1_wrapper.ngc 1401223569
+/home/vivric/Documents/workspace/gsm_sim/gsm_integration_v_1_0/implementation/system_proc_sys_reset_0_wrapper.ngc 1401223569
+/home/vivric/Documents/workspace/gsm_sim/gsm_integration_v_1_0/implementation/system_clock_generator_0_wrapper.ngc 1401223649
+/home/vivric/Documents/workspace/gsm_sim/gsm_integration_v_1_0/implementation/system_sc_uart_interface_modified_0_wrapper.ngc 1401223569
+/home/vivric/Documents/workspace/gsm_sim/gsm_integration_v_1_0/implementation/system_microblaze_0_ilmb_wrapper.ngc 1401223569
+/home/vivric/Documents/workspace/gsm_sim/gsm_integration_v_1_0/implementation/system_microblaze_0_dlmb_wrapper.ngc 1401223569
+/home/vivric/Documents/workspace/gsm_sim/gsm_integration_v_1_0/implementation/system_axi4lite_0_wrapper.ngc 1401223569
+/home/vivric/Documents/workspace/gsm_sim/gsm_integration_v_1_0/implementation/system_microblaze_0_wrapper.ngc 1401223644
+/home/vivric/Documents/workspace/gsm_sim/gsm_integration_v_1_0/implementation/system_chipscope_ila_0_wrapper.ngc 1401223569
+/home/vivric/Documents/workspace/gsm_sim/gsm_integration_v_1_0/implementation/system_microblaze_0_i_bram_ctrl_wrapper.ngc 1401223569
+/home/vivric/Documents/workspace/gsm_sim/gsm_integration_v_1_0/implementation/system_microblaze_0_d_bram_ctrl_wrapper.ngc 1401223569
+/home/vivric/Documents/workspace/gsm_sim/gsm_integration_v_1_0/implementation/system_debug_module_wrapper.ngc 1401223569
+/home/vivric/Documents/workspace/gsm_sim/gsm_integration_v_1_0/implementation/system_leds_8bits_wrapper.ngc 1401223569
+/home/vivric/Documents/workspace/gsm_sim/gsm_integration_v_1_0/implementation/system_microblaze_0_bram_block_wrapper.ngc 1401223569
+/home/vivric/Documents/workspace/gsm_sim/gsm_integration_v_1_0/implementation/system_chipscope_icon_0_wrapper.ngc 1401223569
+OK

@@ -1,13 +1,17 @@
 Release 14.7 - par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Sat May 24 21:51:07 2014
+Tue May 27 23:41:55 2014
 
 All signals are completely routed.
 
-WARNING:ParHelpers:361 - There are 18 loadless signals in this design. This design will cause Bitgen to issue DRC
+WARNING:ParHelpers:361 - There are 59 loadless signals in this design. This design will cause Bitgen to issue DRC
    warnings.
 
+   axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_bmesg_mux_inst/gen_fpga.hh<0>
+   axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_bmesg_mux_inst/gen_fpga.hh<1>
+   axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_rmesg_mux_inst/gen_fpga.hh<1>
+   axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_rmesg_mux_inst/gen_fpga.hh<2>
    microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[0].ram32m_i_RAMD_D1_O
    microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[10].ram32m_i_RAMD_D1_O
    microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[11].ram32m_i_RAMD_D1_O
@@ -24,6 +28,43 @@ WARNING:ParHelpers:361 - There are 18 loadless signals in this design. This desi
    microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[7].ram32m_i_RAMD_D1_O
    microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[8].ram32m_i_RAMD_D1_O
    microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[9].ram32m_i_RAMD_D1_O
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/exception_registers_I1/FPGA_Target.Using_FPGA_LUT6.Gen_Ret_Addr[0].MUXCY_I/O
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Trace_Data_Byte_Enable<0>
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Trace_Data_Byte_Enable<1>
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Trace_Data_Byte_Enable<2>
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Trace_Data_Byte_Enable<3>
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Trace_Data_Write_Value<0>
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Trace_Data_Write_Value<10>
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Trace_Data_Write_Value<11>
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Trace_Data_Write_Value<12>
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Trace_Data_Write_Value<13>
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Trace_Data_Write_Value<14>
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Trace_Data_Write_Value<15>
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Trace_Data_Write_Value<16>
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Trace_Data_Write_Value<17>
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Trace_Data_Write_Value<18>
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Trace_Data_Write_Value<19>
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Trace_Data_Write_Value<1>
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Trace_Data_Write_Value<20>
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Trace_Data_Write_Value<21>
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Trace_Data_Write_Value<22>
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Trace_Data_Write_Value<23>
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Trace_Data_Write_Value<24>
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Trace_Data_Write_Value<25>
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Trace_Data_Write_Value<26>
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Trace_Data_Write_Value<27>
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Trace_Data_Write_Value<28>
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Trace_Data_Write_Value<29>
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Trace_Data_Write_Value<2>
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Trace_Data_Write_Value<30>
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Trace_Data_Write_Value<31>
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Trace_Data_Write_Value<3>
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Trace_Data_Write_Value<4>
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Trace_Data_Write_Value<5>
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Trace_Data_Write_Value<6>
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Trace_Data_Write_Value<7>
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Trace_Data_Write_Value<8>
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Trace_Data_Write_Value<9>
    microblaze_0_d_bram_ctrl_2_microblaze_0_bram_block_BRAM_Addr<30>
    microblaze_0_d_bram_ctrl_2_microblaze_0_bram_block_BRAM_Addr<31>
 

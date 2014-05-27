@@ -1,0 +1,7 @@
+verilog chipscope_axi_monitor_v3_05_a /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/chipscope_axi_monitor_v3_05_a/hdl/verilog/axi_protocol_checker_core.v
+verilog chipscope_axi_monitor_v3_05_a /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/chipscope_axi_monitor_v3_05_a/hdl/verilog/axi_protocol_checker_axi4litepc_asr_inline.v
+verilog chipscope_axi_monitor_v3_05_a /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/chipscope_axi_monitor_v3_05_a/hdl/verilog/axi_protocol_checker_axi4pc_asr_inline.v
+verilog chipscope_axi_monitor_v3_05_a /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/chipscope_axi_monitor_v3_05_a/hdl/verilog/axi_protocol_checker_syn_fifo.v
+verilog chipscope_axi_monitor_v3_05_a /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/chipscope_axi_monitor_v3_05_a/hdl/verilog/axi_protocol_checker_top.v
+VHDL chipscope_axi_monitor_0_v3_05_a /home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/hdl/elaborate/chipscope_axi_monitor_0_v3_05_a/synhdl/vhdl/chipscope_axi_monitor_0.vhd
+vhdl work ../hdl/system_chipscope_axi_monitor_0_wrapper.vhd

@@ -17,9 +17,9 @@ entity system_stub is
     GCLK : in std_logic;
     DIP_Switches_8Bits_TRI_I : in std_logic_vector(7 downto 0);
     sc_uart_0_tx_data_pin : out std_logic_vector(7 downto 0);
+    sc_uart_0_rx_data_pin : in std_logic_vector(7 downto 0);
     sc_uart_0_master_status_pin : out std_logic_vector(2 downto 0);
-    sc_uart_0_slave_status_pin : in std_logic_vector(2 downto 0);
-    sc_uart_0_rx_data_pin : in std_logic_vector(7 downto 0)
+    sc_uart_0_slave_status_pin : in std_logic_vector(2 downto 0)
   );
 end system_stub;
 
@@ -35,9 +35,9 @@ architecture STRUCTURE of system_stub is
       GCLK : in std_logic;
       DIP_Switches_8Bits_TRI_I : in std_logic_vector(7 downto 0);
       sc_uart_0_tx_data_pin : out std_logic_vector(7 downto 0);
+      sc_uart_0_rx_data_pin : in std_logic_vector(7 downto 0);
       sc_uart_0_master_status_pin : out std_logic_vector(2 downto 0);
-      sc_uart_0_slave_status_pin : in std_logic_vector(2 downto 0);
-      sc_uart_0_rx_data_pin : in std_logic_vector(7 downto 0)
+      sc_uart_0_slave_status_pin : in std_logic_vector(2 downto 0)
     );
   end component;
 
@@ -56,9 +56,9 @@ begin
       GCLK => GCLK,
       DIP_Switches_8Bits_TRI_I => DIP_Switches_8Bits_TRI_I,
       sc_uart_0_tx_data_pin => sc_uart_0_tx_data_pin,
+      sc_uart_0_rx_data_pin => sc_uart_0_rx_data_pin,
       sc_uart_0_master_status_pin => sc_uart_0_master_status_pin,
-      sc_uart_0_slave_status_pin => sc_uart_0_slave_status_pin,
-      sc_uart_0_rx_data_pin => sc_uart_0_rx_data_pin
+      sc_uart_0_slave_status_pin => sc_uart_0_slave_status_pin
     );
 
 end architecture STRUCTURE;

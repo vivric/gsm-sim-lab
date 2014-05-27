@@ -1,5 +1,5 @@
 
-<EDKSYSTEM EDKVERSION="14.7" EDWVERSION="1.2" TIMESTAMP="Sat May 24 21:52:36 2014">
+<EDKSYSTEM EDKVERSION="14.7" EDWVERSION="1.2" TIMESTAMP="Tue May 27 23:45:53 2014">
 
   <SYSTEMINFO ARCH="spartan6" DEVICE="xc6slx16" PACKAGE="csg324" PART="xc6slx16csg324-3" SOURCE="/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.xmp" SPEEDGRADE="-3"/>
 
@@ -45,19 +45,21 @@
         <CONNECTION INSTANCE="sc_uart_0" PORT="tx_data"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" ENDIAN="LITTLE" LEFT="2" LSB="0" MHS_INDEX="8" MSB="2" NAME="sc_uart_0_master_status_pin" RIGHT="0" SIGNAME="sc_uart_0_master_status">
+    <PORT DIR="I" ENDIAN="LITTLE" LEFT="7" LSB="0" MHS_INDEX="8" MSB="7" NAME="sc_uart_0_rx_data_pin" RIGHT="0" SIGNAME="sc_uart_0_rx_data">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="sc_uart_0" PORT="rx_data"/>
+        <CONNECTION INSTANCE="chipscope_ila_0" PORT="TRIG0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" ENDIAN="LITTLE" LEFT="2" LSB="0" MHS_INDEX="9" MSB="2" NAME="sc_uart_0_master_status_pin" RIGHT="0" SIGNAME="sc_uart_0_master_status">
       <CONNECTIONS>
         <CONNECTION INSTANCE="sc_uart_0" PORT="master_status"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" ENDIAN="LITTLE" LEFT="2" LSB="0" MHS_INDEX="9" MSB="2" NAME="sc_uart_0_slave_status_pin" RIGHT="0" SIGNAME="sc_uart_0_slave_status">
+    <PORT DIR="I" ENDIAN="LITTLE" LEFT="2" LSB="0" MHS_INDEX="10" MSB="2" NAME="sc_uart_0_slave_status_pin" RIGHT="0" SIGNAME="sc_uart_0_slave_status">
       <CONNECTIONS>
         <CONNECTION INSTANCE="sc_uart_0" PORT="slave_status"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" ENDIAN="LITTLE" LEFT="7" LSB="0" MHS_INDEX="10" MSB="7" NAME="sc_uart_0_rx_data_pin" RIGHT="0" SIGNAME="sc_uart_0_rx_data">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="sc_uart_0" PORT="rx_data"/>
+        <CONNECTION INSTANCE="chipscope_ila_0" PORT="TRIG0"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -142,12 +144,11 @@
         <PORT DIR="O" IS_INSTANTIATED="TRUE" MHS_INDEX="7" MPD_INDEX="19" NAME="Peripheral_Reset" SIGIS="RST" SIGNAME="proc_sys_reset_0_Peripheral_Reset" VECFORMULA="[0:C_NUM_PERP_RST-1]">
           <CONNECTIONS>
             <CONNECTION INSTANCE="fit_timer_0" PORT="Rst"/>
+            <CONNECTION INSTANCE="axi_intc_0" PORT="Processor_rst"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" IS_INSTANTIATED="TRUE" MHS_INDEX="8" MPD_INDEX="21" NAME="Peripheral_aresetn" SIGIS="RST" SIGNAME="proc_sys_reset_0_Peripheral_aresetn" VECFORMULA="[0:C_NUM_PERP_ARESETN-1]">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_intc_0" PORT="Processor_rst"/>
-          </CONNECTIONS>
+          <CONNECTIONS/>
         </PORT>
         <PORT DIR="I" MPD_INDEX="2" NAME="Aux_Reset_In" SIGIS="RST" SIGNAME="__NOC__"/>
         <PORT BUS="RESETPPC0" DEF_SIGNAME="__BUS__" DIR="I" MPD_INDEX="4" NAME="Core_Reset_Req_0" SIGIS="RST" SIGNAME="__NOC__"/>
@@ -1692,13 +1693,13 @@
         <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="5" MPD_INDEX="70" NAME="C_DEBUG_ENABLED" TYPE="integer" VALUE="1">
           <DESCRIPTION>Enable MicroBlaze Debug Module Interface</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="71" NAME="C_NUMBER_OF_PC_BRK" TYPE="integer" VALUE="1">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="14" MPD_INDEX="71" NAME="C_NUMBER_OF_PC_BRK" TYPE="integer" VALUE="2">
           <DESCRIPTION>Number of PC Breakpoints </DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="72" NAME="C_NUMBER_OF_RD_ADDR_BRK" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="15" MPD_INDEX="72" NAME="C_NUMBER_OF_RD_ADDR_BRK" TYPE="integer" VALUE="2">
           <DESCRIPTION>Number of Read Address Watchpoints </DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="73" NAME="C_NUMBER_OF_WR_ADDR_BRK" TYPE="integer" VALUE="0">
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="16" MPD_INDEX="73" NAME="C_NUMBER_OF_WR_ADDR_BRK" TYPE="integer" VALUE="2">
           <DESCRIPTION>Number of Write Address Watchpoints </DESCRIPTION>
         </PARAMETER>
         <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="74" NAME="C_INTERRUPT_IS_EDGE" TYPE="integer" VALUE="0">
@@ -1930,6 +1931,21 @@
             <CONNECTION INSTANCE="clock_generator_0" PORT="CLKOUT0"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" IS_INSTANTIATED="TRUE" MHS_INDEX="2" MPD_INDEX="8" NAME="DBG_STOP" SIGNAME="microblaze_0_DBG_STOP_chipscope">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_TRIG_OUT"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="TRACE" DEF_SIGNAME="Trace_PC" DIR="O" ENDIAN="BIG" IS_INSTANTIATED="TRUE" LEFT="0" LSB="31" MHS_INDEX="3" MPD_INDEX="304" MSB="0" NAME="Trace_PC" RIGHT="31" SIGNAME="microblaze_0_Trace_PC_chipscope" VECFORMULA="[0:31]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_TRIG_IN"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" IS_INSTANTIATED="TRUE" MHS_INDEX="4" MPD_INDEX="9" NAME="MB_Halted" SIGNAME="microblaze_0_MB_Halted_chipscope">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_TRIG_IN"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT BUS="DLMB:ILMB" DEF_SIGNAME="microblaze_0_dlmb_LMB_Rst" DIR="I" MPD_INDEX="1" NAME="RESET" SIGIS="RST" SIGNAME="microblaze_0_dlmb_LMB_Rst">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_dlmb" PORT="LMB_RST"/>
@@ -1960,8 +1976,6 @@
             <CONNECTION INSTANCE="debug_module" PORT="Ext_NM_BRK"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" MPD_INDEX="8" NAME="DBG_STOP" SIGNAME="__NOC__"/>
-        <PORT DIR="O" MPD_INDEX="9" NAME="MB_Halted" SIGNAME="__NOC__"/>
         <PORT DIR="O" MPD_INDEX="10" NAME="MB_Error" SIGNAME="__NOC__"/>
         <PORT DIR="I" ENDIAN="BIG" LEFT="0" LSB="1" MPD_INDEX="11" MSB="0" NAME="WAKEUP" RIGHT="1" SIGNAME="__NOC__" VECFORMULA="[0:1]"/>
         <PORT DIR="O" MPD_INDEX="12" NAME="SLEEP" SIGNAME="__NOC__"/>
@@ -2512,7 +2526,6 @@
         </PORT>
         <PORT BUS="TRACE" DEF_SIGNAME="__BUS__" DIR="O" ENDIAN="BIG" LEFT="0" LSB="31" MPD_INDEX="302" MSB="0" NAME="Trace_Instruction" RIGHT="31" SIGNAME="__NOC__" VECFORMULA="[0:31]"/>
         <PORT BUS="TRACE" DEF_SIGNAME="__BUS__" DIR="O" MPD_INDEX="303" NAME="Trace_Valid_Instr" SIGNAME="__NOC__"/>
-        <PORT BUS="TRACE" DEF_SIGNAME="__BUS__" DIR="O" ENDIAN="BIG" LEFT="0" LSB="31" MPD_INDEX="304" MSB="0" NAME="Trace_PC" RIGHT="31" SIGNAME="__NOC__" VECFORMULA="[0:31]"/>
         <PORT BUS="TRACE" DEF_SIGNAME="__BUS__" DIR="O" MPD_INDEX="305" NAME="Trace_Reg_Write" SIGNAME="__NOC__"/>
         <PORT BUS="TRACE" DEF_SIGNAME="__BUS__" DIR="O" ENDIAN="BIG" LEFT="0" LSB="4" MPD_INDEX="306" MSB="0" NAME="Trace_Reg_Addr" RIGHT="4" SIGNAME="__NOC__" VECFORMULA="[0:4]"/>
         <PORT BUS="TRACE" DEF_SIGNAME="__BUS__" DIR="O" ENDIAN="BIG" LEFT="0" LSB="14" MPD_INDEX="307" MSB="0" NAME="Trace_MSR_Reg" RIGHT="14" SIGNAME="__NOC__" VECFORMULA="[0:14]"/>
@@ -3417,6 +3430,40 @@
             <PORTMAP DIR="O" PHYSICAL="S15_AXIS_TREADY"/>
           </PORTMAPS>
         </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" BUSSTD="XIL" BUSSTD_PSF="XIL_MBTRACE2" MPD_INDEX="109" NAME="TRACE" TYPE="INITIATOR">
+          <PORTMAPS>
+            <PORTMAP DIR="O" PHYSICAL="Trace_PC"/>
+            <PORTMAP DIR="O" PHYSICAL="Trace_Instruction"/>
+            <PORTMAP DIR="O" PHYSICAL="Trace_Valid_Instr"/>
+            <PORTMAP DIR="O" PHYSICAL="Trace_Reg_Write"/>
+            <PORTMAP DIR="O" PHYSICAL="Trace_Reg_Addr"/>
+            <PORTMAP DIR="O" PHYSICAL="Trace_MSR_Reg"/>
+            <PORTMAP DIR="O" PHYSICAL="Trace_PID_Reg"/>
+            <PORTMAP DIR="O" PHYSICAL="Trace_New_Reg_Value"/>
+            <PORTMAP DIR="O" PHYSICAL="Trace_Exception_Taken"/>
+            <PORTMAP DIR="O" PHYSICAL="Trace_Exception_Kind"/>
+            <PORTMAP DIR="O" PHYSICAL="Trace_Jump_Taken"/>
+            <PORTMAP DIR="O" PHYSICAL="Trace_Delay_Slot"/>
+            <PORTMAP DIR="O" PHYSICAL="Trace_Data_Address"/>
+            <PORTMAP DIR="O" PHYSICAL="Trace_Data_Access"/>
+            <PORTMAP DIR="O" PHYSICAL="Trace_Data_Read"/>
+            <PORTMAP DIR="O" PHYSICAL="Trace_Data_Write"/>
+            <PORTMAP DIR="O" PHYSICAL="Trace_Data_Write_Value"/>
+            <PORTMAP DIR="O" PHYSICAL="Trace_Data_Byte_Enable"/>
+            <PORTMAP DIR="O" PHYSICAL="Trace_DCache_Req"/>
+            <PORTMAP DIR="O" PHYSICAL="Trace_DCache_Hit"/>
+            <PORTMAP DIR="O" PHYSICAL="Trace_DCache_Rdy"/>
+            <PORTMAP DIR="O" PHYSICAL="Trace_DCache_Read"/>
+            <PORTMAP DIR="O" PHYSICAL="Trace_ICache_Req"/>
+            <PORTMAP DIR="O" PHYSICAL="Trace_ICache_Hit"/>
+            <PORTMAP DIR="O" PHYSICAL="Trace_ICache_Rdy"/>
+            <PORTMAP DIR="O" PHYSICAL="Trace_OF_PipeRun"/>
+            <PORTMAP DIR="O" PHYSICAL="Trace_EX_PipeRun"/>
+            <PORTMAP DIR="O" PHYSICAL="Trace_MEM_PipeRun"/>
+            <PORTMAP DIR="O" PHYSICAL="Trace_MB_Halted"/>
+            <PORTMAP DIR="O" PHYSICAL="Trace_Jump_Hit"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="axi_intc_0_INTERRUPT" BUSSTD="XIL" BUSSTD_PSF="XIL_MBINTERRUPT" IS_INSTANTIATED="TRUE" MHS_INDEX="4" MPD_INDEX="110" NAME="INTERRUPT" TYPE="TARGET">
           <PORTMAPS>
             <PORTMAP DIR="I" PHYSICAL="INTERRUPT"/>
@@ -3556,40 +3603,6 @@
             <PORTMAP DIR="I" PHYSICAL="DBG_CAPTURE"/>
             <PORTMAP DIR="I" PHYSICAL="DBG_UPDATE"/>
             <PORTMAP DIR="I" PHYSICAL="DEBUG_RST"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="__NOC__" BUSSTD="XIL" BUSSTD_PSF="XIL_MBTRACE2" MPD_INDEX="109" NAME="TRACE" TYPE="INITIATOR">
-          <PORTMAPS>
-            <PORTMAP DIR="O" PHYSICAL="Trace_Instruction"/>
-            <PORTMAP DIR="O" PHYSICAL="Trace_Valid_Instr"/>
-            <PORTMAP DIR="O" PHYSICAL="Trace_PC"/>
-            <PORTMAP DIR="O" PHYSICAL="Trace_Reg_Write"/>
-            <PORTMAP DIR="O" PHYSICAL="Trace_Reg_Addr"/>
-            <PORTMAP DIR="O" PHYSICAL="Trace_MSR_Reg"/>
-            <PORTMAP DIR="O" PHYSICAL="Trace_PID_Reg"/>
-            <PORTMAP DIR="O" PHYSICAL="Trace_New_Reg_Value"/>
-            <PORTMAP DIR="O" PHYSICAL="Trace_Exception_Taken"/>
-            <PORTMAP DIR="O" PHYSICAL="Trace_Exception_Kind"/>
-            <PORTMAP DIR="O" PHYSICAL="Trace_Jump_Taken"/>
-            <PORTMAP DIR="O" PHYSICAL="Trace_Delay_Slot"/>
-            <PORTMAP DIR="O" PHYSICAL="Trace_Data_Address"/>
-            <PORTMAP DIR="O" PHYSICAL="Trace_Data_Access"/>
-            <PORTMAP DIR="O" PHYSICAL="Trace_Data_Read"/>
-            <PORTMAP DIR="O" PHYSICAL="Trace_Data_Write"/>
-            <PORTMAP DIR="O" PHYSICAL="Trace_Data_Write_Value"/>
-            <PORTMAP DIR="O" PHYSICAL="Trace_Data_Byte_Enable"/>
-            <PORTMAP DIR="O" PHYSICAL="Trace_DCache_Req"/>
-            <PORTMAP DIR="O" PHYSICAL="Trace_DCache_Hit"/>
-            <PORTMAP DIR="O" PHYSICAL="Trace_DCache_Rdy"/>
-            <PORTMAP DIR="O" PHYSICAL="Trace_DCache_Read"/>
-            <PORTMAP DIR="O" PHYSICAL="Trace_ICache_Req"/>
-            <PORTMAP DIR="O" PHYSICAL="Trace_ICache_Hit"/>
-            <PORTMAP DIR="O" PHYSICAL="Trace_ICache_Rdy"/>
-            <PORTMAP DIR="O" PHYSICAL="Trace_OF_PipeRun"/>
-            <PORTMAP DIR="O" PHYSICAL="Trace_EX_PipeRun"/>
-            <PORTMAP DIR="O" PHYSICAL="Trace_MEM_PipeRun"/>
-            <PORTMAP DIR="O" PHYSICAL="Trace_MB_Halted"/>
-            <PORTMAP DIR="O" PHYSICAL="Trace_Jump_Hit"/>
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="__NOC__" BUSSTD="FSL" BUSSTD_PSF="FSL" IS_VALID="FALSE" MPD_INDEX="6" NAME="SFSL0" TYPE="SLAVE">
@@ -4303,7 +4316,7 @@
         <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="11" NAME="C_SPLB_SUPPORT_BURSTS" TYPE="INTEGER" VALUE="0">
           <DESCRIPTION>PLB Slave is Capable of Bursts</DESCRIPTION>
         </PARAMETER>
-        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="12" NAME="C_MB_DBG_PORTS" TYPE="INTEGER" VALUE="1">
+        <PARAMETER ASSIGNMENT="OPTIONAL" IS_INSTANTIATED="TRUE" MHS_INDEX="6" MPD_INDEX="12" NAME="C_MB_DBG_PORTS" TYPE="INTEGER" VALUE="1">
           <DESCRIPTION>Number of MicroBlaze debug ports </DESCRIPTION>
         </PARAMETER>
         <PARAMETER ASSIGNMENT="OPTIONAL" IS_INSTANTIATED="TRUE" MHS_INDEX="3" MPD_INDEX="13" NAME="C_USE_UART" TYPE="INTEGER" VALUE="1">
@@ -4362,6 +4375,7 @@
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_AWREADY" DIR="O" MPD_INDEX="8" NAME="S_AXI_AWREADY" SIGNAME="axi4lite_0_M_AWREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_AWREADY"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_AWREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_WDATA" DIR="I" ENDIAN="LITTLE" LEFT="31" LSB="0" MPD_INDEX="9" MSB="31" NAME="S_AXI_WDATA" RIGHT="0" SIGNAME="axi4lite_0_M_WDATA" VECFORMULA="[(C_S_AXI_DATA_WIDTH-1):0]">
@@ -4382,16 +4396,19 @@
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_WREADY" DIR="O" MPD_INDEX="12" NAME="S_AXI_WREADY" SIGNAME="axi4lite_0_M_WREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_WREADY"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_WREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_BRESP" DIR="O" ENDIAN="LITTLE" LEFT="1" LSB="0" MPD_INDEX="13" MSB="1" NAME="S_AXI_BRESP" RIGHT="0" SIGNAME="axi4lite_0_M_BRESP" VECFORMULA="[1:0]">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_BRESP"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_BRESP"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_BVALID" DIR="O" MPD_INDEX="14" NAME="S_AXI_BVALID" SIGNAME="axi4lite_0_M_BVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_BVALID"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_BVALID"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_BREADY" DIR="I" MPD_INDEX="15" NAME="S_AXI_BREADY" SIGNAME="axi4lite_0_M_BREADY">
@@ -4412,21 +4429,25 @@
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_ARREADY" DIR="O" MPD_INDEX="18" NAME="S_AXI_ARREADY" SIGNAME="axi4lite_0_M_ARREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_ARREADY"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_ARREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_RDATA" DIR="O" ENDIAN="LITTLE" LEFT="31" LSB="0" MPD_INDEX="19" MSB="31" NAME="S_AXI_RDATA" RIGHT="0" SIGNAME="axi4lite_0_M_RDATA" VECFORMULA="[(C_S_AXI_DATA_WIDTH-1):0]">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_RDATA"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_RDATA"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_RRESP" DIR="O" ENDIAN="LITTLE" LEFT="1" LSB="0" MPD_INDEX="20" MSB="1" NAME="S_AXI_RRESP" RIGHT="0" SIGNAME="axi4lite_0_M_RRESP" VECFORMULA="[1:0]">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_RRESP"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_RRESP"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_RVALID" DIR="O" MPD_INDEX="21" NAME="S_AXI_RVALID" SIGNAME="axi4lite_0_M_RVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_RVALID"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_RVALID"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_RREADY" DIR="I" MPD_INDEX="22" NAME="S_AXI_RREADY" SIGNAME="axi4lite_0_M_RREADY">
@@ -5599,6 +5620,8 @@
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="axi_intc_0" PORT="S_AXI_ACLK"/>
             <CONNECTION INSTANCE="axi_intc_0" PORT="Processor_clk"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="sc_uart_0" PORT="S_AXI_ACLK"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_ACLK"/>
+            <CONNECTION INSTANCE="chipscope_ila_0" PORT="CLK"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" IS_INSTANTIATED="TRUE" MHS_INDEX="2" MPD_INDEX="23" NAME="RST" SIGIS="RST" SIGNAME="RESET">
@@ -5904,6 +5927,7 @@
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="dip_switches_8bits" PORT="S_AXI_ARESETN"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="axi_intc_0" PORT="S_AXI_ARESETN"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="sc_uart_0" PORT="S_AXI_ARESETN"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_ARESETN"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" IS_VALID="FALSE" MPD_INDEX="4" NAME="IRQ" SENSITIVITY="EDGE_RISING" SIGIS="INTERRUPT" SIGNAME="__NOC__"/>
@@ -6130,7 +6154,9 @@
           </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="axi4lite_0_M_AWID" DIR="O" ENDIAN="LITTLE" LEFT="6" LSB="0" MPD_INDEX="50" MSB="6" NAME="M_AXI_AWID" RIGHT="0" SIGNAME="axi4lite_0_M_AWID" VECFORMULA="[((C_NUM_MASTER_SLOTS*C_AXI_ID_WIDTH)-1):0]">
-          <CONNECTIONS/>
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_AWID"/>
+          </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="axi4lite_0_M_AWADDR" DIR="O" ENDIAN="LITTLE" LEFT="223" LSB="0" MPD_INDEX="51" MSB="223" NAME="M_AXI_AWADDR" RIGHT="0" SIGNAME="axi4lite_0_M_AWADDR" VECFORMULA="[((C_NUM_MASTER_SLOTS*C_AXI_ADDR_WIDTH)-1):0]">
           <CONNECTIONS>
@@ -6141,34 +6167,53 @@
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="dip_switches_8bits" PORT="S_AXI_AWADDR"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="axi_intc_0" PORT="S_AXI_AWADDR"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="sc_uart_0" PORT="S_AXI_AWADDR"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_AWADDR"/>
           </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="axi4lite_0_M_AWLEN" DIR="O" ENDIAN="LITTLE" LEFT="55" LSB="0" MPD_INDEX="52" MSB="55" NAME="M_AXI_AWLEN" RIGHT="0" SIGNAME="axi4lite_0_M_AWLEN" VECFORMULA="[((C_NUM_MASTER_SLOTS*8)-1):0]">
-          <CONNECTIONS/>
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_AWLEN"/>
+          </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="axi4lite_0_M_AWSIZE" DIR="O" ENDIAN="LITTLE" LEFT="20" LSB="0" MPD_INDEX="53" MSB="20" NAME="M_AXI_AWSIZE" RIGHT="0" SIGNAME="axi4lite_0_M_AWSIZE" VECFORMULA="[((C_NUM_MASTER_SLOTS*3)-1):0]">
-          <CONNECTIONS/>
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_AWSIZE"/>
+          </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="axi4lite_0_M_AWBURST" DIR="O" ENDIAN="LITTLE" LEFT="13" LSB="0" MPD_INDEX="54" MSB="13" NAME="M_AXI_AWBURST" RIGHT="0" SIGNAME="axi4lite_0_M_AWBURST" VECFORMULA="[((C_NUM_MASTER_SLOTS*2)-1):0]">
-          <CONNECTIONS/>
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_AWBURST"/>
+          </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="axi4lite_0_M_AWLOCK" DIR="O" ENDIAN="LITTLE" LEFT="13" LSB="0" MPD_INDEX="55" MSB="13" NAME="M_AXI_AWLOCK" RIGHT="0" SIGNAME="axi4lite_0_M_AWLOCK" VECFORMULA="[((C_NUM_MASTER_SLOTS*2)-1):0]">
-          <CONNECTIONS/>
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_AWLOCK"/>
+          </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="axi4lite_0_M_AWCACHE" DIR="O" ENDIAN="LITTLE" LEFT="27" LSB="0" MPD_INDEX="56" MSB="27" NAME="M_AXI_AWCACHE" RIGHT="0" SIGNAME="axi4lite_0_M_AWCACHE" VECFORMULA="[((C_NUM_MASTER_SLOTS*4)-1):0]">
-          <CONNECTIONS/>
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_AWCACHE"/>
+          </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="axi4lite_0_M_AWPROT" DIR="O" ENDIAN="LITTLE" LEFT="20" LSB="0" MPD_INDEX="57" MSB="20" NAME="M_AXI_AWPROT" RIGHT="0" SIGNAME="axi4lite_0_M_AWPROT" VECFORMULA="[((C_NUM_MASTER_SLOTS*3)-1):0]">
-          <CONNECTIONS/>
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_AWPROT"/>
+          </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="axi4lite_0_M_AWREGION" DIR="O" ENDIAN="LITTLE" LEFT="27" LSB="0" MPD_INDEX="58" MSB="27" NAME="M_AXI_AWREGION" RIGHT="0" SIGNAME="axi4lite_0_M_AWREGION" VECFORMULA="[((C_NUM_MASTER_SLOTS*4)-1):0]">
-          <CONNECTIONS/>
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_AWREGION"/>
+          </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="axi4lite_0_M_AWQOS" DIR="O" ENDIAN="LITTLE" LEFT="27" LSB="0" MPD_INDEX="59" MSB="27" NAME="M_AXI_AWQOS" RIGHT="0" SIGNAME="axi4lite_0_M_AWQOS" VECFORMULA="[((C_NUM_MASTER_SLOTS*4)-1):0]">
-          <CONNECTIONS/>
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_AWQOS"/>
+          </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="axi4lite_0_M_AWUSER" DIR="O" ENDIAN="LITTLE" LEFT="6" LSB="0" MPD_INDEX="60" MSB="6" NAME="M_AXI_AWUSER" RIGHT="0" SIGNAME="axi4lite_0_M_AWUSER" VECFORMULA="[((C_NUM_MASTER_SLOTS*C_AXI_AWUSER_WIDTH)-1):0]">
-          <CONNECTIONS/>
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_AWUSER"/>
+          </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="axi4lite_0_M_AWVALID" DIR="O" ENDIAN="LITTLE" LEFT="6" LSB="0" MPD_INDEX="61" MSB="6" NAME="M_AXI_AWVALID" RIGHT="0" SIGNAME="axi4lite_0_M_AWVALID" VECFORMULA="[(C_NUM_MASTER_SLOTS-1):0]">
           <CONNECTIONS>
@@ -6179,6 +6224,7 @@
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="dip_switches_8bits" PORT="S_AXI_AWVALID"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="axi_intc_0" PORT="S_AXI_AWVALID"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="sc_uart_0" PORT="S_AXI_AWVALID"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_AWVALID"/>
           </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="axi4lite_0_M_AWREADY" DIR="I" ENDIAN="LITTLE" LEFT="6" LSB="0" MPD_INDEX="62" MSB="6" NAME="M_AXI_AWREADY" RIGHT="0" SIGNAME="axi4lite_0_M_AWREADY" VECFORMULA="[(C_NUM_MASTER_SLOTS-1):0]">
@@ -6193,7 +6239,9 @@
           </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="axi4lite_0_M_WID" DIR="O" ENDIAN="LITTLE" LEFT="6" LSB="0" MPD_INDEX="63" MSB="6" NAME="M_AXI_WID" RIGHT="0" SIGNAME="axi4lite_0_M_WID" VECFORMULA="[((C_NUM_MASTER_SLOTS*C_AXI_ID_WIDTH)-1):0]">
-          <CONNECTIONS/>
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_WID"/>
+          </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="axi4lite_0_M_WDATA" DIR="O" ENDIAN="LITTLE" LEFT="223" LSB="0" MPD_INDEX="64" MSB="223" NAME="M_AXI_WDATA" RIGHT="0" SIGNAME="axi4lite_0_M_WDATA" VECFORMULA="[((C_NUM_MASTER_SLOTS*C_AXI_DATA_MAX_WIDTH)-1):0]">
           <CONNECTIONS>
@@ -6204,6 +6252,7 @@
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="dip_switches_8bits" PORT="S_AXI_WDATA"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="axi_intc_0" PORT="S_AXI_WDATA"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="sc_uart_0" PORT="S_AXI_WDATA"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_WDATA"/>
           </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="axi4lite_0_M_WSTRB" DIR="O" ENDIAN="LITTLE" LEFT="27" LSB="0" MPD_INDEX="65" MSB="27" NAME="M_AXI_WSTRB" RIGHT="0" SIGNAME="axi4lite_0_M_WSTRB" VECFORMULA="[(((C_NUM_MASTER_SLOTS*C_AXI_DATA_MAX_WIDTH)/8)-1):0]">
@@ -6215,13 +6264,18 @@
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="dip_switches_8bits" PORT="S_AXI_WSTRB"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="axi_intc_0" PORT="S_AXI_WSTRB"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="sc_uart_0" PORT="S_AXI_WSTRB"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_WSTRB"/>
           </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="axi4lite_0_M_WLAST" DIR="O" ENDIAN="LITTLE" LEFT="6" LSB="0" MPD_INDEX="66" MSB="6" NAME="M_AXI_WLAST" RIGHT="0" SIGNAME="axi4lite_0_M_WLAST" VECFORMULA="[(C_NUM_MASTER_SLOTS-1):0]">
-          <CONNECTIONS/>
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_WLAST"/>
+          </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="axi4lite_0_M_WUSER" DIR="O" ENDIAN="LITTLE" LEFT="6" LSB="0" MPD_INDEX="67" MSB="6" NAME="M_AXI_WUSER" RIGHT="0" SIGNAME="axi4lite_0_M_WUSER" VECFORMULA="[((C_NUM_MASTER_SLOTS*C_AXI_WUSER_WIDTH)-1):0]">
-          <CONNECTIONS/>
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_WUSER"/>
+          </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="axi4lite_0_M_WVALID" DIR="O" ENDIAN="LITTLE" LEFT="6" LSB="0" MPD_INDEX="68" MSB="6" NAME="M_AXI_WVALID" RIGHT="0" SIGNAME="axi4lite_0_M_WVALID" VECFORMULA="[(C_NUM_MASTER_SLOTS-1):0]">
           <CONNECTIONS>
@@ -6232,6 +6286,7 @@
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="dip_switches_8bits" PORT="S_AXI_WVALID"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="axi_intc_0" PORT="S_AXI_WVALID"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="sc_uart_0" PORT="S_AXI_WVALID"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_WVALID"/>
           </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="axi4lite_0_M_WREADY" DIR="I" ENDIAN="LITTLE" LEFT="6" LSB="0" MPD_INDEX="69" MSB="6" NAME="M_AXI_WREADY" RIGHT="0" SIGNAME="axi4lite_0_M_WREADY" VECFORMULA="[(C_NUM_MASTER_SLOTS-1):0]">
@@ -6282,10 +6337,13 @@
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="dip_switches_8bits" PORT="S_AXI_BREADY"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="axi_intc_0" PORT="S_AXI_BREADY"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="sc_uart_0" PORT="S_AXI_BREADY"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_BREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="axi4lite_0_M_ARID" DIR="O" ENDIAN="LITTLE" LEFT="6" LSB="0" MPD_INDEX="75" MSB="6" NAME="M_AXI_ARID" RIGHT="0" SIGNAME="axi4lite_0_M_ARID" VECFORMULA="[((C_NUM_MASTER_SLOTS*C_AXI_ID_WIDTH)-1):0]">
-          <CONNECTIONS/>
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_ARID"/>
+          </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="axi4lite_0_M_ARADDR" DIR="O" ENDIAN="LITTLE" LEFT="223" LSB="0" MPD_INDEX="76" MSB="223" NAME="M_AXI_ARADDR" RIGHT="0" SIGNAME="axi4lite_0_M_ARADDR" VECFORMULA="[((C_NUM_MASTER_SLOTS*C_AXI_ADDR_WIDTH)-1):0]">
           <CONNECTIONS>
@@ -6296,34 +6354,53 @@
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="dip_switches_8bits" PORT="S_AXI_ARADDR"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="axi_intc_0" PORT="S_AXI_ARADDR"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="sc_uart_0" PORT="S_AXI_ARADDR"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_ARADDR"/>
           </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="axi4lite_0_M_ARLEN" DIR="O" ENDIAN="LITTLE" LEFT="55" LSB="0" MPD_INDEX="77" MSB="55" NAME="M_AXI_ARLEN" RIGHT="0" SIGNAME="axi4lite_0_M_ARLEN" VECFORMULA="[((C_NUM_MASTER_SLOTS*8)-1):0]">
-          <CONNECTIONS/>
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_ARLEN"/>
+          </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="axi4lite_0_M_ARSIZE" DIR="O" ENDIAN="LITTLE" LEFT="20" LSB="0" MPD_INDEX="78" MSB="20" NAME="M_AXI_ARSIZE" RIGHT="0" SIGNAME="axi4lite_0_M_ARSIZE" VECFORMULA="[((C_NUM_MASTER_SLOTS*3)-1):0]">
-          <CONNECTIONS/>
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_ARSIZE"/>
+          </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="axi4lite_0_M_ARBURST" DIR="O" ENDIAN="LITTLE" LEFT="13" LSB="0" MPD_INDEX="79" MSB="13" NAME="M_AXI_ARBURST" RIGHT="0" SIGNAME="axi4lite_0_M_ARBURST" VECFORMULA="[((C_NUM_MASTER_SLOTS*2)-1):0]">
-          <CONNECTIONS/>
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_ARBURST"/>
+          </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="axi4lite_0_M_ARLOCK" DIR="O" ENDIAN="LITTLE" LEFT="13" LSB="0" MPD_INDEX="80" MSB="13" NAME="M_AXI_ARLOCK" RIGHT="0" SIGNAME="axi4lite_0_M_ARLOCK" VECFORMULA="[((C_NUM_MASTER_SLOTS*2)-1):0]">
-          <CONNECTIONS/>
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_ARLOCK"/>
+          </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="axi4lite_0_M_ARCACHE" DIR="O" ENDIAN="LITTLE" LEFT="27" LSB="0" MPD_INDEX="81" MSB="27" NAME="M_AXI_ARCACHE" RIGHT="0" SIGNAME="axi4lite_0_M_ARCACHE" VECFORMULA="[((C_NUM_MASTER_SLOTS*4)-1):0]">
-          <CONNECTIONS/>
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_ARCACHE"/>
+          </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="axi4lite_0_M_ARPROT" DIR="O" ENDIAN="LITTLE" LEFT="20" LSB="0" MPD_INDEX="82" MSB="20" NAME="M_AXI_ARPROT" RIGHT="0" SIGNAME="axi4lite_0_M_ARPROT" VECFORMULA="[((C_NUM_MASTER_SLOTS*3)-1):0]">
-          <CONNECTIONS/>
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_ARPROT"/>
+          </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="axi4lite_0_M_ARREGION" DIR="O" ENDIAN="LITTLE" LEFT="27" LSB="0" MPD_INDEX="83" MSB="27" NAME="M_AXI_ARREGION" RIGHT="0" SIGNAME="axi4lite_0_M_ARREGION" VECFORMULA="[((C_NUM_MASTER_SLOTS*4)-1):0]">
-          <CONNECTIONS/>
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_ARREGION"/>
+          </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="axi4lite_0_M_ARQOS" DIR="O" ENDIAN="LITTLE" LEFT="27" LSB="0" MPD_INDEX="84" MSB="27" NAME="M_AXI_ARQOS" RIGHT="0" SIGNAME="axi4lite_0_M_ARQOS" VECFORMULA="[((C_NUM_MASTER_SLOTS*4)-1):0]">
-          <CONNECTIONS/>
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_ARQOS"/>
+          </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="axi4lite_0_M_ARUSER" DIR="O" ENDIAN="LITTLE" LEFT="6" LSB="0" MPD_INDEX="85" MSB="6" NAME="M_AXI_ARUSER" RIGHT="0" SIGNAME="axi4lite_0_M_ARUSER" VECFORMULA="[((C_NUM_MASTER_SLOTS*C_AXI_ARUSER_WIDTH)-1):0]">
-          <CONNECTIONS/>
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_ARUSER"/>
+          </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="axi4lite_0_M_ARVALID" DIR="O" ENDIAN="LITTLE" LEFT="6" LSB="0" MPD_INDEX="86" MSB="6" NAME="M_AXI_ARVALID" RIGHT="0" SIGNAME="axi4lite_0_M_ARVALID" VECFORMULA="[(C_NUM_MASTER_SLOTS-1):0]">
           <CONNECTIONS>
@@ -6334,6 +6411,7 @@
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="dip_switches_8bits" PORT="S_AXI_ARVALID"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="axi_intc_0" PORT="S_AXI_ARVALID"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="sc_uart_0" PORT="S_AXI_ARVALID"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_ARVALID"/>
           </CONNECTIONS>
         </PORT>
         <PORT DEF_SIGNAME="axi4lite_0_M_ARREADY" DIR="I" ENDIAN="LITTLE" LEFT="6" LSB="0" MPD_INDEX="87" MSB="6" NAME="M_AXI_ARREADY" RIGHT="0" SIGNAME="axi4lite_0_M_ARREADY" VECFORMULA="[(C_NUM_MASTER_SLOTS-1):0]">
@@ -6398,6 +6476,7 @@
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="dip_switches_8bits" PORT="S_AXI_RREADY"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="axi_intc_0" PORT="S_AXI_RREADY"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="sc_uart_0" PORT="S_AXI_RREADY"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_RREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI_CTRL" DEF_SIGNAME="__BUS__" DIR="I" ENDIAN="LITTLE" LEFT="31" LSB="0" MPD_INDEX="95" MSB="31" NAME="S_AXI_CTRL_AWADDR" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[(C_S_AXI_CTRL_ADDR_WIDTH - 1) : 0]"/>
@@ -6623,6 +6702,7 @@
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_AWREADY" DIR="O" MPD_INDEX="5" NAME="S_AXI_AWREADY" SIGNAME="axi4lite_0_M_AWREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_AWREADY"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_AWREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_WDATA" DIR="I" ENDIAN="LITTLE" LEFT="31" LSB="0" MPD_INDEX="6" MSB="31" NAME="S_AXI_WDATA" RIGHT="0" SIGNAME="axi4lite_0_M_WDATA" VECFORMULA="[(C_S_AXI_DATA_WIDTH-1):0]">
@@ -6643,16 +6723,19 @@
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_WREADY" DIR="O" MPD_INDEX="9" NAME="S_AXI_WREADY" SIGNAME="axi4lite_0_M_WREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_WREADY"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_WREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_BRESP" DIR="O" ENDIAN="LITTLE" LEFT="1" LSB="0" MPD_INDEX="10" MSB="1" NAME="S_AXI_BRESP" RIGHT="0" SIGNAME="axi4lite_0_M_BRESP" VECFORMULA="[1:0]">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_BRESP"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_BRESP"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_BVALID" DIR="O" MPD_INDEX="11" NAME="S_AXI_BVALID" SIGNAME="axi4lite_0_M_BVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_BVALID"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_BVALID"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_BREADY" DIR="I" MPD_INDEX="12" NAME="S_AXI_BREADY" SIGNAME="axi4lite_0_M_BREADY">
@@ -6673,21 +6756,25 @@
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_ARREADY" DIR="O" MPD_INDEX="15" NAME="S_AXI_ARREADY" SIGNAME="axi4lite_0_M_ARREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_ARREADY"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_ARREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_RDATA" DIR="O" ENDIAN="LITTLE" LEFT="31" LSB="0" MPD_INDEX="16" MSB="31" NAME="S_AXI_RDATA" RIGHT="0" SIGNAME="axi4lite_0_M_RDATA" VECFORMULA="[(C_S_AXI_DATA_WIDTH-1):0]">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_RDATA"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_RDATA"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_RRESP" DIR="O" ENDIAN="LITTLE" LEFT="1" LSB="0" MPD_INDEX="17" MSB="1" NAME="S_AXI_RRESP" RIGHT="0" SIGNAME="axi4lite_0_M_RRESP" VECFORMULA="[1:0]">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_RRESP"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_RRESP"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_RVALID" DIR="O" MPD_INDEX="18" NAME="S_AXI_RVALID" SIGNAME="axi4lite_0_M_RVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_RVALID"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_RVALID"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_RREADY" DIR="I" MPD_INDEX="19" NAME="S_AXI_RREADY" SIGNAME="axi4lite_0_M_RREADY">
@@ -6825,6 +6912,7 @@
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_AWREADY" DIR="O" MPD_INDEX="4" NAME="S_AXI_AWREADY" SIGNAME="axi4lite_0_M_AWREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_AWREADY"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_AWREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_WDATA" DIR="I" ENDIAN="LITTLE" LEFT="31" LSB="0" MPD_INDEX="5" MSB="31" NAME="S_AXI_WDATA" RIGHT="0" SIGNAME="axi4lite_0_M_WDATA" VECFORMULA="[(C_S_AXI_DATA_WIDTH-1):0]">
@@ -6845,16 +6933,19 @@
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_WREADY" DIR="O" MPD_INDEX="8" NAME="S_AXI_WREADY" SIGNAME="axi4lite_0_M_WREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_WREADY"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_WREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_BRESP" DIR="O" ENDIAN="LITTLE" LEFT="1" LSB="0" MPD_INDEX="9" MSB="1" NAME="S_AXI_BRESP" RIGHT="0" SIGNAME="axi4lite_0_M_BRESP" VECFORMULA="[1:0]">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_BRESP"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_BRESP"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_BVALID" DIR="O" MPD_INDEX="10" NAME="S_AXI_BVALID" SIGNAME="axi4lite_0_M_BVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_BVALID"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_BVALID"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_BREADY" DIR="I" MPD_INDEX="11" NAME="S_AXI_BREADY" SIGNAME="axi4lite_0_M_BREADY">
@@ -6875,21 +6966,25 @@
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_ARREADY" DIR="O" MPD_INDEX="14" NAME="S_AXI_ARREADY" SIGNAME="axi4lite_0_M_ARREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_ARREADY"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_ARREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_RDATA" DIR="O" ENDIAN="LITTLE" LEFT="31" LSB="0" MPD_INDEX="15" MSB="31" NAME="S_AXI_RDATA" RIGHT="0" SIGNAME="axi4lite_0_M_RDATA" VECFORMULA="[(C_S_AXI_DATA_WIDTH-1):0]">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_RDATA"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_RDATA"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_RRESP" DIR="O" ENDIAN="LITTLE" LEFT="1" LSB="0" MPD_INDEX="16" MSB="1" NAME="S_AXI_RRESP" RIGHT="0" SIGNAME="axi4lite_0_M_RRESP" VECFORMULA="[1:0]">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_RRESP"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_RRESP"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_RVALID" DIR="O" MPD_INDEX="17" NAME="S_AXI_RVALID" SIGNAME="axi4lite_0_M_RVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_RVALID"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_RVALID"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_RREADY" DIR="I" MPD_INDEX="18" NAME="S_AXI_RREADY" SIGNAME="axi4lite_0_M_RREADY">
@@ -7045,6 +7140,7 @@
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_AWREADY" DIR="O" MPD_INDEX="4" NAME="S_AXI_AWREADY" SIGNAME="axi4lite_0_M_AWREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_AWREADY"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_AWREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_WDATA" DIR="I" ENDIAN="LITTLE" LEFT="31" LSB="0" MPD_INDEX="5" MSB="31" NAME="S_AXI_WDATA" RIGHT="0" SIGNAME="axi4lite_0_M_WDATA" VECFORMULA="[(C_S_AXI_DATA_WIDTH-1):0]">
@@ -7065,16 +7161,19 @@
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_WREADY" DIR="O" MPD_INDEX="8" NAME="S_AXI_WREADY" SIGNAME="axi4lite_0_M_WREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_WREADY"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_WREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_BRESP" DIR="O" ENDIAN="LITTLE" LEFT="1" LSB="0" MPD_INDEX="9" MSB="1" NAME="S_AXI_BRESP" RIGHT="0" SIGNAME="axi4lite_0_M_BRESP" VECFORMULA="[1:0]">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_BRESP"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_BRESP"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_BVALID" DIR="O" MPD_INDEX="10" NAME="S_AXI_BVALID" SIGNAME="axi4lite_0_M_BVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_BVALID"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_BVALID"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_BREADY" DIR="I" MPD_INDEX="11" NAME="S_AXI_BREADY" SIGNAME="axi4lite_0_M_BREADY">
@@ -7095,21 +7194,25 @@
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_ARREADY" DIR="O" MPD_INDEX="14" NAME="S_AXI_ARREADY" SIGNAME="axi4lite_0_M_ARREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_ARREADY"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_ARREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_RDATA" DIR="O" ENDIAN="LITTLE" LEFT="31" LSB="0" MPD_INDEX="15" MSB="31" NAME="S_AXI_RDATA" RIGHT="0" SIGNAME="axi4lite_0_M_RDATA" VECFORMULA="[(C_S_AXI_DATA_WIDTH-1):0]">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_RDATA"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_RDATA"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_RRESP" DIR="O" ENDIAN="LITTLE" LEFT="1" LSB="0" MPD_INDEX="16" MSB="1" NAME="S_AXI_RRESP" RIGHT="0" SIGNAME="axi4lite_0_M_RRESP" VECFORMULA="[1:0]">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_RRESP"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_RRESP"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_RVALID" DIR="O" MPD_INDEX="17" NAME="S_AXI_RVALID" SIGNAME="axi4lite_0_M_RVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_RVALID"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_RVALID"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_RREADY" DIR="I" MPD_INDEX="18" NAME="S_AXI_RREADY" SIGNAME="axi4lite_0_M_RREADY">
@@ -7265,6 +7368,7 @@
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_AWREADY" DIR="O" MPD_INDEX="4" NAME="S_AXI_AWREADY" SIGNAME="axi4lite_0_M_AWREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_AWREADY"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_AWREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_WDATA" DIR="I" ENDIAN="LITTLE" LEFT="31" LSB="0" MPD_INDEX="5" MSB="31" NAME="S_AXI_WDATA" RIGHT="0" SIGNAME="axi4lite_0_M_WDATA" VECFORMULA="[(C_S_AXI_DATA_WIDTH-1):0]">
@@ -7285,16 +7389,19 @@
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_WREADY" DIR="O" MPD_INDEX="8" NAME="S_AXI_WREADY" SIGNAME="axi4lite_0_M_WREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_WREADY"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_WREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_BRESP" DIR="O" ENDIAN="LITTLE" LEFT="1" LSB="0" MPD_INDEX="9" MSB="1" NAME="S_AXI_BRESP" RIGHT="0" SIGNAME="axi4lite_0_M_BRESP" VECFORMULA="[1:0]">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_BRESP"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_BRESP"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_BVALID" DIR="O" MPD_INDEX="10" NAME="S_AXI_BVALID" SIGNAME="axi4lite_0_M_BVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_BVALID"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_BVALID"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_BREADY" DIR="I" MPD_INDEX="11" NAME="S_AXI_BREADY" SIGNAME="axi4lite_0_M_BREADY">
@@ -7315,21 +7422,25 @@
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_ARREADY" DIR="O" MPD_INDEX="14" NAME="S_AXI_ARREADY" SIGNAME="axi4lite_0_M_ARREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_ARREADY"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_ARREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_RDATA" DIR="O" ENDIAN="LITTLE" LEFT="31" LSB="0" MPD_INDEX="15" MSB="31" NAME="S_AXI_RDATA" RIGHT="0" SIGNAME="axi4lite_0_M_RDATA" VECFORMULA="[(C_S_AXI_DATA_WIDTH-1):0]">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_RDATA"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_RDATA"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_RRESP" DIR="O" ENDIAN="LITTLE" LEFT="1" LSB="0" MPD_INDEX="16" MSB="1" NAME="S_AXI_RRESP" RIGHT="0" SIGNAME="axi4lite_0_M_RRESP" VECFORMULA="[1:0]">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_RRESP"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_RRESP"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_RVALID" DIR="O" MPD_INDEX="17" NAME="S_AXI_RVALID" SIGNAME="axi4lite_0_M_RVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_RVALID"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_RVALID"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_RREADY" DIR="I" MPD_INDEX="18" NAME="S_AXI_RREADY" SIGNAME="axi4lite_0_M_RREADY">
@@ -7537,9 +7648,9 @@
             <CONNECTION INSTANCE="clock_generator_0" PORT="CLKOUT0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" IS_INSTANTIATED="TRUE" MHS_INDEX="3" MPD_INDEX="24" NAME="Processor_rst" SIGIS="RST" SIGNAME="proc_sys_reset_0_Peripheral_aresetn">
+        <PORT DIR="I" IS_INSTANTIATED="TRUE" MHS_INDEX="3" MPD_INDEX="24" NAME="Processor_rst" SIGIS="RST" SIGNAME="proc_sys_reset_0_Peripheral_Reset">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="proc_sys_reset_0" PORT="Peripheral_aresetn"/>
+            <CONNECTION INSTANCE="proc_sys_reset_0" PORT="Peripheral_Reset"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_ARESETN" DIR="I" MPD_INDEX="1" NAME="S_AXI_ARESETN" SIGIS="RST" SIGNAME="axi4lite_0_M_ARESETN">
@@ -7560,6 +7671,7 @@
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_AWREADY" DIR="O" MPD_INDEX="4" NAME="S_AXI_AWREADY" SIGNAME="axi4lite_0_M_AWREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_AWREADY"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_AWREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_WDATA" DIR="I" ENDIAN="LITTLE" LEFT="31" LSB="0" MPD_INDEX="5" MSB="31" NAME="S_AXI_WDATA" RIGHT="0" SIGNAME="axi4lite_0_M_WDATA" VECFORMULA="[(C_S_AXI_DATA_WIDTH-1):0]">
@@ -7580,16 +7692,19 @@
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_WREADY" DIR="O" MPD_INDEX="8" NAME="S_AXI_WREADY" SIGNAME="axi4lite_0_M_WREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_WREADY"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_WREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_BRESP" DIR="O" ENDIAN="LITTLE" LEFT="1" LSB="0" MPD_INDEX="9" MSB="1" NAME="S_AXI_BRESP" RIGHT="0" SIGNAME="axi4lite_0_M_BRESP" VECFORMULA="[1:0]">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_BRESP"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_BRESP"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_BVALID" DIR="O" MPD_INDEX="10" NAME="S_AXI_BVALID" SIGNAME="axi4lite_0_M_BVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_BVALID"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_BVALID"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_BREADY" DIR="I" MPD_INDEX="11" NAME="S_AXI_BREADY" SIGNAME="axi4lite_0_M_BREADY">
@@ -7610,21 +7725,25 @@
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_ARREADY" DIR="O" MPD_INDEX="14" NAME="S_AXI_ARREADY" SIGNAME="axi4lite_0_M_ARREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_ARREADY"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_ARREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_RDATA" DIR="O" ENDIAN="LITTLE" LEFT="31" LSB="0" MPD_INDEX="15" MSB="31" NAME="S_AXI_RDATA" RIGHT="0" SIGNAME="axi4lite_0_M_RDATA" VECFORMULA="[(C_S_AXI_DATA_WIDTH-1):0]">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_RDATA"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_RDATA"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_RRESP" DIR="O" ENDIAN="LITTLE" LEFT="1" LSB="0" MPD_INDEX="16" MSB="1" NAME="S_AXI_RRESP" RIGHT="0" SIGNAME="axi4lite_0_M_RRESP" VECFORMULA="[1:0]">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_RRESP"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_RRESP"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_RVALID" DIR="O" MPD_INDEX="17" NAME="S_AXI_RVALID" SIGNAME="axi4lite_0_M_RVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_RVALID"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_RVALID"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_RREADY" DIR="I" MPD_INDEX="18" NAME="S_AXI_RREADY" SIGNAME="axi4lite_0_M_RREADY">
@@ -7729,21 +7848,23 @@
         <PORT DIR="O" ENDIAN="LITTLE" IS_INSTANTIATED="TRUE" LEFT="7" LSB="0" MHS_INDEX="1" MPD_INDEX="0" MSB="7" NAME="tx_data" RIGHT="0" SIGNAME="sc_uart_0_tx_data" VECFORMULA="[7:0]">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External Ports" PORT="sc_uart_0_tx_data_pin"/>
+            <CONNECTION INSTANCE="chipscope_ila_0" PORT="TRIG0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" ENDIAN="LITTLE" IS_INSTANTIATED="TRUE" LEFT="2" LSB="0" MHS_INDEX="2" MPD_INDEX="2" MSB="2" NAME="master_status" RIGHT="0" SIGNAME="sc_uart_0_master_status" VECFORMULA="[2:0]">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External Ports" PORT="sc_uart_0_master_status_pin"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" ENDIAN="LITTLE" IS_INSTANTIATED="TRUE" LEFT="2" LSB="0" MHS_INDEX="3" MPD_INDEX="3" MSB="2" NAME="slave_status" RIGHT="0" SIGNAME="sc_uart_0_slave_status" VECFORMULA="[2:0]">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External Ports" PORT="sc_uart_0_slave_status_pin"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" ENDIAN="LITTLE" IS_INSTANTIATED="TRUE" LEFT="7" LSB="0" MHS_INDEX="4" MPD_INDEX="1" MSB="7" NAME="rx_data" RIGHT="0" SIGNAME="sc_uart_0_rx_data" VECFORMULA="[7:0]">
+        <PORT DIR="I" ENDIAN="LITTLE" IS_INSTANTIATED="TRUE" LEFT="7" LSB="0" MHS_INDEX="2" MPD_INDEX="1" MSB="7" NAME="rx_data" RIGHT="0" SIGNAME="sc_uart_0_rx_data" VECFORMULA="[7:0]">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External Ports" PORT="sc_uart_0_rx_data_pin"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" ENDIAN="LITTLE" IS_INSTANTIATED="TRUE" LEFT="2" LSB="0" MHS_INDEX="3" MPD_INDEX="2" MSB="2" NAME="master_status" RIGHT="0" SIGNAME="sc_uart_0_master_status" VECFORMULA="[2:0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External Ports" PORT="sc_uart_0_master_status_pin"/>
+            <CONNECTION INSTANCE="chipscope_ila_0" PORT="TRIG0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" ENDIAN="LITTLE" IS_INSTANTIATED="TRUE" LEFT="2" LSB="0" MHS_INDEX="4" MPD_INDEX="3" MSB="2" NAME="slave_status" RIGHT="0" SIGNAME="sc_uart_0_slave_status" VECFORMULA="[2:0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External Ports" PORT="sc_uart_0_slave_status_pin"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_ARESETN" DIR="I" MPD_INDEX="5" NAME="S_AXI_ARESETN" SIGIS="RST" SIGNAME="axi4lite_0_M_ARESETN">
@@ -7799,41 +7920,49 @@
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_ARREADY" DIR="O" MPD_INDEX="15" NAME="S_AXI_ARREADY" SIGNAME="axi4lite_0_M_ARREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_ARREADY"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_ARREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_RDATA" DIR="O" ENDIAN="LITTLE" LEFT="31" LSB="0" MPD_INDEX="16" MSB="31" NAME="S_AXI_RDATA" RIGHT="0" SIGNAME="axi4lite_0_M_RDATA" VECFORMULA="[(C_S_AXI_DATA_WIDTH-1):0]">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_RDATA"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_RDATA"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_RRESP" DIR="O" ENDIAN="LITTLE" LEFT="1" LSB="0" MPD_INDEX="17" MSB="1" NAME="S_AXI_RRESP" RIGHT="0" SIGNAME="axi4lite_0_M_RRESP" VECFORMULA="[1:0]">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_RRESP"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_RRESP"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_RVALID" DIR="O" MPD_INDEX="18" NAME="S_AXI_RVALID" SIGNAME="axi4lite_0_M_RVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_RVALID"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_RVALID"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_WREADY" DIR="O" MPD_INDEX="19" NAME="S_AXI_WREADY" SIGNAME="axi4lite_0_M_WREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_WREADY"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_WREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_BRESP" DIR="O" ENDIAN="LITTLE" LEFT="1" LSB="0" MPD_INDEX="20" MSB="1" NAME="S_AXI_BRESP" RIGHT="0" SIGNAME="axi4lite_0_M_BRESP" VECFORMULA="[1:0]">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_BRESP"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_BRESP"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_BVALID" DIR="O" MPD_INDEX="21" NAME="S_AXI_BVALID" SIGNAME="axi4lite_0_M_BVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_BVALID"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_BVALID"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_AWREADY" DIR="O" MPD_INDEX="22" NAME="S_AXI_AWREADY" SIGNAME="axi4lite_0_M_AWREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_AWREADY"/>
+            <CONNECTION BUSINTERFACE="[MON_AXI]" INSTANCE="chipscope_axi_monitor_0" PORT="MON_AXI_AWREADY"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -7860,6 +7989,9 @@
             <PORTMAP DIR="O" PHYSICAL="S_AXI_BVALID"/>
             <PORTMAP DIR="O" PHYSICAL="S_AXI_AWREADY"/>
           </PORTMAPS>
+          <MONITORS>
+            <MONITOR BUSINTERFACE="MON_AXI" INSTANCE="chipscope_axi_monitor_0"/>
+          </MONITORS>
         </BUSINTERFACE>
       </BUSINTERFACES>
       <MEMORYMAP>
@@ -7869,6 +8001,1095 @@
           </SLAVES>
         </MEMRANGE>
       </MEMORYMAP>
+    </MODULE>
+    <MODULE HWVERSION="1.06.a" INSTANCE="chipscope_icon_0" IPTYPE="PERIPHERAL" MHS_INDEX="17" MODCLASS="IP" MODTYPE="chipscope_icon">
+      <DESCRIPTION TYPE="SHORT">Chipscope Integrated Controller</DESCRIPTION>
+      <DESCRIPTION TYPE="LONG">'The Chipscope ICON core provides a communication path between the FPGA Boundary Scan port and the other Chipscope Cores OPB IBA, PLB IBA, VIO, and the ILA.'</DESCRIPTION>
+      <LICENSEINFO ICON_NAME="ps_core_preferred"/>
+      <PARAMETERS>
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="SYSTEM" MPD_INDEX="0" NAME="C_FAMILY" TYPE="string" VALUE="spartan6">
+          <DESCRIPTION>Device Family</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="SYSTEM" MPD_INDEX="1" NAME="C_DEVICE" TYPE="string" VALUE="6slx16">
+          <DESCRIPTION>Device Name</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="SYSTEM" MPD_INDEX="2" NAME="C_PACKAGE" TYPE="string" VALUE="csg324">
+          <DESCRIPTION>Package Name</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="SYSTEM" MPD_INDEX="3" NAME="C_SPEEDGRADE" TYPE="string" VALUE="-3">
+          <DESCRIPTION>Speed Grade Name</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="2" MPD_INDEX="4" NAME="C_NUM_CONTROL_PORTS" TYPE="integer" VALUE="2">
+          <DESCRIPTION>Number of Control Ports </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="5" NAME="C_SYSTEM_CONTAINS_MDM" TYPE="integer" VALUE="1">
+          <DESCRIPTION>System Contains MDM Peripheral or Not </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="6" NAME="C_FORCE_BSCAN_USER_PORT" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Use a specific BSCAN user port</DESCRIPTION>
+        </PARAMETER>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" ENDIAN="LITTLE" IS_INSTANTIATED="TRUE" LEFT="35" LSB="0" MHS_INDEX="0" MPD_INDEX="0" MSB="35" NAME="control0" RIGHT="0" SIGNAME="chipscope_axi_monitor_0_icon_ctrl" VECFORMULA="[35:0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="chipscope_axi_monitor_0" PORT="CHIPSCOPE_ICON_CONTROL"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" ENDIAN="LITTLE" IS_INSTANTIATED="TRUE" LEFT="35" LSB="0" MHS_INDEX="1" MPD_INDEX="1" MSB="35" NAME="control1" RIGHT="0" SIGNAME="chipscope_ila_0_icon_control" VECFORMULA="[35:0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="chipscope_ila_0" PORT="CHIPSCOPE_ILA_CONTROL"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" ENDIAN="LITTLE" IS_VALID="FALSE" LEFT="35" LSB="0" MPD_INDEX="2" MSB="35" NAME="control2" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[35:0]"/>
+        <PORT DIR="O" ENDIAN="LITTLE" IS_VALID="FALSE" LEFT="35" LSB="0" MPD_INDEX="3" MSB="35" NAME="control3" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[35:0]"/>
+        <PORT DIR="O" ENDIAN="LITTLE" IS_VALID="FALSE" LEFT="35" LSB="0" MPD_INDEX="4" MSB="35" NAME="control4" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[35:0]"/>
+        <PORT DIR="O" ENDIAN="LITTLE" IS_VALID="FALSE" LEFT="35" LSB="0" MPD_INDEX="5" MSB="35" NAME="control5" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[35:0]"/>
+        <PORT DIR="O" ENDIAN="LITTLE" IS_VALID="FALSE" LEFT="35" LSB="0" MPD_INDEX="6" MSB="35" NAME="control6" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[35:0]"/>
+        <PORT DIR="O" ENDIAN="LITTLE" IS_VALID="FALSE" LEFT="35" LSB="0" MPD_INDEX="7" MSB="35" NAME="control7" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[35:0]"/>
+        <PORT DIR="O" ENDIAN="LITTLE" IS_VALID="FALSE" LEFT="35" LSB="0" MPD_INDEX="8" MSB="35" NAME="control8" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[35:0]"/>
+        <PORT DIR="O" ENDIAN="LITTLE" IS_VALID="FALSE" LEFT="35" LSB="0" MPD_INDEX="9" MSB="35" NAME="control9" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[35:0]"/>
+        <PORT DIR="O" ENDIAN="LITTLE" IS_VALID="FALSE" LEFT="35" LSB="0" MPD_INDEX="10" MSB="35" NAME="control10" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[35:0]"/>
+        <PORT DIR="O" ENDIAN="LITTLE" IS_VALID="FALSE" LEFT="35" LSB="0" MPD_INDEX="11" MSB="35" NAME="control11" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[35:0]"/>
+        <PORT DIR="O" ENDIAN="LITTLE" IS_VALID="FALSE" LEFT="35" LSB="0" MPD_INDEX="12" MSB="35" NAME="control12" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[35:0]"/>
+        <PORT DIR="O" ENDIAN="LITTLE" IS_VALID="FALSE" LEFT="35" LSB="0" MPD_INDEX="13" MSB="35" NAME="control13" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[35:0]"/>
+        <PORT DIR="O" ENDIAN="LITTLE" IS_VALID="FALSE" LEFT="35" LSB="0" MPD_INDEX="14" MSB="35" NAME="control14" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[35:0]"/>
+        <PORT DIR="O" ENDIAN="LITTLE" IS_VALID="FALSE" LEFT="35" LSB="0" MPD_INDEX="15" MSB="35" NAME="control15" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[35:0]"/>
+        <PORT DEF_SIGNAME="bscan_tdi" DIR="I" MPD_INDEX="16" NAME="tdi_in" SIGNAME="bscan_tdi">
+          <CONNECTIONS/>
+        </PORT>
+        <PORT DEF_SIGNAME="bscan_reset" DIR="I" MPD_INDEX="17" NAME="reset_in" SIGNAME="bscan_reset">
+          <CONNECTIONS/>
+        </PORT>
+        <PORT DEF_SIGNAME="bscan_shift" DIR="I" MPD_INDEX="18" NAME="shift_in" SIGNAME="bscan_shift">
+          <CONNECTIONS/>
+        </PORT>
+        <PORT DEF_SIGNAME="bscan_update" DIR="I" MPD_INDEX="19" NAME="update_in" SIGNAME="bscan_update">
+          <CONNECTIONS/>
+        </PORT>
+        <PORT DEF_SIGNAME="bscan_sel1" DIR="I" MPD_INDEX="20" NAME="sel_in" SIGNAME="bscan_sel1">
+          <CONNECTIONS/>
+        </PORT>
+        <PORT DEF_SIGNAME="bscan_drck1" DIR="I" MPD_INDEX="21" NAME="drck_in" SIGNAME="bscan_drck1">
+          <CONNECTIONS/>
+        </PORT>
+        <PORT DEF_SIGNAME="bscan_capture" DIR="I" MPD_INDEX="22" NAME="capture_in" SIGNAME="bscan_capture">
+          <CONNECTIONS/>
+        </PORT>
+        <PORT DEF_SIGNAME="bscan_tdo1" DIR="O" MPD_INDEX="23" NAME="tdo_out" SIGNAME="bscan_tdo1">
+          <CONNECTIONS/>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE HWVERSION="3.05.a" INSTANCE="chipscope_axi_monitor_0" IPTYPE="PERIPHERAL" MHS_INDEX="18" MODCLASS="PERIPHERAL" MODTYPE="chipscope_axi_monitor">
+      <DESCRIPTION TYPE="SHORT">Chipscope AXI Monitor</DESCRIPTION>
+      <DESCRIPTION TYPE="LONG">AXI Monitor Based on Chipscope Integrated Logic Analyzer (ILA)</DESCRIPTION>
+      <DOCUMENTATION>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=chipscope_axi_monitor;v=v3_05_a;d=ds810_chipscope_axi_monitor.pdf" TYPE="IP"/>
+      </DOCUMENTATION>
+      <LICENSEINFO ICON_NAME="ps_core_preferred"/>
+      <PARAMETERS>
+        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="0" NAME="C_MON_AXI_PROTOCOL" TYPE="string" VALUE="AXI4LITE">
+          <DESCRIPTION>Set AXI Bus Protocol</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="1" NAME="C_MON_AXI_S_PROTOCOL" TYPE="string" VALUE="generic">
+          <DESCRIPTION>Set AXIS Bus Protocol</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" IS_INSTANTIATED="TRUE" MHS_INDEX="3" MPD_INDEX="2" NAME="C_USE_INTERFACE" TYPE="string" VALUE="0">
+          <DESCRIPTION>Select bus interface</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="3" NAME="C_MON_AXI_PC_NUM_OF_MATCH" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Set number of match units for the Procotol Checker port</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="4" NAME="C_MON_AXI_EN_HANDSHAKE_CHECKS" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Enable the Ready/Valid handshake protocol checks group</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="5" NAME="C_MON_AXI_EN_COMPLEX_CHECKS" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Enable the Complex protocol checks group</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="6" NAME="C_MON_AXI_EN_EXCLUSIVE_CHECKS" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Enable the Exclusive protocol checks group</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="CONSTANT" MPD_INDEX="7" NAME="C_MON_AXI_EN_IGNORE_CHECKS" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Enable the Ignore protocol checks group</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="8" NAME="C_MON_AXI_EN_ILLEGAL_VALUE_CHECKS" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Enable Illage Value protocol checks group</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="9" NAME="C_MON_AXI_EN_RESET_CHECKS" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Enable the Reset protocol checks group</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="10" NAME="C_MON_AXI_EN_AUX_CHECKS" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Enable the Auxillary protocol checks group</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="11" NAME="C_MON_AXI_EN_ARM_REC_WAIT_CHECKS" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Enable the ARM recommended protocol checks and Max Wait checks group</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="12" NAME="C_MON_AXI_EN_ARM_REC_ONLY_CHECKS" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Enable the ARM recommended protocol checks group</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="CONSTANT" MPD_INDEX="13" NAME="C_MON_AXI_PC_ERROR_COUNT" TYPE="integer" VALUE="95">
+          <DESCRIPTION>Protocol Checker Error Count</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL_UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="14" NAME="C_MON_AXI_PC_MAXRBURST" TYPE="integer" VALUE="2">
+          <DESCRIPTION>Set the MAXRBURST (max read bursts)</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL_UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="15" NAME="C_MON_AXI_PC_MAXWBURST" TYPE="integer" VALUE="2">
+          <DESCRIPTION>Set the MAXWBURST (max write bursts)</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="16" NAME="C_MON_AXI_PC_EXMON_WIDTH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set the number of Exclusive Monitor Requests</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="17" NAME="C_MON_AXI_BURST_LENGTH" TYPE="integer" VALUE="8">
+          <DESCRIPTION>Select bus width of AXI LEN signals</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="18" NAME="C_MON_AXI_LOCK_LENGTH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Select bus width of AXI LOCK signals</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="19" NAME="C_FAMILY" TYPE="string" VALUE="spartan6">
+          <DESCRIPTION>Device Family</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="20" NAME="C_DEVICE" TYPE="string" VALUE="6slx16">
+          <DESCRIPTION>Device Name</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="21" NAME="C_PACKAGE" TYPE="string" VALUE="csg324">
+          <DESCRIPTION>Package Name</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="22" NAME="C_SPEEDGRADE" TYPE="string" VALUE="-3">
+          <DESCRIPTION>Speed Grade Name</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" IS_INSTANTIATED="TRUE" MHS_INDEX="4" MPD_INDEX="23" NAME="C_NUM_DATA_SAMPLES" TYPE="integer" VALUE="1024">
+          <DESCRIPTION>Select the maximum number of samples stored by the ChipScope AXI Monitor</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" IS_INSTANTIATED="TRUE" MHS_INDEX="2" MPD_INDEX="24" NAME="C_MAX_SEQUENCER_LEVELS" TYPE="integer" VALUE="2">
+          <DESCRIPTION>Select the number of sequence levels</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="5" MPD_INDEX="25" NAME="C_USE_TRIG_IN" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Enable Trigger Input port</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="6" MPD_INDEX="26" NAME="C_TRIG_IN_WIDTH" TYPE="integer" VALUE="33">
+          <DESCRIPTION>Set trigger input port width</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="27" NAME="C_MON_AXI_SUPPORTS_THREADS" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Enable threads</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="28" NAME="C_MON_AXI_ID_WIDTH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set ID signal width</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="29" NAME="C_MON_AXI_S_TID_WIDTH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set TID width</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="CONSTANT" MPD_INDEX="30" NAME="C_MON_AXI_ADDR_WIDTH" TYPE="integer" VALUE="32">
+          <DESCRIPTION>Set address signal width</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="31" NAME="C_MON_AXI_S_TDEST_WIDTH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set TDEST Width</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="32" NAME="C_MON_AXI_DATA_WIDTH" TYPE="integer" VALUE="32">
+          <DESCRIPTION>Set data signal width</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="33" NAME="C_MON_AXI_S_TDATA_WIDTH" TYPE="integer" VALUE="32">
+          <DESCRIPTION>Set TDATA width</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="34" NAME="C_MON_AXI_AWUSER_WIDTH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set AWUSER width</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="35" NAME="C_MON_AXI_WUSER_WIDTH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set WUSER width</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="36" NAME="C_MON_AXI_BUSER_WIDTH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set BUSER width</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="37" NAME="C_MON_AXI_ARUSER_WIDTH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set ARUSER width</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="38" NAME="C_MON_AXI_RUSER_WIDTH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set RUSER width</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="39" NAME="C_MON_AXI_S_TUSER_WIDTH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set TUSER width</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="40" NAME="C_MON_AXI_SUPPORTS_READ" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Support reads</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="41" NAME="C_MON_AXI_SUPPORTS_WRITE" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Support Writes</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="42" NAME="C_MON_AXI_GLOBAL_MATCH_TYPE" TYPE="string" VALUE="basic with edges">
+          <DESCRIPTION>Set GLOBAL port match type</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="43" NAME="C_MON_AXI_AWADDRCONTROL_MATCH_TYPE" TYPE="string" VALUE="basic with edges">
+          <DESCRIPTION>Set AWADDRCONTROL port match type</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="44" NAME="C_MON_AXI_AWADDR_MATCH_TYPE" TYPE="string" VALUE="range with edges">
+          <DESCRIPTION>Set AWADDR port match type</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="45" NAME="C_MON_AXI_WDATACONTROL_MATCH_TYPE" TYPE="string" VALUE="basic with edges">
+          <DESCRIPTION>Set WDATACONTROL port match type</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="46" NAME="C_MON_AXI_WDATA_MATCH_TYPE" TYPE="string" VALUE="extended with edges">
+          <DESCRIPTION>Set WDATA port match type</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="47" NAME="C_MON_AXI_BRESP_MATCH_TYPE" TYPE="string" VALUE="basic with edges">
+          <DESCRIPTION>Set BRESP port match type</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="48" NAME="C_MON_AXI_ARADDRCONTROL_MATCH_TYPE" TYPE="string" VALUE="basic with edges">
+          <DESCRIPTION>Set ARADDRCONTROL port match type</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="49" NAME="C_MON_AXI_ARADDR_MATCH_TYPE" TYPE="string" VALUE="range with edges">
+          <DESCRIPTION>Set ARADDR port match type</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="50" NAME="C_MON_AXI_RDATACONTROL_MATCH_TYPE" TYPE="string" VALUE="basic with edges">
+          <DESCRIPTION>Set RDATACONTROL port match type</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="51" NAME="C_MON_AXI_RDATA_MATCH_TYPE" TYPE="string" VALUE="extended with edges">
+          <DESCRIPTION>Set RDATA port match type</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="52" NAME="C_MON_AXI_AWUSER_MATCH_TYPE" TYPE="string" VALUE="basic with edges">
+          <DESCRIPTION>Set AWUSER port match type</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="53" NAME="C_MON_AXI_WUSER_MATCH_TYPE" TYPE="string" VALUE="basic with edges">
+          <DESCRIPTION>Set WUSER port match type</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="54" NAME="C_MON_AXI_BUSER_MATCH_TYPE" TYPE="string" VALUE="basic with edges">
+          <DESCRIPTION>Set BUSER port match type</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="55" NAME="C_MON_AXI_ARUSER_MATCH_TYPE" TYPE="string" VALUE="basic with edges">
+          <DESCRIPTION>Set ARUSER port match type</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="56" NAME="C_MON_AXI_RUSER_MATCH_TYPE" TYPE="string" VALUE="basic with edges">
+          <DESCRIPTION>Set RUSER port match type</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="57" NAME="C_MON_AXI_S_TCONTROL_MATCH_TYPE" TYPE="string" VALUE="range with edges">
+          <DESCRIPTION>Set TCONTROL port match type</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="58" NAME="C_MON_AXI_S_TDATA_MATCH_TYPE" TYPE="string" VALUE="extended with edges">
+          <DESCRIPTION>Set TDATA port match type</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="59" NAME="C_MON_AXI_S_TUSER_MATCH_TYPE" TYPE="string" VALUE="basic with edges">
+          <DESCRIPTION>Set TUSER port match type</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="60" NAME="C_MON_AXI_PC_MATCH_TYPE" TYPE="string" VALUE="basic">
+          <DESCRIPTION>Set Protocol Checker port match type</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="61" NAME="C_MON_AXI_GLOBAL_NUM_OF_MATCH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set number of match units for GLOBAL port</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="62" NAME="C_MON_AXI_AWADDRCONTROL_NUM_OF_MATCH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set number of match units for AWADDRCONTROL port</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="63" NAME="C_MON_AXI_AWADDR_NUM_OF_MATCH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set number of match units for AWADDR port</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="64" NAME="C_MON_AXI_WDATACONTROL_NUM_OF_MATCH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set number of match units for WDATACONTROL port</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="65" NAME="C_MON_AXI_WDATA_NUM_OF_MATCH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set number of match units for WDATA port</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="66" NAME="C_MON_AXI_BRESP_NUM_OF_MATCH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set number of match units for BRESP port</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="67" NAME="C_MON_AXI_ARADDRCONTROL_NUM_OF_MATCH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set number of match units for ARADDRCONTROL port</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="68" NAME="C_MON_AXI_ARADDR_NUM_OF_MATCH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set number of match units for ARADDR port</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="69" NAME="C_MON_AXI_RDATACONTROL_NUM_OF_MATCH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set number of match units for RDATACONTROL port</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL_UPDATE" MPD_INDEX="70" NAME="C_MON_AXI_RDATA_NUM_OF_MATCH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set number of match units for RDATA port</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="71" NAME="C_MON_AXI_AWUSER_NUM_OF_MATCH" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Set number of match units for AWUSER port</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="72" NAME="C_MON_AXI_WUSER_NUM_OF_MATCH" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Set number of match units for WUSER port</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="73" NAME="C_MON_AXI_BUSER_NUM_OF_MATCH" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Set number of match units for BUSER port</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="74" NAME="C_MON_AXI_ARUSER_NUM_OF_MATCH" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Set number of match units for ARUSER port</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="75" NAME="C_MON_AXI_RUSER_NUM_OF_MATCH" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Set number of match units for RUSER port</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="76" NAME="C_MON_AXI_S_TCONTROL_NUM_OF_MATCH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set number of match units for TCONTROL port</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="77" NAME="C_MON_AXI_S_TDATA_NUM_OF_MATCH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set number of match units for TDATA port</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="78" NAME="C_MON_AXI_S_TUSER_NUM_OF_MATCH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set number of match units for TUSER port</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="79" NAME="C_MON_AXI_GLOBAL_TRIG_COUNT_WIDTH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set GLOBAL counter width</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="80" NAME="C_MON_AXI_AWADDRCONTROL_TRIG_COUNT_WIDTH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set AWADDRCONTROL counter width</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="81" NAME="C_MON_AXI_AWADDR_TRIG_COUNT_WIDTH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set AWADDR counter width</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="82" NAME="C_MON_AXI_WDATACONTROL_TRIG_COUNT_WIDTH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set WDATACONTROL counter width</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="83" NAME="C_MON_AXI_WDATA_TRIG_COUNT_WIDTH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set WDATA counter width</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="84" NAME="C_MON_AXI_BRESP_TRIG_COUNT_WIDTH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set BRESP counter width</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="85" NAME="C_MON_AXI_ARADDRCONTROL_TRIG_COUNT_WIDTH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set ARADDRCONTROL counter width</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="86" NAME="C_MON_AXI_ARADDR_TRIG_COUNT_WIDTH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set ARADDR counter width</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="87" NAME="C_MON_AXI_RDATACONTROL_TRIG_COUNT_WIDTH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set RDATACONTROL counter width</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="88" NAME="C_MON_AXI_RDATA_TRIG_COUNT_WIDTH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set RDATA counter width</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="89" NAME="C_MON_AXI_AWUSER_TRIG_COUNT_WIDTH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set AWUSER counter width</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="90" NAME="C_MON_AXI_WUSER_TRIG_COUNT_WIDTH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set WUSER counter width</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="91" NAME="C_MON_AXI_BUSER_TRIG_COUNT_WIDTH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set BUSER counter width</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="92" NAME="C_MON_AXI_ARUSER_TRIG_COUNT_WIDTH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set ARUSER counter width</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="93" NAME="C_MON_AXI_RUSER_TRIG_COUNT_WIDTH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set RUSER counter width</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="94" NAME="C_MON_AXI_S_TCONTROL_TRIG_COUNT_WIDTH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set TCONTROL counter width</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="95" NAME="C_MON_AXI_S_TDATA_TRIG_COUNT_WIDTH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set TDATA counter width</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="96" NAME="C_MON_AXI_S_TUSER_TRIG_COUNT_WIDTH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set TUSER counter width</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="97" NAME="C_MON_AXI_PC_TRIG_COUNT_WIDTH" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Set Protocol Checker counter width</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="98" NAME="C_MON_AXI_GLOBAL_TRACE" TYPE="string" VALUE="1">
+          <DESCRIPTION>Trace/Store GLOBAL signals</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="99" NAME="C_MON_AXI_AWADDRCONTROL_TRACE" TYPE="string" VALUE="1">
+          <DESCRIPTION>Trace/Store AWADDRCONTROL signals</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="100" NAME="C_MON_AXI_AWADDR_TRACE" TYPE="string" VALUE="1">
+          <DESCRIPTION>Trace/Store AWADDR signals</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="101" NAME="C_MON_AXI_WDATACONTROL_TRACE" TYPE="string" VALUE="1">
+          <DESCRIPTION>Trace/Store WDATACONTROL signals</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="102" NAME="C_MON_AXI_WDATA_TRACE" TYPE="string" VALUE="1">
+          <DESCRIPTION>Trace/Store WDATA signals</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="103" NAME="C_MON_AXI_BRESP_TRACE" TYPE="string" VALUE="1">
+          <DESCRIPTION>Trace/Store BRESP signals</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="104" NAME="C_MON_AXI_ARADDRCONTROL_TRACE" TYPE="string" VALUE="1">
+          <DESCRIPTION>Trace/Store ARADDRCONTROL signals</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="105" NAME="C_MON_AXI_ARADDR_TRACE" TYPE="string" VALUE="1">
+          <DESCRIPTION>Trace/Store ARADDR signals</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="106" NAME="C_MON_AXI_RDATACONTROL_TRACE" TYPE="string" VALUE="1">
+          <DESCRIPTION>Trace/Store RDATACONTROL signals</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="107" NAME="C_MON_AXI_RDATA_TRACE" TYPE="string" VALUE="1">
+          <DESCRIPTION>Trace/Store RDATA signals</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="108" NAME="C_MON_AXI_AWUSER_TRACE" TYPE="string" VALUE="1">
+          <DESCRIPTION>Trace/Store AWUSER signals</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="109" NAME="C_MON_AXI_WUSER_TRACE" TYPE="string" VALUE="1">
+          <DESCRIPTION>Trace/Store WUSER signals</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="110" NAME="C_MON_AXI_BUSER_TRACE" TYPE="string" VALUE="1">
+          <DESCRIPTION>Trace/Store BUSER signals</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="111" NAME="C_MON_AXI_ARUSER_TRACE" TYPE="string" VALUE="1">
+          <DESCRIPTION>Trace/Store ARUSER signals</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="112" NAME="C_MON_AXI_RUSER_TRACE" TYPE="string" VALUE="1">
+          <DESCRIPTION>Trace/Store RUSER signals</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="113" NAME="C_MON_AXI_S_TCONTROL_TRACE" TYPE="string" VALUE="1">
+          <DESCRIPTION>Trace/Store TCONTROL signals</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="114" NAME="C_MON_AXI_S_TDATA_TRACE" TYPE="string" VALUE="1">
+          <DESCRIPTION>Trace/Store TDATA signals</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="115" NAME="C_MON_AXI_S_TUSER_TRACE" TYPE="string" VALUE="1">
+          <DESCRIPTION>Trace/Store TUSER signals</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="116" NAME="C_MON_AXI_PC_TRACE" TYPE="string" VALUE="1">
+          <DESCRIPTION>Trace/Store Assertions Violation Flags from Protocol Checker signals</DESCRIPTION>
+        </PARAMETER>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" ENDIAN="LITTLE" IS_INSTANTIATED="TRUE" LEFT="35" LSB="0" MHS_INDEX="0" MPD_INDEX="0" MSB="35" NAME="chipscope_icon_control" RIGHT="0" SIGNAME="chipscope_axi_monitor_0_icon_ctrl" VECFORMULA="[35:0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="chipscope_icon_0" PORT="control0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI:MON_AXI_S" CLKFREQUENCY="100000000" DEF_SIGNAME="__BUS__" DIR="I" IS_INSTANTIATED="TRUE" MHS_INDEX="1" MPD_INDEX="4" NAME="MON_AXI_ACLK" SIGIS="CLK" SIGNAME="clk_100_0000MHz">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clock_generator_0" PORT="CLKOUT0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" IS_INSTANTIATED="TRUE" MHS_INDEX="2" MPD_INDEX="2" NAME="MON_AXI_TRIG_OUT" SIGNAME="microblaze_0_DBG_STOP_chipscope">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0" PORT="DBG_STOP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" ENDIAN="LITTLE" IS_INSTANTIATED="TRUE" LEFT="32" LSB="0" MHS_INDEX="3" MPD_INDEX="3" MSB="32" NAME="MON_AXI_TRIG_IN" RIGHT="0" SIGNAME="microblaze_0_Trace_PC_chipscope &amp; microblaze_0_MB_Halted_chipscope" VECFORMULA="[((C_TRIG_IN_WIDTH)-1):0]">
+          <SIGNALS>
+            <SIGNAL NAME="microblaze_0_Trace_PC_chipscope"/>
+            <SIGNAL NAME="microblaze_0_MB_Halted_chipscope"/>
+          </SIGNALS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_trace_pc_chipscope &amp; microblaze_0_mb_halted_chipscope"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" MPD_INDEX="1" NAME="RESET" SIGNAME="__NOC__"/>
+        <PORT BUS="MON_AXI:MON_AXI_S" DEF_SIGNAME="axi4lite_0_M_ARESETN" DIR="I" MPD_INDEX="5" NAME="MON_AXI_ARESETN" SIGIS="RST" SIGNAME="axi4lite_0_M_ARESETN">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_ARESET_OUT_N"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_AWID" DIR="I" MPD_INDEX="6" NAME="MON_AXI_AWID" SIGNAME="axi4lite_0_M_AWID" VECFORMULA="[((C_MON_AXI_ID_WIDTH)-1):0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_AWID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_AWADDR" DIR="I" ENDIAN="LITTLE" LEFT="31" LSB="0" MPD_INDEX="7" MSB="31" NAME="MON_AXI_AWADDR" RIGHT="0" SIGNAME="axi4lite_0_M_AWADDR" VECFORMULA="[((C_MON_AXI_ADDR_WIDTH)-1):0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_AWADDR"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_AWLEN" DIR="I" ENDIAN="LITTLE" LEFT="7" LSB="0" MPD_INDEX="8" MSB="7" NAME="MON_AXI_AWLEN" RIGHT="0" SIGNAME="axi4lite_0_M_AWLEN" VECFORMULA="[((C_MON_AXI_BURST_LENGTH)-1):0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_AWLEN"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_AWSIZE" DIR="I" ENDIAN="LITTLE" LEFT="2" LSB="0" MPD_INDEX="9" MSB="2" NAME="MON_AXI_AWSIZE" RIGHT="0" SIGNAME="axi4lite_0_M_AWSIZE" VECFORMULA="[2:0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_AWSIZE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_AWBURST" DIR="I" ENDIAN="LITTLE" LEFT="1" LSB="0" MPD_INDEX="10" MSB="1" NAME="MON_AXI_AWBURST" RIGHT="0" SIGNAME="axi4lite_0_M_AWBURST" VECFORMULA="[1:0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_AWBURST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_AWLOCK" DIR="I" MPD_INDEX="11" NAME="MON_AXI_AWLOCK" SIGNAME="axi4lite_0_M_AWLOCK" VECFORMULA="[((C_MON_AXI_LOCK_LENGTH)-1):0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_AWLOCK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_AWCACHE" DIR="I" ENDIAN="LITTLE" LEFT="3" LSB="0" MPD_INDEX="12" MSB="3" NAME="MON_AXI_AWCACHE" RIGHT="0" SIGNAME="axi4lite_0_M_AWCACHE" VECFORMULA="[3:0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_AWCACHE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_AWPROT" DIR="I" ENDIAN="LITTLE" LEFT="2" LSB="0" MPD_INDEX="13" MSB="2" NAME="MON_AXI_AWPROT" RIGHT="0" SIGNAME="axi4lite_0_M_AWPROT" VECFORMULA="[2:0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_AWPROT"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_AWQOS" DIR="I" ENDIAN="LITTLE" LEFT="3" LSB="0" MPD_INDEX="14" MSB="3" NAME="MON_AXI_AWQOS" RIGHT="0" SIGNAME="axi4lite_0_M_AWQOS" VECFORMULA="[3:0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_AWQOS"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_AWREGION" DIR="I" ENDIAN="LITTLE" LEFT="3" LSB="0" MPD_INDEX="15" MSB="3" NAME="MON_AXI_AWREGION" RIGHT="0" SIGNAME="axi4lite_0_M_AWREGION" VECFORMULA="[3:0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_AWREGION"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_AWUSER" DIR="I" MPD_INDEX="16" NAME="MON_AXI_AWUSER" SIGNAME="axi4lite_0_M_AWUSER" VECFORMULA="[(C_MON_AXI_AWUSER_WIDTH-1):0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_AWUSER"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_AWVALID" DIR="I" MPD_INDEX="17" NAME="MON_AXI_AWVALID" SIGNAME="axi4lite_0_M_AWVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_AWVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_AWREADY" DIR="I" MPD_INDEX="18" NAME="MON_AXI_AWREADY" SIGNAME="axi4lite_0_M_AWREADY">
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="debug_module" PORT="S_AXI_AWREADY"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="rs232_uart_1" PORT="S_AXI_AWREADY"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="push_buttons_4bits" PORT="S_AXI_AWREADY"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="leds_8bits" PORT="S_AXI_AWREADY"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="dip_switches_8bits" PORT="S_AXI_AWREADY"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="axi_intc_0" PORT="S_AXI_AWREADY"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="sc_uart_0" PORT="S_AXI_AWREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_WID" DIR="I" MPD_INDEX="19" NAME="MON_AXI_WID" SIGNAME="axi4lite_0_M_WID" VECFORMULA="[((C_MON_AXI_ID_WIDTH)-1):0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_WID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_WDATA" DIR="I" ENDIAN="LITTLE" LEFT="31" LSB="0" MPD_INDEX="20" MSB="31" NAME="MON_AXI_WDATA" RIGHT="0" SIGNAME="axi4lite_0_M_WDATA" VECFORMULA="[((C_MON_AXI_DATA_WIDTH)-1):0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_WDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_WSTRB" DIR="I" ENDIAN="LITTLE" LEFT="3" LSB="0" MPD_INDEX="21" MSB="3" NAME="MON_AXI_WSTRB" RIGHT="0" SIGNAME="axi4lite_0_M_WSTRB" VECFORMULA="[(((C_MON_AXI_DATA_WIDTH)/8)-1):0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_WSTRB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_WLAST" DIR="I" MPD_INDEX="22" NAME="MON_AXI_WLAST" SIGNAME="axi4lite_0_M_WLAST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_WLAST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_WUSER" DIR="I" MPD_INDEX="23" NAME="MON_AXI_WUSER" SIGNAME="axi4lite_0_M_WUSER" VECFORMULA="[(C_MON_AXI_WUSER_WIDTH-1):0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_WUSER"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_WVALID" DIR="I" MPD_INDEX="24" NAME="MON_AXI_WVALID" SIGNAME="axi4lite_0_M_WVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_WVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_WREADY" DIR="I" MPD_INDEX="25" NAME="MON_AXI_WREADY" SIGNAME="axi4lite_0_M_WREADY">
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="debug_module" PORT="S_AXI_WREADY"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="rs232_uart_1" PORT="S_AXI_WREADY"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="push_buttons_4bits" PORT="S_AXI_WREADY"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="leds_8bits" PORT="S_AXI_WREADY"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="dip_switches_8bits" PORT="S_AXI_WREADY"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="axi_intc_0" PORT="S_AXI_WREADY"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="sc_uart_0" PORT="S_AXI_WREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_BID" DIR="I" MPD_INDEX="26" NAME="MON_AXI_BID" SIGNAME="axi4lite_0_M_BID" VECFORMULA="[((C_MON_AXI_ID_WIDTH)-1):0]">
+          <CONNECTIONS/>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_BRESP" DIR="I" ENDIAN="LITTLE" LEFT="1" LSB="0" MPD_INDEX="27" MSB="1" NAME="MON_AXI_BRESP" RIGHT="0" SIGNAME="axi4lite_0_M_BRESP" VECFORMULA="[1:0]">
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="debug_module" PORT="S_AXI_BRESP"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="rs232_uart_1" PORT="S_AXI_BRESP"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="push_buttons_4bits" PORT="S_AXI_BRESP"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="leds_8bits" PORT="S_AXI_BRESP"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="dip_switches_8bits" PORT="S_AXI_BRESP"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="axi_intc_0" PORT="S_AXI_BRESP"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="sc_uart_0" PORT="S_AXI_BRESP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_BUSER" DIR="I" MPD_INDEX="28" NAME="MON_AXI_BUSER" SIGNAME="axi4lite_0_M_BUSER" VECFORMULA="[((C_MON_AXI_BUSER_WIDTH)-1):0]">
+          <CONNECTIONS/>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_BVALID" DIR="I" MPD_INDEX="29" NAME="MON_AXI_BVALID" SIGNAME="axi4lite_0_M_BVALID">
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="debug_module" PORT="S_AXI_BVALID"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="rs232_uart_1" PORT="S_AXI_BVALID"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="push_buttons_4bits" PORT="S_AXI_BVALID"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="leds_8bits" PORT="S_AXI_BVALID"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="dip_switches_8bits" PORT="S_AXI_BVALID"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="axi_intc_0" PORT="S_AXI_BVALID"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="sc_uart_0" PORT="S_AXI_BVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_BREADY" DIR="I" MPD_INDEX="30" NAME="MON_AXI_BREADY" SIGNAME="axi4lite_0_M_BREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_BREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_ARID" DIR="I" MPD_INDEX="31" NAME="MON_AXI_ARID" SIGNAME="axi4lite_0_M_ARID" VECFORMULA="[((C_MON_AXI_ID_WIDTH)-1):0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_ARID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_ARADDR" DIR="I" ENDIAN="LITTLE" LEFT="31" LSB="0" MPD_INDEX="32" MSB="31" NAME="MON_AXI_ARADDR" RIGHT="0" SIGNAME="axi4lite_0_M_ARADDR" VECFORMULA="[((C_MON_AXI_ADDR_WIDTH)-1):0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_ARADDR"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_ARLEN" DIR="I" ENDIAN="LITTLE" LEFT="7" LSB="0" MPD_INDEX="33" MSB="7" NAME="MON_AXI_ARLEN" RIGHT="0" SIGNAME="axi4lite_0_M_ARLEN" VECFORMULA="[((C_MON_AXI_BURST_LENGTH)-1):0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_ARLEN"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_ARSIZE" DIR="I" ENDIAN="LITTLE" LEFT="2" LSB="0" MPD_INDEX="34" MSB="2" NAME="MON_AXI_ARSIZE" RIGHT="0" SIGNAME="axi4lite_0_M_ARSIZE" VECFORMULA="[2:0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_ARSIZE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_ARBURST" DIR="I" ENDIAN="LITTLE" LEFT="1" LSB="0" MPD_INDEX="35" MSB="1" NAME="MON_AXI_ARBURST" RIGHT="0" SIGNAME="axi4lite_0_M_ARBURST" VECFORMULA="[1:0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_ARBURST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_ARLOCK" DIR="I" MPD_INDEX="36" NAME="MON_AXI_ARLOCK" SIGNAME="axi4lite_0_M_ARLOCK" VECFORMULA="[((C_MON_AXI_LOCK_LENGTH)-1):0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_ARLOCK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_ARCACHE" DIR="I" ENDIAN="LITTLE" LEFT="3" LSB="0" MPD_INDEX="37" MSB="3" NAME="MON_AXI_ARCACHE" RIGHT="0" SIGNAME="axi4lite_0_M_ARCACHE" VECFORMULA="[3:0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_ARCACHE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_ARPROT" DIR="I" ENDIAN="LITTLE" LEFT="2" LSB="0" MPD_INDEX="38" MSB="2" NAME="MON_AXI_ARPROT" RIGHT="0" SIGNAME="axi4lite_0_M_ARPROT" VECFORMULA="[2:0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_ARPROT"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_ARQOS" DIR="I" ENDIAN="LITTLE" LEFT="3" LSB="0" MPD_INDEX="39" MSB="3" NAME="MON_AXI_ARQOS" RIGHT="0" SIGNAME="axi4lite_0_M_ARQOS" VECFORMULA="[3:0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_ARQOS"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_ARREGION" DIR="I" ENDIAN="LITTLE" LEFT="3" LSB="0" MPD_INDEX="40" MSB="3" NAME="MON_AXI_ARREGION" RIGHT="0" SIGNAME="axi4lite_0_M_ARREGION" VECFORMULA="[3:0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_ARREGION"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_ARUSER" DIR="I" MPD_INDEX="41" NAME="MON_AXI_ARUSER" SIGNAME="axi4lite_0_M_ARUSER" VECFORMULA="[((C_MON_AXI_ARUSER_WIDTH)-1):0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_ARUSER"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_ARVALID" DIR="I" MPD_INDEX="42" NAME="MON_AXI_ARVALID" SIGNAME="axi4lite_0_M_ARVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_ARVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_ARREADY" DIR="I" MPD_INDEX="43" NAME="MON_AXI_ARREADY" SIGNAME="axi4lite_0_M_ARREADY">
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="debug_module" PORT="S_AXI_ARREADY"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="rs232_uart_1" PORT="S_AXI_ARREADY"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="push_buttons_4bits" PORT="S_AXI_ARREADY"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="leds_8bits" PORT="S_AXI_ARREADY"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="dip_switches_8bits" PORT="S_AXI_ARREADY"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="axi_intc_0" PORT="S_AXI_ARREADY"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="sc_uart_0" PORT="S_AXI_ARREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_RID" DIR="I" MPD_INDEX="44" NAME="MON_AXI_RID" SIGNAME="axi4lite_0_M_RID" VECFORMULA="[((C_MON_AXI_ID_WIDTH)-1):0]">
+          <CONNECTIONS/>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_RDATA" DIR="I" ENDIAN="LITTLE" LEFT="31" LSB="0" MPD_INDEX="45" MSB="31" NAME="MON_AXI_RDATA" RIGHT="0" SIGNAME="axi4lite_0_M_RDATA" VECFORMULA="[((C_MON_AXI_DATA_WIDTH)-1):0]">
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="debug_module" PORT="S_AXI_RDATA"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="rs232_uart_1" PORT="S_AXI_RDATA"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="push_buttons_4bits" PORT="S_AXI_RDATA"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="leds_8bits" PORT="S_AXI_RDATA"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="dip_switches_8bits" PORT="S_AXI_RDATA"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="axi_intc_0" PORT="S_AXI_RDATA"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="sc_uart_0" PORT="S_AXI_RDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_RRESP" DIR="I" ENDIAN="LITTLE" LEFT="1" LSB="0" MPD_INDEX="46" MSB="1" NAME="MON_AXI_RRESP" RIGHT="0" SIGNAME="axi4lite_0_M_RRESP" VECFORMULA="[1:0]">
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="debug_module" PORT="S_AXI_RRESP"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="rs232_uart_1" PORT="S_AXI_RRESP"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="push_buttons_4bits" PORT="S_AXI_RRESP"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="leds_8bits" PORT="S_AXI_RRESP"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="dip_switches_8bits" PORT="S_AXI_RRESP"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="axi_intc_0" PORT="S_AXI_RRESP"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="sc_uart_0" PORT="S_AXI_RRESP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_RLAST" DIR="I" MPD_INDEX="47" NAME="MON_AXI_RLAST" SIGNAME="axi4lite_0_M_RLAST">
+          <CONNECTIONS/>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_RUSER" DIR="I" MPD_INDEX="48" NAME="MON_AXI_RUSER" SIGNAME="axi4lite_0_M_RUSER" VECFORMULA="[((C_MON_AXI_RUSER_WIDTH)-1):0]">
+          <CONNECTIONS/>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_RVALID" DIR="I" MPD_INDEX="49" NAME="MON_AXI_RVALID" SIGNAME="axi4lite_0_M_RVALID">
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="debug_module" PORT="S_AXI_RVALID"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="rs232_uart_1" PORT="S_AXI_RVALID"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="push_buttons_4bits" PORT="S_AXI_RVALID"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="leds_8bits" PORT="S_AXI_RVALID"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="dip_switches_8bits" PORT="S_AXI_RVALID"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="axi_intc_0" PORT="S_AXI_RVALID"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="sc_uart_0" PORT="S_AXI_RVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI" DEF_SIGNAME="axi4lite_0_M_RREADY" DIR="I" MPD_INDEX="50" NAME="MON_AXI_RREADY" SIGNAME="axi4lite_0_M_RREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_RREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="MON_AXI_S" DEF_SIGNAME="__BUS__" DIR="I" IS_VALID="FALSE" MPD_INDEX="51" NAME="MON_AXI_S_TVALID" SIGNAME="__NOC__"/>
+        <PORT BUS="MON_AXI_S" DEF_SIGNAME="__BUS__" DIR="I" IS_VALID="FALSE" MPD_INDEX="52" NAME="MON_AXI_S_TREADY" SIGNAME="__NOC__"/>
+        <PORT BUS="MON_AXI_S" DEF_SIGNAME="__BUS__" DIR="I" ENDIAN="LITTLE" IS_VALID="FALSE" LEFT="31" LSB="0" MPD_INDEX="53" MSB="31" NAME="MON_AXI_S_TDATA" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[((C_MON_AXI_S_TDATA_WIDTH)-1):0]"/>
+        <PORT BUS="MON_AXI_S" DEF_SIGNAME="__BUS__" DIR="I" ENDIAN="LITTLE" IS_VALID="FALSE" LEFT="3" LSB="0" MPD_INDEX="54" MSB="3" NAME="MON_AXI_S_TKEEP" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[(((C_MON_AXI_S_TDATA_WIDTH)/8)-1):0]"/>
+        <PORT BUS="MON_AXI_S" DEF_SIGNAME="__BUS__" DIR="I" IS_VALID="FALSE" MPD_INDEX="55" NAME="MON_AXI_S_TLAST" SIGNAME="__NOC__"/>
+        <PORT BUS="MON_AXI_S" DEF_SIGNAME="__BUS__" DIR="I" IS_VALID="FALSE" MPD_INDEX="56" NAME="MON_AXI_S_TID" SIGNAME="__NOC__" VECFORMULA="[((C_MON_AXI_S_TID_WIDTH)-1):0]"/>
+        <PORT BUS="MON_AXI_S" DEF_SIGNAME="__BUS__" DIR="I" IS_VALID="FALSE" MPD_INDEX="57" NAME="MON_AXI_S_TDEST" SIGNAME="__NOC__" VECFORMULA="[((C_MON_AXI_S_TDEST_WIDTH)-1):0]"/>
+        <PORT BUS="MON_AXI_S" DEF_SIGNAME="__BUS__" DIR="I" IS_VALID="FALSE" MPD_INDEX="58" NAME="MON_AXI_S_TUSER" SIGNAME="__NOC__" VECFORMULA="[((C_MON_AXI_S_TUSER_WIDTH)-1):0]"/>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="axi4lite_0" BUSSTD="AXI" BUSSTD_PSF="AXI" IS_INSTANTIATED="TRUE" MHS_INDEX="0" MPD_INDEX="0" NAME="MON_AXI" PROTOCOL="AXI4LITE" TYPE="MONITOR">
+          <PORTMAPS>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_ACLK"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_ARESETN"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_AWID"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_AWADDR"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_AWLEN"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_AWSIZE"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_AWBURST"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_AWLOCK"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_AWCACHE"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_AWPROT"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_AWQOS"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_AWREGION"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_AWUSER"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_AWVALID"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_AWREADY"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_WID"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_WDATA"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_WSTRB"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_WLAST"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_WUSER"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_WVALID"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_WREADY"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_BID"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_BRESP"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_BUSER"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_BVALID"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_BREADY"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_ARID"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_ARADDR"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_ARLEN"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_ARSIZE"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_ARBURST"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_ARLOCK"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_ARCACHE"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_ARPROT"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_ARQOS"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_ARREGION"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_ARUSER"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_ARVALID"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_ARREADY"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_RID"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_RDATA"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_RRESP"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_RLAST"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_RUSER"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_RVALID"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_RREADY"/>
+          </PORTMAPS>
+          <MONITORS>
+            <MONITOR BUSINTERFACE="S_AXI" INSTANCE="sc_uart_0"/>
+          </MONITORS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" BUSSTD="AXIS" BUSSTD_PSF="AXIS" IS_P2P="TRUE" IS_VALID="FALSE" MPD_INDEX="1" NAME="MON_AXI_S" PROTOCOL="GENERIC" TYPE="MONITOR">
+          <PORTMAPS>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_ACLK"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_ARESETN"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_S_TVALID"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_S_TREADY"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_S_TDATA"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_S_TKEEP"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_S_TLAST"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_S_TID"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_S_TDEST"/>
+            <PORTMAP DIR="I" PHYSICAL="MON_AXI_S_TUSER"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE HWVERSION="1.05.a" INSTANCE="chipscope_ila_0" IPTYPE="PERIPHERAL" MHS_INDEX="19" MODCLASS="IP" MODTYPE="chipscope_ila">
+      <DESCRIPTION TYPE="SHORT">Chipscope Integrated Logic Analyzer (ILA)</DESCRIPTION>
+      <DESCRIPTION TYPE="LONG">The Chipscope Integrated Logic Analyzer (ILA) core is used to monitor internal FPGA signals in real time.</DESCRIPTION>
+      <LICENSEINFO ICON_NAME="ps_core_preferred"/>
+      <PARAMETERS>
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="SYSTEM" MPD_INDEX="0" NAME="C_FAMILY" TYPE="string" VALUE="spartan6">
+          <DESCRIPTION>Device Family</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="SYSTEM" MPD_INDEX="1" NAME="C_DEVICE" TYPE="string" VALUE="6slx16">
+          <DESCRIPTION>Device Name</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="SYSTEM" MPD_INDEX="2" NAME="C_PACKAGE" TYPE="string" VALUE="csg324">
+          <DESCRIPTION>Package Name</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="SYSTEM" MPD_INDEX="3" NAME="C_SPEEDGRADE" TYPE="string" VALUE="-3">
+          <DESCRIPTION>Speed Grade Name</DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" IS_INSTANTIATED="TRUE" MHS_INDEX="3" MPD_INDEX="4" NAME="C_NUM_DATA_SAMPLES" TYPE="integer" VALUE="1024">
+          <DESCRIPTION>Number of Data Samples Captured Per Trigger Match </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="5" NAME="C_DATA_SAME_AS_TRIGGER" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Use The ILA Trigger Signal As The ILA Data Signal </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="6" NAME="C_DATA_IN_WIDTH" TYPE="integer" VALUE="32">
+          <DESCRIPTION>Width of ILA Data Input Signal </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="7" NAME="C_ENABLE_TRIGGER_OUT" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Enable The Trigger Out Signal "trig_out" </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="8" NAME="C_DISABLE_RPM" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Disable RPM Placement Infomation in Netlist </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="9" NAME="C_RISING_CLOCK_EDGE" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Trigger on Rising Clock Edge </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="10" NAME="C_MAX_SEQUENCER_LEVELS" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Maximum Number of Levels supported by the Trigger Sequencer </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="11" NAME="C_ENABLE_STORAGE_QUALIFICATION" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Enable Storage Qualification for ILA storage </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" IS_INSTANTIATED="TRUE" MHS_INDEX="2" MPD_INDEX="12" NAME="C_TRIG0_UNITS" TYPE="integer" VALUE="1">
+          <DESCRIPTION>Number of Match Unit Enabled for Trigger Unit 0 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="4" MPD_INDEX="13" NAME="C_TRIG0_TRIGGER_IN_WIDTH" TYPE="integer" VALUE="22">
+          <DESCRIPTION>Width of Trigger Input for Trigger Unit 0 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="14" NAME="C_TRIG0_UNIT_COUNTER_WIDTH" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Match Counter Width for Trigger Unit 0 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="15" NAME="C_TRIG0_UNIT_MATCH_TYPE" TYPE="string" VALUE="basic">
+          <DESCRIPTION>Match Type for Trigger Unit 0 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="16" NAME="C_TRIG1_UNITS" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Number of Match Unit Enabled for Trigger Unit 1 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="17" NAME="C_TRIG1_TRIGGER_IN_WIDTH" TYPE="integer" VALUE="8">
+          <DESCRIPTION>Width of Trigger Input for Trigger Unit 1 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="18" NAME="C_TRIG1_UNIT_COUNTER_WIDTH" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Match Counter Width for Trigger Unit 1 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="19" NAME="C_TRIG1_UNIT_MATCH_TYPE" TYPE="string" VALUE="basic">
+          <DESCRIPTION>Match Type for Trigger Unit 1 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="20" NAME="C_TRIG2_UNITS" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Number of Match Unit Enabled for Trigger Unit 2 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="21" NAME="C_TRIG2_TRIGGER_IN_WIDTH" TYPE="integer" VALUE="8">
+          <DESCRIPTION>Width of Trigger Input for Trigger Unit 2 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="22" NAME="C_TRIG2_UNIT_COUNTER_WIDTH" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Match Counter Width for Trigger Unit 2 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="23" NAME="C_TRIG2_UNIT_MATCH_TYPE" TYPE="string" VALUE="basic">
+          <DESCRIPTION>Match Type for Trigger Unit 2 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="24" NAME="C_TRIG3_UNITS" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Number of Match Unit Enabled for Trigger Unit 3 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="25" NAME="C_TRIG3_TRIGGER_IN_WIDTH" TYPE="integer" VALUE="8">
+          <DESCRIPTION>Width of Trigger Input for Trigger Unit 3 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="26" NAME="C_TRIG3_UNIT_COUNTER_WIDTH" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Match Counter Width for Trigger Unit 3 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="27" NAME="C_TRIG3_UNIT_MATCH_TYPE" TYPE="string" VALUE="basic">
+          <DESCRIPTION>Match Type for Trigger Unit 3 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="28" NAME="C_TRIG4_UNITS" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Number of Match Unit Enabled for Trigger Unit 4 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="29" NAME="C_TRIG4_TRIGGER_IN_WIDTH" TYPE="integer" VALUE="8">
+          <DESCRIPTION>Width of Trigger Input for Trigger Unit 4 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="30" NAME="C_TRIG4_UNIT_COUNTER_WIDTH" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Match Counter Width for Trigger Unit 4 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="31" NAME="C_TRIG4_UNIT_MATCH_TYPE" TYPE="string" VALUE="basic">
+          <DESCRIPTION>Match Type for Trigger Unit 4 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="32" NAME="C_TRIG5_UNITS" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Number of Match Unit Enabled for Trigger Unit 5 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="33" NAME="C_TRIG5_TRIGGER_IN_WIDTH" TYPE="integer" VALUE="8">
+          <DESCRIPTION>Width of Trigger Input for Trigger Unit 5 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="34" NAME="C_TRIG5_UNIT_COUNTER_WIDTH" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Match Counter Width for Trigger Unit 5 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="35" NAME="C_TRIG5_UNIT_MATCH_TYPE" TYPE="string" VALUE="basic">
+          <DESCRIPTION>Match Type for Trigger Unit 5 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="36" NAME="C_TRIG6_UNITS" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Number of Match Unit Enabled for Trigger Unit 6 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="37" NAME="C_TRIG6_TRIGGER_IN_WIDTH" TYPE="integer" VALUE="8">
+          <DESCRIPTION>Width of Trigger Input for Trigger Unit 6 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="38" NAME="C_TRIG6_UNIT_COUNTER_WIDTH" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Match Counter Width for Trigger Unit 6 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="39" NAME="C_TRIG6_UNIT_MATCH_TYPE" TYPE="string" VALUE="basic">
+          <DESCRIPTION>Match Type for Trigger Unit 6 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="40" NAME="C_TRIG7_UNITS" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Number of Match Unit Enabled for Trigger Unit 7 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="41" NAME="C_TRIG7_TRIGGER_IN_WIDTH" TYPE="integer" VALUE="8">
+          <DESCRIPTION>Width of Trigger Input for Trigger Unit 7 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="42" NAME="C_TRIG7_UNIT_COUNTER_WIDTH" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Match Counter Width for Trigger Unit 7 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="43" NAME="C_TRIG7_UNIT_MATCH_TYPE" TYPE="string" VALUE="basic">
+          <DESCRIPTION>Match Type for Trigger Unit 7 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="44" NAME="C_TRIG8_UNITS" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Number of Match Unit Enabled for Trigger Unit 8 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="45" NAME="C_TRIG8_TRIGGER_IN_WIDTH" TYPE="integer" VALUE="8">
+          <DESCRIPTION>Width of Trigger Input for Trigger Unit 8 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="46" NAME="C_TRIG8_UNIT_COUNTER_WIDTH" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Match Counter Width for Trigger Unit 8 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="47" NAME="C_TRIG8_UNIT_MATCH_TYPE" TYPE="string" VALUE="basic">
+          <DESCRIPTION>Match Type for Trigger Unit 8 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="48" NAME="C_TRIG9_UNITS" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Number of Match Unit Enabled for Trigger Unit 9 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="49" NAME="C_TRIG9_TRIGGER_IN_WIDTH" TYPE="integer" VALUE="8">
+          <DESCRIPTION>Width of Trigger Input for Trigger Unit 9 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="50" NAME="C_TRIG9_UNIT_COUNTER_WIDTH" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Match Counter Width for Trigger Unit 9 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="51" NAME="C_TRIG9_UNIT_MATCH_TYPE" TYPE="string" VALUE="basic">
+          <DESCRIPTION>Match Type for Trigger Unit 9 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="52" NAME="C_TRIG10_UNITS" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Number of Match Unit Enabled for Trigger Unit 10 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="53" NAME="C_TRIG10_TRIGGER_IN_WIDTH" TYPE="integer" VALUE="8">
+          <DESCRIPTION>Width of Trigger Input for Trigger Unit 10 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="54" NAME="C_TRIG10_UNIT_COUNTER_WIDTH" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Match Counter Width for Trigger Unit 10 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="55" NAME="C_TRIG10_UNIT_MATCH_TYPE" TYPE="string" VALUE="basic">
+          <DESCRIPTION>Match Type for Trigger Unit 10 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="56" NAME="C_TRIG11_UNITS" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Number of Match Unit Enabled for Trigger Unit 11 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="57" NAME="C_TRIG11_TRIGGER_IN_WIDTH" TYPE="integer" VALUE="8">
+          <DESCRIPTION>Width of Trigger Input for Trigger Unit 11 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="58" NAME="C_TRIG11_UNIT_COUNTER_WIDTH" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Match Counter Width for Trigger Unit 11 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="59" NAME="C_TRIG11_UNIT_MATCH_TYPE" TYPE="string" VALUE="basic">
+          <DESCRIPTION>Match Type for Trigger Unit 11 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="60" NAME="C_TRIG12_UNITS" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Number of Match Unit Enabled for Trigger Unit 12 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="61" NAME="C_TRIG12_TRIGGER_IN_WIDTH" TYPE="integer" VALUE="8">
+          <DESCRIPTION>Width of Trigger Input for Trigger Unit 12 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="62" NAME="C_TRIG12_UNIT_COUNTER_WIDTH" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Match Counter Width for Trigger Unit 12 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="63" NAME="C_TRIG12_UNIT_MATCH_TYPE" TYPE="string" VALUE="basic">
+          <DESCRIPTION>Match Type for Trigger Unit 12 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="64" NAME="C_TRIG13_UNITS" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Number of Match Unit Enabled for Trigger Unit 13 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="65" NAME="C_TRIG13_TRIGGER_IN_WIDTH" TYPE="integer" VALUE="8">
+          <DESCRIPTION>Width of Trigger Input for Trigger Unit 13 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="66" NAME="C_TRIG13_UNIT_COUNTER_WIDTH" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Match Counter Width for Trigger Unit 13 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="67" NAME="C_TRIG13_UNIT_MATCH_TYPE" TYPE="string" VALUE="basic">
+          <DESCRIPTION>Match Type for Trigger Unit 13 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="68" NAME="C_TRIG14_UNITS" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Number of Match Unit Enabled for Trigger Unit 14 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="69" NAME="C_TRIG14_TRIGGER_IN_WIDTH" TYPE="integer" VALUE="8">
+          <DESCRIPTION>Width of Trigger Input for Trigger Unit 14 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="70" NAME="C_TRIG14_UNIT_COUNTER_WIDTH" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Match Counter Width for Trigger Unit 14 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="71" NAME="C_TRIG14_UNIT_MATCH_TYPE" TYPE="string" VALUE="basic">
+          <DESCRIPTION>Match Type for Trigger Unit 14 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="72" NAME="C_TRIG15_UNITS" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Number of Match Unit Enabled for Trigger Unit 15 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="73" NAME="C_TRIG15_TRIGGER_IN_WIDTH" TYPE="integer" VALUE="8">
+          <DESCRIPTION>Width of Trigger Input for Trigger Unit 15 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="74" NAME="C_TRIG15_UNIT_COUNTER_WIDTH" TYPE="integer" VALUE="0">
+          <DESCRIPTION>Match Counter Width for Trigger Unit 15 </DESCRIPTION>
+        </PARAMETER>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="75" NAME="C_TRIG15_UNIT_MATCH_TYPE" TYPE="string" VALUE="basic">
+          <DESCRIPTION>Match Type for Trigger Unit 15 </DESCRIPTION>
+        </PARAMETER>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" ENDIAN="LITTLE" IS_INSTANTIATED="TRUE" LEFT="35" LSB="0" MHS_INDEX="0" MPD_INDEX="0" MSB="35" NAME="chipscope_ila_control" RIGHT="0" SIGNAME="chipscope_ila_0_icon_control" VECFORMULA="[35:0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="chipscope_icon_0" PORT="control1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" IS_INSTANTIATED="TRUE" MHS_INDEX="1" MPD_INDEX="1" NAME="CLK" SIGIS="CLK" SIGNAME="clk_100_0000MHz">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clock_generator_0" PORT="CLKOUT0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" ENDIAN="LITTLE" IS_INSTANTIATED="TRUE" LEFT="21" LSB="0" MHS_INDEX="2" MPD_INDEX="3" MSB="21" NAME="TRIG0" RIGHT="0" SIGNAME="sc_uart_0_tx_data &amp; sc_uart_0_master_status &amp; sc_uart_0_rx_data &amp; sc_uart_0_slave_status" VECFORMULA="[(C_TRIG0_TRIGGER_IN_WIDTH-1):0]">
+          <SIGNALS>
+            <SIGNAL NAME="sc_uart_0_tx_data"/>
+            <SIGNAL NAME="sc_uart_0_master_status"/>
+            <SIGNAL NAME="sc_uart_0_rx_data"/>
+            <SIGNAL NAME="sc_uart_0_slave_status"/>
+          </SIGNALS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="sc_uart_0_tx_data &amp; sc_uart_0_master_status &amp; sc_uart_0_rx_data &amp; sc_uart_0_slave_status"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" ENDIAN="LITTLE" LEFT="31" LSB="0" MPD_INDEX="2" MSB="31" NAME="DATA" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[(C_DATA_IN_WIDTH-1):0]"/>
+        <PORT DIR="I" ENDIAN="LITTLE" IS_VALID="FALSE" LEFT="7" LSB="0" MPD_INDEX="4" MSB="7" NAME="TRIG1" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[(C_TRIG1_TRIGGER_IN_WIDTH-1):0]"/>
+        <PORT DIR="I" ENDIAN="LITTLE" IS_VALID="FALSE" LEFT="7" LSB="0" MPD_INDEX="5" MSB="7" NAME="TRIG2" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[(C_TRIG2_TRIGGER_IN_WIDTH-1):0]"/>
+        <PORT DIR="I" ENDIAN="LITTLE" IS_VALID="FALSE" LEFT="7" LSB="0" MPD_INDEX="6" MSB="7" NAME="TRIG3" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[(C_TRIG3_TRIGGER_IN_WIDTH-1):0]"/>
+        <PORT DIR="I" ENDIAN="LITTLE" IS_VALID="FALSE" LEFT="7" LSB="0" MPD_INDEX="7" MSB="7" NAME="TRIG4" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[(C_TRIG4_TRIGGER_IN_WIDTH-1):0]"/>
+        <PORT DIR="I" ENDIAN="LITTLE" IS_VALID="FALSE" LEFT="7" LSB="0" MPD_INDEX="8" MSB="7" NAME="TRIG5" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[(C_TRIG5_TRIGGER_IN_WIDTH-1):0]"/>
+        <PORT DIR="I" ENDIAN="LITTLE" IS_VALID="FALSE" LEFT="7" LSB="0" MPD_INDEX="9" MSB="7" NAME="TRIG6" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[(C_TRIG6_TRIGGER_IN_WIDTH-1):0]"/>
+        <PORT DIR="I" ENDIAN="LITTLE" IS_VALID="FALSE" LEFT="7" LSB="0" MPD_INDEX="10" MSB="7" NAME="TRIG7" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[(C_TRIG7_TRIGGER_IN_WIDTH-1):0]"/>
+        <PORT DIR="I" ENDIAN="LITTLE" IS_VALID="FALSE" LEFT="7" LSB="0" MPD_INDEX="11" MSB="7" NAME="TRIG8" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[(C_TRIG8_TRIGGER_IN_WIDTH-1):0]"/>
+        <PORT DIR="I" ENDIAN="LITTLE" IS_VALID="FALSE" LEFT="7" LSB="0" MPD_INDEX="12" MSB="7" NAME="TRIG9" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[(C_TRIG9_TRIGGER_IN_WIDTH-1):0]"/>
+        <PORT DIR="I" ENDIAN="LITTLE" IS_VALID="FALSE" LEFT="7" LSB="0" MPD_INDEX="13" MSB="7" NAME="TRIG10" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[(C_TRIG10_TRIGGER_IN_WIDTH-1):0]"/>
+        <PORT DIR="I" ENDIAN="LITTLE" IS_VALID="FALSE" LEFT="7" LSB="0" MPD_INDEX="14" MSB="7" NAME="TRIG11" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[(C_TRIG11_TRIGGER_IN_WIDTH-1):0]"/>
+        <PORT DIR="I" ENDIAN="LITTLE" IS_VALID="FALSE" LEFT="7" LSB="0" MPD_INDEX="15" MSB="7" NAME="TRIG12" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[(C_TRIG12_TRIGGER_IN_WIDTH-1):0]"/>
+        <PORT DIR="I" ENDIAN="LITTLE" IS_VALID="FALSE" LEFT="7" LSB="0" MPD_INDEX="16" MSB="7" NAME="TRIG13" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[(C_TRIG13_TRIGGER_IN_WIDTH-1):0]"/>
+        <PORT DIR="I" ENDIAN="LITTLE" IS_VALID="FALSE" LEFT="7" LSB="0" MPD_INDEX="17" MSB="7" NAME="TRIG14" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[(C_TRIG14_TRIGGER_IN_WIDTH-1):0]"/>
+        <PORT DIR="I" ENDIAN="LITTLE" IS_VALID="FALSE" LEFT="7" LSB="0" MPD_INDEX="18" MSB="7" NAME="TRIG15" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[(C_TRIG15_TRIGGER_IN_WIDTH-1):0]"/>
+        <PORT DIR="O" MPD_INDEX="19" NAME="TRIG_OUT" SIGNAME="__NOC__"/>
+      </PORTS>
+      <BUSINTERFACES/>
     </MODULE>
   </MODULES>
 

@@ -19,9 +19,9 @@
  PORT GCLK = GCLK, DIR = I, SIGIS = CLK, CLK_FREQ = 100000000
  PORT DIP_Switches_8Bits_TRI_I = DIP_Switches_8Bits_TRI_I, DIR = I, VEC = [7:0]
  PORT sc_uart_0_tx_data_pin = sc_uart_0_tx_data, DIR = O, VEC = [7:0]
+ PORT sc_uart_0_rx_data_pin = sc_uart_0_rx_data, DIR = I, VEC = [7:0]
  PORT sc_uart_0_master_status_pin = sc_uart_0_master_status, DIR = O, VEC = [2:0]
  PORT sc_uart_0_slave_status_pin = sc_uart_0_slave_status, DIR = I, VEC = [2:0]
- PORT sc_uart_0_rx_data_pin = sc_uart_0_rx_data, DIR = I, VEC = [7:0]
 
 
 BEGIN proc_sys_reset
@@ -93,6 +93,9 @@ BEGIN microblaze
  PARAMETER C_DCACHE_HIGHADDR = 0X3FFFFFFF
  PARAMETER C_USE_DCACHE = 0
  PARAMETER C_DCACHE_ALWAYS_USED = 0
+ PARAMETER C_NUMBER_OF_PC_BRK = 2
+ PARAMETER C_NUMBER_OF_RD_ADDR_BRK = 2
+ PARAMETER C_NUMBER_OF_WR_ADDR_BRK = 2
  BUS_INTERFACE ILMB = microblaze_0_ilmb
  BUS_INTERFACE DLMB = microblaze_0_dlmb
  BUS_INTERFACE M_AXI_DP = axi4lite_0
@@ -100,6 +103,9 @@ BEGIN microblaze
  BUS_INTERFACE INTERRUPT = axi_intc_0_INTERRUPT
  PORT MB_RESET = proc_sys_reset_0_MB_Reset
  PORT CLK = clk_100_0000MHz
+ PORT DBG_STOP = microblaze_0_DBG_STOP_chipscope
+ PORT Trace_PC = microblaze_0_Trace_PC_chipscope
+ PORT MB_Halted = microblaze_0_MB_Halted_chipscope
 END
 
 BEGIN mdm
@@ -109,6 +115,7 @@ BEGIN mdm
  PARAMETER C_USE_UART = 1
  PARAMETER C_BASEADDR = 0x41400000
  PARAMETER C_HIGHADDR = 0x4140ffff
+ PARAMETER C_MB_DBG_PORTS = 1
  BUS_INTERFACE S_AXI = axi4lite_0
  BUS_INTERFACE MBDEBUG_0 = microblaze_0_debug
  PORT Debug_SYS_Rst = proc_sys_reset_0_MB_Debug_Sys_Rst
@@ -212,7 +219,7 @@ BEGIN axi_intc
  PORT S_AXI_ACLK = clk_100_0000MHz
  PORT Intr = fit_timer_0_Interrupt
  PORT Processor_clk = clk_100_0000MHz
- PORT Processor_rst = proc_sys_reset_0_Peripheral_aresetn
+ PORT Processor_rst = proc_sys_reset_0_Peripheral_Reset
 END
 
 BEGIN sc_uart
@@ -223,8 +230,42 @@ BEGIN sc_uart
  BUS_INTERFACE S_AXI = axi4lite_0
  PORT S_AXI_ACLK = clk_100_0000MHz
  PORT tx_data = sc_uart_0_tx_data
+ PORT rx_data = sc_uart_0_rx_data
  PORT master_status = sc_uart_0_master_status
  PORT slave_status = sc_uart_0_slave_status
- PORT rx_data = sc_uart_0_rx_data
+END
+
+BEGIN chipscope_icon
+ PARAMETER INSTANCE = chipscope_icon_0
+ PARAMETER HW_VER = 1.06.a
+ PARAMETER C_NUM_CONTROL_PORTS = 2
+ PORT control0 = chipscope_axi_monitor_0_icon_ctrl
+ PORT control1 = chipscope_ila_0_icon_control
+END
+
+BEGIN chipscope_axi_monitor
+ PARAMETER INSTANCE = chipscope_axi_monitor_0
+ PARAMETER HW_VER = 3.05.a
+ PARAMETER C_MAX_SEQUENCER_LEVELS = 2
+ PARAMETER C_USE_INTERFACE = 0
+ PARAMETER C_NUM_DATA_SAMPLES = 1024
+ PARAMETER C_USE_TRIG_IN = 1
+ PARAMETER C_TRIG_IN_WIDTH = 33
+ BUS_INTERFACE MON_AXI = sc_uart_0.S_AXI
+ PORT chipscope_icon_control = chipscope_axi_monitor_0_icon_ctrl
+ PORT MON_AXI_ACLK = clk_100_0000MHz
+ PORT MON_AXI_TRIG_OUT = microblaze_0_DBG_STOP_chipscope
+ PORT MON_AXI_TRIG_IN = microblaze_0_Trace_PC_chipscope & microblaze_0_MB_Halted_chipscope
+END
+
+BEGIN chipscope_ila
+ PARAMETER INSTANCE = chipscope_ila_0
+ PARAMETER HW_VER = 1.05.a
+ PARAMETER C_TRIG0_UNITS = 1
+ PARAMETER C_NUM_DATA_SAMPLES = 1024
+ PARAMETER C_TRIG0_TRIGGER_IN_WIDTH = 22
+ PORT chipscope_ila_control = chipscope_ila_0_icon_control
+ PORT CLK = clk_100_0000MHz
+ PORT TRIG0 = sc_uart_0_tx_data & sc_uart_0_master_status & sc_uart_0_rx_data & sc_uart_0_slave_status
 END
 

@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/vivric/Documents/workspace/gsm_sim/gsm_integration_v_1_0/pcores/sc_uart_interface_modified_v1_00_a/devl/projnav/sc_uart_interface.xst" -ofn "/home/vivric/Documents/workspace/gsm_sim/gsm_integration_v_1_0/pcores/sc_uart_interface_modified_v1_00_a/devl/projnav/sc_uart_interface.syr" 

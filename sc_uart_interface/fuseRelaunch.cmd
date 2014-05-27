@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/home/ga38qol/Downloads/sc_uart_interface/uart_ip_tb_isim_beh.exe" -prj "/home/ga38qol/Downloads/sc_uart_interface/uart_ip_tb_beh.prj" "work.uart_ip_tb" 

@@ -9,10 +9,45 @@ WARNING:EDK:4180 - PORT: Interrupt_address_in, CONNECTOR: Interrupt_address_in -
    No driver found. Port will be driven to GND -
    /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
    axi_intc_v1_04_a/data/axi_intc_v2_1_0.mpd line 131 
+WARNING:EDK:4180 - PORT: tdi_in, CONNECTOR: bscan_tdi - No driver found. Port
+   will be driven to GND -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   chipscope_icon_v1_06_a/data/chipscope_icon_v2_1_0.mpd line 101 
+WARNING:EDK:4180 - PORT: reset_in, CONNECTOR: bscan_reset - No driver found.
+   Port will be driven to GND -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   chipscope_icon_v1_06_a/data/chipscope_icon_v2_1_0.mpd line 102 
+WARNING:EDK:4180 - PORT: shift_in, CONNECTOR: bscan_shift - No driver found.
+   Port will be driven to GND -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   chipscope_icon_v1_06_a/data/chipscope_icon_v2_1_0.mpd line 103 
+WARNING:EDK:4180 - PORT: update_in, CONNECTOR: bscan_update - No driver found.
+   Port will be driven to GND -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   chipscope_icon_v1_06_a/data/chipscope_icon_v2_1_0.mpd line 104 
+WARNING:EDK:4180 - PORT: sel_in, CONNECTOR: bscan_sel1 - No driver found. Port
+   will be driven to GND -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   chipscope_icon_v1_06_a/data/chipscope_icon_v2_1_0.mpd line 105 
+WARNING:EDK:4180 - PORT: drck_in, CONNECTOR: bscan_drck1 - No driver found. Port
+   will be driven to GND -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   chipscope_icon_v1_06_a/data/chipscope_icon_v2_1_0.mpd line 106 
+WARNING:EDK:4180 - PORT: capture_in, CONNECTOR: bscan_capture - No driver found.
+   Port will be driven to GND -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   chipscope_icon_v1_06_a/data/chipscope_icon_v2_1_0.mpd line 107 
+WARNING:EDK:4181 - PORT: Peripheral_aresetn, CONNECTOR:
+   proc_sys_reset_0_Peripheral_aresetn - floating connection -
+   /home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.mhs line
+   39 
 WARNING:EDK:4181 - PORT: Processor_ack_out, CONNECTOR: Processor_ack_out -
    floating connection -
    /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
    axi_intc_v1_04_a/data/axi_intc_v2_1_0.mpd line 132 
+WARNING:EDK:4181 - PORT: tdo_out, CONNECTOR: bscan_tdo1 - floating connection -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   chipscope_icon_v1_06_a/data/chipscope_icon_v2_1_0.mpd line 108 
 
 Performing Clock DRCs...
 
@@ -69,6 +104,26 @@ INFO:EDK:4130 - IPNAME: axi_intc, INSTANCE:axi_intc_0 - tcl is overriding
    PARAMETER C_KIND_OF_LVL value to 0b11111111111111111111111111111111 -
    /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
    axi_intc_v1_04_a/data/axi_intc_v2_1_0.mpd line 89 
+INFO:EDK:4130 - IPNAME: chipscope_icon, INSTANCE:chipscope_icon_0 - tcl is
+   overriding PARAMETER C_SYSTEM_CONTAINS_MDM value to 1 -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   chipscope_icon_v1_06_a/data/chipscope_icon_v2_1_0.mpd line 81 
+chipscope_axi_monitor_0 is connected to instance: sc_uart_0
+Bus Name is: S_AXI 
+ISSUING nor ACCEPTANCE Parameter Not Found
+The value of MAXRBURSTS is set to 2
+INFO:EDK:4130 - IPNAME: chipscope_axi_monitor, INSTANCE:chipscope_axi_monitor_0
+   - tcl is overriding PARAMETER C_MON_AXI_PC_MAXRBURST value to 2 -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   chipscope_axi_monitor_v3_05_a/data/chipscope_axi_monitor_v2_1_0.mpd line 94 
+chipscope_axi_monitor_0 is connected to instance: sc_uart_0
+Bus Name is: S_AXI 
+ISSUING nor ACCEPTANCE Parameter Not Found
+The value of MAXWBURSTS is set to 2
+INFO:EDK:4130 - IPNAME: chipscope_axi_monitor, INSTANCE:chipscope_axi_monitor_0
+   - tcl is overriding PARAMETER C_MON_AXI_PC_MAXWBURST value to 2 -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   chipscope_axi_monitor_v3_05_a/data/chipscope_axi_monitor_v2_1_0.mpd line 95 
 
 Running system level update procedures...
 
@@ -80,4 +135,6 @@ Performing System level DRCs on properties...
 
 Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
 INTC INFO:: Both AXI clock and processor clock have same connection.
+Chipscope Integrate Controller, instance 'chipscope_icon', exists in System 
+Chipscope Integrate Controller, instance 'chipscope_icon', exists in System 
 Conversion to XML complete.

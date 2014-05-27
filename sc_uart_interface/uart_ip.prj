@@ -1,0 +1,8 @@
+vhdl work "uart_tx.vhd"
+vhdl work "uart_rx.vhd"
+vhdl work "Control.vhd"
+vhdl work "uart_top.vhd"
+vhdl work "tx_cdc.vhd"
+vhdl work "rx_cdc.vhd"
+vhdl work "reset_cdc.vhd"
+vhdl work "uart_ip.vhd"

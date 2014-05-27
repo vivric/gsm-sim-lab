@@ -1,0 +1,226 @@
+
+Release 14.7 - Simulation Model Generator Xilinx EDK 14.7 Build EDK_P.20131013
+ (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: simgen -p xc6slx16csg324-3 -lang vhdl -intstyle default -pe
+microblaze_0 bootloops/microblaze_0.elf -msg __xps/ise/xmsgprops.lst -s isim -tb
+-m behavioral system.mhs 
+
+MHS file              : /.../gsm_sim/gsm_integration_v_1_0/system.mhs
+Language (-lang)      : VHDL 
+Flow (-flow)      : ISE 
+Simulation Model (-m) : Behavioral
+Simulator (-s)        : ISE Simulator (ISIM)
+Part (-p) [ family ]  : xc6slx16csg324-3 [ spartan6 ]
+External memory simulation (-external_mem_sim) : FALSE 
+
+Output directory (-od):
+/home/vivric/Documents/workspace/gsm_sim/gsm_integration_v_1_0/
+
+
+Simulation Model Generator started ...
+
+Reading MHS file ...
+
+Reading MPD definitions ...
+
+Overriding IP level properties ...
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_ENDIANNESS value to 1 -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   microblaze_v8_50_c/data/microblaze_v2_1_0.mpd line 198 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_ICACHE_USE_FSL value to 0 -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   microblaze_v8_50_c/data/microblaze_v2_1_0.mpd line 339 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_DCACHE_USE_FSL value to 0 -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   microblaze_v8_50_c/data/microblaze_v2_1_0.mpd line 369 
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4lite_0 - tcl is
+   overriding PARAMETER C_BASEFAMILY value to spartan6 -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   axi_interconnect_v1_06_a/data/axi_interconnect_v2_1_0.mpd line 81 
+
+Computing clock values...
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   microblaze_0_i_bram_ctrl:BRAM_Clk_A. Clock DRCs will not be performed on this
+   core and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   microblaze_0_d_bram_ctrl:BRAM_Clk_A. Clock DRCs will not be performed on this
+   core and cores connected to it. 
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00001fff) microblaze_0_d_bram_ctrl	microblaze_0_dlmb
+  (0000000000-0x00001fff) microblaze_0_i_bram_ctrl	microblaze_0_ilmb
+  (0x40000000-0x4000ffff) Push_Buttons_4Bits	axi4lite_0
+  (0x40020000-0x4002ffff) LEDs_8Bits	axi4lite_0
+  (0x40040000-0x4004ffff) DIP_Switches_8Bits	axi4lite_0
+  (0x40600000-0x4060ffff) RS232_Uart_1	axi4lite_0
+  (0x41400000-0x4140ffff) debug_module	axi4lite_0
+  (0x7f400000-0x7f40ffff) sc_uart_interface_modified_0	axi4lite_0
+INFO:EDK:4130 - IPNAME: lmb_v10, INSTANCE:microblaze_0_ilmb - tool is overriding
+   PARAMETER C_LMB_NUM_SLAVES value to 1 -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   lmb_v10_v2_00_b/data/lmb_v10_v2_1_0.mpd line 82 
+INFO:EDK:4130 - IPNAME: lmb_v10, INSTANCE:microblaze_0_dlmb - tool is overriding
+   PARAMETER C_LMB_NUM_SLAVES value to 1 -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   lmb_v10_v2_00_b/data/lmb_v10_v2_1_0.mpd line 82 
+INFO:EDK:4130 - IPNAME: bram_block, INSTANCE:microblaze_0_bram_block - tool is
+   overriding PARAMETER C_MEMSIZE value to 0x2000 -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   bram_block_v1_00_a/data/bram_block_v2_1_0.mpd line 78 
+
+Checking platform address map ...
+
+Checking platform configuration ...
+IPNAME: lmb_v10, INSTANCE: microblaze_0_ilmb - 1 master(s) : 1 slave(s) 
+IPNAME: lmb_v10, INSTANCE: microblaze_0_dlmb - 1 master(s) : 1 slave(s) 
+IPNAME: axi_interconnect, INSTANCE: axi4lite_0 - 1 master(s) : 6 slave(s) 
+
+Checking port drivers...
+
+Performing Clock DRCs...
+
+Performing Reset DRCs...
+
+Overriding system level properties...
+INFO:EDK:4130 - IPNAME: lmb_bram_if_cntlr, INSTANCE:microblaze_0_i_bram_ctrl -
+   tcl is overriding PARAMETER C_MASK value to 0x40000000 -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   lmb_bram_if_cntlr_v3_10_c/data/lmb_bram_if_cntlr_v2_1_0.mpd line 92 
+INFO:EDK:4130 - IPNAME: lmb_bram_if_cntlr, INSTANCE:microblaze_0_d_bram_ctrl -
+   tcl is overriding PARAMETER C_MASK value to 0x40000000 -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   lmb_bram_if_cntlr_v3_10_c/data/lmb_bram_if_cntlr_v2_1_0.mpd line 92 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_D_AXI value to 1 -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   microblaze_v8_50_c/data/microblaze_v2_1_0.mpd line 232 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_ADDR_TAG_BITS value to 0 -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   microblaze_v8_50_c/data/microblaze_v2_1_0.mpd line 337 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_DCACHE_ADDR_TAG value to 0 -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   microblaze_v8_50_c/data/microblaze_v2_1_0.mpd line 367 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_USE_EXT_BRK value to 1 -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   microblaze_v8_50_c/data/microblaze_v2_1_0.mpd line 402 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_USE_EXT_NM_BRK value to 1 -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   microblaze_v8_50_c/data/microblaze_v2_1_0.mpd line 403 
+
+INFO: Setting C_RANGE_CHECK = ON for axi_interconnect axi4lite_0.
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4lite_0 - tcl is
+   overriding PARAMETER C_RANGE_CHECK value to 1 -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   axi_interconnect_v1_06_a/data/axi_interconnect_v2_1_0.mpd line 149 
+
+Running system level update procedures...
+
+Running UPDATE Tcl procedures for OPTION SYSLEVEL_UPDATE_PROC...
+
+Running system level DRCs...
+
+Performing System level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+
+Running UPDATE Tcl procedures for OPTION SIMGEN_SYSLEVEL_UPDATE_PROC...
+
+Elaborating instances ...
+IPNAME:bram_block INSTANCE:microblaze_0_bram_block -
+/home/vivric/Documents/workspace/gsm_sim/gsm_integration_v_1_0/system.mhs line
+72 - elaborating IP
+IPNAME:clock_generator INSTANCE:clock_generator_0 -
+/home/vivric/Documents/workspace/gsm_sim/gsm_integration_v_1_0/system.mhs line
+115 - elaborating IP
+ClkGen elaborate status: PASSED
+----------------------------------------
+----------------------------------------
+
+Generating simulation files ...
+
+Writing HDL for elaborated instances ...
+
+Inserting wrapper level ...
+
+Constructing platform-level signal connectivity ...
+
+Writing HDL ...
+
+Writing BMM ...
+
+Writing memory initialization files ...
+
+Generating Memory Initialization Files ...
+
+Overriding IP level properties ...
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_ENDIANNESS value to 1 -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   microblaze_v8_50_c/data/microblaze_v2_1_0.mpd line 198 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_ICACHE_USE_FSL value to 0 -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   microblaze_v8_50_c/data/microblaze_v2_1_0.mpd line 339 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_DCACHE_USE_FSL value to 0 -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   microblaze_v8_50_c/data/microblaze_v2_1_0.mpd line 369 
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4lite_0 - tcl is
+   overriding PARAMETER C_BASEFAMILY value to spartan6 -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   axi_interconnect_v1_06_a/data/axi_interconnect_v2_1_0.mpd line 81 
+
+Computing clock values...
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   microblaze_0_i_bram_ctrl:BRAM_Clk_A. Clock DRCs will not be performed on this
+   core and cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   microblaze_0_d_bram_ctrl:BRAM_Clk_A. Clock DRCs will not be performed on this
+   core and cores connected to it. 
+Address Map for Processor microblaze_0
+  (0000000000-0x00001fff) microblaze_0_d_bram_ctrl	microblaze_0_dlmb
+  (0000000000-0x00001fff) microblaze_0_i_bram_ctrl	microblaze_0_ilmb
+  (0x40000000-0x4000ffff) Push_Buttons_4Bits	axi4lite_0
+  (0x40020000-0x4002ffff) LEDs_8Bits	axi4lite_0
+  (0x40040000-0x4004ffff) DIP_Switches_8Bits	axi4lite_0
+  (0x40600000-0x4060ffff) RS232_Uart_1	axi4lite_0
+  (0x41400000-0x4140ffff) debug_module	axi4lite_0
+  (0x7f400000-0x7f40ffff) sc_uart_interface_modified_0	axi4lite_0
+INFO:EDK:4130 - IPNAME: lmb_v10, INSTANCE:microblaze_0_ilmb - tool is overriding
+   PARAMETER C_LMB_NUM_SLAVES value to 1 -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   lmb_v10_v2_00_b/data/lmb_v10_v2_1_0.mpd line 82 
+INFO:EDK:4130 - IPNAME: lmb_v10, INSTANCE:microblaze_0_dlmb - tool is overriding
+   PARAMETER C_LMB_NUM_SLAVES value to 1 -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   lmb_v10_v2_00_b/data/lmb_v10_v2_1_0.mpd line 82 
+INFO:EDK:4130 - IPNAME: bram_block, INSTANCE:microblaze_0_bram_block - tool is
+   overriding PARAMETER C_MEMSIZE value to 0x2000 -
+   /home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/
+   bram_block_v1_00_a/data/bram_block_v2_1_0.mpd line 78 
+
+Checking platform address map ...
+Running Data2Mem with the following command:
+data2mem -bm system_sim.bmm  -bd
+/home/vivric/Documents/workspace/gsm_sim/gsm_integration_v_1_0/bootloops/microbl
+aze_0.elf tag microblaze_0  -bx
+/home/vivric/Documents/workspace/gsm_sim/gsm_integration_v_1_0/simulation/behavi
+oral -u   -p xc6slx16csg324-3 
+
+Generating simulator compile script ...
+
+Generating simulator helper scripts ...
+Simulation Model Generator done!
+

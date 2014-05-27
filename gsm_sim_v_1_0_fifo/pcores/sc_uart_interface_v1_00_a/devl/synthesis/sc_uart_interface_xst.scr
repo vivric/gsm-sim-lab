@@ -1,0 +1,12 @@
+run
+-opt_level 2
+-opt_mode speed
+-ifmt mixed
+-ifn "/home/ga37jom/GSM/prog/pcores/sc_uart_interface_v1_00_a/devl/synthesis/sc_uart_interface_xst.prj"
+-top sc_uart_interface
+-p virtex6
+-ofn "/home/ga37jom/GSM/prog/pcores/sc_uart_interface_v1_00_a/devl/synthesis/sc_uart_interface_xst.ngc"
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /
+-work_lib sc_uart_interface_v1_00_a

@@ -5,7 +5,7 @@ Parameter TMPDIR set to /home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_f
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 
@@ -481,7 +481,10 @@ Elaborating entity <address_hit> (architecture <IMP>) with generics from library
 
 Elaborating entity <MB_SRLC16E> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
 WARNING:HDLCompiler:321 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_primitives.vhd" Line 211: Comparison between arrays of unequal length always returns FALSE.
-WARNING:HDLCompiler:746 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/debug.vhd" Line 1975: Range is empty (null range)
+
+Elaborating entity <address_hit> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+
+Elaborating entity <address_data_hit> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
 
 Elaborating entity <MMU> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
 WARNING:HDLCompiler:634 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze.vhd" Line 2509: Net <local_sig[186]> does not have a driver.
@@ -571,9 +574,9 @@ Synthesizing Unit <MicroBlaze>.
         C_RESET_MSR = "00000000000000000000000000000000"
         C_OPCODE_0x0_ILLEGAL = 0
         C_DEBUG_ENABLED = 1
-        C_NUMBER_OF_PC_BRK = 1
-        C_NUMBER_OF_RD_ADDR_BRK = 0
-        C_NUMBER_OF_WR_ADDR_BRK = 0
+        C_NUMBER_OF_PC_BRK = 2
+        C_NUMBER_OF_RD_ADDR_BRK = 2
+        C_NUMBER_OF_WR_ADDR_BRK = 2
         C_INTERRUPT_IS_EDGE = 0
         C_EDGE_IS_POSITIVE = 1
         C_ASYNC_INTERRUPT = 1
@@ -750,9 +753,9 @@ Synthesizing Unit <MicroBlaze_Core>.
         C_RESET_MSR = "00000000000000000000000000000000"
         C_OPCODE_0x0_ILLEGAL = 0
         C_DEBUG_ENABLED = 1
-        C_NUMBER_OF_PC_BRK = 1
-        C_NUMBER_OF_RD_ADDR_BRK = 0
-        C_NUMBER_OF_WR_ADDR_BRK = 0
+        C_NUMBER_OF_PC_BRK = 2
+        C_NUMBER_OF_RD_ADDR_BRK = 2
+        C_NUMBER_OF_WR_ADDR_BRK = 2
         C_INTERRUPT_IS_EDGE = 0
         C_EDGE_IS_POSITIVE = 1
         C_ASYNC_INTERRUPT = 1
@@ -1413,7 +1416,7 @@ INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcesso
     Found 1-bit register for signal <WB_SW_Instr>.
     Found 1-bit register for signal <WB_Word_Access>.
     Found 1-bit register for signal <ext_nm_brk_hold>.
-    Found 8x2-bit Read Only RAM for signal <_n2028>
+    Found 8x2-bit Read Only RAM for signal <_n2030>
     Found 2-bit 4-to-1 multiplexer for signal <PWR_11_o_PWR_11_o_mux_65_OUT> created at line 3096.
     Found 5-bit comparator equal for signal <of_op1_read_addr[0]_ex_gpr_write_addr[0]_equal_22_o> created at line 2070
     Found 5-bit comparator equal for signal <of_op2_read_addr[0]_ex_gpr_write_addr[0]_equal_23_o> created at line 2072
@@ -1615,9 +1618,9 @@ Synthesizing Unit <Data_Flow_gti>.
         C_FSL_EXCEPTION = 0
         C_USE_STACK_PROTECTION = 0
         C_DEBUG_ENABLED = 1
-        C_NUMBER_OF_PC_BRK = 1
-        C_NUMBER_OF_RD_ADDR_BRK = 0
-        C_NUMBER_OF_WR_ADDR_BRK = 0
+        C_NUMBER_OF_PC_BRK = 2
+        C_NUMBER_OF_RD_ADDR_BRK = 2
+        C_NUMBER_OF_WR_ADDR_BRK = 2
         C_USE_ICACHE = 0
         C_ADDR_TAG_BITS = 0
         C_ICACHE_USE_FSL = 0
@@ -2194,9 +2197,9 @@ Synthesizing Unit <PVR>.
         C_USE_EXTENDED_FSL_INSTR = 0
         C_M_AXI_DP_EXCLUSIVE_ACCESS = 0
         C_DEBUG_ENABLED = 1
-        C_NUMBER_OF_PC_BRK = 1
-        C_NUMBER_OF_RD_ADDR_BRK = 0
-        C_NUMBER_OF_WR_ADDR_BRK = 0
+        C_NUMBER_OF_PC_BRK = 2
+        C_NUMBER_OF_RD_ADDR_BRK = 2
+        C_NUMBER_OF_WR_ADDR_BRK = 2
         C_FSL_LINKS = 0
         C_BTC_SIZE = 0
         C_USE_ICACHE = 0
@@ -2344,9 +2347,9 @@ Synthesizing Unit <Debug>.
         C_DCACHE_HIGHADDR = "00111111111111111111111111111111"
         C_TARGET = spartan6
         C_DATA_SIZE = 32
-        C_NUMBER_OF_PC_BRK = 1
-        C_NUMBER_OF_RD_ADDR_BRK = 0
-        C_NUMBER_OF_WR_ADDR_BRK = 0
+        C_NUMBER_OF_PC_BRK = 2
+        C_NUMBER_OF_RD_ADDR_BRK = 2
+        C_NUMBER_OF_WR_ADDR_BRK = 2
         C_USE_MMU = 0
         C_MMU_DTLB_SIZE = 4
         C_MMU_ITLB_SIZE = 2
@@ -2356,13 +2359,7 @@ Synthesizing Unit <Debug>.
         C_USE_STACK_PROTECTION = 0
         C_USE_REORDER_INSTR = 1
         C_USE_SRL16 = "yes"
-WARNING:Xst:647 - Input <MEM_Data_Addr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <MEM_Data_Write> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <WB_DataBus_Steered_Read_Data> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <Stack_Violation> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <MEM_Write_Instr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <MEM_Read_Instr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <MEM_DReady> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <WB_PipeRun> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <Ok_To_Stop> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1-bit register for signal <running_clock>.
@@ -2396,6 +2393,8 @@ WARNING:Xst:647 - Input <Ok_To_Stop> is never used. This port will be preserved 
     Found 7-bit register for signal <Detect_Commands.sample>.
     Found 7-bit register for signal <Detect_Commands.sample_1>.
     Found 1-bit register for signal <new_dbg_instr_shifting_CLK>.
+    Found 32-bit register for signal <wb_data_addr>.
+    Found 1-bit register for signal <wb_read_instr>.
     Found 1-bit register for signal <read_register_PC_1>.
     Found 1-bit register for signal <read_register_MSR_1>.
     Found 33-bit register for signal <data_rd_reg>.
@@ -2412,11 +2411,12 @@ WARNING:Xst:647 - Input <Ok_To_Stop> is never used. This port will be preserved 
     Found 1-bit register for signal <force_stop_i>.
     Found 1-bit register for signal <Performace_Debug_Control.Force_Stop_Handle.force_stop_cmd_1>.
     Found 1-bit register for signal <watchpoint_brk_hold>.
-    Found 1-bit register for signal <Performace_Debug_Control.ex_dbg_hit>.
+    Found 6-bit register for signal <dbg_hit_hold_i>.
+    Found 6-bit register for signal <Performace_Debug_Control.ex_dbg_hit>.
     Found 1-bit register for signal <Performace_Debug_Control.ex_brki_hit>.
-    Found 1-bit register for signal <Performace_Debug_Control.mem_dbg_hit>.
+    Found 6-bit register for signal <Performace_Debug_Control.mem_dbg_hit>.
     Found 1-bit register for signal <Performace_Debug_Control.mem_brki_hit>.
-    Found 1-bit register for signal <Performace_Debug_Control.wb_dbg_hit>.
+    Found 6-bit register for signal <Performace_Debug_Control.wb_dbg_hit>.
     Found 1-bit register for signal <Performace_Debug_Control.wb_brki_hit>.
     Found 16-bit register for signal <dbg_hit>.
     Found 1-bit register for signal <dbg_brki_hit>.
@@ -2428,21 +2428,21 @@ WARNING:Xst:647 - Input <Ok_To_Stop> is never used. This port will be preserved 
     Found 1-bit register for signal <dbg_stop_instr_fetch_nohalt>.
     Found 1-bit register for signal <Performace_Debug_Control.dbg_state_nohalt>.
     Found 8-bit adder for signal <shift_count[7]_GND_254_o_add_0_OUT> created at line 1241.
-    Found 2-bit subtractor for signal <GND_254_o_GND_254_o_sub_40_OUT<1:0>> created at line 1308.
+    Found 2-bit subtractor for signal <GND_254_o_GND_254_o_sub_50_OUT<1:0>> created at line 1308.
     Found 1-bit 16-to-1 multiplexer for signal <TDO_Config_Word> created at line 865.
     Found 1-bit 28-to-1 multiplexer for signal <TDO_Status_Reg> created at line 974.
     WARNING:Xst:2404 -  FFs/Latches <Status_Reg_Handle.stack_violation_occurance_1<0:0>> (without init value) have a constant value of 0 in block <Debug>.
     Summary:
 	inferred   2 Adder/Subtractor(s).
-	inferred 273 D-type flip-flop(s).
-	inferred  52 Multiplexer(s).
+	inferred 328 D-type flip-flop(s).
+	inferred  58 Multiplexer(s).
 Unit <Debug> synthesized.
 
 Synthesizing Unit <MB_SRL16E_1>.
     Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_primitives.vhd".
         C_USE_SRL16 = "yes"
         C_STATIC = true
-        INIT = "0000000000011011"
+        INIT = "0010001000101011"
     Summary:
 	no macro.
 Unit <MB_SRL16E_1> synthesized.
@@ -2501,7 +2501,7 @@ Synthesizing Unit <MB_SRL16E_7>.
 	no macro.
 Unit <MB_SRL16E_7> synthesized.
 
-Synthesizing Unit <address_hit>.
+Synthesizing Unit <address_hit_1>.
     Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/address_hit.vhd".
         C_TARGET = spartan6
         C_FIRST = true
@@ -2510,7 +2510,7 @@ Synthesizing Unit <address_hit>.
 INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/address_hit.vhd" line 161: Output port <Q15> of the instance <Using_FPGA.Compare[0].SRLC16E_I> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
-Unit <address_hit> synthesized.
+Unit <address_hit_1> synthesized.
 
 Synthesizing Unit <MB_SRLC16E>.
     Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_primitives.vhd".
@@ -2520,6 +2520,28 @@ WARNING:Xst:647 - Input <Config_Reset> is never used. This port will be preserve
     Summary:
 	no macro.
 Unit <MB_SRLC16E> synthesized.
+
+Synthesizing Unit <address_hit_2>.
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/address_hit.vhd".
+        C_TARGET = spartan6
+        C_FIRST = false
+        C_USE_SRL16 = "yes"
+        No_Bits = 32
+WARNING:Xst:647 - Input <Single_Step_N> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/address_hit.vhd" line 161: Output port <Q15> of the instance <Using_FPGA.Compare[0].SRLC16E_I> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <address_hit_2> synthesized.
+
+Synthesizing Unit <address_data_hit>.
+    Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/address_data_hit.vhd".
+        C_TARGET = spartan6
+        C_USE_SRL16 = "yes"
+        No_Bits = 32
+INFO:Xst:3210 - "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/address_data_hit.vhd" line 191: Output port <Q15> of the instance <Using_FPGA.Data_Compare[0].Data_SRLC16E_I> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <address_data_hit> synthesized.
 
 Synthesizing Unit <MMU>.
     Related source file is "/home/vivric/Documents/xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mmu.vhd".
@@ -2583,8 +2605,8 @@ Macro Statistics
 # Adders/Subtractors                                   : 2
  2-bit subtractor                                      : 1
  8-bit adder                                           : 1
-# Registers                                            : 325
- 1-bit register                                        : 248
+# Registers                                            : 329
+ 1-bit register                                        : 247
  10-bit register                                       : 1
  13-bit register                                       : 2
  15-bit register                                       : 1
@@ -2593,20 +2615,20 @@ Macro Statistics
  28-bit register                                       : 1
  3-bit register                                        : 3
  31-bit register                                       : 1
- 32-bit register                                       : 32
+ 32-bit register                                       : 33
  33-bit register                                       : 2
  4-bit register                                        : 6
  4096-bit register                                     : 1
  43-bit register                                       : 4
  5-bit register                                        : 4
- 6-bit register                                        : 1
+ 6-bit register                                        : 5
  7-bit register                                        : 2
  8-bit register                                        : 1
 # Comparators                                          : 9
  5-bit comparator equal                                : 9
-# Multiplexers                                         : 271
+# Multiplexers                                         : 277
  1-bit 16-to-1 multiplexer                             : 1
- 1-bit 2-to-1 multiplexer                              : 150
+ 1-bit 2-to-1 multiplexer                              : 154
  1-bit 28-to-1 multiplexer                             : 1
  1-bit 4-to-1 multiplexer                              : 46
  15-bit 2-to-1 multiplexer                             : 9
@@ -2621,7 +2643,7 @@ Macro Statistics
  4-bit 2-to-1 multiplexer                              : 2
  43-bit 4-to-1 multiplexer                             : 1
  5-bit 2-to-1 multiplexer                              : 7
- 6-bit 2-to-1 multiplexer                              : 4
+ 6-bit 2-to-1 multiplexer                              : 6
  8-bit 2-to-1 multiplexer                              : 6
  8-bit 4-to-1 multiplexer                              : 2
 # Xors                                                 : 38
@@ -2641,7 +2663,7 @@ The following registers are absorbed into counter <single_step_count>: 1 registe
 Unit <Debug> synthesized (advanced).
 
 Synthesizing (advanced) Unit <Decode_gti>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n2028> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n2030> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -2759,6 +2781,8 @@ Synthesizing (advanced) Unit <PreFetch_Buffer_gti>.
 	Found 4-bit dynamic shift register for signal <Using_FPGA_Buffers_Mux.srl16<1>>.
 	Found 4-bit dynamic shift register for signal <Using_FPGA_Buffers_Mux.srl16<0>>.
 Unit <PreFetch_Buffer_gti> synthesized (advanced).
+WARNING:Xst:2677 - Node <dbg_hit_hold_i_1> of sequential type is unconnected in block <Debug>.
+WARNING:Xst:2677 - Node <dbg_hit_hold_i_0> of sequential type is unconnected in block <Debug>.
 WARNING:Xst:2677 - Node <wb_MSR_i_31> of sequential type is unconnected in block <msr_reg_gti>.
 WARNING:Xst:2677 - Node <wb_MSR_i_27> of sequential type is unconnected in block <msr_reg_gti>.
 WARNING:Xst:2677 - Node <wb_MSR_i_26> of sequential type is unconnected in block <msr_reg_gti>.
@@ -2783,15 +2807,15 @@ Macro Statistics
 # Counters                                             : 2
  2-bit down counter                                    : 1
  8-bit up counter                                      : 1
-# Registers                                            : 5751
- Flip-Flops                                            : 5751
+# Registers                                            : 5804
+ Flip-Flops                                            : 5804
 # Shift Registers                                      : 75
  4-bit dynamic shift register                          : 75
 # Comparators                                          : 9
  5-bit comparator equal                                : 9
-# Multiplexers                                         : 265
+# Multiplexers                                         : 271
  1-bit 16-to-1 multiplexer                             : 1
- 1-bit 2-to-1 multiplexer                              : 148
+ 1-bit 2-to-1 multiplexer                              : 152
  1-bit 28-to-1 multiplexer                             : 1
  1-bit 4-to-1 multiplexer                              : 46
  15-bit 2-to-1 multiplexer                             : 9
@@ -2805,7 +2829,7 @@ Macro Statistics
  33-bit 2-to-1 multiplexer                             : 4
  4-bit 2-to-1 multiplexer                              : 2
  5-bit 2-to-1 multiplexer                              : 7
- 6-bit 2-to-1 multiplexer                              : 4
+ 6-bit 2-to-1 multiplexer                              : 6
  8-bit 2-to-1 multiplexer                              : 5
  8-bit 4-to-1 multiplexer                              : 2
 # Xors                                                 : 38
@@ -4472,27 +4496,17 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mem_Sel_SPR_EAR_I> 
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mem_Sel_SPR_ESR_I> (without init value) has a constant value of 0 in block <Decode_gti>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <WB_Sel_SPR_PVR> (without init value) has a constant value of 0 in block <Decode_gti>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <ex_write_icache_done_i> of sequential type is unconnected in block <Decode_gti>.
-WARNING:Xst:1293 - FF/Latch <status_reg_26> has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dbg_hit_1> (without init value) has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dbg_hit_2> (without init value) has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dbg_hit_3> (without init value) has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dbg_hit_4> (without init value) has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dbg_hit_5> (without init value) has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dbg_hit_6> (without init value) has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dbg_hit_7> (without init value) has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dbg_hit_8> (without init value) has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dbg_hit_9> (without init value) has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dbg_hit_10> (without init value) has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dbg_hit_11> (without init value) has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dbg_hit_12> (without init value) has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dbg_hit_13> (without init value) has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dbg_hit_15> (without init value) has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dbg_hit_14> (without init value) has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dbg_hit_15> (without init value) has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Status_Reg_Handle.dbg_hit_1_1> (without init value) has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Status_Reg_Handle.dbg_hit_1_2> (without init value) has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Status_Reg_Handle.dbg_hit_1_3> (without init value) has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Status_Reg_Handle.dbg_hit_1_4> (without init value) has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Status_Reg_Handle.dbg_hit_1_5> (without init value) has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dbg_hit_13> (without init value) has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dbg_hit_12> (without init value) has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dbg_hit_11> (without init value) has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dbg_hit_10> (without init value) has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dbg_hit_9> (without init value) has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dbg_hit_8> (without init value) has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dbg_hit_7> (without init value) has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dbg_hit_6> (without init value) has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_reg_26> has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Status_Reg_Handle.dbg_hit_1_6> (without init value) has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Status_Reg_Handle.dbg_hit_1_7> (without init value) has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Status_Reg_Handle.dbg_hit_1_8> (without init value) has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
@@ -4503,21 +4517,16 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Status_Reg_Handle.d
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Status_Reg_Handle.dbg_hit_1_13> (without init value) has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Status_Reg_Handle.dbg_hit_1_14> (without init value) has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Status_Reg_Handle.dbg_hit_1_15> (without init value) has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_reg_1> has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_reg_2> has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_reg_3> has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_reg_4> has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_reg_5> has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_reg_6> has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_reg_7> has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_reg_8> has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_reg_9> has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_reg_10> has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_reg_11> has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_reg_12> has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_reg_13> has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_reg_14> has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_reg_15> has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_reg_14> has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_reg_13> has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_reg_12> has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_reg_11> has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_reg_10> has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_reg_9> has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_reg_8> has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_reg_7> has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_reg_6> has a constant value of 0 in block <Debug>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <WB_ESR_i_27> (without init value) has a constant value of 0 in block <exception_registers_gti>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <WB_ESR_27> (without init value) has a constant value of 0 in block <exception_registers_gti>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <EX_Shift_Op_1> in Unit <Decode_gti> is equivalent to the following FF/Latch, which will be removed : <EX_FPU_Cond_26> 
@@ -4553,7 +4562,11 @@ Optimizing unit <MicroBlaze> ...
 
 Optimizing unit <mux_bus> ...
 
-Optimizing unit <address_hit> ...
+Optimizing unit <address_data_hit> ...
+
+Optimizing unit <address_hit_1> ...
+
+Optimizing unit <address_hit_2> ...
 
 Optimizing unit <Register_File_gti> ...
 
@@ -7075,7 +7088,7 @@ WARNING:Xst:1293 - FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I
 WARNING:Xst:1293 - FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Using_FPGA.Gen_Bits[27].MEM_EX_Result_Inst> has a constant value of 0 in block <system_microblaze_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Using_FPGA.Gen_Bits[27].MEM_EX_Result_Inst> has a constant value of 0 in block <system_microblaze_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 0) on block system_microblaze_0_wrapper, actual ratio is 28.
+Found area constraint ratio of 100 (+ 0) on block system_microblaze_0_wrapper, actual ratio is 32.
 WARNING:Xst:387 - The KEEP property attached to the net <microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/WB_Mux_I/FPGA_Target.ALL_Bits[0].Wb_Mux_I1/wb_fwd_i> may hinder timing optimization.
    You may achieve better results by removing this property
 WARNING:Xst:387 - The KEEP property attached to the net <microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/WB_Mux_I/FPGA_Target.ALL_Bits[1].Wb_Mux_I1/wb_fwd_i> may hinder timing optimization.
@@ -7106,17 +7119,50 @@ WARNING:Xst:387 - The KEEP property attached to the net <microblaze_0/MicroBlaze
    You may achieve better results by removing this property
 WARNING:Xst:387 - The KEEP property attached to the net <microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/WB_Mux_I/FPGA_Target.ALL_Bits[14].Wb_Mux_I1/wb_fwd_i> may hinder timing optimization.
    You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/WB_Mux_I/FPGA_Target.ALL_Bits[31].Wb_Mux_I1/Data_Bits<0>> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/WB_Mux_I/FPGA_Target.ALL_Bits[30].Wb_Mux_I1/Data_Bits<0>> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/WB_Mux_I/FPGA_Target.ALL_Bits[29].Wb_Mux_I1/Data_Bits<0>> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/WB_Mux_I/FPGA_Target.ALL_Bits[28].Wb_Mux_I1/Data_Bits<0>> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/WB_Mux_I/FPGA_Target.ALL_Bits[27].Wb_Mux_I1/Data_Bits<0>> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/WB_Mux_I/FPGA_Target.ALL_Bits[26].Wb_Mux_I1/Data_Bits<0>> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/WB_Mux_I/FPGA_Target.ALL_Bits[25].Wb_Mux_I1/Data_Bits<0>> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/WB_Mux_I/FPGA_Target.ALL_Bits[24].Wb_Mux_I1/Data_Bits<0>> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/WB_Mux_I/FPGA_Target.ALL_Bits[23].Wb_Mux_I1/Data_Bits<0>> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/WB_Mux_I/FPGA_Target.ALL_Bits[22].Wb_Mux_I1/Data_Bits<0>> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/WB_Mux_I/FPGA_Target.ALL_Bits[21].Wb_Mux_I1/Data_Bits<0>> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/WB_Mux_I/FPGA_Target.ALL_Bits[20].Wb_Mux_I1/Data_Bits<0>> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/WB_Mux_I/FPGA_Target.ALL_Bits[19].Wb_Mux_I1/Data_Bits<0>> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/WB_Mux_I/FPGA_Target.ALL_Bits[18].Wb_Mux_I1/Data_Bits<0>> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/WB_Mux_I/FPGA_Target.ALL_Bits[17].Wb_Mux_I1/Data_Bits<0>> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/WB_Mux_I/FPGA_Target.ALL_Bits[16].Wb_Mux_I1/Data_Bits<0>> may hinder timing optimization.
+   You may achieve better results by removing this property
 WARNING:Xst:1293 - FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Using_FPGA.Gen_Bits[27].MEM_EX_Result_Inst> has a constant value of 0 in block <system_microblaze_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Using_FPGA.Gen_Bits[27].MEM_EX_Result_Inst> has a constant value of 0 in block <system_microblaze_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Using_FPGA.Gen_Bits[27].MEM_EX_Result_Inst> has a constant value of 0 in block <system_microblaze_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Using_FPGA.Gen_Bits[27].MEM_EX_Result_Inst> has a constant value of 0 in block <system_microblaze_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
-FlipFlop microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_Take_Intr_or_Exc has been replicated 1 time(s)
+FlipFlop microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/WB_Byte_Access has been replicated 2 time(s)
 FlipFlop microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_valid_jump has been replicated 1 time(s)
 FlipFlop microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_i has been replicated 1 time(s)
 FlipFlop microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_28 has been replicated 2 time(s)
 FlipFlop microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_29 has been replicated 1 time(s)
 FlipFlop microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_30 has been replicated 1 time(s)
 FlipFlop microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_31 has been replicated 1 time(s)
+FlipFlop microblaze_0/MicroBlaze_Core_I/Performance.Use_DBUS.Using_D_AXI.DAXI_Interface_I1/WB_DAXI_Data_Strobe has been replicated 4 time(s)
 WARNING:Xst:1293 - FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Using_FPGA.Gen_Bits[27].MEM_EX_Result_Inst> has a constant value of 0 in block <system_microblaze_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
 
 Final Macro Processing ...
@@ -7125,8 +7171,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1576
- Flip-Flops                                            : 1576
+# Registers                                            : 1649
+ Flip-Flops                                            : 1649
 
 =========================================================================
 WARNING:Xst:1293 - FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Using_FPGA.Gen_Bits[27].MEM_EX_Result_Inst> has a constant value of 0 in block <system_microblaze_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
@@ -7151,36 +7197,36 @@ Top Level Output File Name         : system_microblaze_0_wrapper.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1831
+# BELS                             : 1956
 #      GND                         : 1
 #      INV                         : 8
 #      LUT1                        : 35
-#      LUT2                        : 84
-#      LUT3                        : 348
-#      LUT4                        : 153
-#      LUT5                        : 206
-#      LUT6                        : 513
+#      LUT2                        : 86
+#      LUT3                        : 320
+#      LUT4                        : 156
+#      LUT5                        : 227
+#      LUT6                        : 533
 #      LUT6_2                      : 96
 #      MULT_AND                    : 2
-#      MUXCY                       : 16
+#      MUXCY                       : 88
 #      MUXCY_L                     : 149
-#      MUXF7                       : 117
+#      MUXF7                       : 152
 #      VCC                         : 1
 #      XORCY                       : 102
-# FlipFlops/Latches                : 1576
+# FlipFlops/Latches                : 1649
 #      FD                          : 87
 #      FDC                         : 1
 #      FDCE                        : 7
-#      FDE                         : 280
-#      FDR                         : 579
-#      FDRE                        : 583
+#      FDE                         : 285
+#      FDR                         : 583
+#      FDRE                        : 647
 #      FDS                         : 2
 #      FDSE                        : 37
 # RAMS                             : 16
 #      RAM32M                      : 16
-# Shift Registers                  : 87
+# Shift Registers                  : 159
 #      SRL16E                      : 14
-#      SRLC16E                     : 73
+#      SRLC16E                     : 145
 # DSPs                             : 3
 #      DSP48A1                     : 3
 # Others                           : 1
@@ -7193,19 +7239,19 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1576  out of  18224     8%  
- Number of Slice LUTs:                 1594  out of   9112    17%  
-    Number used as Logic:              1443  out of   9112    15%  
-    Number used as Memory:              151  out of   2176     6%  
+ Number of Slice Registers:            1649  out of  18224     9%  
+ Number of Slice LUTs:                 1684  out of   9112    18%  
+    Number used as Logic:              1461  out of   9112    16%  
+    Number used as Memory:              223  out of   2176    10%  
        Number used as RAM:               64
-       Number used as SRL:               87
+       Number used as SRL:              159
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   2390
-   Number with an unused Flip Flop:     814  out of   2390    34%  
-   Number with an unused LUT:           796  out of   2390    33%  
-   Number of fully used LUT-FF pairs:   780  out of   2390    32%  
-   Number of unique control sets:        43
+ Number of LUT Flip Flop pairs used:   2525
+   Number with an unused Flip Flop:     876  out of   2525    34%  
+   Number with an unused LUT:           841  out of   2525    33%  
+   Number of fully used LUT-FF pairs:   808  out of   2525    32%  
+   Number of unique control sets:        45
 
 IO Utilization: 
  Number of IOs:                       16560
@@ -7235,8 +7281,8 @@ Clock Information:
 -----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)                                                                                                             | Load  |
 -----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+-------+
-DCACHE_FSL_OUT_CLK                 | NONE(microblaze_0/LOCKSTEP_Out_0)                                                                                                 | 1525  |
-DBG_CLK                            | NONE(microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Use_SRL16.SRL16E_4/Use_unisim.MB_SRL16E_I1)| 145   |
+DCACHE_FSL_OUT_CLK                 | NONE(microblaze_0/LOCKSTEP_Out_0)                                                                                                 | 1588  |
+DBG_CLK                            | NONE(microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Use_SRL16.SRL16E_4/Use_unisim.MB_SRL16E_I1)| 227   |
 DBG_UPDATE                         | NONE(microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/command_reg_0)                             | 12    |
 -----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -7249,10 +7295,10 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 6.880ns (Maximum Frequency: 145.358MHz)
-   Minimum input arrival time before clock: 4.105ns
-   Maximum output required time after clock: 7.538ns
-   Maximum combinational path delay: 2.580ns
+   Minimum period: 6.960ns (Maximum Frequency: 143.680MHz)
+   Minimum input arrival time before clock: 4.207ns
+   Maximum output required time after clock: 5.468ns
+   Maximum combinational path delay: 2.586ns
 
 Timing Details:
 ---------------
@@ -7260,136 +7306,121 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'DCACHE_FSL_OUT_CLK'
-  Clock period: 6.880ns (frequency: 145.358MHz)
-  Total number of paths / destination ports: 248597 / 3627
+  Clock period: 6.960ns (frequency: 143.680MHz)
+  Total number of paths / destination ports: 267804 / 3822
 -------------------------------------------------------------------------
-Delay:               6.880ns (Levels of Logic = 7)
+Delay:               6.960ns (Levels of Logic = 7)
   Source:            microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/PreFetch_Buffer_I1/Using_FPGA_Buffers_Mux.Instruction_Prefetch_Mux[3].Gen_Instr_DFF (FF)
-  Destination:       microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/jump_logic_I1/FPGA_TARGET.use_Reg_Neg_DI (FF)
+  Destination:       microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/EX_ALU_Op_0 (FF)
   Source Clock:      DCACHE_FSL_OUT_CLK rising
   Destination Clock: DCACHE_FSL_OUT_CLK rising
 
-  Data Path: microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/PreFetch_Buffer_I1/Using_FPGA_Buffers_Mux.Instruction_Prefetch_Mux[3].Gen_Instr_DFF to microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/jump_logic_I1/FPGA_TARGET.use_Reg_Neg_DI
+  Data Path: microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/PreFetch_Buffer_I1/Using_FPGA_Buffers_Mux.Instruction_Prefetch_Mux[3].Gen_Instr_DFF to microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/EX_ALU_Op_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDR:C->Q             28   0.447   1.463  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/PreFetch_Buffer_I1/Using_FPGA_Buffers_Mux.Instruction_Prefetch_Mux[3].Gen_Instr_DFF (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_instr<3>)
-     LUT3:I0->O           13   0.205   0.933  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/PWR_11_o_of_opcode[0]_equal_35_o<0>11 (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/PWR_11_o_of_opcode[0]_equal_35_o<0>1)
+     LUT3:I0->O           15   0.205   0.982  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/PWR_11_o_of_opcode[0]_equal_35_o<0>11 (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/PWR_11_o_of_opcode[0]_equal_35_o<0>1)
      LUT6:I5->O            1   0.205   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_pipe_ctrl<7>1 (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_pipe_ctrl<7>)
      MUXCY_L:S->LO         1   0.172   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Use_MuxCy[7].OF_Piperun_Stage/Using_FPGA.MUXCY_I (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_PipeRun_carry<7>)
      MUXCY_L:CI->LO        1   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Use_MuxCy[8].OF_Piperun_Stage/Using_FPGA.MUXCY_I (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_PipeRun_carry<8>)
      MUXCY_L:CI->LO        1   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Use_MuxCy[9].OF_Piperun_Stage/Using_FPGA.MUXCY_I (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_PipeRun_carry<9>)
-     MUXCY_L:CI->LO      390   0.019   2.079  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Use_MuxCy[10].OF_Piperun_Stage/Using_FPGA.MUXCY_I (Trace_OF_PipeRun)
-     LUT3:I2->O            4   0.205   0.683  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/jump_logic_I1/Reset_OR_DriverANDClockEnable1 (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/jump_logic_I1/Reset_OR_DriverANDClockEnable)
-     FDRE:R                    0.430          microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/jump_logic_I1/FPGA_TARGET.use_Reg_Neg_DI
+     MUXCY_L:CI->LO      395   0.019   2.080  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Use_MuxCy[10].OF_Piperun_Stage/Using_FPGA.MUXCY_I (Trace_OF_PipeRun)
+     LUT6:I5->O            5   0.205   0.714  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Reset_OR_DriverANDClockEnable181 (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Reset_OR_DriverANDClockEnable18)
+     FDRE:R                    0.430          microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/EX_CMP_Op
     ----------------------------------------
-    Total                      6.880ns (1.721ns logic, 5.159ns route)
-                                       (25.0% logic, 75.0% route)
+    Total                      6.960ns (1.721ns logic, 5.239ns route)
+                                       (24.7% logic, 75.3% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'DBG_CLK'
-  Clock period: 2.427ns (frequency: 412.072MHz)
-  Total number of paths / destination ports: 203 / 171
+  Clock period: 2.734ns (frequency: 365.751MHz)
+  Total number of paths / destination ports: 275 / 243
 -------------------------------------------------------------------------
-Delay:               2.427ns (Levels of Logic = 6)
-  Source:            microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/shift_count_3 (FF)
-  Destination:       microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/shift_count_7 (FF)
+Delay:               2.734ns (Levels of Logic = 2)
+  Source:            microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/shift_count_0 (FF)
+  Destination:       microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/New_Dbg_Instr_TCK (FF)
   Source Clock:      DBG_CLK rising
   Destination Clock: DBG_CLK rising
 
-  Data Path: microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/shift_count_3 to microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/shift_count_7
+  Data Path: microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/shift_count_0 to microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/New_Dbg_Instr_TCK
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              30   0.447   1.264  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/shift_count_3 (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/shift_count_3)
-     LUT2:I1->O            1   0.205   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_lut<3> (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_lut<3>)
-     MUXCY:S->O            1   0.172   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_cy<3> (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_cy<3>)
-     MUXCY:CI->O           1   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_cy<4> (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_cy<4>)
-     MUXCY:CI->O           1   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_cy<5> (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_cy<5>)
-     MUXCY:CI->O           0   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_cy<6> (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_cy<6>)
-     XORCY:CI->O           1   0.180   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_xor<7> (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count7)
-     FD:D                      0.102          microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/shift_count_7
+     FD:C->Q              20   0.447   1.197  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/shift_count_0 (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/shift_count_0)
+     LUT5:I3->O            1   0.203   0.580  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_GND_254_o_PWR_117_o_MUX_5031_o1_SW0 (N34)
+     LUT6:I5->O            1   0.205   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_GND_254_o_PWR_117_o_MUX_5031_o1 (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/GND_254_o_PWR_117_o_MUX_5031_o)
+     FD:D                      0.102          microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/New_Dbg_Instr_TCK
     ----------------------------------------
-    Total                      2.427ns (1.163ns logic, 1.264ns route)
-                                       (47.9% logic, 52.1% route)
+    Total                      2.734ns (0.957ns logic, 1.777ns route)
+                                       (35.0% logic, 65.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'DCACHE_FSL_OUT_CLK'
-  Total number of paths / destination ports: 1884 / 1545
+  Total number of paths / destination ports: 1934 / 1600
 -------------------------------------------------------------------------
-Offset:              4.105ns (Levels of Logic = 15)
+Offset:              4.207ns (Levels of Logic = 5)
   Source:            DREADY (PAD)
-  Destination:       microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/jump_logic_I1/FPGA_TARGET.use_Reg_Neg_DI (FF)
+  Destination:       microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_28 (FF)
   Destination Clock: DCACHE_FSL_OUT_CLK rising
 
-  Data Path: DREADY to microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/jump_logic_I1/FPGA_TARGET.use_Reg_Neg_DI
+  Data Path: DREADY to microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_28
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LUT2:I0->O            1   0.203   0.000  microblaze_0/MicroBlaze_Core_I/Performance.mem_databus_ready_sel_carry_or/Using_FPGA.A_N1 (microblaze_0/MicroBlaze_Core_I/Performance.mem_databus_ready_sel_carry_or/Using_FPGA.A_N)
-     MUXCY_L:S->LO         1   0.172   0.000  microblaze_0/MicroBlaze_Core_I/Performance.mem_databus_ready_sel_carry_or/Using_FPGA.MUXCY_I (microblaze_0/MicroBlaze_Core_I/Performance.mem_databus_ready)
+     MUXCY_L:S->LO         2   0.172   0.000  microblaze_0/MicroBlaze_Core_I/Performance.mem_databus_ready_sel_carry_or/Using_FPGA.MUXCY_I (microblaze_0/MicroBlaze_Core_I/Performance.mem_databus_ready)
      MUXCY_L:CI->LO        1   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/mem_wait_on_ready_N_carry_or/Using_FPGA.MUXCY_I (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/mem_wait_on_ready_N)
-     MUXCY_L:CI->LO      238   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/mem_PipeRun_carry_and/Using_FPGA.MUXCY_I (Trace_MEM_PipeRun)
-     MUXCY_L:CI->LO        1   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Use_MuxCy[1].OF_Piperun_Stage/Using_FPGA.MUXCY_I (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_PipeRun_carry<1>)
-     MUXCY_L:CI->LO        1   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Use_MuxCy[2].OF_Piperun_Stage/Using_FPGA.MUXCY_I (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_PipeRun_carry<2>)
-     MUXCY_L:CI->LO      267   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Use_MuxCy[3].OF_Piperun_Stage/Using_FPGA.MUXCY_I (Trace_EX_PipeRun)
-     MUXCY_L:CI->LO        1   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Use_MuxCy[4].OF_Piperun_Stage/Using_FPGA.MUXCY_I (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_PipeRun_carry<4>)
-     MUXCY_L:CI->LO        1   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Use_MuxCy[5].OF_Piperun_Stage/Using_FPGA.MUXCY_I (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_PipeRun_carry<5>)
-     MUXCY_L:CI->LO        1   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Use_MuxCy[6].OF_Piperun_Stage/Using_FPGA.MUXCY_I (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_PipeRun_carry<6>)
-     MUXCY_L:CI->LO        1   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Use_MuxCy[7].OF_Piperun_Stage/Using_FPGA.MUXCY_I (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_PipeRun_carry<7>)
-     MUXCY_L:CI->LO        1   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Use_MuxCy[8].OF_Piperun_Stage/Using_FPGA.MUXCY_I (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_PipeRun_carry<8>)
-     MUXCY_L:CI->LO        1   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Use_MuxCy[9].OF_Piperun_Stage/Using_FPGA.MUXCY_I (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_PipeRun_carry<9>)
-     MUXCY_L:CI->LO      390   0.019   2.079  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Use_MuxCy[10].OF_Piperun_Stage/Using_FPGA.MUXCY_I (Trace_OF_PipeRun)
-     LUT3:I2->O            4   0.205   0.683  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/jump_logic_I1/Reset_OR_DriverANDClockEnable1 (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/jump_logic_I1/Reset_OR_DriverANDClockEnable)
-     FDRE:R                    0.430          microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/jump_logic_I1/FPGA_TARGET.use_Reg_Neg_DI
+     MUXCY_L:CI->LO      277   0.019   2.173  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/mem_PipeRun_carry_and/Using_FPGA.MUXCY_I (Trace_MEM_PipeRun)
+     LUT3:I1->O           11   0.203   0.882  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Reset_OR_DriverANDClockEnable441 (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Reset_OR_DriverANDClockEnable)
+     FDRE:R                    0.430          microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_i
     ----------------------------------------
-    Total                      4.105ns (1.343ns logic, 2.762ns route)
-                                       (32.7% logic, 67.3% route)
+    Total                      4.207ns (1.151ns logic, 3.056ns route)
+                                       (27.4% logic, 72.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'DBG_UPDATE'
   Total number of paths / destination ports: 96 / 12
 -------------------------------------------------------------------------
-Offset:              2.615ns (Levels of Logic = 2)
-  Source:            DBG_REG_EN<3> (PAD)
+Offset:              2.691ns (Levels of Logic = 2)
+  Source:            DBG_REG_EN<0> (PAD)
   Destination:       microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/force_stop_TClk (FF)
   Destination Clock: DBG_UPDATE rising
 
-  Data Path: DBG_REG_EN<3> to microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/force_stop_TClk
+  Data Path: DBG_REG_EN<0> to microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/force_stop_TClk
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LUT5:I0->O            4   0.203   0.684  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_GND_254_o_PWR_117_o_MUX_5031_o111 (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_GND_254_o_PWR_117_o_MUX_5031_o11)
-     LUT4:I3->O           10   0.205   0.856  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Control_Reg_En<0>1 (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Control_Reg_En)
+     LUT4:I0->O           10   0.203   0.857  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_GND_254_o_PWR_117_o_MUX_5031_o111 (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_GND_254_o_PWR_117_o_MUX_5031_o11)
+     LUT5:I4->O           10   0.205   0.856  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Control_Reg_En<0>1 (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Control_Reg_En)
      FDCE:CE                   0.322          microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/single_Step_TClk
     ----------------------------------------
-    Total                      2.615ns (1.075ns logic, 1.540ns route)
-                                       (41.1% logic, 58.9% route)
+    Total                      2.691ns (0.978ns logic, 1.713ns route)
+                                       (36.3% logic, 63.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'DBG_CLK'
-  Total number of paths / destination ports: 171 / 65
+  Total number of paths / destination ports: 757 / 147
 -------------------------------------------------------------------------
-Offset:              2.606ns (Levels of Logic = 3)
-  Source:            DBG_REG_EN<3> (PAD)
-  Destination:       microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/New_Dbg_Instr_TCK (FF)
+Offset:              3.050ns (Levels of Logic = 2)
+  Source:            DBG_REG_EN<0> (PAD)
+  Destination:       microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Using_Rd_Addr_Breakpoints.All_Rd_Addr_Breakpoints[0].address_data_hit_2/Using_FPGA.Addr_Compare[7].Addr_SRLC16E_I/Use_unisim.MB_SRL16CE_I1 (FF)
   Destination Clock: DBG_CLK rising
 
-  Data Path: DBG_REG_EN<3> to microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/New_Dbg_Instr_TCK
+  Data Path: DBG_REG_EN<0> to microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Using_Rd_Addr_Breakpoints.All_Rd_Addr_Breakpoints[0].address_data_hit_2/Using_FPGA.Addr_Compare[7].Addr_SRLC16E_I/Use_unisim.MB_SRL16CE_I1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LUT5:I0->O            4   0.203   0.684  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_GND_254_o_PWR_117_o_MUX_5031_o111 (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_GND_254_o_PWR_117_o_MUX_5031_o11)
-     LUT4:I3->O            2   0.205   0.864  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_GND_254_o_PWR_117_o_MUX_5031_o121 (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Instr_Insert_Reg_En)
-     LUT6:I2->O            1   0.203   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_GND_254_o_PWR_117_o_MUX_5031_o11 (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/GND_254_o_PWR_117_o_MUX_5031_o)
-     FD:D                      0.102          microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/New_Dbg_Instr_TCK
+     LUT4:I0->O           10   0.203   1.201  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_GND_254_o_PWR_117_o_MUX_5031_o111 (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_GND_254_o_PWR_117_o_MUX_5031_o11)
+     LUT5:I0->O           16   0.203   1.004  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_which_pc31 (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/which_pc<2>)
+     SRLC16E:CE                0.191          microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Using_Rd_Addr_Breakpoints.All_Rd_Addr_Breakpoints[0].address_data_hit_2/Using_FPGA.Data_Compare[0].Data_SRLC16E_I/Use_unisim.MB_SRL16CE_I1
     ----------------------------------------
-    Total                      2.606ns (1.058ns logic, 1.548ns route)
-                                       (40.6% logic, 59.4% route)
+    Total                      3.050ns (0.845ns logic, 2.205ns route)
+                                       (27.7% logic, 72.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'DCACHE_FSL_OUT_CLK'
-  Total number of paths / destination ports: 22584 / 816
+  Total number of paths / destination ports: 22654 / 816
 -------------------------------------------------------------------------
 Offset:              5.305ns (Levels of Logic = 2)
   Source:            microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48A.Normal_in_fabric.DSP48A_I1 (DSP)
@@ -7429,31 +7460,30 @@ Offset:              0.447ns (Levels of Logic = 0)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'DBG_CLK'
   Total number of paths / destination ports: 207 / 33
 -------------------------------------------------------------------------
-Offset:              7.538ns (Levels of Logic = 6)
-  Source:            microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/shift_count_3 (FF)
+Offset:              5.468ns (Levels of Logic = 5)
+  Source:            microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/shift_count_2 (FF)
   Destination:       DBG_TDO (PAD)
   Source Clock:      DBG_CLK rising
 
-  Data Path: microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/shift_count_3 to DBG_TDO
+  Data Path: microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/shift_count_2 to DBG_TDO
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              30   0.447   1.608  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/shift_count_3 (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/shift_count_3)
-     LUT5:I0->O            1   0.203   0.924  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_TDO125 (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_TDO124)
-     LUT6:I1->O            1   0.203   0.924  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_TDO126 (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_TDO125)
+     FD:C->Q              24   0.447   1.537  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/shift_count_2 (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/shift_count_2)
+     LUT6:I0->O            1   0.203   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_TDO126_G (N274)
+     MUXF7:I1->O           1   0.140   0.924  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_TDO126 (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_TDO125)
      LUT6:I1->O            1   0.203   0.924  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_TDO127 (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_TDO126)
      LUT6:I1->O            1   0.203   0.684  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_TDO1215 (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_TDO1214)
-     LUT6:I4->O            1   0.203   0.808  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_TDO1223 (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_TDO1222)
-     LUT3:I0->O            0   0.205   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_TDO1224 (DBG_TDO)
+     LUT6:I4->O            0   0.203   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_TDO1225 (DBG_TDO)
     ----------------------------------------
-    Total                      7.538ns (1.667ns logic, 5.871ns route)
-                                       (22.1% logic, 77.9% route)
+    Total                      5.468ns (1.399ns logic, 4.069ns route)
+                                       (25.6% logic, 74.4% route)
 
 =========================================================================
 Timing constraint: Default path analysis
   Total number of paths / destination ports: 20 / 11
 -------------------------------------------------------------------------
-Delay:               2.580ns (Levels of Logic = 4)
+Delay:               2.586ns (Levels of Logic = 4)
   Source:            DREADY (PAD)
   Destination:       microblaze_0/MicroBlaze_Core_I/Performance.Use_DLMB.Using_Latch_AS_Logic.AND2B1L_I1:DI (PAD)
 
@@ -7462,13 +7492,13 @@ Delay:               2.580ns (Levels of Logic = 4)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LUT2:I0->O            1   0.203   0.000  microblaze_0/MicroBlaze_Core_I/Performance.mem_databus_ready_sel_carry_or/Using_FPGA.A_N1 (microblaze_0/MicroBlaze_Core_I/Performance.mem_databus_ready_sel_carry_or/Using_FPGA.A_N)
-     MUXCY_L:S->LO         1   0.172   0.000  microblaze_0/MicroBlaze_Core_I/Performance.mem_databus_ready_sel_carry_or/Using_FPGA.MUXCY_I (microblaze_0/MicroBlaze_Core_I/Performance.mem_databus_ready)
+     MUXCY_L:S->LO         2   0.172   0.000  microblaze_0/MicroBlaze_Core_I/Performance.mem_databus_ready_sel_carry_or/Using_FPGA.MUXCY_I (microblaze_0/MicroBlaze_Core_I/Performance.mem_databus_ready)
      MUXCY_L:CI->LO        1   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/mem_wait_on_ready_N_carry_or/Using_FPGA.MUXCY_I (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/mem_wait_on_ready_N)
-     MUXCY_L:CI->LO      238   0.019   2.062  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/mem_PipeRun_carry_and/Using_FPGA.MUXCY_I (Trace_MEM_PipeRun)
+     MUXCY_L:CI->LO      277   0.019   2.068  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/mem_PipeRun_carry_and/Using_FPGA.MUXCY_I (Trace_MEM_PipeRun)
     AND2B1L:DI                 0.000          microblaze_0/MicroBlaze_Core_I/Performance.Use_DLMB.Using_Latch_AS_Logic.AND2B1L_I1
     ----------------------------------------
-    Total                      2.580ns (0.518ns logic, 2.062ns route)
-                                       (20.1% logic, 79.9% route)
+    Total                      2.586ns (0.518ns logic, 2.068ns route)
+                                       (20.0% logic, 80.0% route)
 
 =========================================================================
 
@@ -7480,8 +7510,8 @@ Clock to Setup on destination clock DBG_CLK
                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------+---------+---------+---------+---------+
-DBG_CLK           |    2.427|         |         |         |
-DCACHE_FSL_OUT_CLK|    5.037|         |         |         |
+DBG_CLK           |    2.734|         |         |         |
+DCACHE_FSL_OUT_CLK|    5.158|         |         |         |
 ------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock DBG_UPDATE
@@ -7498,23 +7528,23 @@ Clock to Setup on destination clock DCACHE_FSL_OUT_CLK
                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------+---------+---------+---------+---------+
-DBG_CLK           |    4.360|         |         |         |
-DBG_UPDATE        |    3.477|         |         |         |
-DCACHE_FSL_OUT_CLK|    6.880|         |         |         |
+DBG_CLK           |    5.593|         |         |         |
+DBG_UPDATE        |    4.599|         |         |         |
+DCACHE_FSL_OUT_CLK|    6.960|         |         |         |
 ------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 58.00 secs
-Total CPU time to Xst completion: 49.20 secs
+Total REAL time to Xst completion: 57.00 secs
+Total CPU time to Xst completion: 54.90 secs
  
 --> 
 
 
-Total memory usage is 521792 kilobytes
+Total memory usage is 522532 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings : 4665 (   0 filtered)
-Number of infos    :  149 (   0 filtered)
+Number of warnings : 4662 (   0 filtered)
+Number of infos    :  151 (   0 filtered)
 

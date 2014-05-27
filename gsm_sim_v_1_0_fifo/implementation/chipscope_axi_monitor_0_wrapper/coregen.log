@@ -1,0 +1,160 @@
+Updating project device from '6slx16' to 'xc6slx16'.
+INFO:encore:314 - Created non-GUI application for batch mode execution.
+Wrote CGP file for project 'coregen'.
+INFO:sim:172 - Generating IP...
+Resolving generic values...
+WARNING:sim:597 - The parameter 'Exclude_From_Data_Storage_1' is disabled and
+   can't be set to any other value than 'true'. Its value will be reset from
+   'false' to its last valid value 'true'.
+WARNING:sim:597 - The parameter 'Exclude_From_Data_Storage_2' is disabled and
+   can't be set to any other value than 'true'. Its value will be reset from
+   'false' to its last valid value 'true'.
+WARNING:sim:597 - The parameter 'Exclude_From_Data_Storage_3' is disabled and
+   can't be set to any other value than 'true'. Its value will be reset from
+   'false' to its last valid value 'true'.
+WARNING:sim:597 - The parameter 'Exclude_From_Data_Storage_4' is disabled and
+   can't be set to any other value than 'true'. Its value will be reset from
+   'false' to its last valid value 'true'.
+WARNING:sim:597 - The parameter 'Exclude_From_Data_Storage_5' is disabled and
+   can't be set to any other value than 'true'. Its value will be reset from
+   'false' to its last valid value 'true'.
+WARNING:sim:597 - The parameter 'Exclude_From_Data_Storage_6' is disabled and
+   can't be set to any other value than 'true'. Its value will be reset from
+   'false' to its last valid value 'true'.
+WARNING:sim:597 - The parameter 'Exclude_From_Data_Storage_7' is disabled and
+   can't be set to any other value than 'true'. Its value will be reset from
+   'false' to its last valid value 'true'.
+WARNING:sim:597 - The parameter 'Exclude_From_Data_Storage_8' is disabled and
+   can't be set to any other value than 'true'. Its value will be reset from
+   'false' to its last valid value 'true'.
+WARNING:sim:597 - The parameter 'Exclude_From_Data_Storage_9' is disabled and
+   can't be set to any other value than 'true'. Its value will be reset from
+   'false' to its last valid value 'true'.
+WARNING:sim:597 - The parameter 'Exclude_From_Data_Storage_10' is disabled and
+   can't be set to any other value than 'true'. Its value will be reset from
+   'false' to its last valid value 'true'.
+WARNING:sim:597 - The parameter 'Exclude_From_Data_Storage_11' is disabled and
+   can't be set to any other value than 'true'. Its value will be reset from
+   'false' to its last valid value 'true'.
+WARNING:sim:597 - The parameter 'Exclude_From_Data_Storage_12' is disabled and
+   can't be set to any other value than 'true'. Its value will be reset from
+   'false' to its last valid value 'true'.
+WARNING:sim:597 - The parameter 'Exclude_From_Data_Storage_13' is disabled and
+   can't be set to any other value than 'true'. Its value will be reset from
+   'false' to its last valid value 'true'.
+WARNING:sim:597 - The parameter 'Exclude_From_Data_Storage_14' is disabled and
+   can't be set to any other value than 'true'. Its value will be reset from
+   'false' to its last valid value 'true'.
+WARNING:sim:597 - The parameter 'Exclude_From_Data_Storage_15' is disabled and
+   can't be set to any other value than 'true'. Its value will be reset from
+   'false' to its last valid value 'true'.
+WARNING:sim:597 - The parameter 'Exclude_From_Data_Storage_16' is disabled and
+   can't be set to any other value than 'true'. Its value will be reset from
+   'false' to its last valid value 'true'.
+WARNING:sim:192 - Xco Parameter changed from (Exclude_From_Data_Storage_1,false)
+   to (Exclude_From_Data_Storage_1,true) during Recustomization.
+WARNING:sim:192 - Xco Parameter changed from (Exclude_From_Data_Storage_2,false)
+   to (Exclude_From_Data_Storage_2,true) during Recustomization.
+WARNING:sim:192 - Xco Parameter changed from (Exclude_From_Data_Storage_3,false)
+   to (Exclude_From_Data_Storage_3,true) during Recustomization.
+WARNING:sim:192 - Xco Parameter changed from (Exclude_From_Data_Storage_4,false)
+   to (Exclude_From_Data_Storage_4,true) during Recustomization.
+WARNING:sim:192 - Xco Parameter changed from (Exclude_From_Data_Storage_5,false)
+   to (Exclude_From_Data_Storage_5,true) during Recustomization.
+WARNING:sim:192 - Xco Parameter changed from (Exclude_From_Data_Storage_6,false)
+   to (Exclude_From_Data_Storage_6,true) during Recustomization.
+WARNING:sim:192 - Xco Parameter changed from (Exclude_From_Data_Storage_7,false)
+   to (Exclude_From_Data_Storage_7,true) during Recustomization.
+WARNING:sim:192 - Xco Parameter changed from (Exclude_From_Data_Storage_8,false)
+   to (Exclude_From_Data_Storage_8,true) during Recustomization.
+WARNING:sim:192 - Xco Parameter changed from (Exclude_From_Data_Storage_9,false)
+   to (Exclude_From_Data_Storage_9,true) during Recustomization.
+WARNING:sim:192 - Xco Parameter changed from
+   (Exclude_From_Data_Storage_10,false) to (Exclude_From_Data_Storage_10,true)
+   during Recustomization.
+WARNING:sim:192 - Xco Parameter changed from
+   (Exclude_From_Data_Storage_11,false) to (Exclude_From_Data_Storage_11,true)
+   during Recustomization.
+WARNING:sim:192 - Xco Parameter changed from
+   (Exclude_From_Data_Storage_12,false) to (Exclude_From_Data_Storage_12,true)
+   during Recustomization.
+WARNING:sim:192 - Xco Parameter changed from
+   (Exclude_From_Data_Storage_13,false) to (Exclude_From_Data_Storage_13,true)
+   during Recustomization.
+WARNING:sim:192 - Xco Parameter changed from
+   (Exclude_From_Data_Storage_14,false) to (Exclude_From_Data_Storage_14,true)
+   during Recustomization.
+WARNING:sim:192 - Xco Parameter changed from
+   (Exclude_From_Data_Storage_15,false) to (Exclude_From_Data_Storage_15,true)
+   during Recustomization.
+WARNING:sim:192 - Xco Parameter changed from
+   (Exclude_From_Data_Storage_16,false) to (Exclude_From_Data_Storage_16,true)
+   during Recustomization.
+Finished resolving generic values.
+Generating IP...
+WARNING:sim:89 - A core named <chipscope_axi_monitor_0> already exists in the
+   output directory. Output products for this core may be overwritten.
+Configuring files for chipscope_axi_monitor_0 root...
+Gathering HDL files for chipscope_axi_monitor_0 root...
+Creating XST project for chipscope_axi_monitor_0...
+Creating XST script file for chipscope_axi_monitor_0...
+Creating XST instantiation file for chipscope_axi_monitor_0...
+Running XST for chipscope_axi_monitor_0...
+XST: HDL Parsing
+XST: HDL Elaboration
+XST: HDL Synthesis
+XST: Advanced HDL Synthesis
+XST: Low Level Synthesis
+XST: Design Summary
+Generating VHDL wrapper
+Not generating Verilog wrapper
+Creating ISE instantiation template for chipscope_axi_monitor_0...
+Skipping Verilog instantiation template for chipscope_axi_monitor_0...
+Finished Generation.
+Generating IP instantiation template...
+Generating ASY schematic symbol...
+INFO:sim:949 - Finished generation of ASY schematic symbol.
+Generating metadata file...
+Generating ISE project...
+XCO file found: chipscope_axi_monitor_0.xco
+XMDF file found: chipscope_axi_monitor_0_xmdf.tcl
+Adding
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/implementation/chips
+cope_axi_monitor_0_wrapper/tmp/_cg/chipscope_axi_monitor_0.asy -view all
+-origin_type imported
+Adding
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/implementation/chips
+cope_axi_monitor_0_wrapper/tmp/_cg/chipscope_axi_monitor_0.ngc -view all
+-origin_type created
+Checking file
+"/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/implementation/chip
+scope_axi_monitor_0_wrapper/tmp/_cg/chipscope_axi_monitor_0.ngc" for project
+device match ...
+File
+"/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/implementation/chip
+scope_axi_monitor_0_wrapper/tmp/_cg/chipscope_axi_monitor_0.ngc" device
+information matches project device.
+Adding
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/implementation/chips
+cope_axi_monitor_0_wrapper/tmp/_cg/chipscope_axi_monitor_0.vhd -view all
+-origin_type created
+INFO:HDLCompiler:1061 - Parsing VHDL file
+   "/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/implementation/c
+   hipscope_axi_monitor_0_wrapper/tmp/_cg/chipscope_axi_monitor_0.vhd" into
+   library work
+INFO:ProjectMgmt - Parsing design hierarchy completed successfully.
+Adding
+/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/implementation/chips
+cope_axi_monitor_0_wrapper/tmp/_cg/chipscope_axi_monitor_0.vho -view all
+-origin_type imported
+INFO:TclTasksC:2116 - The automatic calculation of top has been turned-off.
+   Please set the new top explicitly by running the "project set top" command.
+   To re-calculate the new top automatically, set the "Auto Implementation Top"
+   property to true.
+Top level has been set to "/chipscope_axi_monitor_0"
+Generating README file...
+Generating FLIST file...
+INFO:sim:948 - Finished FLIST file generation.
+Moving files to output directory...
+Finished moving files to output directory
+Saved CGP file for project 'coregen'.

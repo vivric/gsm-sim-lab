@@ -21,3 +21,64 @@
 	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
 
 03:06:00.105 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+10:00:36.384 INFO  - FPGA configured successfully with bitstream "/home/ga38kud/vivin_gsm/gsm_sim/software/fifo_v_1_2/gsm_sim_v_1_0_fifo_hw_platform/download.bit" 
+10:24:15.323 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:25:16.989 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:26:01.351 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:27:18.155 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:42:15.446 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+19:17:45.838 INFO  - FPGA configured successfully with bitstream "/home/ga38kud/vivin_gsm/gsm_sim/software/fifo_v_1_2/gsm_sim_v_1_0_fifo_hw_platform/download.bit" 
+19:18:33.025 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+19:34:34.786 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+19:34:34.821 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+19:34:49.420 INFO  - Processing command line option -hwspec /home/ga38kud/vivin_gsm/gsm_sim/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/system.xml. 
+19:34:50.879 INFO  - The hardware specification for project 'gsm_sim_v_1_0_fifo_hw_platform' is different from /home/ga38kud/vivin_gsm/gsm_sim/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/system.xml. 
+19:34:51.028 INFO  - Copied contents of /home/ga38kud/vivin_gsm/gsm_sim/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/system.xml into /gsm_sim_v_1_0_fifo_hw_platform/system.xml. 
+19:34:51.054 INFO  - Copied contents of /home/ga38kud/vivin_gsm/gsm_sim/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/system.bit into /gsm_sim_v_1_0_fifo_hw_platform/system.bit. 
+19:34:51.062 INFO  - Copied contents of /home/ga38kud/vivin_gsm/gsm_sim/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/system_bd.bmm into /gsm_sim_v_1_0_fifo_hw_platform/system_bd.bmm. 
+19:34:51.246 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+19:34:53.111 INFO  - Updating hardware inferred compiler options for fifo_v_1_2. 
+19:34:53.117 INFO  - Clearing existing target manager status. 
+19:35:09.261 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+19:35:20.097 INFO  - Processing command line option -hwspec /home/ga38kud/vivin_gsm/gsm_sim/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/system.xml. 
+19:35:54.987 INFO  - FPGA configured successfully with bitstream "/home/ga38kud/vivin_gsm/gsm_sim/software/fifo_v_1_2/gsm_sim_v_1_0_fifo_hw_platform/download.bit" 
+19:55:16.124 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+20:01:30.809 INFO  - Processing command line option -hwspec /home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/SDK/SDK_Export/hw/system.xml. 
+20:01:32.085 INFO  - The hardware specification for project 'gsm_sim_v_1_0_fifo_hw_platform' is different from /home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/SDK/SDK_Export/hw/system.xml. 
+20:01:32.480 INFO  - Copied contents of /home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/SDK/SDK_Export/hw/system.xml into /gsm_sim_v_1_0_fifo_hw_platform/system.xml. 
+20:01:32.528 INFO  - Copied contents of /home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/SDK/SDK_Export/hw/system.bit into /gsm_sim_v_1_0_fifo_hw_platform/system.bit. 
+20:01:32.543 INFO  - Copied contents of /home/ga38kud/vivin_gsm/gsm_sim/gsm_integration_v_1_0/SDK/SDK_Export/hw/system_bd.bmm into /gsm_sim_v_1_0_fifo_hw_platform/system_bd.bmm. 
+20:01:32.693 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+20:01:35.054 INFO  - Updating hardware inferred compiler options for fifo_v_1_2. 
+20:01:35.148 INFO  - Clearing existing target manager status. 
+20:06:08.803 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+23:14:04.429 INFO  - Processing command line option -hwspec /home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/system.xml. 
+23:14:06.981 INFO  - The hardware specification for project 'gsm_sim_v_1_0_fifo_hw_platform' is different from /home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/system.xml. 
+23:14:07.527 INFO  - Copied contents of /home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/system.xml into /gsm_sim_v_1_0_fifo_hw_platform/system.xml. 
+23:14:07.531 INFO  - Copied contents of /home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/system.bit into /gsm_sim_v_1_0_fifo_hw_platform/system.bit. 
+23:14:07.534 INFO  - Copied contents of /home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/system_bd.bmm into /gsm_sim_v_1_0_fifo_hw_platform/system_bd.bmm. 
+23:14:08.226 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+23:14:13.439 INFO  - Updating hardware inferred compiler options for fifo_v_1_2. 
+23:14:13.453 INFO  - Clearing existing target manager status. 
+23:20:37.916 ERROR - Unable to read in MSS file /home/vivric/Documents/workspace/gsm_sim/software/fifo_v_1_2/fifo_v_1_2_bsp/system.mss. 
+23:20:55.961 ERROR - Unable to read in MSS file /home/vivric/Documents/workspace/gsm_sim/software/fifo_v_1_2/fifo_v_1_2_bsp/system.mss. 
+23:20:56.001 ERROR - Unable to read in MSS file /home/vivric/Documents/workspace/gsm_sim/software/fifo_v_1_2/fifo_v_1_2_bsp/system.mss. 
+23:20:57.372 WARN  - Unable to determine location of documentation for OS . 
+23:20:57.385 ERROR - Unable to read in MSS file /home/vivric/Documents/workspace/gsm_sim/software/fifo_v_1_2/fifo_v_1_2_bsp/system.mss. 
+23:20:57.456 ERROR - Unable to read in MSS file /home/vivric/Documents/workspace/gsm_sim/software/fifo_v_1_2/fifo_v_1_2_bsp/system.mss. 
+23:21:37.126 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+23:46:35.916 INFO  - Processing command line option -hwspec /home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/system.xml. 
+23:46:40.782 INFO  - The hardware specification for project 'gsm_sim_v_1_0_fifo_hw_platform' is different from /home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/system.xml. 
+23:46:41.105 INFO  - Copied contents of /home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/system.xml into /gsm_sim_v_1_0_fifo_hw_platform/system.xml. 
+23:46:41.121 INFO  - Copied contents of /home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/system.bit into /gsm_sim_v_1_0_fifo_hw_platform/system.bit. 
+23:46:41.122 INFO  - Copied contents of /home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/SDK/SDK_Export/hw/system_bd.bmm into /gsm_sim_v_1_0_fifo_hw_platform/system_bd.bmm. 
+23:46:41.627 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+23:46:53.896 INFO  - Updating hardware inferred compiler options for fifo_v_1_2. 
+23:46:54.010 INFO  - Clearing existing target manager status. 
+23:47:33.597 INFO  - FPGA configured successfully with bitstream "/home/vivric/Documents/workspace/gsm_sim/software/fifo_v_1_2/gsm_sim_v_1_0_fifo_hw_platform/download.bit" 
+23:51:32.993 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+23:52:44.369 WARN  - Terminating existing sessions on processor microblaze_0 
+23:52:47.321 INFO  - FPGA configured successfully with bitstream "/home/vivric/Documents/workspace/gsm_sim/software/fifo_v_1_2/gsm_sim_v_1_0_fifo_hw_platform/download.bit" 
