@@ -1,5 +1,4 @@
-
-<EDKSYSTEM EDKVERSION="14.7" EDWVERSION="1.2" TIMESTAMP="Sun May 25 01:50:54 2014">
+<EDKSYSTEM EDKVERSION="14.7" EDWVERSION="1.2" TIMESTAMP="Tue May 27 08:13:43 2014">
 
   <SYSTEMINFO ARCH="spartan6" DEVICE="xc6slx16" PACKAGE="csg324" PART="xc6slx16csg324-3" SOURCE="/home/vivric/Documents/workspace/gsm_sim/gsm_sim_v_1_0_fifo/system.xmp" SPEEDGRADE="-3"/>
 
